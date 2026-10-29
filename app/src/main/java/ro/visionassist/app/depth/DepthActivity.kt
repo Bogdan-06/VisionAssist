@@ -19,6 +19,11 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
+import ro.visionassist.app.ui.UiPreferencesViewModel
+import ro.visionassist.app.ui.ThemeChoice
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -63,7 +68,15 @@ class DepthActivity:ComponentActivity() {
             }
         } },onStatus={ message -> runOnUiThread { if(running) { status=message; result=null } } })
         fun ro(text:String)=AnnotatedString(text,SpanStyle(localeList=LocaleList("ro-RO")))
-        setContent { VisionAssistTheme { Scaffold { insets ->
+        setContent {
+            val preferences: UiPreferencesViewModel = viewModel()
+            val settings by preferences.state.collectAsStateWithLifecycle()
+            val dark = when(settings.value?.theme) {
+                ThemeChoice.Dark -> true
+                ThemeChoice.Light -> false
+                else -> isSystemInDarkTheme()
+            }
+            VisionAssistTheme(dark) { Scaffold { insets ->
             Column(Modifier.padding(insets).verticalScroll(rememberScrollState()).padding(24.dp),
                 verticalArrangement=Arrangement.spacedBy(16.dp)) {
                 Text(ro("Adâncime · experiment"),style=MaterialTheme.typography.headlineMedium,modifier=Modifier.semantics { heading() })
@@ -82,7 +95,7 @@ class DepthActivity:ComponentActivity() {
                     val center=current.centerDepth
                     Text(ro(if(center==null) "Suprafața centrală: distanță necunoscută. Măsurători insuficiente sau neuniforme."
                         else "Suprafața centrală: aproximativ ${String.format(Locale.forLanguageTag("ro-RO"),"%.2f",center.medianMeters)} metri față de planul camerei. Aceasta este o măsurătoare de suprafață, nu o detectare de pericol sau o distanță de mers."))
-                    if(current.candidates.isEmpty()) Text(ro("Nicio posibilă groapă identificată în acest cadru. Aceasta nu confirmă absența pericolelor."))
+                    Text(ro("Detectorul experimental de gropi este dezactivat. Sunt disponibile doar măsurători de suprafață, fără evaluarea siguranței traseului."))
                     current.candidates.take(5).forEach { candidate ->
                         val depth=candidate.regionDepth
                         Text(ro(if(depth==null) "Posibilă groapă. Distanță necunoscută: măsurători insuficiente sau neuniforme."

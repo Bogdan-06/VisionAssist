@@ -28,7 +28,7 @@ class VisionAssistScreenTest {
                 VisionAssistScreen(ScreenStatus.PermissionRequired, false, { clicked = true }, {}, {}, {}, {})
             }
         }
-        compose.onNodeWithText("Permite accesul la cameră").performScrollTo()
+        compose.onNodeWithText("Permite accesul la cameră")
             .assertIsDisplayed().assertHasClickAction()
             .assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.Button)).performClick()
         compose.runOnIdle { assertTrue(clicked) }
@@ -59,7 +59,7 @@ class VisionAssistScreenTest {
         }
         compose.onNodeWithText("Obiectele recunoscute apar în chenar și în lista de sub cameră. Nu sunt estimate distanțe sau trasee sigure.")
             .performScrollTo().assertIsDisplayed()
-        compose.onNodeWithText("Oprește camera").performScrollTo().performClick()
+        compose.onNodeWithText("Oprește camera").performClick()
         compose.runOnIdle { assertTrue(stopped) }
     }
 

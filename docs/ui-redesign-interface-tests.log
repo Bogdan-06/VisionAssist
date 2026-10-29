@@ -1,0 +1,246 @@
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.VisionAssistScreenTest:
+INSTRUMENTATION_STATUS: test=activePreviewExposesStopAndHonestLimitations
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Obiectele recunoscute apar Ã®n chenar È™i Ã®n lista de sub camerÄƒ. Nu sunt estimate distanÈ›e sau trasee sigure.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.activePreviewExposesStopAndHonestLimitations(VisionAssistScreenTest.kt:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in activePreviewExposesStopAndHonestLimitations(ro.visionassist.app.ui.VisionAssistScreenTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Obiectele recunoscute apar Ã®n chenar È™i Ã®n lista de sub camerÄƒ. Nu sunt estimate distanÈ›e sau trasee sigure.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.activePreviewExposesStopAndHonestLimitations(VisionAssistScreenTest.kt:61)
+
+INSTRUMENTATION_STATUS: test=activePreviewExposesStopAndHonestLimitations
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=permissionControlIsLabeledAndActionable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Permite accesul la camerÄƒ' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.permissionControlIsLabeledAndActionable(VisionAssistScreenTest.kt:31)
+
+INSTRUMENTATION_STATUS: stream=
+Error in permissionControlIsLabeledAndActionable(ro.visionassist.app.ui.VisionAssistScreenTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Permite accesul la camerÄƒ' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.permissionControlIsLabeledAndActionable(VisionAssistScreenTest.kt:31)
+
+INSTRUMENTATION_STATUS: test=permissionControlIsLabeledAndActionable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=helpCanBeDismissed
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (OnClick is defined)
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Am Ã®nÈ›eles' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:262)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertHasClickAction(Assertions.kt:235)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.helpCanBeDismissed(VisionAssistScreenTest.kt:73)
+
+INSTRUMENTATION_STATUS: stream=
+Error in helpCanBeDismissed(ro.visionassist.app.ui.VisionAssistScreenTest):
+java.lang.AssertionError: Failed to assert the following: (OnClick is defined)
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Am Ã®nÈ›eles' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:262)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertHasClickAction(Assertions.kt:235)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.helpCanBeDismissed(VisionAssistScreenTest.kt:73)
+
+INSTRUMENTATION_STATUS: test=helpCanBeDismissed
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=deniedPermissionOffersSettingsAtLargeFontScale
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Deschide setÄƒrile aplicaÈ›iei' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.deniedPermissionOffersSettingsAtLargeFontScale(VisionAssistScreenTest.kt:48)
+
+INSTRUMENTATION_STATUS: stream=
+Error in deniedPermissionOffersSettingsAtLargeFontScale(ro.visionassist.app.ui.VisionAssistScreenTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Deschide setÄƒrile aplicaÈ›iei' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.deniedPermissionOffersSettingsAtLargeFontScale(VisionAssistScreenTest.kt:48)
+
+INSTRUMENTATION_STATUS: test=deniedPermissionOffersSettingsAtLargeFontScale
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.NavigationRetentionTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.NavigationRetentionTest:
+INSTRUMENTATION_STATUS: test=navigationKeepsCameraHostMountedAndMeasuredAndStopVisible
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.NavigationRetentionTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=navigationKeepsCameraHostMountedAndMeasuredAndStopVisible
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.UiPreferencesPersistenceTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.UiPreferencesPersistenceTest:
+INSTRUMENTATION_STATUS: test=onboardingChoiceThemeAndDeveloperSurviveStoreReopening
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.UiPreferencesPersistenceTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=onboardingChoiceThemeAndDeveloperSurviveStoreReopening
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.InterfaceFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.InterfaceFlowTest:
+INSTRUMENTATION_STATUS: test=chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.InterfaceFlowTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at ro.visionassist.app.ui.InterfaceFlowTest.chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation(InterfaceFlowTest.kt:17)
+
+INSTRUMENTATION_STATUS: stream=
+Error in chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation(ro.visionassist.app.ui.InterfaceFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at ro.visionassist.app.ui.InterfaceFlowTest.chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation(InterfaceFlowTest.kt:17)
+
+INSTRUMENTATION_STATUS: test=chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 26.112
+There were 5 failures:
+1) activePreviewExposesStopAndHonestLimitations(ro.visionassist.app.ui.VisionAssistScreenTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Obiectele recunoscute apar Ã®n chenar È™i Ã®n lista de sub camerÄƒ. Nu sunt estimate distanÈ›e sau trasee sigure.' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.activePreviewExposesStopAndHonestLimitations(VisionAssistScreenTest.kt:61)
+2) permissionControlIsLabeledAndActionable(ro.visionassist.app.ui.VisionAssistScreenTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Permite accesul la camerÄƒ' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.permissionControlIsLabeledAndActionable(VisionAssistScreenTest.kt:31)
+3) helpCanBeDismissed(ro.visionassist.app.ui.VisionAssistScreenTest)
+java.lang.AssertionError: Failed to assert the following: (OnClick is defined)
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Am Ã®nÈ›eles' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:262)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertHasClickAction(Assertions.kt:235)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.helpCanBeDismissed(VisionAssistScreenTest.kt:73)
+4) deniedPermissionOffersSettingsAtLargeFontScale(ro.visionassist.app.ui.VisionAssistScreenTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains 'Deschide setÄƒrile aplicaÈ›iei' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at ro.visionassist.app.ui.VisionAssistScreenTest.deniedPermissionOffersSettingsAtLargeFontScale(VisionAssistScreenTest.kt:48)
+5) chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation(ro.visionassist.app.ui.InterfaceFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at ro.visionassist.app.ui.InterfaceFlowTest.chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation(InterfaceFlowTest.kt:17)
+
+FAILURES!!!
+Tests run: 7,  Failures: 5
+
+
+INSTRUMENTATION_CODE: -1

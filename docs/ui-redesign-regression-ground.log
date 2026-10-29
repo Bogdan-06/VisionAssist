@@ -1,0 +1,100 @@
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.BarrierModelCompatibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.BarrierModelCompatibilityTest:
+INSTRUMENTATION_STATUS: test=threeClassMetadataModelRunsOfflineOnReviewedImages
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.BarrierModelCompatibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=threeClassMetadataModelRunsOfflineOnReviewedImages
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.GroundInferenceTest:
+INSTRUMENTATION_STATUS: test=losslessPreparedInputMatchesPythonInterpreterAndDecoder
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=losslessPreparedInputMatchesPythonInterpreterAndDecoder
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=packagedModelRunsOnRealPhotographWithoutTakingBitmapOwnership
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=packagedModelRunsOnRealPhotographWithoutTakingBitmapOwnership
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=closeCanRaceFrameSubmissionWithoutRejectedTasks
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=closeCanRaceFrameSubmissionWithoutRejectedTasks
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=workerCopiesBeforeProducerRecyclesAndBoundsFrameBacklog
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=workerCopiesBeforeProducerRecyclesAndBoundsFrameBacklog
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundSustainedBenchmarkTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.GroundSustainedBenchmarkTest:
+INSTRUMENTATION_STATUS: test=sustainedRealFixtureInference
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundSustainedBenchmarkTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit benchmark argument required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at ro.visionassist.core.ground.GroundSustainedBenchmarkTest.sustainedRealFixtureInference(GroundSustainedBenchmarkTest.kt:27)
+
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.GroundSustainedBenchmarkTest:
+INSTRUMENTATION_STATUS: test=sustainedRealFixtureInference
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_RESULT: stream=
+
+Time: 9.193
+
+OK (6 tests)
+
+
+INSTRUMENTATION_CODE: -1

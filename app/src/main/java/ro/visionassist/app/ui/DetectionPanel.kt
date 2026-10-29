@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import ro.visionassist.app.R
 
 @Composable
-fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit) {
+fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit, developer: Boolean = true) {
     val status = when (state.phase) {
         DetectionPhase.Idle -> R.string.detection_idle
         DetectionPhase.Loading -> R.string.detection_loading
@@ -40,11 +40,20 @@ fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit) {
             }
         }
         state.result?.let { result ->
-            Text(ro(stringResource(R.string.detection_timing, result.inferenceMs)), style = MaterialTheme.typography.bodyMedium)
+            if (developer) {
+                Text(ro(stringResource(R.string.detection_timing, result.inferenceMs)), style = MaterialTheme.typography.bodyMedium)
+                Text(ro(state.analysisFps?.let { "FPS analiză: %.1f cadre/s".format(java.util.Locale.ROOT, it) }
+                    ?: "FPS analiză: se colectează cadre. Nu reprezintă rata camerei."))
+            }
             if (result.objects.isEmpty()) Text(ro(stringResource(R.string.detection_empty)))
             // Deliberately no live region on per-frame results: accessible by exploration,
             // without continuously interrupting TalkBack or implementing spoken warnings.
-            result.objects.forEach { obj -> Text(ro(DetectionLabels.description(obj)), style = MaterialTheme.typography.bodyLarge) }
+            result.objects.forEach { obj -> Text(ro(if (developer) DetectionLabels.description(obj)
+                else "${DetectionLabels.label(obj.label)} · ${when (obj.bounds.direction) {
+                    ro.visionassist.core.detection.Direction.Left -> "stânga"
+                    ro.visionassist.core.detection.Direction.Center -> "centru"
+                    ro.visionassist.core.detection.Direction.Right -> "dreapta"
+                }}"), style = MaterialTheme.typography.bodyLarge) }
         }
         Text(ro(stringResource(R.string.detection_limits)), style = MaterialTheme.typography.bodyMedium)
     }

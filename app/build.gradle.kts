@@ -30,6 +30,7 @@ android {
 }
 kotlin { compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17) } }
 dependencies {
+    implementation(libs.androidx.datastore)
     implementation(project(":core:camera"))
     implementation(project(":core:detection"))
     implementation(project(":core:ground"))

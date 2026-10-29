@@ -1,0 +1,167 @@
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugBuildConfig
+> Task :core:camera:preBuild UP-TO-DATE
+> Task :core:camera:preDebugBuild UP-TO-DATE
+> Task :core:depth:preBuild UP-TO-DATE
+> Task :core:depth:preDebugBuild UP-TO-DATE
+> Task :core:camera:writeDebugAarMetadata
+> Task :core:depth:writeDebugAarMetadata
+> Task :core:detection:preBuild UP-TO-DATE
+> Task :core:detection:preDebugBuild UP-TO-DATE
+> Task :core:ground:preBuild UP-TO-DATE
+> Task :core:ground:preDebugBuild UP-TO-DATE
+> Task :core:detection:writeDebugAarMetadata
+> Task :core:voice:preBuild UP-TO-DATE
+> Task :core:voice:preDebugBuild UP-TO-DATE
+> Task :core:ground:writeDebugAarMetadata
+> Task :core:voice:writeDebugAarMetadata
+> Task :core:camera:processDebugNavigationResources
+> Task :core:depth:processDebugNavigationResources FROM-CACHE
+> Task :core:detection:processDebugNavigationResources FROM-CACHE
+> Task :core:ground:processDebugNavigationResources FROM-CACHE
+> Task :core:voice:processDebugNavigationResources FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :core:camera:generateDebugResValues FROM-CACHE
+> Task :app:compileDebugNavigationResources
+> Task :core:camera:generateDebugResources
+> Task :core:camera:packageDebugResources
+> Task :core:depth:generateDebugResValues FROM-CACHE
+> Task :core:depth:generateDebugResources FROM-CACHE
+> Task :core:depth:packageDebugResources
+> Task :core:detection:generateDebugResValues FROM-CACHE
+> Task :core:detection:generateDebugResources FROM-CACHE
+> Task :core:detection:packageDebugResources
+> Task :core:ground:generateDebugResValues FROM-CACHE
+> Task :core:ground:generateDebugResources FROM-CACHE
+> Task :core:ground:packageDebugResources
+> Task :core:voice:generateDebugResValues FROM-CACHE
+> Task :core:voice:generateDebugResources FROM-CACHE
+> Task :core:voice:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :core:camera:extractDeepLinksDebug
+> Task :core:camera:processDebugManifest
+> Task :core:depth:extractDeepLinksDebug FROM-CACHE
+> Task :core:depth:processDebugManifest
+> Task :core:detection:extractDeepLinksDebug FROM-CACHE
+> Task :core:detection:processDebugManifest
+> Task :core:ground:extractDeepLinksDebug FROM-CACHE
+> Task :core:ground:processDebugManifest
+> Task :core:voice:extractDeepLinksDebug FROM-CACHE
+> Task :core:voice:processDebugManifest
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :core:camera:compileDebugLibraryResources
+> Task :core:depth:compileDebugLibraryResources FROM-CACHE
+> Task :core:camera:parseDebugLocalResources
+> Task :core:depth:parseDebugLocalResources
+> Task :core:depth:generateDebugRFile
+> Task :core:camera:generateDebugRFile
+> Task :core:detection:compileDebugLibraryResources FROM-CACHE
+> Task :core:detection:parseDebugLocalResources FROM-CACHE
+> Task :core:ground:compileDebugLibraryResources FROM-CACHE
+> Task :core:ground:parseDebugLocalResources FROM-CACHE
+> Task :core:detection:generateDebugRFile
+> Task :core:voice:compileDebugLibraryResources FROM-CACHE
+> Task :core:voice:parseDebugLocalResources FROM-CACHE
+> Task :core:ground:generateDebugRFile
+> Task :core:camera:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:detection:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:voice:generateDebugRFile
+> Task :app:processDebugResources
+> Task :core:detection:javaPreCompileDebug
+> Task :core:ground:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:detection:compileDebugKotlin
+> Task :core:detection:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:detection:bundleLibCompileToJarDebug
+> Task :core:ground:javaPreCompileDebug FROM-CACHE
+> Task :core:camera:javaPreCompileDebug FROM-CACHE
+> Task :core:depth:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:depth:javaPreCompileDebug FROM-CACHE
+> Task :core:voice:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:ground:compileDebugKotlin
+> Task :core:ground:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:ground:bundleLibCompileToJarDebug
+> Task :core:voice:compileDebugKotlin
+> Task :core:camera:compileDebugKotlin
+> Task :core:camera:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:camera:bundleLibCompileToJarDebug
+> Task :core:voice:javaPreCompileDebug FROM-CACHE
+> Task :core:voice:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:voice:bundleLibCompileToJarDebug
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :core:camera:mergeDebugShaders
+> Task :core:camera:compileDebugShaders NO-SOURCE
+> Task :core:camera:generateDebugAssets UP-TO-DATE
+> Task :core:camera:mergeDebugAssets
+> Task :core:depth:mergeDebugShaders
+> Task :core:depth:compileDebugShaders NO-SOURCE
+> Task :core:depth:generateDebugAssets UP-TO-DATE
+> Task :core:depth:mergeDebugAssets
+> Task :core:detection:mergeDebugShaders
+> Task :core:detection:compileDebugShaders NO-SOURCE
+> Task :core:detection:generateDebugAssets UP-TO-DATE
+> Task :core:detection:mergeDebugAssets
+> Task :core:ground:mergeDebugShaders
+> Task :core:ground:compileDebugShaders NO-SOURCE
+> Task :core:ground:generateDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugAssets
+> Task :core:voice:mergeDebugShaders
+> Task :core:voice:compileDebugShaders NO-SOURCE
+> Task :core:voice:generateDebugAssets UP-TO-DATE
+> Task :core:voice:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :core:camera:bundleLibRuntimeToJarDebug
+> Task :core:depth:compileDebugKotlin
+> Task :core:depth:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:depth:bundleLibCompileToJarDebug
+> Task :core:detection:bundleLibRuntimeToJarDebug
+> Task :core:depth:bundleLibRuntimeToJarDebug
+> Task :core:ground:bundleLibRuntimeToJarDebug
+> Task :core:voice:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :core:camera:processDebugJavaRes
+> Task :core:depth:processDebugJavaRes
+> Task :core:detection:processDebugJavaRes
+> Task :core:ground:processDebugJavaRes
+> Task :core:voice:processDebugJavaRes
+> Task :app:checkDebugDuplicateClasses
+
+> Task :app:compileDebugKotlin
+e: file:///C:/Users/Moth/Desktop/VisionAssist/app/src/main/java/ro/visionassist/app/ui/VisionAssistRoute.kt:159:23 Argument type mismatch: actual type is 'SharedPreferences!', but 'UiPreferences' was expected.
+e: file:///C:/Users/Moth/Desktop/VisionAssist/app/src/main/java/ro/visionassist/app/ui/VisionAssistRoute.kt:176:70 Unresolved reference 'localAnnouncements'.
+
+> Task :app:mergeExtDexDebug
+> Task :app:compileDebugKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2m 24s
+109 actionable tasks: 80 executed, 29 from cache

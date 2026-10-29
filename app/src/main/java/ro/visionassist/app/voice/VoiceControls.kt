@@ -34,7 +34,10 @@ import ro.visionassist.core.voice.*
 
 @Composable
 fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
-                  snapshots: CameraSnapshotRequest, cameraActive: Boolean, foreground: Boolean) {
+                  snapshots: CameraSnapshotRequest, cameraActive: Boolean, foreground: Boolean,
+                  showConversation: Boolean = true, showLocal: Boolean = true,
+                  localEnabled: Boolean = announcements.enabled,
+                  onLocalEnabledChange: (Boolean) -> Unit = { announcements.enabled = it }) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val state by client.state.collectAsStateWithLifecycle()
@@ -44,7 +47,6 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
     var showSettings by remember { mutableStateOf(false) }
     var permissionDenied by remember { mutableStateOf(false) }
     var startWhenResumed by remember { mutableStateOf(false) }
-    var localEnabled by remember { mutableStateOf(false) }
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         permissionDenied = !granted; startWhenResumed = granted
     }
@@ -53,6 +55,7 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
     }
     val running = state.phase in setOf(VoicePhase.Connecting, VoicePhase.Listening, VoicePhase.Speaking)
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (showConversation) {
         Ro("Asistent vocal în română", Modifier.semantics { heading() })
         val phase = when (state.phase) {
             VoicePhase.Disconnected -> "Deconectat"
@@ -64,8 +67,7 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
         Ro(if (state.warningActive) "$phase. Anunțul local are prioritate; microfonul și asistentul sunt dezactivate temporar." else phase,
             Modifier.semantics { liveRegion = LiveRegionMode.Polite })
         Ro(state.message)
-        Ro("Furnizor: ${settings.provider.label}. Pornirea conversației trimite vocea către acest furnizor. Oprirea sau ieșirea din aplicație închide microfonul. Fotografiile se trimit numai după confirmarea ta.")
-        if (settings.provider == VoiceProvider.Gemini) Ro("Gemini are o cotă gratuită limitată. Un anunț local oprește conversația Gemini; o poți reporni după anunț.")
+        Ro("Pornirea trimite vocea către ${settings.provider.label}. Fotografiile necesită confirmarea ta.")
         Button(onClick = {
             if (running) { startWhenResumed = false; client.stop() }
             else if (settings.url.isBlank() || settings.accessToken.isBlank()) showSettings = true
@@ -74,6 +76,8 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
         }, enabled = !state.warningActive, modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
             Ro(if (running) "Oprește conversația AI" else "Pornește conversația AI")
         }
+        Ro("Oprirea conversației sau ieșirea din aplicație închide microfonul.")
+        if (settings.provider == VoiceProvider.Gemini) Ro("Gemini are o cotă gratuită limitată. Un anunț local oprește conversația Gemini; o poți reporni după anunț.")
         if (permissionDenied) {
             Ro("Microfonul nu este permis. Camera și recunoașterea locală pot continua.")
             OutlinedButton(onClick = { context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, "package:${context.packageName}".toUri())) },
@@ -87,17 +91,21 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
         }
         if (state.imageRequested) TextButton(onClick = { client.declineImage() }, modifier = Modifier.heightIn(min = 56.dp)) { Ro("Nu trimite fotografia") }
         if (!cameraActive) Ro("Pornește camera pentru a putea trimite o fotografie nouă.")
+        }
+        if (!showConversation) Ro("Furnizor vocal: ${settings.provider.label}. Oprește conversația pentru a modifica serverul.")
         OutlinedButton(onClick = { showSettings = true }, enabled = !running,
             modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Ro("Configurarea serverului vocal") }
+        if (showLocal) {
         Ro("Anunțuri locale", Modifier.semantics { heading() })
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Ro("Anunță obiectele recunoscute", Modifier.weight(1f))
-            Switch(checked = localEnabled, onCheckedChange = { localEnabled = it; announcements.enabled = it },
+            Switch(checked = localEnabled, onCheckedChange = onLocalEnabledChange,
                 modifier = Modifier.semantics { contentDescription = "Anunțuri locale despre obiecte" })
         }
         Ro(localStatus)
         OutlinedButton(onClick = announcements::testVoice, enabled = announcements.isReady, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Ro("Testează vocea locală și prioritatea audio") }
         Ro("Anunțurile descriu recunoașterea modelului, nu pericole confirmate. Nu sunt estimate distanțe.")
+        }
     }
     if (showSettings) {
         var url by remember { mutableStateOf(settings.url) }

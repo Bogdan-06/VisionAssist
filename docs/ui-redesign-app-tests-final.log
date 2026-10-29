@@ -1,0 +1,301 @@
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.CameraLifecycleTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.CameraLifecycleTest:
+INSTRUMENTATION_STATUS: test=navigationPreservesAnalysisAndExperimentalGroundStaysDisabled
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.CameraLifecycleTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=navigationPreservesAnalysisAndExperimentalGroundStaysDisabled
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.CameraLifecycleTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.CameraLifecycleTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.CameraLifecycleTest.previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop(CameraLifecycleTest.kt:43)
+
+INSTRUMENTATION_STATUS: stream=
+Error in previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop(ro.visionassist.app.ui.CameraLifecycleTest):
+java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.CameraLifecycleTest.previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop(CameraLifecycleTest.kt:43)
+
+INSTRUMENTATION_STATUS: test=previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DepthFallbackTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.DepthFallbackTest:
+INSTRUMENTATION_STATUS: test=unsupportedDeviceShowsFallbackAndNoMeasuredDistance
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DepthFallbackTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.DepthFallbackTest.unsupportedDeviceShowsFallbackAndNoMeasuredDistance(DepthFallbackTest.kt:37)
+
+INSTRUMENTATION_STATUS: stream=
+Error in unsupportedDeviceShowsFallbackAndNoMeasuredDistance(ro.visionassist.app.ui.DepthFallbackTest):
+java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.DepthFallbackTest.unsupportedDeviceShowsFallbackAndNoMeasuredDistance(DepthFallbackTest.kt:37)
+
+INSTRUMENTATION_STATUS: test=unsupportedDeviceShowsFallbackAndNoMeasuredDistance
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DetectionRenderingTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.DetectionRenderingTest:
+INSTRUMENTATION_STATUS: test=actualModelResultsRenderBoxesLabelsConfidenceAndDirections
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DetectionRenderingTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=actualModelResultsRenderBoxesLabelsConfidenceAndDirections
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DetectionViewModelTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.DetectionViewModelTest:
+INSTRUMENTATION_STATUS: test=resultsExpireAndStopAndFailureClearBoxes
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.DetectionViewModelTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=resultsExpireAndStopAndFailureClearBoxes
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.InterfaceFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.InterfaceFlowTest:
+INSTRUMENTATION_STATUS: test=chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.InterfaceFlowTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=chosenLayoutCanChangeInSettingsAndSurvivesActivityRecreation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.NavigationRetentionTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.NavigationRetentionTest:
+INSTRUMENTATION_STATUS: test=navigationKeepsCameraHostMountedAndMeasuredAndStopVisible
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.NavigationRetentionTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=navigationKeepsCameraHostMountedAndMeasuredAndStopVisible
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.PhysicalDepthMeasurementTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.PhysicalDepthMeasurementTest:
+INSTRUMENTATION_STATUS: test=centralSurfaceAgreesWithPreparedReference
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.PhysicalDepthMeasurementTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Requires explicit prepared-scene opt-in
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at ro.visionassist.app.ui.PhysicalDepthMeasurementTest.centralSurfaceAgreesWithPreparedReference(PhysicalDepthMeasurementTest.kt:27)
+
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.PhysicalDepthMeasurementTest:
+INSTRUMENTATION_STATUS: test=centralSurfaceAgreesWithPreparedReference
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.UiPreferencesPersistenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.UiPreferencesPersistenceTest:
+INSTRUMENTATION_STATUS: test=onboardingChoiceThemeAndDeveloperSurviveStoreReopening
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.UiPreferencesPersistenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=onboardingChoiceThemeAndDeveloperSurviveStoreReopening
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.ui.VisionAssistScreenTest:
+INSTRUMENTATION_STATUS: test=activePreviewExposesStopAndHonestLimitations
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=activePreviewExposesStopAndHonestLimitations
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=permissionControlIsLabeledAndActionable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=permissionControlIsLabeledAndActionable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=helpCanBeDismissed
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=helpCanBeDismissed
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=deniedPermissionOffersSettingsAtLargeFontScale
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.ui.VisionAssistScreenTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=deniedPermissionOffersSettingsAtLargeFontScale
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.LiveRealtimeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.voice.LiveRealtimeTest:
+INSTRUMENTATION_STATUS: test=realSessionStreamsImageResponseHonorsPriorityAndClosesMicrophone
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.LiveRealtimeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Requires explicit live=1 and private test credentials
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at ro.visionassist.app.voice.LiveRealtimeTest.realSessionStreamsImageResponseHonorsPriorityAndClosesMicrophone(LiveRealtimeTest.kt:43)
+
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.voice.LiveRealtimeTest:
+INSTRUMENTATION_STATUS: test=realSessionStreamsImageResponseHonorsPriorityAndClosesMicrophone
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.app.voice.VoiceControlsTest:
+INSTRUMENTATION_STATUS: test=localPrioritySurvivesStopAndLateCompletionWithoutAConnection
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=localPrioritySurvivesStopAndLateCompletionWithoutAConnection
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=geminiOverlappingWarningsBlockStartAndRequireExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=geminiOverlappingWarningsBlockStartAndRequireExplicitRestart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=accessibleSetupAtLargeFontDoesNotUploadImagesOrOpenMicrophone
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.app.voice.VoiceControlsTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=accessibleSetupAtLargeFontDoesNotUploadImagesOrOpenMicrophone
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 89.842
+There were 2 failures:
+1) previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop(ro.visionassist.app.ui.CameraLifecycleTest)
+java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.CameraLifecycleTest.previewStreamsRestartsAfterBackgroundAndRetainsExplicitStop(CameraLifecycleTest.kt:43)
+2) unsupportedDeviceShowsFallbackAndNoMeasuredDistance(ro.visionassist.app.ui.DepthFallbackTest)
+java.lang.AssertionError: Semantic Node has no parent layout with a Scroll SemanticsAction
+	at androidx.compose.ui.test.ActionsKt.scrollToNode(Actions.kt:97)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:82)
+	at ro.visionassist.app.ui.DepthFallbackTest.unsupportedDeviceShowsFallbackAndNoMeasuredDistance(DepthFallbackTest.kt:37)
+
+FAILURES!!!
+Tests run: 17,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

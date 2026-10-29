@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-29",
+  "project": "C:\\Users\\Moth\\Desktop\\VisionAssist",
+  "instrumentation": {
+    "app": {
+      "runner_tests": 19,
+      "successful_cases": 17,
+      "assumption_skips": 2,
+      "failed_cases": 0,
+      "log": "docs\\ui-redesign-delivery-app-tests.log"
+    },
+    "camera": {
+      "runner_tests": 7,
+      "successful_cases": 7,
+      "assumption_skips": 0,
+      "failed_cases": 0,
+      "log": "docs\\ui-redesign-regression-camera.log"
+    },
+    "detection": {
+      "runner_tests": 4,
+      "successful_cases": 4,
+      "assumption_skips": 0,
+      "failed_cases": 0,
+      "log": "docs\\ui-redesign-regression-detection.log"
+    },
+    "voice": {
+      "runner_tests": 4,
+      "successful_cases": 4,
+      "assumption_skips": 0,
+      "failed_cases": 0,
+      "log": "docs\\ui-redesign-regression-voice.log"
+    },
+    "ground": {
+      "runner_tests": 6,
+      "successful_cases": 5,
+      "assumption_skips": 1,
+      "failed_cases": 0,
+      "log": "docs\\ui-redesign-regression-ground.log"
+    }
+  },
+  "jvm": [
+    {
+      "suite": "ro.visionassist.app.ui.PreviewUiStateTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "ro.visionassist.core.depth.DepthEvidenceTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "ro.visionassist.core.detection.DetectionGeometryTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "ro.visionassist.core.ground.GroundPolicyTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "ro.visionassist.core.voice.VoicePolicyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 26,
+    "report": "app/build/reports/lint-results-debug.xml"
+  },
+  "build_log": "docs/ui-redesign-accessibility-build.log",
+  "preserved_model_hashes": {
+    "core\\detection\\src\\main\\assets\\efficientdet_lite0.tflite": {
+      "bytes": 13836895,
+      "sha256": "40338edf5ec70d43e318b0a716a84d4564cd1802759a7a07170c7e43796dbf58"
+    },
+    "core\\ground\\src\\main\\assets\\ground_baseline.tflite": {
+      "bytes": 2225580,
+      "sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88"
+    },
+    "barrier-training-runs\\20261028-215718-4bd1910e\\training\\model.tflite": {
+      "bytes": 10462141,
+      "sha256": "9e5e8ed50eec603097a9d34274dbe89712625b0a868e2b02f93efb2ea09ef0ce"
+    }
+  },
+  "ground_warning_gate_false": true,
+  "camera_experimental_ground_disabled": true,
+  "depth_experimental_ground_default_disabled": true,
+  "training_started": false,
+  "limits": [
+    "No live paid/cloud voice session was opened; opt-in live and measured physical depth tests skipped as designed.",
+    "TalkBack-specific human usability audit not performed; semantics, controls and double text size tested.",
+    "Emulator is not physical camera/depth performance evidence."
+  ],
+  "android_successful_cases": 37,
+  "android_opt_in_skips": 3,
+  "jvm_successful_cases": 19,
+  "base_checkpoint": "cd926b790c0ea6800ec4dfceae61f04946a42543",
+  "artifact_repackaging_log": "docs/ui-redesign-artifact-build.log",
+  "build_artifacts": {
+    "app\\build\\outputs\\apk\\debug\\app-debug.apk": {
+      "bytes": 148073768,
+      "sha256": "6c24178de272a9c9497dff8562529ef62ca8aacf9e58d34efe43c438ca142fbd"
+    },
+    "app\\build\\outputs\\apk\\release\\app-release-unsigned.apk": {
+      "bytes": 133287352,
+      "sha256": "5d2117eabe7b6bb1c807de0dc02da45d11faa905e68a35216f59c2e1f4ffe8e6"
+    }
+  },
+  "artifact_note": "Debug APK repackaged from unchanged cached build inputs after its output folder was missing. Emulator had closed before optional installed-binary hash comparison; completed test logs and screenshots are preserved.",
+  "protected_tracked_sources_unchanged": true,
+  "screenshots": [
+    "docs/ui-onboarding.png",
+    "docs/ui-home-dark.png",
+    "docs/ui-home-compact-dark.png",
+    "docs/ui-voice-dark.png",
+    "docs/ui-settings-dark.png",
+    "docs/ui-large-text-dark-fixed.png",
+    "docs/ui-home-light.png"
+  ],
+  "production_source_hashes": {
+    "app\\src\\main\\java\\ro\\visionassist\\app\\MainActivity.kt": "43ec74d5b14952acf00c483bb8cee45f6e094c5e504db607591cbe41236a4ed2",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\depth\\DepthActivity.kt": "4960ec82f9ceba765bb6dcdf14603c0b4cf0df60ea06584350f190bb76f22217",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\DetectionLabels.kt": "c4d55383d2c8062806a4e9c125a164f027d62d96fece9608d73ba9691e6cb428",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\DetectionOverlay.kt": "6d6b03f3eb9d8f19809925b04f3b0881dd8d70673b25e33c03feb417dba29f76",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\DetectionPanel.kt": "761c67eef58e2bbd078018b9bbee6622a58abff4f24f760fc072e989b06d6aa9",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\DetectionViewModel.kt": "c070b2ec53b9ed96f627914ccbcd626d0e72f6dbd0693dace6b4433a47528b82",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\GroundOverlay.kt": "0bc95150252225310ded866e977c3b263a62585023ff70bd08c01b20635a9f99",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\GroundPanel.kt": "39a19fc6705ae0f0e1e3625b83f596cee4967583c18b761dd978ec4ad6b93ad7",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\PreviewUiState.kt": "9538d49136124827f603a12aa53e5c0374988febf1aa7aba17fff70eaa80c531",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\UiPreferences.kt": "eee3e8e481f07c0c325fcd85fa84773c6e087c2357731769e660839a9f9981fa",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\VisionAssistRoute.kt": "e412c6c03dc2eb954b28ba3950a0596044a61f61f755b7927e79534f78b64ece",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\VisionAssistScreen.kt": "15aae0dd13939a554f8be410112621b555821325beba0416a555d3719c61ea9e",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\ui\\VisionAssistTheme.kt": "631c660da73232e2f1a357a0c9a1ffaf0bebb932956b836c1418f8a8f23b1ac6",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\voice\\BackendSettingsStore.kt": "3ee4259f2efae717e9539aff54049219383dba53c37fa66cff725e9fa4b7f061",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\voice\\LocalAnnouncements.kt": "0ddf65127d8b394fd5773e48b4214aa56bd042e007c7aec3d5abcc695729b4f0",
+    "app\\src\\main\\java\\ro\\visionassist\\app\\voice\\VoiceControls.kt": "49a4d8160c41e1d346765d599715150aee773f2fbdccb7aec5a8f30d56ac073a",
+    "app\\build.gradle.kts": "f1a9602ff14d9d2f5d4f059ba1240e43e66625c60322062f20d27f585d55bc43",
+    "gradle\\libs.versions.toml": "5fc8e9a29e76bb318dc4c54b23bdeb685ba48deb5f8893f2eb51859b3b3eeaad",
+    "core\\depth\\src\\main\\java\\ro\\visionassist\\core\\depth\\DepthCameraView.kt": "d34f8b35d2ba4e6852ff26f41f276be977ec848913a3ef1f23aae9c666d38eed"
+  }
+}

@@ -14,8 +14,10 @@ mediapipe = "0.10.32"
 guava = "33.4.0-android"
 webrtc = "150.7871.01"
 coroutines = "1.10.2"
+datastore = "1.2.1"
 
 [libraries]
+androidx-datastore = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 webrtc = { module = "io.github.webrtc-sdk:android", version.ref = "webrtc" }
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "core" }

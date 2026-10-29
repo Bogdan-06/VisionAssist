@@ -27,14 +27,15 @@ import kotlin.math.roundToInt
 
 data class DepthCandidate(val visual:GroundCandidate,val regionDepth:RegionDepth?)
 data class DepthProbeResult(val candidates:List<DepthCandidate>,val receivedAtMs:Long,
-    val diagnostic:DiscontinuityDiagnostic?,val metrics:GroundMetrics,val hasFreshDepth:Boolean,
+    val diagnostic:DiscontinuityDiagnostic?,val metrics:GroundMetrics?,val hasFreshDepth:Boolean,
     val centerDepth:RegionDepth?=null)
 
 /** Dedicated ARCore camera owner. Never mount while a CameraX session is active. */
 class DepthCameraView(context:Context, private val onResult:(DepthProbeResult)->Unit,
-                      private val onStatus:(String)->Unit) : GLSurfaceView(context), AutoCloseable {
+                      private val onStatus:(String)->Unit,
+                      experimentalGroundEnabled:Boolean = false) : GLSurfaceView(context), AutoCloseable {
     @Volatile var arSession:Session?=null
-    private val ground=GroundWorker(context) { onStatus("Modelul experimental de gropi nu este disponibil.") }
+    private val ground=if (experimentalGroundEnabled) GroundWorker(context) { onStatus("Modelul experimental de gropi nu este disponibil.") } else null
     private var lastAttempt=0L
     private var lastStatusAt=0L
     private var lastStatusText=""
@@ -103,12 +104,19 @@ class DepthCameraView(context:Context, private val onResult:(DepthProbeResult)->
 
     private fun capture(frame:Frame,viewWidth:Int,viewHeight:Int,now:Long) {
         val depth=RawDepthCapture.copy(frame)
+        val detector = ground
+        if (detector == null) {
+            // Surface measurements remain available without loading an unvalidated detector.
+            onResult(DepthProbeResult(emptyList(), now, depth?.let(DepthEvidence::discontinuities), null,
+                depth != null, depth?.let { DepthEvidence.region(it,GroundBox(.25f,.25f,.75f,.75f)) }))
+            return
+        }
         frame.acquireCameraImage().use { image ->
             // The CPU image and depth are acquired from this exact Frame before the next update.
             if (image.timestamp != frame.timestamp) return
             val bitmap=uprightViewBitmap(image,frame,viewWidth,viewHeight)
             try {
-                ground.offer(bitmap,now) { result,metrics ->
+                detector.offer(bitmap,now) { result,metrics ->
                     onResult(DepthProbeResult(result.candidates.map { DepthCandidate(it,depth?.let { d -> DepthEvidence.region(d,it.bounds) }) },
                         result.receivedAtMs,depth?.let(DepthEvidence::discontinuities),metrics,depth!=null,
                         depth?.let { DepthEvidence.region(it,GroundBox(.25f,.25f,.75f,.75f)) }))
@@ -117,7 +125,7 @@ class DepthCameraView(context:Context, private val onResult:(DepthProbeResult)->
         }
     }
 
-    override fun close() { arSession=null; ground.close() }
+    override fun close() { arSession=null; ground?.close() }
 
     companion object {
         private fun buffer(values:FloatArray)=ByteBuffer.allocateDirect(values.size*4).order(ByteOrder.nativeOrder()).asFloatBuffer().apply { put(values); rewind() }

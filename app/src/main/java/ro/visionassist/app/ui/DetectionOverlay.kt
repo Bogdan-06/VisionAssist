@@ -19,7 +19,7 @@ import ro.visionassist.core.detection.DetectionResult
 
 /** Drawing coordinates are normalized by the CameraX mapper, never guessed from box size. */
 @Composable
-fun DetectionOverlay(result: DetectionResult?, modifier: Modifier = Modifier) {
+fun DetectionOverlay(result: DetectionResult?, modifier: Modifier = Modifier, showConfidence: Boolean = true) {
     val measurer = rememberTextMeasurer()
     Canvas(modifier) {
         val placedLabels = mutableListOf<Rect>()
@@ -30,7 +30,7 @@ fun DetectionOverlay(result: DetectionResult?, modifier: Modifier = Modifier) {
                 Size((b.right - b.left) * size.width, (b.bottom - b.top) * size.height), style = Stroke(3.dp.toPx()))
             val padding = 4.dp.toPx()
             val text = measurer.measure(
-                DetectionLabels.description(obj),
+                if (showConfidence) DetectionLabels.description(obj) else DetectionLabels.label(obj.label),
                 style = TextStyle(color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold),
                 constraints = Constraints(maxWidth = (size.width - padding * 2).toInt().coerceAtLeast(1))
             )

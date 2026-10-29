@@ -16,7 +16,8 @@ enum class DetectionPhase { Idle, Loading, Active, Stale, Error }
 data class DetectionUiState(
     val phase: DetectionPhase = DetectionPhase.Idle,
     val result: DetectionResult? = null,
-    val failure: DetectionFailure? = null
+    val failure: DetectionFailure? = null,
+    val analysisFps: Double? = null
 )
 
 /** Owns UI state only; camera sessions own native inference resources. Main-thread callbacks. */
@@ -24,12 +25,15 @@ class DetectionViewModel : ViewModel() {
     private val mutableState = MutableStateFlow(DetectionUiState())
     val state = mutableState.asStateFlow()
     private var expiry: Job? = null
+    private val frameTimes = ArrayDeque<Long>()
 
     fun start() {
+        frameTimes.clear()
         expiry?.cancel()
         mutableState.value = DetectionUiState(DetectionPhase.Loading)
     }
     fun stop() {
+        frameTimes.clear()
         expiry?.cancel()
         mutableState.value = DetectionUiState()
     }
@@ -49,7 +53,11 @@ class DetectionViewModel : ViewModel() {
             mutableState.value = DetectionUiState(DetectionPhase.Stale)
             return
         }
-        mutableState.value = DetectionUiState(DetectionPhase.Active, result)
+        frameTimes.addLast(result.receivedAtMs)
+        while (frameTimes.size > 20 || (frameTimes.size > 1 && result.receivedAtMs - frameTimes.first() > 2000)) frameTimes.removeFirst()
+        val span = frameTimes.last() - frameTimes.first()
+        val fps = if (frameTimes.size >= 2 && span > 0) (frameTimes.size - 1) * 1000.0 / span else null
+        mutableState.value = DetectionUiState(DetectionPhase.Active, result, analysisFps = fps)
         expiry = viewModelScope.launch {
             delay((DetectionPolicy.MAX_RESULT_AGE_MS - age).coerceAtLeast(1))
             mutableState.value = DetectionUiState(DetectionPhase.Stale)

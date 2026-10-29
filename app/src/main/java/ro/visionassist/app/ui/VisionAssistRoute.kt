@@ -9,6 +9,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
@@ -37,25 +38,33 @@ import ro.visionassist.core.ground.GroundFailure
 import ro.visionassist.core.detection.DetectionFailure
 
 @Composable
-fun VisionAssistRoute() {
+fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout.Compact),
+                      preferenceError: String? = null,
+                      onLayout: (InterfaceLayout) -> Unit = {}, onTheme: (ThemeChoice) -> Unit = {},
+                      onDeveloper: (Boolean) -> Unit = {}, onLocalAnnouncements: (Boolean) -> Unit = {}) {
     val detectionViewModel: DetectionViewModel = viewModel()
     val detectionState by detectionViewModel.state.collectAsStateWithLifecycle()
     val groundViewModel: DetectionViewModel = viewModel(key = "ground")
     val groundState by groundViewModel.state.collectAsStateWithLifecycle()
-    var groundEnabled by rememberSaveable { mutableStateOf(false) }
+    // Unvalidated ground detectors stay disabled regardless of navigation/developer settings.
+    val groundEnabled = false
     var groundMetrics by remember { mutableStateOf<GroundMetrics?>(null) }
     val context = LocalContext.current
     val voice = remember { SelectableVoiceClient(context, BuildConfig.DEBUG) }
     val snapshots = remember { CameraSnapshotRequest() }
     val announcements = remember { LocalAnnouncements(context, voice) }
+    val voiceState by voice.state.collectAsStateWithLifecycle()
+    val recent by announcements.recent.collectAsStateWithLifecycle()
+    val hazards by announcements.recentHazards.collectAsStateWithLifecycle()
+    LaunchedEffect(preferences.localAnnouncements) { announcements.enabled = preferences.localAnnouncements }
     DisposableEffect(voice) {
         onDispose { snapshots.cancel(); announcements.close(); voice.close() }
     }
     val lifecycleOwner = LocalLifecycleOwner.current
-    val preferences = remember(context) { context.getSharedPreferences("camera_permission", Activity.MODE_PRIVATE) }
+    val cameraPreferences = remember(context) { context.getSharedPreferences("camera_permission", Activity.MODE_PRIVATE) }
     fun permissionNow(): CameraPermission = when {
         ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED -> CameraPermission.Granted
-        preferences.getBoolean("requested", false) -> CameraPermission.Denied
+        cameraPreferences.getBoolean("requested", false) -> CameraPermission.Denied
         else -> CameraPermission.Required
     }
     var permission by remember { mutableStateOf(permissionNow()) }
@@ -106,7 +115,7 @@ fun VisionAssistRoute() {
             when (status) {
                 ScreenStatus.PermissionRequired, ScreenStatus.PermissionDenied -> {
                     enabled = true
-                    preferences.edit { putBoolean("requested", true) }
+                    cameraPreferences.edit { putBoolean("requested", true) }
                     permissionLauncher.launch(Manifest.permission.CAMERA)
                 }
                 ScreenStatus.Streaming, ScreenStatus.Starting -> enabled = false
@@ -148,10 +157,28 @@ fun VisionAssistRoute() {
         },
         detectionState = detectionState,
         onRetryDetection = { session++ },
+        preferences = preferences,
+        onLayout = onLayout, onTheme = onTheme, onDeveloper = onDeveloper,
+        preferenceError = preferenceError,
+        recentAnnouncements = recent,
+        recentHazardWarnings = hazards,
+        connectionSummary = "Asistent AI: " + when (voiceState.phase) {
+            ro.visionassist.core.voice.VoicePhase.Disconnected -> "deconectat"
+            ro.visionassist.core.voice.VoicePhase.Connecting -> "se conectează"
+            ro.visionassist.core.voice.VoicePhase.Listening -> "ascultă"
+            ro.visionassist.core.voice.VoicePhase.Speaking -> "vorbește"
+            ro.visionassist.core.voice.VoicePhase.Error -> "eroare de conexiune"
+        } + if (voiceState.warningActive) ". Anunțul local are prioritate." else "",
         voiceControls = {
-            VoiceControls(voice, announcements, snapshots, status == ScreenStatus.Streaming, foreground)
+            VoiceControls(voice, announcements, snapshots, status == ScreenStatus.Streaming, foreground,
+                showLocal = false)
+        },
+        settingsControls = {
+            VoiceControls(voice, announcements, snapshots, status == ScreenStatus.Streaming, foreground,
+                showConversation = false, localEnabled = preferences.localAnnouncements,
+                onLocalEnabledChange = onLocalAnnouncements)
             GroundPanel(groundEnabled,groundState,groundMetrics,
-                onToggle = { groundEnabled = !groundEnabled },
+                onToggle = {},
                 onDepth = {
                     enabled = false
                     snapshots.cancel(); announcements.stop(); voice.stop()

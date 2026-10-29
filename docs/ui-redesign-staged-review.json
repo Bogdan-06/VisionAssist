@@ -1,0 +1,6 @@
+{
+  "staged_files": 51,
+  "credential_findings": [],
+  "protected_or_generated_files_staged": [],
+  "scope": "UI sources, optional depth-worker enable guard, Gradle DataStore dependency and validation evidence. Heuristic credential review; no secret values printed."
+}

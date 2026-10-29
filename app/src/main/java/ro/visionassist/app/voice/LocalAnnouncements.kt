@@ -34,6 +34,10 @@ class LocalAnnouncements(context: Context, private val voice: VoiceClient) : Aut
     private var lastLabel: String? = null
     private val mutableStatus = MutableStateFlow("Se verifică vocea română offline…")
     val status = mutableStatus.asStateFlow()
+    private val mutableRecent = MutableStateFlow<List<String>>(emptyList())
+    val recent = mutableRecent.asStateFlow()
+    private val mutableHazards = MutableStateFlow<List<String>>(emptyList())
+    val recentHazards = mutableHazards.asStateFlow()
     private var ready = false
     val isReady get() = ready && !closed
     var enabled = false
@@ -88,8 +92,8 @@ class LocalAnnouncements(context: Context, private val voice: VoiceClient) : Aut
         }
         if (vibrator?.hasVibrator() == true) vibrator.vibrate(VibrationEffect.createWaveform(longArrayOf(0,100,80,180),-1))
     }
-    fun testVoice() { if (ready && !closed && !groundSpeaking) speak("Acesta este un test al vocii locale. Nu este un avertisment despre mediul din jur.") }
-    private fun speak(text: String, ground: Boolean = false) {
+    fun testVoice() { if (ready && !closed && !groundSpeaking) speak("Acesta este un test al vocii locale. Nu este un avertisment despre mediul din jur.", record = false) }
+    private fun speak(text: String, ground: Boolean = false, record: Boolean = true) {
         // Acquire the new interruption before releasing the old one: no AI audio gap
         // when a ground warning preempts a lower-priority object announcement.
         val previous = activeId
@@ -99,6 +103,10 @@ class LocalAnnouncements(context: Context, private val voice: VoiceClient) : Aut
         activeId = id; groundSpeaking = ground
         previous?.let { voice.endLocalWarning(it) }
         if (tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, id) == TextToSpeech.ERROR) finish(id)
+        else if (record) {
+            val history = if (ground) mutableHazards else mutableRecent
+            history.value = (listOf(text) + history.value).take(5)
+        }
         // A broken engine must never leave the microphone/AI permanently muted.
         main.postDelayed({ if (activeId == id) { tts.stop(); finish(id) } }, 8_000)
     }

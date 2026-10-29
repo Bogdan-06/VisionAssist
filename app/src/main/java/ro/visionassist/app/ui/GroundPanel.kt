@@ -23,8 +23,9 @@ fun GroundPanel(enabled: Boolean, state: DetectionUiState, metrics: GroundMetric
     Column {
         Text(ro("Gropi · model experimental"), Modifier.semantics { heading() })
         Text(ro("Analiza rulează pe telefon. Modelul poate rata gropi și poate confunda alte suprafețe cu gropi. Nu detectează borduri, trepte sau denivelări generale."))
-        OutlinedButton(onClick=onToggle, modifier=Modifier.fillMaxWidth().heightIn(min=56.dp)) {
-            Text(ro(if (enabled) "Oprește analiza experimentală a gropilor" else "Pornește analiza experimentală a gropilor"))
+        Text(ro("Detectorul experimental este dezactivat până la validare. Avertizările pentru gropi nu sunt disponibile."))
+        OutlinedButton(onClick=onToggle, enabled=false, modifier=Modifier.fillMaxWidth().heightIn(min=56.dp)) {
+            Text(ro("Analiză experimentală indisponibilă"))
         }
         OutlinedButton(onClick=onDepth, modifier=Modifier.fillMaxWidth().heightIn(min=56.dp)) {
             Text(ro("Deschide experimentul de adâncime"))
