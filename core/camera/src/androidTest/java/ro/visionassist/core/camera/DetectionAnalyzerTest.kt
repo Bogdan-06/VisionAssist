@@ -17,10 +17,12 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicReference
 import ro.visionassist.core.ground.GroundFailure
+import kotlinx.coroutines.*
+import java.util.concurrent.Executors
 
 class DetectionAnalyzerTest {
     private val instrumentation = InstrumentationRegistry.getInstrumentation()
-    private fun proxy(bitmap: Bitmap?, rotation: Int, closed: () -> Unit): ImageProxy {
+    private fun proxy(bitmap: Bitmap?, rotation: Int, beforeConversion: () -> Unit = {}, closed: () -> Unit): ImageProxy {
         val info = Proxy.newProxyInstance(ImageInfo::class.java.classLoader,arrayOf(ImageInfo::class.java)) { _,method,_ ->
             when (method.name) { "getRotationDegrees" -> rotation; else -> error("Unexpected ${method.name}") }
         } as ImageInfo
@@ -30,11 +32,45 @@ class DetectionAnalyzerTest {
                 "getWidth" -> bitmap?.width ?: 640
                 "getHeight" -> bitmap?.height ?: 480
                 "getCropRect" -> Rect(0,0,bitmap?.width ?: 640,bitmap?.height ?: 480)
-                "toBitmap" -> bitmap ?: error("Injected frame conversion failure")
+                "toBitmap" -> { beforeConversion(); bitmap ?: error("Injected frame conversion failure") }
                 "close" -> { closed(); null }
                 else -> error("Unexpected ${method.name}")
             }
         } as ImageProxy
+    }
+
+    @Test fun cancelledAnalyzerCannotSupplyAnOldFrameToANewSessionPhoto() = runBlocking {
+        val image = instrumentation.context.assets.open("cats_and_dogs.jpg").use { BitmapFactory.decodeStream(it) }
+        val entered = CountDownLatch(1); val release = CountDownLatch(1)
+        val broker = CameraSnapshotRequest()
+        val failure = AtomicReference<DetectionFailure?>()
+        val oldWorker = Executors.newSingleThreadExecutor()
+        val old = DetectionAnalyzer(instrumentation.targetContext, { _,_,_,_ -> fail("Cancelled analyzer published") },
+            { failure.set(it) }, snapshotRequest = broker)
+        var fresh: DetectionAnalyzer? = null
+        val oldTask = oldWorker.submit {
+            old.initialize()
+            old.analyze(proxy(image.copy(Bitmap.Config.ARGB_8888, false), 0, beforeConversion = {
+                entered.countDown(); check(release.await(10, TimeUnit.SECONDS))
+            }) {})
+        }
+        try {
+            assertTrue(entered.await(10, TimeUnit.SECONDS))
+            old.cancel()
+            fresh = DetectionAnalyzer(instrumentation.targetContext, { _,_,_,_ -> }, { failure.set(it) }, snapshotRequest = broker)
+            fresh.initialize()
+            val requested = async(start = CoroutineStart.UNDISPATCHED) { broker.capture() }
+            release.countDown(); oldTask.get(10, TimeUnit.SECONDS)
+            oldWorker.submit { old.close() }.get(10, TimeUnit.SECONDS)
+            assertFalse(requested.isCompleted)
+            fresh.analyze(proxy(image.copy(Bitmap.Config.ARGB_8888, false), 0) {})
+            assertTrue(requested.await().isNotEmpty())
+            assertNull(failure.get())
+        } finally {
+            release.countDown(); oldTask.get(10, TimeUnit.SECONDS)
+            oldWorker.submit { old.close() }.get(10, TimeUnit.SECONDS)
+            oldWorker.shutdown(); fresh?.close(); broker.cancel(); image.recycle()
+        }
     }
 
     @Test fun rotatedCameraFrameRunsRealModelAndClosesImage() {

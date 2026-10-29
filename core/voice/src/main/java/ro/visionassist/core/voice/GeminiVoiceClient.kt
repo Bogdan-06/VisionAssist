@@ -35,8 +35,21 @@ class GeminiVoiceClient(context: Context, private val allowLoopbackHttp: Boolean
     private var generation = 0
     private var closed = false
     private var ready = false
-    private var pendingTool: String? = null
     private val warnings = mutableSetOf<String>()
+    private val images = ImageRequestCoordinator(
+        canSend = { ready && !closed && warnings.isEmpty() },
+        dispatch = { tool, jpeg, commit ->
+            pcm?.interrupt()
+            if (tool == null || send(GeminiEvents.toolResult(tool, "request_camera_image", "photo_confirmed"))) {
+                val event = GeminiEvents.image(jpeg)
+                commit { send(event) }
+            }
+        },
+        decline = { tool, reason -> if (ready) send(GeminiEvents.toolResult(tool, "request_camera_image", reason)) },
+        changed = { requested, busy -> mutableState.value = mutableState.value.copy(imageRequested = requested, imageBusy = busy) },
+        sent = { mutableState.value = mutableState.value.copy(message = "O fotografie a fost trimisă către Google Gemini.") },
+        captureFailed = { mutableState.value = mutableState.value.copy(message = "Fotografia nu a putut fi trimisă. Încearcă din nou.") }
+    )
 
     override fun start(settings: BackendSettings) {
         if (closed || warnings.isNotEmpty()) return
@@ -118,44 +131,17 @@ class GeminiVoiceClient(context: Context, private val allowLoopbackHttp: Boolean
                 check(pcm?.enqueue(decoded) == true)
             }
             val cancelled = event.optJSONObject("toolCallCancellation")?.optJSONArray("ids")
-            if (cancelled != null && (0 until cancelled.length()).any { cancelled.optString(it) == pendingTool }) {
-                pendingTool = null; mutableState.value = mutableState.value.copy(imageRequested = false)
-            }
+            if (cancelled != null) for (i in 0 until cancelled.length()) images.cancelTool(cancelled.optString(i))
             val calls = event.optJSONObject("toolCall")?.optJSONArray("functionCalls")
             if (calls != null) for (i in 0 until calls.length()) {
                 val call = calls.getJSONObject(i); val id = call.getString("id"); val name = call.getString("name")
-                if (name == "request_camera_image" && pendingTool == null && !state.value.imageBusy) {
-                    pendingTool = id; mutableState.value = mutableState.value.copy(imageRequested = true)
-                } else send(GeminiEvents.toolResult(id, name, "unavailable"))
+                if (name != "request_camera_image" || !images.request(id)) send(GeminiEvents.toolResult(id, name, "unavailable"))
             }
         } catch (_: Exception) { fail("Fluxul Gemini nu poate fi redat în siguranță. Repornește conversația.") }
     }
 
-    override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) {
-        if (!ready || warnings.isNotEmpty() || state.value.imageBusy) return
-        val gen = generation; val tool = pendingTool
-        mutableState.value = mutableState.value.copy(imageBusy = true)
-        try {
-            val jpeg = capture()
-            if (gen != generation || !ready || warnings.isNotEmpty()) return
-            // A decline or server cancellation during capture revokes that pending tool request.
-            if (tool != null && pendingTool != tool) return
-            require(jpeg.isNotEmpty() && jpeg.size <= 44_000)
-            pcm?.interrupt()
-            // A single explicit user turn keeps the image and its description request together.
-            if (tool != null) send(GeminiEvents.toolResult(tool, "request_camera_image", "photo_confirmed"))
-            if (send(GeminiEvents.image(jpeg))) {
-                pendingTool = null
-                mutableState.value = mutableState.value.copy(imageRequested = false, message = "O fotografie a fost trimisă către Google Gemini.")
-            }
-        } catch (cancelled: CancellationException) { throw cancelled }
-        catch (_: Exception) { if (gen == generation) mutableState.value = mutableState.value.copy(message = "Fotografia nu a putut fi trimisă. Încearcă din nou.") }
-        finally { if (gen == generation) mutableState.value = mutableState.value.copy(imageBusy = false) }
-    }
-    override fun declineImage(reason: String) {
-        pendingTool?.let { send(GeminiEvents.toolResult(it, "request_camera_image", "user_declined")) }
-        pendingTool = null; mutableState.value = mutableState.value.copy(imageRequested = false)
-    }
+    override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) = images.submit(capture)
+    override fun declineImage(reason: String) = images.cancel(reason)
     private fun send(event: JSONObject): Boolean {
         if (socket?.queueSize()?.let { it <= 128_000 } == true && socket?.send(event.toString()) == true) return true
         fail("Conexiunea Gemini nu poate transmite date. Repornește conversația."); return false
@@ -174,9 +160,10 @@ class GeminiVoiceClient(context: Context, private val allowLoopbackHttp: Boolean
     private fun fail(message: String) { cleanup(); mutableState.value = VoiceState(VoicePhase.Error, message, warningActive = warnings.isNotEmpty()) }
     private fun cleanup() {
         generation++; ready = false
+        images.cancel("session_ended", notify = false)
         pcm?.close(); pcm = null
         socket?.cancel(); socket = null; http.cancel()
-        connection?.cancel(); connection = null; timeout?.cancel(); timeout = null; pendingTool = null
+        connection?.cancel(); connection = null; timeout?.cancel(); timeout = null
         focus?.let { audio.abandonAudioFocusRequest(it) }; focus = null
         previousMode?.let { audio.mode = it }; previousMode = null
     }

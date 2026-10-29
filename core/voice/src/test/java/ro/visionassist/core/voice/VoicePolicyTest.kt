@@ -4,6 +4,15 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class VoicePolicyTest {
+    @Test fun imageAlreadyDispatchedDoesNotHideAFollowingTransportErrorOrClaimRecall() {
+        val failed = VoiceState(VoicePhase.Error, "Conexiunea s-a întrerupt.").afterImageDispatch()
+        assertEquals(VoicePhase.Error, failed.phase)
+        assertTrue(failed.message.contains("Fotografia a fost trimisă"))
+        assertTrue(failed.message.contains("conversația s-a întrerupt"))
+        val normal = VoiceState(VoicePhase.Listening).afterImageDispatch()
+        assertEquals(VoicePhase.Listening, normal.phase)
+        assertEquals("Fotografia solicitată a fost trimisă.", normal.message)
+    }
     @Test fun overlappingWarningsAndLateCompletionsCannotUnmuteAi() {
         val gate = AudioPriorityGate()
         gate.begin("a"); gate.begin("b"); gate.end("a"); gate.cleared()

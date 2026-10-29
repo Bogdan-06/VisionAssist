@@ -37,13 +37,15 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
                   snapshots: CameraSnapshotRequest, cameraActive: Boolean, foreground: Boolean,
                   showConversation: Boolean = true, showLocal: Boolean = true,
                   localEnabled: Boolean = announcements.enabled,
-                  onLocalEnabledChange: (Boolean) -> Unit = { announcements.enabled = it }) {
+                  onLocalEnabledChange: (Boolean) -> Unit = { announcements.enabled = it },
+                  settingsStore: BackendSettingsStore? = null) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val state by client.state.collectAsStateWithLifecycle()
     val localStatus by announcements.status.collectAsStateWithLifecycle()
-    val store = remember { BackendSettingsStore(context) }
-    var settings by remember { mutableStateOf(store.load()) }
+    val store = remember(context, settingsStore) { settingsStore ?: BackendSettingsStore(context) }
+    var loaded by remember(store) { mutableStateOf(store.load()) }
+    val settings = (loaded as? BackendSettingsLoadResult.Available)?.settings ?: BackendSettings("", "", VoiceProvider.Gemini)
     var showSettings by remember { mutableStateOf(false) }
     var permissionDenied by remember { mutableStateOf(false) }
     var startWhenResumed by remember { mutableStateOf(false) }
@@ -55,6 +57,10 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
     }
     val running = state.phase in setOf(VoicePhase.Connecting, VoicePhase.Listening, VoicePhase.Speaking)
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (loaded == BackendSettingsLoadResult.Unreadable) {
+            Ro("Configurația vocală salvată nu a putut fi citită. Datele nu au fost șterse. Reintrodu adresa și codul de acces în configurarea serverului.",
+                Modifier.semantics { liveRegion = LiveRegionMode.Polite })
+        }
         if (showConversation) {
         Ro("Asistent vocal în română", Modifier.semantics { heading() })
         val phase = when (state.phase) {
@@ -67,13 +73,14 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
         Ro(if (state.warningActive) "$phase. Anunțul local are prioritate; microfonul și asistentul sunt dezactivate temporar." else phase,
             Modifier.semantics { liveRegion = LiveRegionMode.Polite })
         Ro(state.message)
-        Ro("Pornirea trimite vocea către ${settings.provider.label}. Fotografiile necesită confirmarea ta.")
+        Ro(if (loaded == BackendSettingsLoadResult.Unreadable) "Reconfigurează furnizorul vocal înainte de a porni conversația."
+            else "Pornirea trimite vocea către ${settings.provider.label}. Fotografiile necesită confirmarea ta.")
         Button(onClick = {
             if (running) { startWhenResumed = false; client.stop() }
             else if (settings.url.isBlank() || settings.accessToken.isBlank()) showSettings = true
             else if (context.checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) client.start(settings)
             else launcher.launch(Manifest.permission.RECORD_AUDIO)
-        }, enabled = !state.warningActive, modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+        }, enabled = running || !state.warningActive, modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
             Ro(if (running) "Oprește conversația AI" else "Pornește conversația AI")
         }
         Ro("Oprirea conversației sau ieșirea din aplicație închide microfonul.")
@@ -89,10 +96,11 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
             modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
             Ro(if (state.imageBusy) "Se pregătește fotografia…" else "Ce este în fața mea? Trimite o fotografie")
         }
-        if (state.imageRequested) TextButton(onClick = { client.declineImage() }, modifier = Modifier.heightIn(min = 56.dp)) { Ro("Nu trimite fotografia") }
+        if (state.imageRequested || state.imageBusy) TextButton(onClick = { client.declineImage() }, modifier = Modifier.heightIn(min = 56.dp)) { Ro("Nu trimite fotografia") }
         if (!cameraActive) Ro("Pornește camera pentru a putea trimite o fotografie nouă.")
         }
-        if (!showConversation) Ro("Furnizor vocal: ${settings.provider.label}. Oprește conversația pentru a modifica serverul.")
+        if (!showConversation) Ro(if (loaded == BackendSettingsLoadResult.Unreadable) "Furnizorul vocal nu poate fi citit din configurația salvată."
+            else "Furnizor vocal: ${settings.provider.label}. Oprește conversația pentru a modifica serverul.")
         OutlinedButton(onClick = { showSettings = true }, enabled = !running,
             modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) { Ro("Configurarea serverului vocal") }
         if (showLocal) {
@@ -111,7 +119,7 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
         var url by remember { mutableStateOf(settings.url) }
         var token by remember { mutableStateOf(settings.accessToken) }
         var provider by remember { mutableStateOf(settings.provider) }
-        var error by remember { mutableStateOf(false) }
+        var error by remember { mutableStateOf<String?>(null) }
         AlertDialog(onDismissRequest = { showSettings = false }, title = { Ro("Serverul VisionAssist") }, text = {
             Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Ro("Alege furnizorul. Cheile Google și OpenAI rămân exclusiv pe server. Introdu adresa serverului și codul său privat de acces.")
@@ -127,14 +135,19 @@ fun VoiceControls(client: VoiceClient, announcements: LocalAnnouncements,
                 OutlinedTextField(value = url, onValueChange = { url = it }, label = { Ro("Adresa HTTPS a serverului") }, singleLine = true)
                 OutlinedTextField(value = token, onValueChange = { token = it }, label = { Ro("Cod de acces al serverului") },
                     visualTransformation = PasswordVisualTransformation(), singleLine = true)
-                if (error) Ro("Verifică adresa și codul de acces (minimum 32 de caractere). Cheile Google și OpenAI nu sunt acceptate aici.")
+                error?.let { Ro(it, Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
             }
         }, confirmButton = {
             TextButton(onClick = {
+                val value = BackendSettings(url.trim(), token.trim(), provider)
+                try { value.validate(BuildConfig.DEBUG) }
+                catch (_: Exception) {
+                    error = "Verifică adresa și codul de acces (minimum 32 de caractere). Cheile Google și OpenAI nu sunt acceptate aici."
+                    return@TextButton
+                }
                 try {
-                    val value = BackendSettings(url.trim(), token.trim(), provider); value.validate(BuildConfig.DEBUG)
-                    store.save(value); settings = value; showSettings = false
-                } catch (_: Exception) { error = true }
+                    store.save(value); loaded = BackendSettingsLoadResult.Available(value); showSettings = false
+                } catch (_: Exception) { error = "Configurația vocală nu a putut fi salvată. Încearcă din nou. Datele de acces nu sunt afișate." }
             }, modifier = Modifier.heightIn(min = 56.dp)) { Ro("Salvează") }
         }, dismissButton = { TextButton(onClick = { showSettings = false }, modifier = Modifier.heightIn(min = 56.dp)) { Ro("Anulează") } })
     }

@@ -9,7 +9,12 @@ data class VoiceState(
     val warningActive: Boolean = false
 )
 
+internal fun VoiceState.afterImageDispatch() = copy(message =
+    if (phase == VoicePhase.Error) "Fotografia a fost trimisă, dar conversația s-a întrerupt. Repornește conversația."
+    else "Fotografia solicitată a fost trimisă.")
+
 data class BackendSettings(val url: String, val accessToken: String, val provider: VoiceProvider = VoiceProvider.OpenAI) {
+    override fun toString() = "BackendSettings(provider=$provider, credentials=redacted)"
     fun validate(allowLoopbackHttp: Boolean) {
         val uri = java.net.URI(url)
         require(uri.userInfo == null && uri.query == null && uri.fragment == null && !uri.host.isNullOrBlank())

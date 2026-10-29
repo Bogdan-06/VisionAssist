@@ -31,6 +31,7 @@ class DetectionAnalyzer(
     private val onGroundError: (GroundFailure) -> Unit = {}
 ) : ImageAnalysis.Analyzer, AutoCloseable {
     private val cancelled = AtomicBoolean(false)
+    private val snapshotSource = snapshotRequest?.beginSource()
     private var failed = false
     private var detector: ObjectDetector? = null
     private var ground: GroundWorker? = null
@@ -64,7 +65,8 @@ class DetectionAnalyzer(
                 bitmap, 0, 0, bitmap.width, bitmap.height,
                 Matrix().apply { postRotate(image.imageInfo.rotationDegrees.toFloat()) }, true
             )
-            snapshotRequest?.offer(upright)
+            if (cancelled.get()) return
+            snapshotSource?.let { snapshotRequest?.offer(upright, it) }
             ground?.offer(upright, receivedAt) { result, metrics ->
                 if (!cancelled.get()) onGroundResult(result, metrics, source)
             }
@@ -88,9 +90,12 @@ class DetectionAnalyzer(
         failed = true
         if (!cancelled.get()) onError(reason)
     }
-    fun cancel() { cancelled.set(true) }
-    override fun close() {
+    fun cancel() {
         cancelled.set(true)
+        snapshotSource?.let { snapshotRequest?.endSource(it) }
+    }
+    override fun close() {
+        cancel()
         ground?.close()
         ground = null
         detector?.close()

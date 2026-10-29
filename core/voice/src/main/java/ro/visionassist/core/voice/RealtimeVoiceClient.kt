@@ -48,7 +48,24 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
     private var sessionSeen = false
     private var attempts = 0
     private var settings: BackendSettings? = null
-    private var pendingImageCall: String? = null
+    private val images = ImageRequestCoordinator(
+        canSend = { ready && !closed && !priority.muted },
+        dispatch = { callId, bytes, commit ->
+            if (send(RealtimeEvents.simple("response.cancel")) &&
+                send(RealtimeEvents.simple("output_audio_buffer.clear")) &&
+                (callId == null || send(RealtimeEvents.toolResult(callId, "user_confirmed_image_follows")))) {
+                val event = RealtimeEvents.image(bytes, Base64.encodeToString(bytes, Base64.NO_WRAP))
+                if (commit { send(event) }) send(RealtimeEvents.simple("response.create"))
+            }
+        },
+        decline = { callId, reason ->
+            if (ready && send(RealtimeEvents.toolResult(callId, reason)) && !priority.muted)
+                send(RealtimeEvents.simple("response.create"))
+        },
+        changed = { requested, busy -> mutableState.value = mutableState.value.copy(imageRequested = requested, imageBusy = busy) },
+        sent = { mutableState.value = mutableState.value.afterImageDispatch() },
+        captureFailed = { mutableState.value = mutableState.value.copy(message = "Nu există o imagine nouă. Pornește camera și încearcă din nou.") }
+    )
     private var focus: AudioFocusRequest? = null
     private var previousMode: Int? = null
     private var networkRegistered = false
@@ -57,7 +74,7 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
     }
 
     override fun start(settings: BackendSettings) {
-        if (closed) return
+        if (closed || priority.warningActive) return
         stop()
         try { settings.validate(allowLoopbackHttp) }
         catch (_: Exception) { fail("Configurează adresa HTTPS și codul de acces al serverului. Nu introduce cheia OpenAI pe telefon."); return }
@@ -80,7 +97,7 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
                 val secret = transport.clientSecret(config)
                 ensureActive()
                 if (gen != generation) return@launch
-                acquireAudioFocus()
+                acquireAudioFocus(gen)
                 initializeNative(gen)
                 val rtc = PeerConnection.RTCConfiguration(emptyList()).apply {
                     sdpSemantics = PeerConnection.SdpSemantics.UNIFIED_PLAN
@@ -190,9 +207,8 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
             "response.function_call_arguments.done" -> {
                 val callId = event.optString("call_id")
                 if (event.optString("name") == "request_camera_image" && callId.isNotBlank()) {
-                    if (pendingImageCall == null) {
-                        pendingImageCall = callId
-                        mutableState.value = mutableState.value.copy(imageRequested = true, message = "Confirmă trimiterea unei fotografii pe telefon.")
+                    if (images.request(callId)) {
+                        mutableState.value = mutableState.value.copy(message = "Confirmă trimiterea unei fotografii pe telefon.")
                     } else send(RealtimeEvents.toolResult(callId, "another_request_pending"))
                 }
             }
@@ -207,6 +223,7 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
 
     override fun beginLocalWarning(id: String) {
         priority.begin(id); applyMute() // Native mute BEFORE network cancellation or TTS.
+        images.cancel("local_warning")
         mutableState.value = mutableState.value.copy(warningActive = true)
         if (ready) clearRemoteAudio()
     }
@@ -228,31 +245,8 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         microphone?.setEnabled(!muted)
     }
 
-    override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) {
-        if (!ready || priority.muted || mutableState.value.imageBusy) return
-        val gen = generation
-        mutableState.value = mutableState.value.copy(imageBusy = true)
-        try {
-            val bytes = withTimeout(3_000) { capture() }
-            if (gen != generation || !ready || priority.muted) return
-            send(RealtimeEvents.simple("response.cancel"))
-            send(RealtimeEvents.simple("output_audio_buffer.clear"))
-            pendingImageCall?.let { check(send(RealtimeEvents.toolResult(it, "user_confirmed_image_follows"))) }
-            pendingImageCall = null
-            check(send(RealtimeEvents.image(bytes, Base64.encodeToString(bytes, Base64.NO_WRAP))))
-            check(send(RealtimeEvents.simple("response.create")))
-            mutableState.value = mutableState.value.copy(imageRequested = false, message = "Fotografia solicitată a fost trimisă.")
-        } catch (_: CancellationException) {
-            if (gen == generation) declineImage("capture_cancelled")
-        } catch (_: Exception) {
-            if (gen == generation) { declineImage("camera_unavailable"); mutableState.value = mutableState.value.copy(message = "Nu există o imagine nouă. Pornește camera și încearcă din nou.") }
-        } finally { if (gen == generation) mutableState.value = mutableState.value.copy(imageBusy = false) }
-    }
-    override fun declineImage(reason: String) {
-        pendingImageCall?.let { send(RealtimeEvents.toolResult(it, reason)); send(RealtimeEvents.simple("response.create")) }
-        pendingImageCall = null
-        mutableState.value = mutableState.value.copy(imageRequested = false)
-    }
+    override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) = images.submit(capture)
+    override fun declineImage(reason: String) = images.cancel(reason)
     private fun send(event: JSONObject): Boolean {
         val data = channel ?: return false
         return try {
@@ -285,7 +279,8 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         mutableState.value = VoiceState(warningActive = priority.warningActive)
     }
     private fun cleanup() {
-        ++generation; ready = false; sessionSeen = false; pendingImageCall = null
+        ++generation; ready = false; sessionSeen = false
+        images.cancel("session_ended", notify = false)
         work?.cancel(); work = null; watchdog?.cancel(); clearTimeout?.cancel()
         http?.cancel(); http = null
         audioDevice?.setSpeakerMute(true); audioDevice?.setMicrophoneMute(true)
@@ -297,12 +292,12 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         previousMode?.let { audio.mode = it }; previousMode = null
         priority.resetTransport()
     }
-    private fun acquireAudioFocus() {
+    private fun acquireAudioFocus(gen: Int) {
         val request = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
             .setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_VOICE_COMMUNICATION)
                 .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
             .setOnAudioFocusChangeListener({ change ->
-                if (change < 0) scope.launch { if (wanted) fail("Conversația a fost oprită de o altă aplicație audio. O poți reporni.") }
+                if (change < 0) dispatch(gen) { if (wanted) fail("Conversația a fost oprită de o altă aplicație audio. O poți reporni.") }
             }, Handler(Looper.getMainLooper())).build()
         check(audio.requestAudioFocus(request) == AudioManager.AUDIOFOCUS_REQUEST_GRANTED)
         focus = request; previousMode = audio.mode; audio.mode = AudioManager.MODE_IN_COMMUNICATION

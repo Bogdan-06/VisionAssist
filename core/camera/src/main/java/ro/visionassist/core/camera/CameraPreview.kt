@@ -221,8 +221,7 @@ fun CameraPreview(
         }, main)
         onDispose {
             disposed = true
-            snapshotRequest?.cancel()
-            analyzer.cancel()
+            analyzer.cancel() // Revokes only this analyzer's snapshot source, not a newer session.
             analysis.clearAnalyzer()
             view.previewStreamState.removeObserver(streamObserver)
             boundCamera?.cameraInfo?.cameraState?.removeObserver(cameraObserver)

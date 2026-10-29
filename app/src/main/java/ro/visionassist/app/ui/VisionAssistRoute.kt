@@ -30,6 +30,7 @@ import ro.visionassist.core.camera.CameraPreview
 import ro.visionassist.core.camera.PreviewStatus
 import ro.visionassist.core.camera.CameraSnapshotRequest
 import ro.visionassist.core.voice.SelectableVoiceClient
+import ro.visionassist.core.voice.VoiceClient
 import ro.visionassist.app.BuildConfig
 import ro.visionassist.app.voice.LocalAnnouncements
 import ro.visionassist.app.voice.VoiceControls
@@ -41,7 +42,8 @@ import ro.visionassist.core.detection.DetectionFailure
 fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout.Compact),
                       preferenceError: String? = null,
                       onLayout: (InterfaceLayout) -> Unit = {}, onTheme: (ThemeChoice) -> Unit = {},
-                      onDeveloper: (Boolean) -> Unit = {}, onLocalAnnouncements: (Boolean) -> Unit = {}) {
+                      onDeveloper: (Boolean) -> Unit = {}, onLocalAnnouncements: (Boolean) -> Unit = {},
+                      voiceClient: VoiceClient? = null) {
     val detectionViewModel: DetectionViewModel = viewModel()
     val detectionState by detectionViewModel.state.collectAsStateWithLifecycle()
     val groundViewModel: DetectionViewModel = viewModel(key = "ground")
@@ -50,7 +52,7 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
     val groundEnabled = false
     var groundMetrics by remember { mutableStateOf<GroundMetrics?>(null) }
     val context = LocalContext.current
-    val voice = remember { SelectableVoiceClient(context, BuildConfig.DEBUG) }
+    val voice = remember(context, voiceClient) { voiceClient ?: SelectableVoiceClient(context, BuildConfig.DEBUG) }
     val snapshots = remember { CameraSnapshotRequest() }
     val announcements = remember { LocalAnnouncements(context, voice) }
     val voiceState by voice.state.collectAsStateWithLifecycle()
@@ -58,7 +60,7 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
     val hazards by announcements.recentHazards.collectAsStateWithLifecycle()
     LaunchedEffect(preferences.localAnnouncements) { announcements.enabled = preferences.localAnnouncements }
     DisposableEffect(voice) {
-        onDispose { snapshots.cancel(); announcements.close(); voice.close() }
+        onDispose { voice.stop(); snapshots.cancel(); announcements.close(); voice.close() }
     }
     val lifecycleOwner = LocalLifecycleOwner.current
     val cameraPreferences = remember(context) { context.getSharedPreferences("camera_permission", Activity.MODE_PRIVATE) }
@@ -87,7 +89,9 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
                 }
                 Lifecycle.Event.ON_PAUSE -> {
                     foreground = false
-                    snapshots.cancel(); announcements.stop(); voice.stop()
+                    // Stop transport before releasing local audio priority; never briefly
+                    // re-enable a conversation microphone while the app is backgrounding.
+                    voice.stop(); snapshots.cancel(); announcements.stop()
                 }
                 else -> Unit
             }
@@ -99,7 +103,9 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
     val shouldAnalyze = permission == CameraPermission.Granted && enabled && foreground &&
         previewStatus != PreviewStatus.Error && previewStatus != PreviewStatus.Unavailable
     DisposableEffect(shouldAnalyze, session) {
-        if (shouldAnalyze) detectionViewModel.start() else { detectionViewModel.stop(); snapshots.cancel(); announcements.stop() }
+        if (shouldAnalyze) detectionViewModel.start() else {
+            detectionViewModel.stop(); snapshots.cancel(); voice.declineImage("camera_unavailable"); announcements.stop()
+        }
         onDispose { detectionViewModel.stop() }
     }
     DisposableEffect(shouldAnalyze, groundEnabled, session) {
@@ -118,7 +124,11 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
                     cameraPreferences.edit { putBoolean("requested", true) }
                     permissionLauncher.launch(Manifest.permission.CAMERA)
                 }
-                ScreenStatus.Streaming, ScreenStatus.Starting -> enabled = false
+                ScreenStatus.Streaming, ScreenStatus.Starting -> {
+                    snapshots.cancel()
+                    voice.declineImage("camera_stopped")
+                    enabled = false
+                }
                 else -> {
                     permission = permissionNow()
                     previewStatus = PreviewStatus.Starting
@@ -137,7 +147,12 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
                 key(session) {
                     CameraPreview(
                         modifier = modifier,
-                        onStatus = { previewStatus = it },
+                        onStatus = {
+                            if (it == PreviewStatus.Error || it == PreviewStatus.Unavailable) {
+                                snapshots.cancel(); voice.declineImage("camera_unavailable")
+                            }
+                            previewStatus = it
+                        },
                         onDetections = { result -> detectionViewModel.onResult(result); announcements.observe(result) },
                         onDetectionError = detectionViewModel::onError,
                         onAnalysisReset = detectionViewModel::clearResults,
@@ -181,7 +196,7 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
                 onToggle = {},
                 onDepth = {
                     enabled = false
-                    snapshots.cancel(); announcements.stop(); voice.stop()
+                    voice.stop(); snapshots.cancel(); announcements.stop()
                     context.startActivity(Intent(context,ro.visionassist.app.depth.DepthActivity::class.java))
                 })
         },
