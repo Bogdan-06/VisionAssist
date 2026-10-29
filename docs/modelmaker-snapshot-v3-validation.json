@@ -1,0 +1,147 @@
+{
+  "split": "validation",
+  "images": 1330,
+  "available_images": 1330,
+  "partial": false,
+  "model_sha256": "60f4fcd74d60916378eebc0cc9b59eb872695770db6595c789a3d00bbcd80746",
+  "annotations_sha256": "1085e9245ee86e7b50d0d5e50278d044b8de39c2e29b88b611fc64a28ba4c479",
+  "data_provenance": {
+    "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+    "manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+    "classes": [
+      "pothole"
+    ],
+    "counts": {
+      "train": {
+        "images": 3000,
+        "boxes": 2111,
+        "negatives": 1993
+      },
+      "validation": {
+        "images": 1330,
+        "boxes": 526,
+        "negatives": 1086
+      }
+    },
+    "test_images_exported": false,
+    "image_folder": "images",
+    "source": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+    "license": "Release CC BY 4.0; author repository images CC BY-SA 4.0; retain both notices.",
+    "transformations": "Original JPEG bytes; VOC-derived xyxy boxes converted to COCO xywh only."
+  },
+  "runtime": "MediaPipe Tasks Python CPU; metadata-based detector decoding",
+  "iou_threshold": 0.5,
+  "mediapipe_version": "0.10.21",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "pothole"
+    ]
+  },
+  "metrics": {
+    "0.1": {
+      "tp": 149,
+      "fp": 494,
+      "fn": 377,
+      "precision": 0.2317262830482115,
+      "recall": 0.2832699619771863,
+      "f1": 0.2549187339606501
+    },
+    "0.2": {
+      "tp": 44,
+      "fp": 37,
+      "fn": 482,
+      "precision": 0.5432098765432098,
+      "recall": 0.08365019011406843,
+      "f1": 0.14497528830313014
+    },
+    "0.3": {
+      "tp": 8,
+      "fp": 5,
+      "fn": 518,
+      "precision": 0.6153846153846154,
+      "recall": 0.015209125475285171,
+      "f1": 0.029684601113172542
+    },
+    "0.4": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.5": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.6": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.65": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.7": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.75": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.8": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.9": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 526,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "task_detect_ms": {
+    "p50": 73.14229999610689,
+    "p95": 106.59684501879381,
+    "p99": 127.62736700213281
+  },
+  "processing_ms": {
+    "p50": 84.83215000887867,
+    "p95": 118.57626498967875,
+    "p99": 140.52871599764336
+  },
+  "limitations": [
+    "Task detect timing includes graph preprocessing/postprocessing; not bare interpreter or phone timing.",
+    "Validation is used during development; not an independent safety evaluation.",
+    "Road imagery does not establish walking-camera warning reliability."
+  ]
+}

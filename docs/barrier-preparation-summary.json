@@ -1,0 +1,104 @@
+{
+  "splits": {
+    "train": {
+      "images": 3911,
+      "target_boxes": {
+        "stairs": 1090,
+        "step": 1665,
+        "curb": 822
+      },
+      "no_target_images": 1565,
+      "annotation_tasks": {
+        "11": 634,
+        "7": 656,
+        "8": 644,
+        "10": 657,
+        "9": 654,
+        "12": 666
+      }
+    },
+    "validation": {
+      "images": 825,
+      "target_boxes": {
+        "curb": 185,
+        "stairs": 213,
+        "step": 372
+      },
+      "no_target_images": 351,
+      "annotation_tasks": {
+        "12": 136,
+        "8": 147,
+        "11": 148,
+        "9": 138,
+        "7": 135,
+        "10": 121
+      }
+    },
+    "test": {
+      "images": 802,
+      "target_boxes": {
+        "stairs": 189,
+        "step": 342,
+        "curb": 178
+      },
+      "no_target_images": 321,
+      "annotation_tasks": {
+        "11": 146,
+        "7": 134,
+        "9": 115,
+        "8": 137,
+        "12": 126,
+        "10": 144
+      }
+    },
+    "excluded": {
+      "images": 0,
+      "target_boxes": {},
+      "no_target_images": 0,
+      "annotation_tasks": {}
+    }
+  },
+  "total_groups": 5537,
+  "largest_group": 2,
+  "reviewed_images_forced_into_training": [
+    "images/000002187.jpg",
+    "images/000004724.jpg",
+    "images/000011653.jpg",
+    "images/000011656.jpg",
+    "images/000011841.jpg",
+    "images/000021562.jpg",
+    "images/000021675.jpg",
+    "images/000040999.jpg",
+    "images/000044462.jpg",
+    "images/000057108.jpg",
+    "images/000086694.jpg",
+    "images/000103714.jpg",
+    "images/000131108.jpg",
+    "images/000141336.jpg"
+  ],
+  "source_sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "annotation_sha256": "9a19dc3a95acd01c30e1a40320de49e19a3d5fe5b1b9c7253f045aa2e590930c",
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "classes": [
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "seed": 4217,
+  "split_rule": "SHA256(seed:duplicate-group-anchor) 70/15/15; displayed/previously reviewed groups forced to train",
+  "near_duplicate_rule": "63-bit DCT pHash Hamming <=4 and aspect-ratio difference <=1%; transitive grouping",
+  "no_cross_split_detected_duplicates": true,
+  "limitations": [
+    "Similarity grouping does not prove geographic, source-session or all-near-duplicate independence.",
+    "Source visible-barrier convention may omit unseen descending stairs and is wheelchair-oriented.",
+    "Heights and widths remain subjective source attributes, never distance ground truth.",
+    "Source boxes are not segmentation masks; no pixel ground truth is created.",
+    "Negative images are annotation-defined, not independently reviewed hazard-free scenes.",
+    "Research splits are provisional; no trained runtime or warning eligibility is established."
+  ],
+  "exact_duplicate_groups": 0,
+  "near_duplicate_pairs": 1,
+  "excluded_images": 0,
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee"
+}

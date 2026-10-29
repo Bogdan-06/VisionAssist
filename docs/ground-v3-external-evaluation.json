@@ -1,0 +1,586 @@
+{
+  "dataset_doi": "10.17632/tp95cdvgm8.1",
+  "source_sha256": "a154cab487415c02269041f674e9e790b6ca61afc1c9ac417e9f1aae3e283a22",
+  "model_sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+  "excluded_images": [
+    {
+      "id": "Pothole-261",
+      "problems": [
+        {
+          "invalid_box": [
+            1721.0,
+            740.0,
+            2609.0,
+            1660.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-262",
+      "problems": [
+        {
+          "invalid_box": [
+            1870.0,
+            211.0,
+            3094.0,
+            1596.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-268",
+      "problems": [
+        {
+          "invalid_box": [
+            1841.0,
+            891.0,
+            2309.0,
+            1388.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-271",
+      "problems": [
+        {
+          "invalid_box": [
+            1501.0,
+            823.0,
+            2522.0,
+            1611.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-487",
+      "problems": [
+        "Unknown annotation class"
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "images": 708,
+      "metrics": {
+        "0.1": {
+          "tp": 68,
+          "fp": 2747,
+          "fn": 1079,
+          "precision": 0.024156305506216696,
+          "recall": 0.05928509154315606
+        },
+        "0.2": {
+          "tp": 15,
+          "fp": 342,
+          "fn": 1132,
+          "precision": 0.04201680672268908,
+          "recall": 0.013077593722755012
+        },
+        "0.3": {
+          "tp": 5,
+          "fp": 44,
+          "fn": 1142,
+          "precision": 0.10204081632653061,
+          "recall": 0.004359197907585004
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1147,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "wet": {
+      "images": 17,
+      "metrics": {
+        "0.1": {
+          "tp": 1,
+          "fp": 69,
+          "fn": 33,
+          "precision": 0.014285714285714285,
+          "recall": 0.029411764705882353
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "shadow": {
+      "images": 2,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 12,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "night_low_light": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "glare": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "low_exposure": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    }
+  },
+  "inference_ms": {
+    "p50": 5.101449991343543,
+    "p95": 8.714655005314853,
+    "p99": 12.718123994418407
+  },
+  "conditions_source": "Reviewed condition tags only; no tags are inferred from the dataset title.",
+  "limitations": [
+    "Mostly positive close-up road photos; not an unbiased walking-camera or negative-scene sample.",
+    "Annotation mismatch images excluded as a whole; exclusion details retained.",
+    "Research evaluation only; no independent-navigation safety claim."
+  ]
+}

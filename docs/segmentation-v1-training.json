@@ -1,0 +1,49 @@
+{
+  "architecture": "Frozen MobileNetV2 alpha 0.5 + separable multiscale mask decoder",
+  "classes": [
+    "pothole mask"
+  ],
+  "input": [
+    1,
+    320,
+    320,
+    3
+  ],
+  "input_normalization": "RGB / 127.5 - 1",
+  "output": [
+    1,
+    80,
+    80,
+    1
+  ],
+  "output_semantics": "sigmoid probability per stride-four pixel",
+  "backbone_sha256": "279052de2cfa801003aa6cc25cc4d007d35dd0b76f06935268c79788b7642d05",
+  "manifest_sha256": "6f87baaacef7ffdfb01e9c8ef8840ba60fdd433d4473dbc937d744d485688944",
+  "source_sha256": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+  "script_sha256": "059328fef7d0e38f50bf92c71ad5c9fc402d28be62dc36f7caf71c6cb6bb3392",
+  "model_sha256": "c1c7a8354a894cb77fa7d0d8bf8aa87ddf7b1bf18f26ba6c95c6967e01759536",
+  "bytes": 1997104,
+  "seed": 4217,
+  "requested_epochs": 12,
+  "completed_epochs": 12,
+  "selected_epoch": 12,
+  "selection": "minimum published-validation BCE plus soft-Dice loss; no test fitting/selection",
+  "training_frames": 1860,
+  "validation_frames": 620,
+  "frozen_encoder": true,
+  "augmentation": "none for this initial cached-feature baseline",
+  "feature_cache_dtype": "float16; exported backbone inference remains float32",
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "elapsed_seconds": 277.1364390850067,
+  "limitations": [
+    "Published clip partitions preserved; capture locations/source sequences are not established as disjoint.",
+    "Near-neighbour grayscale differences are a manual review aid, not a reliable leakage classifier.",
+    "Only sampled frames were checked for exact decoded-frame duplication.",
+    "Test partition has already been used for detector development evaluation; not an untouched safety test.",
+    "Road close-up masks cannot establish walking safety, curb/stair classes or distances.",
+    "Pixel metrics at 320x320 do not measure calibrated hazard confidence or warning-event reliability.",
+    "No representative all-negative walking clips; class specificity needs separate evaluation.",
+    "No Android runtime integration, curb/stair classes or depth estimation in this candidate."
+  ]
+}

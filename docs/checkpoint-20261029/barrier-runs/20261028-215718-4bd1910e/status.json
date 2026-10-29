@@ -1,0 +1,9 @@
+{
+  "state": "running",
+  "stage": "evaluate-test",
+  "pid": 391,
+  "completed": [
+    "train",
+    "evaluate-validation"
+  ]
+}

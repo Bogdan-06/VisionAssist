@@ -1,0 +1,38 @@
+{
+  "device": "SM-S931B",
+  "test_count": 5,
+  "passed": 5,
+  "failed": 0,
+  "structural_compatibility_passed": true,
+  "denied_permissions_asserted": [
+    "android.permission.INTERNET",
+    "android.permission.CAMERA",
+    "android.permission.RECORD_AUDIO"
+  ],
+  "main_apk_sha256": "b9a218bf6479166b69058fc43c3c62abc9fed989b77bfc11569577c5e6695b41",
+  "test_apk_sha256": "e501669773756f62f65f9b39191208cbc9b27c19e025bd2539418da8f4fc9bd4",
+  "main_apk_has_barrier_fixture_assets": false,
+  "model_sha256": "0097090945bbf0b73301c33803c00c5d200f564d1e9d75bd42682a274e22e7ed",
+  "smoke_model": true,
+  "accuracy_approved": false,
+  "numerical_parity_approved": false,
+  "warning_eligible": false,
+  "frames": 4,
+  "inference_calls": 16,
+  "timing_samples": 12,
+  "task_detect_ms": {
+    "median": 95.5,
+    "p95_nearest_rank": 109
+  },
+  "process_pss_kb": {
+    "before_detector_creation": 63637,
+    "loaded_after_calls": 165908
+  },
+  "raw_detections": 1536,
+  "nonempty_clipped_projections": 900,
+  "observed_category_indices": [
+    -1
+  ],
+  "python_reference_clipped_predictions_per_four_images": 282,
+  "scope": "Real local Task CPU inference on stored public images. No camera/microphone or cloud access. Counts are model outputs, not valid hazards. Timing includes Task preprocessing/postprocessing; not sustained CameraX or battery evidence."
+}

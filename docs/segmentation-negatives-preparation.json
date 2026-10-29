@@ -1,0 +1,18 @@
+{
+  "kind": "rdd_annotated_negatives",
+  "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+  "split_manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+  "source": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+  "license_note": "Figshare CC BY 4.0; upstream project also declares CC BY-SA 4.0. Retain both source notices.",
+  "training_images": 1993,
+  "validation_images": 1086,
+  "test_images_exported": 0,
+  "no_exact_cross_split_duplicates": true,
+  "annotation_rule": "Source XML has no D40 object, including difficult objects; binary pothole mask is all zero.",
+  "limitations": [
+    "Annotation-defined negative, not independently reviewed as pothole-free.",
+    "Other road-damage labels are not potholes; this mask does not label general terrain safety.",
+    "Original grouped split retained; geographic independence is not established.",
+    "Only negative images from this domain enter mask training; positive RDD boxes are not pixel masks."
+  ]
+}

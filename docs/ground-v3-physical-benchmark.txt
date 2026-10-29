@@ -1,0 +1,4 @@
+--------- beginning of main
+10-24 12:10:09.400  9404  9423 I GroundBenchmark: device=SM-S931B fixture iterations=20 inference_ms median=13 p95=14; fixture timing is not sustained camera throughput
+10-24 12:10:09.400  9404  9423 I GroundBenchmark: frame_processing_ms median=27 p95=28; includes resizing, inference and decoding, excludes CameraX delivery
+10-24 12:10:09.429  9404  9423 I GroundBenchmark: process_pss_kb before=39448 loaded_after_20=61365; includes runtime/test harness, not isolated model allocation

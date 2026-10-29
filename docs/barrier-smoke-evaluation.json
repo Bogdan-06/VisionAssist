@@ -1,0 +1,196 @@
+{
+  "model_sha256": "0097090945bbf0b73301c33803c00c5d200f564d1e9d75bd42682a274e22e7ed",
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee",
+  "source_sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "split": "validation",
+  "images": 64,
+  "available_images": 825,
+  "classes": [
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "partial": true,
+  "smoke_model": true,
+  "warning_eligible": false,
+  "runtime": "MediaPipe Tasks CPU; real metadata/anchor decoding",
+  "mediapipe_version": "0.10.21",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "stairs",
+      "curb",
+      "step"
+    ]
+  },
+  "iou_threshold": 0.5,
+  "annotation_defined_negatives": 23,
+  "metrics": {
+    "0.1": {
+      "by_class": {
+        "stairs": {
+          "tp": 0,
+          "fp": 2894,
+          "fn": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "curb": {
+          "tp": 0,
+          "fp": 2915,
+          "fn": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "step": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 24,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "micro": {
+        "tp": 0,
+        "fp": 5809,
+        "fn": 66,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "negative_images_with_false_detection": 23
+    },
+    "0.3": {
+      "by_class": {
+        "stairs": {
+          "tp": 0,
+          "fp": 2894,
+          "fn": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "curb": {
+          "tp": 0,
+          "fp": 2915,
+          "fn": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "step": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 24,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "micro": {
+        "tp": 0,
+        "fp": 5809,
+        "fn": 66,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "negative_images_with_false_detection": 23
+    },
+    "0.5": {
+      "by_class": {
+        "stairs": {
+          "tp": 0,
+          "fp": 2894,
+          "fn": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "curb": {
+          "tp": 0,
+          "fp": 2915,
+          "fn": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "step": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 24,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "micro": {
+        "tp": 0,
+        "fp": 5809,
+        "fn": 66,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "negative_images_with_false_detection": 23
+    },
+    "0.65": {
+      "by_class": {
+        "stairs": {
+          "tp": 0,
+          "fp": 2894,
+          "fn": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "curb": {
+          "tp": 0,
+          "fp": 2915,
+          "fn": 18,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "step": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 24,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "micro": {
+        "tp": 0,
+        "fp": 5809,
+        "fn": 66,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "negative_images_with_false_detection": 23
+    }
+  },
+  "task_detect_ms": {
+    "p50": 62.79470003210008,
+    "p95": 69.20840500388293,
+    "p99": 73.0701860191766
+  },
+  "processing_ms": {
+    "p50": 100.96164996502921,
+    "p95": 111.55622502847108,
+    "p99": 123.72949099342799
+  },
+  "limitations": [
+    "Scores are not calibrated warning probabilities; no production warning decision is made.",
+    "Timing is desktop CPU inference including task preprocessing/postprocessing, not phone timing.",
+    "Image processing includes archive reads, hashing, decoding and metric calculation.",
+    "Duplicate-grouped source holdout does not establish geographic independence or walking-video safety.",
+    "No generic unevenness/pothole class, metric distance ground truth, or false alarms per hour."
+  ]
+}

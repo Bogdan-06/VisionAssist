@@ -1,0 +1,74 @@
+{
+  "model_sha256": "a145296eca9ed48aa73ea3a2b29cbe354f20e36d8645d5f999f86ce2ff613f8d",
+  "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+  "manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+  "dataset": "RDD2022 India, existing held-out test partition",
+  "images": 1342,
+  "component_rule": "8-connected regions of restored probability >= pixel threshold; no minimum area or top-k limit",
+  "component_score": "mean member pixel probability; uncalibrated, no additional score threshold",
+  "matching": "greedy descending component score, one-to-one box IoU >= 0.5; difficult boxes ignored",
+  "metrics": {
+    "0.3": {
+      "tp": 0,
+      "fp": 6,
+      "fn": 550,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.5": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 550,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "0.65": {
+      "tp": 0,
+      "fp": 7,
+      "fn": 550,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "annotated_negative_images": 1063,
+  "excluded_from_negative_subset_due_to_ignored_boxes": 0,
+  "negatives": {
+    "0.3": {
+      "images_with_prediction": 5,
+      "predicted_components": 6,
+      "fraction_with_prediction": 0.004703668861712135
+    },
+    "0.5": {
+      "images_with_prediction": 4,
+      "predicted_components": 8,
+      "fraction_with_prediction": 0.0037629350893697085
+    },
+    "0.65": {
+      "images_with_prediction": 3,
+      "predicted_components": 7,
+      "fraction_with_prediction": 0.0028222013170272815
+    }
+  },
+  "inference_ms": {
+    "p50": 5.099999994854443,
+    "p95": 8.790270003373736,
+    "p99": 11.219162000634226
+  },
+  "image_processing_ms": {
+    "p50": 38.449149986263365,
+    "p95": 54.322415016940795,
+    "p99": 61.55303199484477
+  },
+  "tensorflow": "2.20.0",
+  "threads": 2,
+  "limitations": [
+    "Annotated negatives mean no D40 boxes, not independently reviewed hazard-free scenes.",
+    "RDD box labels cannot validate segmentation pixel accuracy.",
+    "Dataset was previously examined during detector development; not an untouched safety test.",
+    "Pixel/component scores are not calibrated event confidence; no warnings are enabled.",
+    "Desktop timing, with image decode and region extraction in processing; not phone latency."
+  ]
+}

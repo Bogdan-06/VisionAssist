@@ -1,0 +1,56 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "attribution": "Jakob Stolberg; collectors Christopher Richters and Sami Nenno; HIIG, 2022",
+  "source_sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee",
+  "classes": [
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "counts": {
+    "train": {
+      "images": 3911,
+      "boxes": 3577,
+      "boxes_by_class": {
+        "stairs": 1090,
+        "step": 1665,
+        "curb": 822
+      },
+      "negatives": 1565
+    },
+    "validation": {
+      "images": 825,
+      "boxes": 770,
+      "boxes_by_class": {
+        "curb": 185,
+        "stairs": 213,
+        "step": 372
+      },
+      "negatives": 351
+    }
+  },
+  "files": {
+    "train": {
+      "labels_sha256": "b40260dc8844a87c9d30e409f8690b02aa88ab0ce7536e16c570db5cc21310e1",
+      "image_hashes_sha256": "cf94efdaeb9582d353aee5d58703ab5764d44927a4f98ee9602304592c524b15"
+    },
+    "validation": {
+      "labels_sha256": "ca9459c536ec195339d65c994b55c81f0ed95910b96ba11f6e08077fdd2a9d83",
+      "image_hashes_sha256": "e96a82301300d25380b00306a667297dbfbd0024b9bb6b92a44c9a8bb01529b2"
+    }
+  },
+  "test_images_exported": false,
+  "image_folder": "images",
+  "transformations": "Original JPEG bytes; source xyxy boxes converted to COCO xywh. No masks.",
+  "limitations": [
+    "Similarity grouping does not prove geographic, source-session or all-near-duplicate independence.",
+    "Source visible-barrier convention may omit unseen descending stairs and is wheelchair-oriented.",
+    "Heights and widths remain subjective source attributes, never distance ground truth.",
+    "Source boxes are not segmentation masks; no pixel ground truth is created.",
+    "Negative images are annotation-defined, not independently reviewed hazard-free scenes.",
+    "Research splits are provisional; no trained runtime or warning eligibility is established."
+  ],
+  "exporter_sha256": "15736f1bacd0e7b75aebe635cdf38f9ea3b4307fd15ed630df4211078d9c60d2"
+}

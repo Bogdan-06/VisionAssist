@@ -1,0 +1,19 @@
+{
+  "Pothole-496": ["wet", "low_exposure"],
+  "Pothole-600": ["wet"],
+  "Pothole-103": ["wet", "night_low_light", "glare"],
+  "Pothole-503": ["wet"],
+  "Pothole-499": ["wet"],
+  "Pothole-553": ["wet"],
+  "Pothole-541": ["wet"],
+  "Pothole-452": ["wet"],
+  "Pothole-157": ["wet"],
+  "Pothole-443": ["wet"],
+  "Pothole-502": ["wet"],
+  "Pothole-537": ["wet"],
+  "Pothole-357": ["wet"],
+  "Pothole-119": ["wet", "shadow"],
+  "Pothole-087": ["wet", "shadow"],
+  "Pothole-603": ["wet"],
+  "Pothole-041": ["wet"]
+}

@@ -1,0 +1,13 @@
+WARNING:tensorflow:From C:\Users\Moth\Documents\Codex\2026-10-09\new-chat\work\ground\modelmaker-venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+test_checkpoint_history_mismatch_or_nonfinite_state_is_rejected (test_modelmaker_resume.ResumeTests.test_checkpoint_history_mismatch_or_nonfinite_state_is_rejected) ... ok
+test_latest_state_and_best_state_remain_distinct (test_modelmaker_resume.ResumeTests.test_latest_state_and_best_state_remain_distinct) ... ok
+test_live_source_and_changed_schedule_are_rejected (test_modelmaker_resume.ResumeTests.test_live_source_and_changed_schedule_are_rejected) ... ok
+test_modified_source_or_data_is_rejected (test_modelmaker_resume.ResumeTests.test_modified_source_or_data_is_rejected) ... ok
+test_custom_loss_names_without_standard_loss_key (test_modelmaker_training.FiniteLossTests.test_custom_loss_names_without_standard_loss_key) ... ok
+test_nonfinite_validation_is_rejected_before_checkpoint (test_modelmaker_training.FiniteLossTests.test_nonfinite_validation_is_rejected_before_checkpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.395s
+
+OK

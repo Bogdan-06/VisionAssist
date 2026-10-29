@@ -1,0 +1,3 @@
+# Preserve checkpoint bytes, fixture JSON hashes and raw UTF-16 PowerShell evidence.
+# Do not normalize line endings when saving or restoring this checkpoint.
+* -text

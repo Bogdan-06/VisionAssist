@@ -1,0 +1,21 @@
+# Isolated Python 3.11 vision-only training profile. See MODELMAKER_WINDOWS.md.
+# Framework wheels are installed separately with --no-deps, then narrow import/data patches apply.
+tensorflow==2.15.1
+numpy==1.26.4
+mediapipe==0.10.21
+jax==0.4.30
+jaxlib==0.4.30
+opencv-python==4.11.0.86
+tensorflow-addons==0.21.0
+tensorflow-datasets==4.9.4
+tensorflow-metadata==1.15.0
+tensorflow-hub==0.15.0
+tensorflow-model-optimization==0.7.5
+pycocotools==2.0.10
+gin-config==0.5.0
+pyyaml==6.0.2
+tf-slim==1.1.0
+pandas==2.2.3
+psutil==7.0.0
+setuptools==70.3.0
+immutabledict==4.2.1

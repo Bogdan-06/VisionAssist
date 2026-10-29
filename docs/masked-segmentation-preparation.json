@@ -1,0 +1,269 @@
+{
+  "source": "https://data.mendeley.com/datasets/5bwfg4v4cd/3",
+  "doi": "10.17632/5bwfg4v4cd.3",
+  "license": "CC BY 4.0",
+  "source_sha256": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+  "authors": [
+    "Muhammad Ihsan",
+    "Agus Harjoko",
+    "Muhammad Alfian Amrizal"
+  ],
+  "preparation": {
+    "size": 320,
+    "sample_interval_ms": 400,
+    "rgb_resize": "area",
+    "mask": "grayscale >=128 at original resolution, then nearest-neighbour resize",
+    "opencv": "4.12.0",
+    "numpy": "2.2.6",
+    "test_arrays_exported": false
+  },
+  "partitions": {
+    "train": {
+      "clips": 372,
+      "sampled_frames": 1860,
+      "foreground_pixels": 30082834
+    },
+    "val": {
+      "clips": 124,
+      "sampled_frames": 620,
+      "foreground_pixels": 11164809
+    },
+    "test": {
+      "clips": 123,
+      "sampled_frames": 615,
+      "foreground_pixels": 11325127
+    }
+  },
+  "cross_split_video_duplicates": [],
+  "cross_split_sampled_frame_duplicates": [],
+  "closest_cross_split_pairs": [
+    {
+      "mean_gray_difference_0_255": 5.4052734375,
+      "first": {
+        "split": "train",
+        "clip": "0208"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0363"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.552734375,
+      "first": {
+        "split": "train",
+        "clip": "0342"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.580078125,
+      "first": {
+        "split": "train",
+        "clip": "0252"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.669921875,
+      "first": {
+        "split": "train",
+        "clip": "0313"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0618"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.7294921875,
+      "first": {
+        "split": "train",
+        "clip": "0541"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.7578125,
+      "first": {
+        "split": "train",
+        "clip": "0559"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0587"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.833984375,
+      "first": {
+        "split": "train",
+        "clip": "0024"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 5.8466796875,
+      "first": {
+        "split": "train",
+        "clip": "0550"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0587"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.017578125,
+      "first": {
+        "split": "train",
+        "clip": "0249"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0591"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.068359375,
+      "first": {
+        "split": "train",
+        "clip": "0526"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.0703125,
+      "first": {
+        "split": "train",
+        "clip": "0251"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0596"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.1201171875,
+      "first": {
+        "split": "train",
+        "clip": "0548"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.306640625,
+      "first": {
+        "split": "train",
+        "clip": "0558"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0596"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.333984375,
+      "first": {
+        "split": "train",
+        "clip": "0543"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0591"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.40234375,
+      "first": {
+        "split": "val",
+        "clip": "0571"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0591"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.42578125,
+      "first": {
+        "split": "train",
+        "clip": "0518"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0586"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.470703125,
+      "first": {
+        "split": "train",
+        "clip": "0604"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0286"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.515625,
+      "first": {
+        "split": "train",
+        "clip": "0549"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0584"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.5205078125,
+      "first": {
+        "split": "train",
+        "clip": "0348"
+      },
+      "second": {
+        "split": "val",
+        "clip": "0571"
+      }
+    },
+    {
+      "mean_gray_difference_0_255": 6.5341796875,
+      "first": {
+        "split": "train",
+        "clip": "0601"
+      },
+      "second": {
+        "split": "test",
+        "clip": "0595"
+      }
+    }
+  ],
+  "exact_duplicate_audit_passed": true,
+  "limitations": [
+    "Published clip partitions preserved; capture locations/source sequences are not established as disjoint.",
+    "Near-neighbour grayscale differences are a manual review aid, not a reliable leakage classifier.",
+    "Only sampled frames were checked for exact decoded-frame duplication.",
+    "Test partition has already been used for detector development evaluation; not an untouched safety test.",
+    "Road close-up masks cannot establish walking safety, curb/stair classes or distances."
+  ]
+}

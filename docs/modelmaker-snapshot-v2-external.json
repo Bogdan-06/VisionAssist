@@ -1,0 +1,672 @@
+{
+  "dataset_doi": "10.17632/tp95cdvgm8.1",
+  "source_sha256": "a154cab487415c02269041f674e9e790b6ca61afc1c9ac417e9f1aae3e283a22",
+  "model_sha256": "3266cd1f8db6367b9da2e29e214e8c78269a51534846812a0b50d3ba221e5927",
+  "conditions_sha256": "324ecabfbf7b486a43c604c5c999f09455f046925ebdb40f4754773c25fe8747",
+  "images": 708,
+  "available_images": 708,
+  "partial": false,
+  "excluded_images": [
+    {
+      "id": "Pothole-261",
+      "problems": [
+        {
+          "invalid_box": [
+            1721.0,
+            740.0,
+            2609.0,
+            1660.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-262",
+      "problems": [
+        {
+          "invalid_box": [
+            1870.0,
+            211.0,
+            3094.0,
+            1596.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-268",
+      "problems": [
+        {
+          "invalid_box": [
+            1841.0,
+            891.0,
+            2309.0,
+            1388.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-271",
+      "problems": [
+        {
+          "invalid_box": [
+            1501.0,
+            823.0,
+            2522.0,
+            1611.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-487",
+      "problems": [
+        "Unknown annotation class"
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "images": 708,
+      "metrics": {
+        "0.1": {
+          "tp": 41,
+          "fp": 225,
+          "fn": 1106,
+          "precision": 0.15413533834586465,
+          "recall": 0.03574542284219703,
+          "f1": 0.05803255484784147
+        },
+        "0.2": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 1146,
+          "precision": 0.25,
+          "recall": 0.0008718395815170009,
+          "f1": 0.0017376194613379669
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "wet": {
+      "images": 17,
+      "metrics": {
+        "0.1": {
+          "tp": 1,
+          "fp": 4,
+          "fn": 33,
+          "precision": 0.2,
+          "recall": 0.029411764705882353,
+          "f1": 0.05128205128205128
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "shadow": {
+      "images": 2,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "night_low_light": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "glare": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "low_exposure": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.5,
+          "recall": 0.14285714285714285,
+          "f1": 0.2222222222222222
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "iou_threshold": 0.5,
+  "runtime": "MediaPipe Tasks Python CPU; metadata-based detector decoding",
+  "mediapipe_version": "0.10.21",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "pothole"
+    ]
+  },
+  "task_detect_ms": {
+    "p50": 39.48185000626836,
+    "p95": 44.14700999550405,
+    "p99": 47.46594599899252
+  },
+  "processing_ms": {
+    "p50": 42.31940000317991,
+    "p95": 47.603415000776295,
+    "p99": 50.86922400849288
+  },
+  "limitations": [
+    "Mostly positive road close-ups; not representative walking-camera negatives.",
+    "Previously examined development benchmark, not an untouched safety evaluation.",
+    "Condition tags are reviewed small subsets, not inferred from filenames.",
+    "Task timing includes graph preprocessing/postprocessing; not phone latency.",
+    "Partial smoke runs only check execution; no representative accuracy claim."
+  ]
+}

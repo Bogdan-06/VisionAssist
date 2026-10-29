@@ -1,0 +1,164 @@
+{
+  "test_only": true,
+  "warning_eligible": false,
+  "smoke_model": false,
+  "model_sha256": "9e5e8ed50eec603097a9d34274dbe89712625b0a868e2b02f93efb2ea09ef0ce",
+  "labels": [
+    "background",
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "attribution": "Jakob Stolberg; collectors Christopher Richters and Sami Nenno; HIIG, 2022",
+  "transformations": "Reviewed training JPEGs decoded RGB and resized with aspect ratio preserved to at most 640 pixels on each side. Lossless PNG for runtime checks.",
+  "source_sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee",
+  "mediapipe_version": "0.10.32",
+  "records": [
+    {
+      "file": "frame-0.png",
+      "source_image": "images/000086694.jpg",
+      "source_sha256": "b9fac3bb6834e02d1f26bd132eb71554ee913d45f83c56b952d1334af9f4cb2b",
+      "png_sha256": "da64511b5cdbcecef8878aec17d828866f306f98aa77195a9f028b37cad3cc81",
+      "rgb_sha256": "2d2533daa6f23499ae67d07ca3cf12999d6bf9bd4599e5a2df5eb9273d181bb8",
+      "width": 480,
+      "height": 640,
+      "python_predictions": [
+        {
+          "score": 0.6903717517852783,
+          "box": [
+            124,
+            501,
+            372,
+            598
+          ],
+          "class": "stairs"
+        }
+      ],
+      "python_task_detect_ms": 36.90930001903325
+    },
+    {
+      "file": "frame-1.png",
+      "source_image": "images/000131108.jpg",
+      "source_sha256": "5563923f5599d8efdaa339d83979eb398b805d9ac1bd409d8a237a7802f264ab",
+      "png_sha256": "b5108880317367b733e8163ec9b06bae56fbcff1605897c40d655a06c62a349d",
+      "rgb_sha256": "1f5880d59cfed7337e47f408d8c9cba17158eb0dc8dc8af987671842f4db60f0",
+      "width": 480,
+      "height": 640,
+      "python_predictions": [
+        {
+          "score": 0.2506007254123688,
+          "box": [
+            5,
+            524,
+            406,
+            564
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 0.17727214097976685,
+          "box": [
+            427,
+            431,
+            479,
+            452
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 0.1624515950679779,
+          "box": [
+            1,
+            446,
+            480,
+            569
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 0.07486803084611893,
+          "box": [
+            6,
+            502,
+            449,
+            542
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 0.07140163332223892,
+          "box": [
+            285,
+            474,
+            480,
+            525
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 0.05914994329214096,
+          "box": [
+            412,
+            485,
+            479,
+            635
+          ],
+          "class": "curb"
+        }
+      ],
+      "python_task_detect_ms": 37.074899999424815
+    },
+    {
+      "file": "frame-2.png",
+      "source_image": "images/000004724.jpg",
+      "source_sha256": "8ec9b529ebb1eadc633e7f57263afedf7dcb176a8013efd4b4d20b3f82b40414",
+      "png_sha256": "cdfd3f7be05bcf4c89359b3f3e2f12fed5f13b4c602d10ffc4a26d68f99f55ea",
+      "rgb_sha256": "6d2c610f73959ae242052f230679905c49e34aa43a26e40fb7d2579bd79baadb",
+      "width": 640,
+      "height": 480,
+      "python_predictions": [
+        {
+          "score": 0.10799707472324371,
+          "box": [
+            81,
+            341,
+            113,
+            349
+          ],
+          "class": "step"
+        }
+      ],
+      "python_task_detect_ms": 34.76170002250001
+    },
+    {
+      "file": "frame-3.png",
+      "source_image": "images/000002187.jpg",
+      "source_sha256": "05fde578cae2c23c7e681401c81b7d2ea625424d6ecaab471214b1d066421c55",
+      "png_sha256": "544ba4e6742d8d542daa33deebf92c7cf0b590117a02a561d245cc58234ac7d7",
+      "rgb_sha256": "3adda506afa9cb44fbd44eed9405fc37bce26f1cf416e5ba8992b1cae4c1ceaf",
+      "width": 640,
+      "height": 480,
+      "python_predictions": [
+        {
+          "score": 0.09983769804239273,
+          "box": [
+            475,
+            181,
+            595,
+            391
+          ],
+          "class": "stairs"
+        }
+      ],
+      "python_task_detect_ms": 34.38460000324994
+    }
+  ],
+  "limitations": [
+    "Compatibility fixtures are not held-out accuracy evidence.",
+    "The smoke model is rejected for use; its detections are real inference outputs, not valid hazards.",
+    "Structural Android checks do not establish numerical cross-platform parity or warning reliability."
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "model_revision": "489d5cd81a0b59fab9b7ea758d3548ebe99677da",
+  "model_sha256": "6ae39addd01de6b1b8bde2cf677d43a5cd733424b8d186de3f95d1c51fee23f9",
+  "script_sha256": "44be911f4d255413d5c775e2ccf493c8330b3764db6fb47348654db170640da2",
+  "research_only": true,
+  "android_integrated": false,
+  "model_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "input": [
+    1,
+    3,
+    512,
+    512
+  ],
+  "raw_output": [
+    1,
+    150,
+    128,
+    128
+  ],
+  "dataset_manifest_sha256": "20ff508498d553d86341f33cd1ae05fdd59aec14af37eb7b53170f3fb995e0b4",
+  "torch": "2.8.0+cpu",
+  "transformers": "4.57.1",
+  "cpu_threads": 4,
+  "images": 8,
+  "stair_classes": [
+    53,
+    59
+  ],
+  "thresholds": [
+    0.3,
+    0.5,
+    0.65
+  ],
+  "semantics": "Argmax stairs/stairway AND summed class probability >= pixel threshold; all connected components retained.",
+  "box_metrics": {
+    "0.3": {
+      "tp": 1,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.2,
+      "recall": 0.2
+    },
+    "0.5": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "0.65": {
+      "tp": 0,
+      "fp": 5,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "per_image": [
+    {
+      "path": "00.jpg",
+      "archive_entry": "images/000086694.jpg",
+      "stratum": "stair",
+      "metrics": {
+        "0.3": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 1
+        }
+      },
+      "predictions": {
+        "0.3": [
+          {
+            "box": [
+              379.6875,
+              1409.765625,
+              988.76953125,
+              1631.25
+            ],
+            "score": 0.5083163380622864,
+            "pixels": 7717
+          },
+          {
+            "box": [
+              901.7578125,
+              1511.71875,
+              904.39453125,
+              1515.234375
+            ],
+            "score": 0.3827644884586334,
+            "pixels": 1
+          },
+          {
+            "box": [
+              519.43359375,
+              1325.390625,
+              590.625,
+              1378.125
+            ],
+            "score": 0.3448297083377838,
+            "pixels": 275
+          },
+          {
+            "box": [
+              427.1484375,
+              1395.703125,
+              445.60546875,
+              1430.859375
+            ],
+            "score": 0.3369341790676117,
+            "pixels": 50
+          }
+        ],
+        "0.5": [
+          {
+            "box": [
+              390.234375,
+              1451.953125,
+              822.65625,
+              1606.640625
+            ],
+            "score": 0.5824166536331177,
+            "pixels": 3839
+          },
+          {
+            "box": [
+              885.9375,
+              1437.890625,
+              925.48828125,
+              1480.078125
+            ],
+            "score": 0.5130967497825623,
+            "pixels": 80
+          },
+          {
+            "box": [
+              775.1953125,
+              1455.46875,
+              785.7421875,
+              1458.984375
+            ],
+            "score": 0.501088559627533,
+            "pixels": 4
+          }
+        ],
+        "0.65": [
+          {
+            "box": [
+              514.16015625,
+              1469.53125,
+              664.453125,
+              1525.78125
+            ],
+            "score": 0.6738925576210022,
+            "pixels": 490
+          },
+          {
+            "box": [
+              482.51953125,
+              1469.53125,
+              511.5234375,
+              1504.6875
+            ],
+            "score": 0.6646603345870972,
+            "pixels": 72
+          },
+          {
+            "box": [
+              406.0546875,
+              1504.6875,
+              432.421875,
+              1515.234375
+            ],
+            "score": 0.6566072702407837,
+            "pixels": 22
+          },
+          {
+            "box": [
+              458.7890625,
+              1508.203125,
+              471.97265625,
+              1511.71875
+            ],
+            "score": 0.6535550355911255,
+            "pixels": 5
+          }
+        ]
+      },
+      "inference_ms": 387.3732000065502,
+      "processing_ms": 774.7164000174962,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "01.jpg",
+      "archive_entry": "images/000057108.jpg",
+      "stratum": "stair",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 376.1083999997936,
+      "processing_ms": 720.4257000121288,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "02.jpg",
+      "archive_entry": "images/000021675.jpg",
+      "stratum": "stair",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 402.82879999722354,
+      "processing_ms": 725.2036999852862,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "03.jpg",
+      "archive_entry": "images/000103714.jpg",
+      "stratum": "stair",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 374.01320002391003,
+      "processing_ms": 706.4537000260316,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "04.jpg",
+      "archive_entry": "images/000002187.jpg",
+      "stratum": "no_annotated_stair_or_step",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        }
+      },
+      "predictions": {
+        "0.3": [
+          {
+            "box": [
+              1342.96875,
+              516.796875,
+              1673.4375,
+              1136.42578125
+            ],
+            "score": 0.7394566535949707,
+            "pixels": 18353
+          }
+        ],
+        "0.5": [
+          {
+            "box": [
+              1357.03125,
+              516.796875,
+              1666.40625,
+              1091.6015625
+            ],
+            "score": 0.789452075958252,
+            "pixels": 15939
+          }
+        ],
+        "0.65": [
+          {
+            "box": [
+              1371.09375,
+              522.0703125,
+              1652.34375,
+              1057.32421875
+            ],
+            "score": 0.8281336426734924,
+            "pixels": 13514
+          }
+        ]
+      },
+      "inference_ms": 373.1061000144109,
+      "processing_ms": 714.4656000018585,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "05.jpg",
+      "archive_entry": "images/000044462.jpg",
+      "stratum": "no_annotated_stair_or_step",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 364.5879999967292,
+      "processing_ms": 699.1785000136588,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "06.jpg",
+      "archive_entry": "images/000011841.jpg",
+      "stratum": "no_annotated_stair_or_step",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 494.4899000111036,
+      "processing_ms": 919.6782999788411,
+      "predicted_step_pixels": 0
+    },
+    {
+      "path": "07.jpg",
+      "archive_entry": "images/000040999.jpg",
+      "stratum": "no_annotated_stair_or_step",
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "predictions": {
+        "0.3": [],
+        "0.5": [],
+        "0.65": []
+      },
+      "inference_ms": 554.172500007553,
+      "processing_ms": 1029.241500014905,
+      "predicted_step_pixels": 0
+    }
+  ],
+  "inference_ms": {
+    "p50": 381.7408000031719,
+    "p95": 533.2835900087957
+  },
+  "processing_ms": {
+    "p50": 722.8146999987075,
+    "p95": 990.8943800022826
+  },
+  "limitations": [
+    "Eight-image execution sample, not a representative evaluation or training split.",
+    "Negative means no published stair/step annotation, not independently reviewed hazard-free.",
+    "Source uses visible-region boxes and wheelchair-accessibility annotation conventions.",
+    "Step heights are annotator estimates, not measured distance ground truth.",
+    "Source locations and overlap with model pretraining are not established.",
+    "Four stair-positive and four annotation-defined negative images; no accuracy/generalization claim.",
+    "Merged ADE stair regions and source visible-stair boxes use different annotation conventions.",
+    "Step class is recorded separately, not mapped to curb or included in stair metrics.",
+    "CPU desktop timing is not Android performance; processing excludes disk load and drawing.",
+    "One warmup inference is excluded; processing includes preprocessing and postprocessing.",
+    "No depth, direction, step count, safe-route claim, warning activation or cloud inference."
+  ]
+}

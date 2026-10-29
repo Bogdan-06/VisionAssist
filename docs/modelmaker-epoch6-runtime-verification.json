@@ -1,0 +1,52 @@
+{
+  "model_sha256": "60f4fcd74d60916378eebc0cc9b59eb872695770db6595c789a3d00bbcd80746",
+  "weights_sha256": "ceee6b710117920535fc6008af10acca0324a0f6add725e9945e83326cd423e4",
+  "selected_epoch": 6,
+  "images": 3,
+  "results": [
+    {
+      "image_id": 4,
+      "image_sha256": "62ff7f07c338159336591b981b36262a0fb9f2ec1614ca8c119cfef93e828c7f",
+      "prepared_rgb_sha256": "35a89f564907b5d3042715370dc6489a76d1262fba0e7a7fec1e42f5994ecd8d",
+      "score_max_absolute_error": 4.0978193283081055e-07,
+      "box_max_absolute_error": 5.245208740234375e-05,
+      "raw_top_pothole_score": 0.30183202028274536,
+      "tasks_top_score": 0.3018321394920349
+    },
+    {
+      "image_id": 11,
+      "image_sha256": "1cbcfb1417189c12958d6999b27d15e63b1b20258082a198fe675f49a1a6206f",
+      "prepared_rgb_sha256": "7b6178c8ad2bb1c1bb73468f534cfbad3149efb4d1bc71b7ac069ee189ac7cb8",
+      "score_max_absolute_error": 1.9371509552001953e-07,
+      "box_max_absolute_error": 7.390975952148438e-05,
+      "raw_top_pothole_score": 0.08589362353086472,
+      "tasks_top_score": 0.08589369803667068
+    },
+    {
+      "image_id": 18,
+      "image_sha256": "b5ba3a4313bf577a6c019e7d2279bb3b3e16c110bffed340caa161d7592c35c8",
+      "prepared_rgb_sha256": "81a71dd920c18db9e4136afa4f771d804322059427ab6ea3ca36b51a50bc607e",
+      "score_max_absolute_error": 3.3527612686157227e-07,
+      "box_max_absolute_error": 2.7418136596679688e-05,
+      "raw_top_pothole_score": 0.13641738891601562,
+      "tasks_top_score": 0.13641735911369324
+    }
+  ],
+  "tensorflow_version": "2.15.1",
+  "mediapipe_version": "0.10.21",
+  "passed": true,
+  "score_tolerance": {
+    "rtol": 0.001,
+    "atol": 2e-05
+  },
+  "box_tolerance": {
+    "rtol": 0.001,
+    "atol": 0.0002
+  },
+  "limitations": [
+    "Three prepared real images check export numerics, not detection accuracy.",
+    "Raw box tensor agreement does not independently validate every decoded bounding box.",
+    "Tasks top-score agreement checks normalization/score handling on 320-square inputs, not arbitrary camera geometry.",
+    "No Android runtime, camera, microphone or cloud call is exercised."
+  ]
+}

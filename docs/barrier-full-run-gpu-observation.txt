@@ -1,0 +1,2 @@
+timestamp, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%], temperature.gpu
+2026/10/27 19:11:24.177, NVIDIA GeForce GTX 1650 Ti with Max-Q Design, 2125 MiB, 4096 MiB, 43 %, 65

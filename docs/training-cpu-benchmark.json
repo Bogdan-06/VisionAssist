@@ -1,0 +1,42 @@
+{
+  "hardware": {
+    "requested": "cpu",
+    "selected": "cpu",
+    "cpu_threads": 8,
+    "gpus": [],
+    "encoder_output_device": "/job:localhost/replica:0/task:0/device:CPU:0",
+    "decoder_weight_device": "/job:localhost/replica:0/task:0/device:CPU:0"
+  },
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "real_images": 32,
+  "batch_order_and_masks_match": true,
+  "batch_reference_max_abs_error": 0.00010395050048828125,
+  "encoder_batch_ms": [
+    486.0521999944467,
+    518.3261000202037,
+    519.452899985481,
+    563.750200002687,
+    596.1964000016451
+  ],
+  "encoder_batch_median_ms": 519.452899985481,
+  "train_batch_size": 16,
+  "decoder_losses": [
+    1.6498717069625854,
+    1.641948938369751,
+    1.6345783472061157,
+    1.627510905265808
+  ],
+  "decoder_step_ms": [
+    3926.6551000182517,
+    93.83480000542477,
+    84.44150001741946,
+    89.02050001779571
+  ],
+  "steady_decoder_median_ms": 89.02050001779571,
+  "optimizer_updated_weights": true,
+  "limitations": [
+    "Short warm-cache benchmark, not full-run speed or accuracy.",
+    "First decoder step includes tracing/compilation; excluded from steady median."
+  ]
+}

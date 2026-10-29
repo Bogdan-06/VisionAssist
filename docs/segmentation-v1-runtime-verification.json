@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "clips": 124,
+  "frames": 620,
+  "model_sha256": "c1c7a8354a894cb77fa7d0d8bf8aa87ddf7b1bf18f26ba6c95c6967e01759536",
+  "counts": {
+    "0.3": [
+      8557779,
+      3772845,
+      2607030
+    ],
+    "0.5": [
+      8062869,
+      2729908,
+      3101940
+    ],
+    "0.65": [
+      7657596,
+      2116651,
+      3507213
+    ]
+  },
+  "scope": "Exact shared-adapter pixel count agreement with direct-interpreter validation; not detection quality"
+}

@@ -1,0 +1,21 @@
+{
+  "architecture": "MobileNetV2 0.35 + center/box head, fine-tuned convolution weights with frozen BatchNorm",
+  "initial_model_sha256": "994ad01c8ad387c690f3db09124211fbc5f2c1f171b3b167b611dea105c4cda7",
+  "model_sha256": "13f9d1cadb47ae4269d3be7ac10ddf7b349faaa004d60b005293a68b4258cf4b",
+  "bytes": 455144,
+  "seed": 4217,
+  "epochs": 12,
+  "training_images": 3000,
+  "validation_images": 1330,
+  "elapsed_seconds": 1711.922779560089,
+  "augmentations": [
+    "horizontal flip",
+    "brightness 0.65 to 1.3"
+  ],
+  "loss": "focal heatmap + 2 GIoU + 0.5 offset L1",
+  "classes": [
+    "RDD2022 D40 pothole"
+  ],
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1"
+}

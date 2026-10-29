@@ -1,0 +1,586 @@
+{
+  "dataset_doi": "10.17632/tp95cdvgm8.1",
+  "source_sha256": "a154cab487415c02269041f674e9e790b6ca61afc1c9ac417e9f1aae3e283a22",
+  "model_sha256": "038522a5f41a7d1e269f51765e7c4d1c745d5b89903f5487e57ae61f179d6adf",
+  "excluded_images": [
+    {
+      "id": "Pothole-261",
+      "problems": [
+        {
+          "invalid_box": [
+            1721.0,
+            740.0,
+            2609.0,
+            1660.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-262",
+      "problems": [
+        {
+          "invalid_box": [
+            1870.0,
+            211.0,
+            3094.0,
+            1596.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-268",
+      "problems": [
+        {
+          "invalid_box": [
+            1841.0,
+            891.0,
+            2309.0,
+            1388.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-271",
+      "problems": [
+        {
+          "invalid_box": [
+            1501.0,
+            823.0,
+            2522.0,
+            1611.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-487",
+      "problems": [
+        "Unknown annotation class"
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "images": 708,
+      "metrics": {
+        "0.1": {
+          "tp": 103,
+          "fp": 2740,
+          "fn": 1044,
+          "precision": 0.036229335209285965,
+          "recall": 0.08979947689625109
+        },
+        "0.2": {
+          "tp": 56,
+          "fp": 699,
+          "fn": 1091,
+          "precision": 0.07417218543046358,
+          "recall": 0.04882301656495205
+        },
+        "0.3": {
+          "tp": 18,
+          "fp": 148,
+          "fn": 1129,
+          "precision": 0.10843373493975904,
+          "recall": 0.015693112467306015
+        },
+        "0.4": {
+          "tp": 5,
+          "fp": 20,
+          "fn": 1142,
+          "precision": 0.2,
+          "recall": 0.004359197907585004
+        },
+        "0.5": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1145,
+          "precision": 1.0,
+          "recall": 0.0017436791630340018
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "wet": {
+      "images": 17,
+      "metrics": {
+        "0.1": {
+          "tp": 2,
+          "fp": 44,
+          "fn": 32,
+          "precision": 0.043478260869565216,
+          "recall": 0.058823529411764705
+        },
+        "0.2": {
+          "tp": 2,
+          "fp": 9,
+          "fn": 32,
+          "precision": 0.18181818181818182,
+          "recall": 0.058823529411764705
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "shadow": {
+      "images": 2,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "night_low_light": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "glare": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    },
+    "low_exposure": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0
+        }
+      }
+    }
+  },
+  "inference_ms": {
+    "p50": 5.785449990071356,
+    "p95": 9.300910000456495,
+    "p99": 11.853581996983817
+  },
+  "conditions_source": "Reviewed condition tags only; no tags are inferred from the dataset title.",
+  "limitations": [
+    "Mostly positive close-up road photos; not an unbiased walking-camera or negative-scene sample.",
+    "Annotation mismatch images excluded as a whole; exclusion details retained.",
+    "Research evaluation only; no independent-navigation safety claim."
+  ]
+}

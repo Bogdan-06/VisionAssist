@@ -1,0 +1,52 @@
+{
+  "model": "nvidia/segformer-b0-finetuned-ade-512-512",
+  "revision": "489d5cd81a0b59fab9b7ea758d3548ebe99677da",
+  "use": "Acquired for local noncommercial research/evaluation only; not bundled in Android or cleared for general app use",
+  "license_source": "https://raw.githubusercontent.com/NVlabs/SegFormer/1022b45ddb0d18c6288683d60139ac9b1e83a5f2/LICENSE",
+  "license_sha256": "f549820c06519e3105e5174a2fd7285224ffd2268a7f879a843b1a255fd04a61",
+  "license_restriction": "NVIDIA SegFormer license section 3.3: research or evaluation purposes only",
+  "class_ids": {
+    "53": "stairs",
+    "59": "stairway",
+    "121": "step"
+  },
+  "curb_class": false,
+  "tensors": 208,
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 3189,
+      "sha256": "a738172c9395b26f14e1981f6a95885085cc1239210446d752bf30ad6a9b8538",
+      "publisher_digest": "a0fbaa9434d2c61a704150a0f61e64e538ee105f",
+      "source": "https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512/resolve/489d5cd81a0b59fab9b7ea758d3548ebe99677da/README.md"
+    },
+    {
+      "name": "config.json",
+      "bytes": 6884,
+      "sha256": "209caa9091e4632f7c8883c11170cd08ad29af68b23c09590aa4a5befb1a2a7f",
+      "publisher_digest": "ba9e66725a3c53aeff1e9fede9ed14e6800f76d5",
+      "source": "https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512/resolve/489d5cd81a0b59fab9b7ea758d3548ebe99677da/config.json"
+    },
+    {
+      "name": "preprocessor_config.json",
+      "bytes": 271,
+      "sha256": "8039d1d210abaa7117ad78e58cdfd6141a2ec72c03dae891b3cd76737e422c6c",
+      "publisher_digest": "731939640bb201ce03c59a5b2d6bc1ee4f4162b3",
+      "source": "https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512/resolve/489d5cd81a0b59fab9b7ea758d3548ebe99677da/preprocessor_config.json"
+    },
+    {
+      "name": "model.safetensors",
+      "bytes": 15036944,
+      "sha256": "6ae39addd01de6b1b8bde2cf677d43a5cd733424b8d186de3f95d1c51fee23f9",
+      "publisher_digest": "6ae39addd01de6b1b8bde2cf677d43a5cd733424b8d186de3f95d1c51fee23f9",
+      "source": "https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512/resolve/489d5cd81a0b59fab9b7ea758d3548ebe99677da/model.safetensors"
+    }
+  ],
+  "training_provenance": "Model card: ImageNet-1k encoder pretraining and ADE20K fine-tuning",
+  "limitations": [
+    "Semantic classes are not calibrated hazard events or measured distances.",
+    "No accuracy, phone runtime or camera performance has been established by this acquisition.",
+    "Do not map sidewalk to curb or ordinary image semantics to surface geometry.",
+    "Retain NVIDIA license; this model is not cleared for general-use or commercial app distribution."
+  ]
+}

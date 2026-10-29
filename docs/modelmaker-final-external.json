@@ -1,0 +1,672 @@
+{
+  "dataset_doi": "10.17632/tp95cdvgm8.1",
+  "source_sha256": "a154cab487415c02269041f674e9e790b6ca61afc1c9ac417e9f1aae3e283a22",
+  "model_sha256": "26a1e05f8296fd7b037e49baa5654950a45d64244f674027743a540ac58e3d39",
+  "conditions_sha256": "324ecabfbf7b486a43c604c5c999f09455f046925ebdb40f4754773c25fe8747",
+  "images": 708,
+  "available_images": 708,
+  "partial": false,
+  "excluded_images": [
+    {
+      "id": "Pothole-261",
+      "problems": [
+        {
+          "invalid_box": [
+            1721.0,
+            740.0,
+            2609.0,
+            1660.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-262",
+      "problems": [
+        {
+          "invalid_box": [
+            1870.0,
+            211.0,
+            3094.0,
+            1596.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-268",
+      "problems": [
+        {
+          "invalid_box": [
+            1841.0,
+            891.0,
+            2309.0,
+            1388.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-271",
+      "problems": [
+        {
+          "invalid_box": [
+            1501.0,
+            823.0,
+            2522.0,
+            1611.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-487",
+      "problems": [
+        "Unknown annotation class"
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "images": 708,
+      "metrics": {
+        "0.1": {
+          "tp": 68,
+          "fp": 187,
+          "fn": 1079,
+          "precision": 0.26666666666666666,
+          "recall": 0.05928509154315606,
+          "f1": 0.09700427960057062
+        },
+        "0.2": {
+          "tp": 21,
+          "fp": 27,
+          "fn": 1126,
+          "precision": 0.4375,
+          "recall": 0.018308631211857017,
+          "f1": 0.035146443514644354
+        },
+        "0.3": {
+          "tp": 10,
+          "fp": 7,
+          "fn": 1137,
+          "precision": 0.5882352941176471,
+          "recall": 0.008718395815170008,
+          "f1": 0.01718213058419244
+        },
+        "0.4": {
+          "tp": 3,
+          "fp": 4,
+          "fn": 1144,
+          "precision": 0.42857142857142855,
+          "recall": 0.0026155187445510027,
+          "f1": 0.005199306759098787
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1147,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1147,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "wet": {
+      "images": 17,
+      "metrics": {
+        "0.1": {
+          "tp": 1,
+          "fp": 5,
+          "fn": 33,
+          "precision": 0.16666666666666666,
+          "recall": 0.029411764705882353,
+          "f1": 0.05
+        },
+        "0.2": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 33,
+          "precision": 0.3333333333333333,
+          "recall": 0.029411764705882353,
+          "f1": 0.05405405405405406
+        },
+        "0.3": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 33,
+          "precision": 1.0,
+          "recall": 0.029411764705882353,
+          "f1": 0.05714285714285714
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "shadow": {
+      "images": 2,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "night_low_light": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "glare": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.2": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "low_exposure": {
+      "images": 1,
+      "metrics": {
+        "0.1": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.5,
+          "recall": 0.14285714285714285,
+          "f1": 0.2222222222222222
+        },
+        "0.2": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.5,
+          "recall": 0.14285714285714285,
+          "f1": 0.2222222222222222
+        },
+        "0.3": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "precision": 1.0,
+          "recall": 0.14285714285714285,
+          "f1": 0.25
+        },
+        "0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 7,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "iou_threshold": 0.5,
+  "runtime": "MediaPipe Tasks Python CPU; metadata-based detector decoding",
+  "mediapipe_version": "0.10.21",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "pothole"
+    ]
+  },
+  "task_detect_ms": {
+    "p50": 38.46250000060536,
+    "p95": 42.646459995012265,
+    "p99": 48.61322601180289
+  },
+  "processing_ms": {
+    "p50": 41.19455000909511,
+    "p95": 47.424165006668765,
+    "p99": 50.81982201634671
+  },
+  "limitations": [
+    "Mostly positive road close-ups; not representative walking-camera negatives.",
+    "Previously examined development benchmark, not an untouched safety evaluation.",
+    "Condition tags are reviewed small subsets, not inferred from filenames.",
+    "Task timing includes graph preprocessing/postprocessing; not phone latency.",
+    "Partial smoke runs only check execution; no representative accuracy claim."
+  ]
+}

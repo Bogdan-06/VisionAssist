@@ -1,0 +1,89 @@
+{
+  "started_utc": "2026-10-27T17:03:45.475085+00:00",
+  "versions": {
+    "python": "3.11.17 (main, Oct 14 2026, 01:05:33) [Clang 23.1.3 ]",
+    "available_gpus": [
+      "/physical_device:GPU:0"
+    ],
+    "versions": {
+      "tensorflow": "2.15.1",
+      "keras": "2.15.0",
+      "mediapipe": "0.10.21",
+      "mediapipe-model-maker": "0.2.1.4",
+      "tf-models-official": "2.15.0"
+    }
+  },
+  "arguments": {
+    "data_root": "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground",
+    "output_root": "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs",
+    "device": "gpu",
+    "epochs": 20,
+    "threads": 8,
+    "batch_size": 8,
+    "smoke": false,
+    "check_only": false
+  },
+  "commands": [
+    [
+      "train",
+      [
+        "/opt/visionassist/modelmaker-venv/bin/python",
+        "-u",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/source/train_modelmaker.py",
+        "--data",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/barrier-coco-v1",
+        "--checkpoint-archive",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/mobilenetv2_ssd_i320_ckpt.tar.gz",
+        "--output",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/training",
+        "--class-profile",
+        "barriers",
+        "--device",
+        "gpu",
+        "--threads",
+        "8",
+        "--epochs",
+        "20",
+        "--batch-size",
+        "8"
+      ]
+    ],
+    [
+      "evaluate-validation",
+      [
+        "/opt/visionassist/modelmaker-venv/bin/python",
+        "-u",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/source/evaluate_barrier_detector.py",
+        "--model",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/training/model.tflite",
+        "--archive",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/accessibility-barriers/wm_barriers_data.zip",
+        "--prepared",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/barrier-prepared-v1",
+        "--split",
+        "validation",
+        "--output",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/validation"
+      ]
+    ],
+    [
+      "evaluate-test",
+      [
+        "/opt/visionassist/modelmaker-venv/bin/python",
+        "-u",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/source/evaluate_barrier_detector.py",
+        "--model",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/training/model.tflite",
+        "--archive",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/accessibility-barriers/wm_barriers_data.zip",
+        "--prepared",
+        "/mnt/c/Users/Moth/Documents/Codex/2026-10-09/new-chat/work/ground/barrier-prepared-v1",
+        "--split",
+        "test",
+        "--output",
+        "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261027-190343-192c18c7/test"
+      ]
+    ]
+  ],
+  "installs_android_model": false
+}

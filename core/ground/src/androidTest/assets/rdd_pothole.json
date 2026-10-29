@@ -1,0 +1,124 @@
+{
+  "source": "India/train/images/India_005612.jpg",
+  "doi": "10.6084/m9.figshare.21431547.v1",
+  "source_sha256": "40c43ec9b038c83c607b7267bafb6e6d4c7912276f3bf2eb496c41db09f116fc",
+  "attribution": "Arya et al., RDD2022: A multi-national image dataset for automatic Road Damage Detection",
+  "license": "Figshare release: CC BY 4.0; source repository states CC BY-SA 4.0. Preserve attribution/share-alike for this fixture.",
+  "changes": "Original JPEG renamed; PNG is the RGB 320px letterbox used for tensor parity.",
+  "record": {
+    "id": "India_005612",
+    "image": "India/train/images/India_005612.jpg",
+    "width": 720,
+    "height": 720,
+    "boxes": [
+      [
+        375.0,
+        515.0,
+        449.0,
+        542.0
+      ]
+    ],
+    "ignored": [],
+    "group": "India:56",
+    "split": "validation",
+    "crc32": "7ffffb7e",
+    "used_for_training": false
+  },
+  "python_prediction": {
+    "id": "India_005612",
+    "condition": "original",
+    "detections": [
+      {
+        "score": 0.7241072654724121,
+        "box": [
+          372.953708589077,
+          511.5357963144779,
+          445.45824390649796,
+          545.4520262181759
+        ]
+      },
+      {
+        "score": 0.26068049669265747,
+        "box": [
+          505.34206688404083,
+          548.2828674316406,
+          674.9582594633102,
+          643.1599817276001
+        ]
+      },
+      {
+        "score": 0.13645656406879425,
+        "box": [
+          141.8689602613449,
+          427.62973576784134,
+          260.30793964862823,
+          474.2354938387871
+        ]
+      },
+      {
+        "score": 0.11255955696105957,
+        "box": [
+          78.39943850040436,
+          463.16777274012566,
+          173.11624252796173,
+          505.2599926292896
+        ]
+      },
+      {
+        "score": 0.09645681828260422,
+        "box": [
+          68.85398018360138,
+          589.9129271507263,
+          189.8007606267929,
+          663.7789463996887
+        ]
+      },
+      {
+        "score": 0.09497848153114319,
+        "box": [
+          466.18162643909454,
+          490.13890385627747,
+          566.8634380102158,
+          545.6613063812256
+        ]
+      },
+      {
+        "score": 0.09307504445314407,
+        "box": [
+          312.5321150422096,
+          647.2908470034599,
+          377.025353372097,
+          696.3010337948799
+        ]
+      },
+      {
+        "score": 0.0578271821141243,
+        "box": [
+          0.0,
+          598.997346997261,
+          51.682548344135284,
+          656.0582002401352
+        ]
+      }
+    ],
+    "inference_ms": 3.7818999990122393
+  },
+  "model_sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+  "preprocessed_predictions": [
+    {
+      "score": 0.7241072654724121,
+      "box": [
+        165.75720381736755,
+        227.34924280643463,
+        197.9814417362213,
+        242.42312276363373
+      ]
+    }
+  ],
+  "purpose": "Runtime regression fixture selected for correct localization; not an unbiased evaluation subset.",
+  "source_url": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+  "license_urls": [
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://creativecommons.org/licenses/by-sa/4.0/"
+  ]
+}

@@ -1,0 +1,10 @@
+
+    requested permissions:
+      android.permission.POST_NOTIFICATIONS
+      android.permission.REORDER_TASKS
+      android.permission.ACCESS_NETWORK_STATE
+    install permissions:
+      android.permission.REORDER_TASKS: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+        android.permission.POST_NOTIFICATIONS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+

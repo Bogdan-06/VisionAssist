@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "model_sha256": "0097090945bbf0b73301c33803c00c5d200f564d1e9d75bd42682a274e22e7ed",
+  "fixture_sha256": "1062d220a147d925bb264f14ec194ad475923931558932cbf5cb705ffad76dd1",
+  "python_runtime": "MediaPipe Python 0.10.32 CPU on Windows",
+  "python_results_sha256": "ed0eb488b2c1c60c9ff096b4bb97d8fa0b3ddc55077469e560cecf0833d92249",
+  "device": "SM-S931B",
+  "runtime": "MediaPipe Tasks Android CPU, Gradle pin 0.10.32",
+  "smoke_model": true,
+  "score_tolerance": 0.001,
+  "pixel_tolerance": 2.0,
+  "frames": [
+    {
+      "file": "frame-0.png",
+      "python_count": 57,
+      "android_count": 57,
+      "thresholds": {
+        "0.3": {
+          "passed": true,
+          "matched_pairs": 57,
+          "required_python": 57,
+          "required_android": 57,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        },
+        "0.65": {
+          "passed": true,
+          "matched_pairs": 57,
+          "required_python": 57,
+          "required_android": 57,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        }
+      }
+    },
+    {
+      "file": "frame-1.png",
+      "python_count": 61,
+      "android_count": 61,
+      "thresholds": {
+        "0.3": {
+          "passed": true,
+          "matched_pairs": 61,
+          "required_python": 61,
+          "required_android": 61,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        },
+        "0.65": {
+          "passed": true,
+          "matched_pairs": 61,
+          "required_python": 61,
+          "required_android": 61,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        }
+      }
+    },
+    {
+      "file": "frame-2.png",
+      "python_count": 52,
+      "android_count": 52,
+      "thresholds": {
+        "0.3": {
+          "passed": true,
+          "matched_pairs": 52,
+          "required_python": 52,
+          "required_android": 52,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        },
+        "0.65": {
+          "passed": true,
+          "matched_pairs": 52,
+          "required_python": 52,
+          "required_android": 52,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        }
+      }
+    },
+    {
+      "file": "frame-3.png",
+      "python_count": 55,
+      "android_count": 55,
+      "thresholds": {
+        "0.3": {
+          "passed": true,
+          "matched_pairs": 55,
+          "required_python": 55,
+          "required_android": 55,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        },
+        "0.65": {
+          "passed": true,
+          "matched_pairs": 55,
+          "required_python": 55,
+          "required_android": 55,
+          "borderline_python": 0,
+          "borderline_android": 0,
+          "unmatched_python": [],
+          "unmatched_android": [],
+          "max_score_error": 0.0,
+          "max_coordinate_error_px": 0
+        }
+      }
+    }
+  ],
+  "accuracy_approved": false,
+  "warning_eligible": false,
+  "scope": "Class/score/clipped-box output agreement at 0.3 and 0.65, with an explicit score-tolerance ambiguity band. Not raw tensor equality or accuracy evidence."
+}

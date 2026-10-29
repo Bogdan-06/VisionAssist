@@ -1,0 +1,196 @@
+{
+  "model_sha256": "9e5e8ed50eec603097a9d34274dbe89712625b0a868e2b02f93efb2ea09ef0ce",
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee",
+  "source_sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "split": "test",
+  "images": 802,
+  "available_images": 802,
+  "classes": [
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "partial": false,
+  "smoke_model": false,
+  "warning_eligible": false,
+  "runtime": "MediaPipe Tasks CPU; real metadata/anchor decoding",
+  "mediapipe_version": "0.10.32",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "stairs",
+      "curb",
+      "step"
+    ]
+  },
+  "iou_threshold": 0.5,
+  "annotation_defined_negatives": 321,
+  "metrics": {
+    "0.1": {
+      "by_class": {
+        "stairs": {
+          "tp": 134,
+          "fp": 171,
+          "fn": 55,
+          "precision": 0.43934426229508194,
+          "recall": 0.708994708994709,
+          "f1": 0.5425101214574899
+        },
+        "curb": {
+          "tp": 61,
+          "fp": 375,
+          "fn": 117,
+          "precision": 0.13990825688073394,
+          "recall": 0.34269662921348315,
+          "f1": 0.1986970684039088
+        },
+        "step": {
+          "tp": 154,
+          "fp": 507,
+          "fn": 188,
+          "precision": 0.2329803328290469,
+          "recall": 0.4502923976608187,
+          "f1": 0.3070787637088734
+        }
+      },
+      "micro": {
+        "tp": 349,
+        "fp": 1053,
+        "fn": 360,
+        "precision": 0.24893009985734665,
+        "recall": 0.4922425952045134,
+        "f1": 0.33064898152534344
+      },
+      "negative_images_with_false_detection": 149
+    },
+    "0.3": {
+      "by_class": {
+        "stairs": {
+          "tp": 114,
+          "fp": 28,
+          "fn": 75,
+          "precision": 0.8028169014084507,
+          "recall": 0.6031746031746031,
+          "f1": 0.6888217522658611
+        },
+        "curb": {
+          "tp": 13,
+          "fp": 13,
+          "fn": 165,
+          "precision": 0.5,
+          "recall": 0.07303370786516854,
+          "f1": 0.12745098039215685
+        },
+        "step": {
+          "tp": 79,
+          "fp": 41,
+          "fn": 263,
+          "precision": 0.6583333333333333,
+          "recall": 0.2309941520467836,
+          "f1": 0.341991341991342
+        }
+      },
+      "micro": {
+        "tp": 206,
+        "fp": 82,
+        "fn": 503,
+        "precision": 0.7152777777777778,
+        "recall": 0.29055007052186177,
+        "f1": 0.41323971915747243
+      },
+      "negative_images_with_false_detection": 16
+    },
+    "0.5": {
+      "by_class": {
+        "stairs": {
+          "tp": 90,
+          "fp": 8,
+          "fn": 99,
+          "precision": 0.9183673469387755,
+          "recall": 0.47619047619047616,
+          "f1": 0.627177700348432
+        },
+        "curb": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 175,
+          "precision": 0.75,
+          "recall": 0.016853932584269662,
+          "f1": 0.03296703296703297
+        },
+        "step": {
+          "tp": 42,
+          "fp": 9,
+          "fn": 300,
+          "precision": 0.8235294117647058,
+          "recall": 0.12280701754385964,
+          "f1": 0.21374045801526717
+        }
+      },
+      "micro": {
+        "tp": 135,
+        "fp": 18,
+        "fn": 574,
+        "precision": 0.8823529411764706,
+        "recall": 0.19040902679830748,
+        "f1": 0.31322505800464034
+      },
+      "negative_images_with_false_detection": 4
+    },
+    "0.65": {
+      "by_class": {
+        "stairs": {
+          "tp": 73,
+          "fp": 4,
+          "fn": 116,
+          "precision": 0.948051948051948,
+          "recall": 0.3862433862433862,
+          "f1": 0.5488721804511278
+        },
+        "curb": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 177,
+          "precision": 1.0,
+          "recall": 0.0056179775280898875,
+          "f1": 0.0111731843575419
+        },
+        "step": {
+          "tp": 19,
+          "fp": 4,
+          "fn": 323,
+          "precision": 0.8260869565217391,
+          "recall": 0.05555555555555555,
+          "f1": 0.10410958904109589
+        }
+      },
+      "micro": {
+        "tp": 93,
+        "fp": 8,
+        "fn": 616,
+        "precision": 0.9207920792079208,
+        "recall": 0.1311706629055007,
+        "f1": 0.22962962962962963
+      },
+      "negative_images_with_false_detection": 2
+    }
+  },
+  "task_detect_ms": {
+    "p50": 29.6262999981991,
+    "p95": 51.081670000530714,
+    "p99": 64.11652600112576
+  },
+  "processing_ms": {
+    "p50": 72.13045000025886,
+    "p95": 115.24797999882138,
+    "p99": 137.5411620006344
+  },
+  "limitations": [
+    "Scores are not calibrated warning probabilities; no production warning decision is made.",
+    "Timing is desktop CPU inference including task preprocessing/postprocessing, not phone timing.",
+    "Image processing includes archive reads, hashing, decoding and metric calculation.",
+    "Duplicate-grouped source holdout does not establish geographic independence or walking-video safety.",
+    "No generic unevenness/pothole class, metric distance ground truth, or false alarms per hour."
+  ]
+}

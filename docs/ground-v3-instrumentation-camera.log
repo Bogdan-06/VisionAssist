@@ -1,0 +1,10 @@
+
+ro.visionassist.core.camera.CameraSnapshotTest:..
+ro.visionassist.core.camera.DetectionAnalyzerTest:...
+ro.visionassist.core.camera.DetectionMapperTest:..
+
+Time: 2.47
+
+OK (7 tests)
+
+

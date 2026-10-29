@@ -1,0 +1,46 @@
+{
+  "staged_files": 379,
+  "staged_bytes": 25026268,
+  "known_local_secret_values_checked": 3,
+  "findings": [],
+  "forbidden_files": [],
+  "largest_files": [
+    {
+      "path": "core/detection/src/main/assets/efficientdet_lite0.tflite",
+      "bytes": 13836895
+    },
+    {
+      "path": "core/ground/src/main/assets/ground_baseline.tflite",
+      "bytes": 2225580
+    },
+    {
+      "path": "docs/checkpoint-20261029/artifact-inventory.json",
+      "bytes": 984017
+    },
+    {
+      "path": "docs/barrier-label-review.png",
+      "bytes": 711019
+    },
+    {
+      "path": "docs/stair-research-review.png",
+      "bytes": 692477
+    },
+    {
+      "path": "core/ground/src/androidTest/assets/barrier-candidate/frame-1.png",
+      "bytes": 484650
+    },
+    {
+      "path": "core/ground/src/androidTest/assets/barrier-candidate/frame-3.png",
+      "bytes": 456967
+    },
+    {
+      "path": "core/ground/src/androidTest/assets/barrier-candidate/frame-2.png",
+      "bytes": 434036
+    }
+  ],
+  "intentionally_included_models": [
+    "core/detection/src/main/assets/efficientdet_lite0.tflite",
+    "core/ground/src/main/assets/ground_baseline.tflite"
+  ],
+  "scope": "Scanned staged content against local env credential values and common credential signatures; no plaintext secrets emitted. Heuristic checks do not prove absence of all secrets."
+}

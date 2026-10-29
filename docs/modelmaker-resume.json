@@ -1,0 +1,8 @@
+{
+  "source_snapshot": "C:\\Users\\Moth\\Documents\\Codex\\2026-10-09\\new-chat\\work\\ground\\modelmaker-epoch-snapshot-v2",
+  "initial_epoch": 3,
+  "restored_optimizer_step": 1126,
+  "verified_optimizer_variables": 280,
+  "weights_sha256": "62d3a5dcf5857ca7afcc5e6507cbb27f4cac24988805273dbb90d6b280cf7230",
+  "limitation": "Optimizer/model state and schedule restored; shuffled data order after restart is not bitwise identical to an uninterrupted run."
+}

@@ -1,0 +1,16 @@
+--------- beginning of main
+10-28 22:16:13.941 20671 20687 I GroundBenchmark: device=SM-S931B fixture iterations=20 inference_ms median=12 p95=12; fixture timing is not sustained camera throughput
+10-28 22:16:13.941 20671 20687 I GroundBenchmark: frame_processing_ms median=23 p95=24; includes resizing, inference and decoding, excludes CameraX delivery
+10-28 22:16:13.971 20671 20687 I GroundBenchmark: process_pss_kb before=118883 loaded_after_20=140606; includes runtime/test harness, not isolated model allocation
+10-28 22:23:38.498 21530 21544 I BarrierCompatibility: actual Task CPU inference; samples=12 median_ms=98.5 p95_ms=116; pss_kb before=64338 loaded=133683; includes task pre/postprocessing, excludes bitmap copy and camera
+10-28 22:23:38.498 21530 21544 I BarrierCompatibility: Rejected smoke model structural compatibility only; no accuracy, numeric parity, warnings, camera or microphone check
+10-28 22:23:38.498 21530 21544 I BarrierCompatibility: raw_detections=1536 nonempty_clipped_projections=900 category_indices=[-1]; label names remain mandatory
+10-28 22:23:39.187 21530 21544 I GroundBenchmark: device=SM-S931B fixture iterations=20 inference_ms median=12 p95=15; fixture timing is not sustained camera throughput
+10-28 22:23:39.187 21530 21544 I GroundBenchmark: frame_processing_ms median=24 p95=30; includes resizing, inference and decoding, excludes CameraX delivery
+10-28 22:23:39.218 21530 21544 I GroundBenchmark: process_pss_kb before=88673 loaded_after_20=110495; includes runtime/test harness, not isolated model allocation
+10-28 22:33:35.065 23744 23758 I BarrierCompatibility: actual Task CPU inference; samples=12 median_ms=95.5 p95_ms=109; pss_kb before=63637 loaded=165908; includes task pre/postprocessing, excludes bitmap copy and camera
+10-28 22:33:35.065 23744 23758 I BarrierCompatibility: Rejected smoke model structural compatibility only; no accuracy, numeric parity, warnings, camera or microphone check
+10-28 22:33:35.065 23744 23758 I BarrierCompatibility: raw_detections=1536 nonempty_clipped_projections=900 category_indices=[-1]; label names remain mandatory
+10-28 22:33:35.705 23744 23758 I GroundBenchmark: device=SM-S931B fixture iterations=20 inference_ms median=12 p95=12; fixture timing is not sustained camera throughput
+10-28 22:33:35.705 23744 23758 I GroundBenchmark: frame_processing_ms median=24 p95=26; includes resizing, inference and decoding, excludes CameraX delivery
+10-28 22:33:35.734 23744 23758 I GroundBenchmark: process_pss_kb before=66800 loaded_after_20=88574; includes runtime/test harness, not isolated model allocation

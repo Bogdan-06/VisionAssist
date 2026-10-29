@@ -1,0 +1,13 @@
+{
+  "audit_date": "2026-10-29",
+  "windows_matching_training_or_evaluation_processes": 0,
+  "wsl_python_training_or_evaluation_processes": 0,
+  "original_controller_status_is_stale": true,
+  "training_complete_epochs": 20,
+  "sdk32_validation_complete": true,
+  "sdk32_test_complete": true,
+  "legacy_test_report_present": false,
+  "new_training_started": false,
+  "warning_gate_enabled": false,
+  "note": "Original status.json preserved verbatim; do not treat stale running state as live."
+}

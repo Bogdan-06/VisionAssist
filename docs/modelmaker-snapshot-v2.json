@@ -1,0 +1,42 @@
+{
+  "intermediate_checkpoint": true,
+  "source_run": "C:\\Users\\Moth\\Documents\\Codex\\2026-10-09\\new-chat\\work\\ground\\modelmaker-run-v2",
+  "completed_epochs": 3,
+  "selected_epoch": 3,
+  "selection": "lowest completed validation total loss; no accuracy-based selection",
+  "weights_sha256": "62d3a5dcf5857ca7afcc5e6507cbb27f4cac24988805273dbb90d6b280cf7230",
+  "history_sha256": "00898295bb62754835df635ade3ce67e82687bd97db32b25640977936640735d",
+  "pretrained_checkpoint_sha256": "73dd229998007e47259b93b00f65aca410ec053a15e67d78519ce5c1779f521f",
+  "data_provenance": {
+    "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+    "manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+    "classes": [
+      "pothole"
+    ],
+    "counts": {
+      "train": {
+        "images": 3000,
+        "boxes": 2111,
+        "negatives": 1993
+      },
+      "validation": {
+        "images": 1330,
+        "boxes": 526,
+        "negatives": 1086
+      }
+    },
+    "test_images_exported": false,
+    "image_folder": "images",
+    "source": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+    "license": "Release CC BY 4.0; author repository images CC BY-SA 4.0; retain both notices.",
+    "transformations": "Original JPEG bytes; VOC-derived xyxy boxes converted to COCO xywh only."
+  },
+  "model_sha256": "3266cd1f8db6367b9da2e29e214e8c78269a51534846812a0b50d3ba221e5927",
+  "model_bytes": 10452901,
+  "warning_eligible": false,
+  "limitations": [
+    "Intermediate export of completed weights; source training is stopped, with three completed epochs retained.",
+    "Export does not establish detection quality, Android compatibility or walking safety."
+  ],
+  "source_run_state_at_review": "interrupted"
+}

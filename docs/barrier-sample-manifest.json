@@ -1,0 +1,194 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "attribution": "Jakob Stolberg; collectors Christopher Richters and Sami Nenno; HIIG, 2022",
+  "archive_url": "https://zenodo.org/api/records/6382090/files/wm_barriers_data.zip/content",
+  "archive_bytes": 7972407510,
+  "publisher_archive_md5": "d96051ca1339d1c1afa9ac736eabd058",
+  "full_archive_checksum_verified": false,
+  "selected_member_crcs_verified": true,
+  "downloaded_bytes": 10839560,
+  "annotation_sha256": "9a19dc3a95acd01c30e1a40320de49e19a3d5fe5b1b9c7253f045aa2e590930c",
+  "annotation_image_count": 5538,
+  "annotation_counts": {
+    "step": 3564,
+    "stair": 1492,
+    "grab_bar": 922,
+    "ramp": 143
+  },
+  "curb_boxes": 1185,
+  "selection": "First four by SHA256 of source member name in each stratum; no model-based selection",
+  "records": [
+    {
+      "path": "00.jpg",
+      "archive_entry": "images/000086694.jpg",
+      "width": 1350,
+      "height": 1800,
+      "sha256": "b9fac3bb6834e02d1f26bd132eb71554ee913d45f83c56b952d1334af9f4cb2b",
+      "crc32": "0e7230c6",
+      "stratum": "stair",
+      "boxes": [
+        {
+          "label": "stair",
+          "box": [
+            344.07,
+            1413.85,
+            1041.82,
+            1684.04
+          ],
+          "attributes": {
+            "number_of_steps": "2"
+          }
+        }
+      ]
+    },
+    {
+      "path": "01.jpg",
+      "archive_entry": "images/000057108.jpg",
+      "width": 1800,
+      "height": 1012,
+      "sha256": "9f173802ddb1b2dc6e9bef7bc81149b5e2dfc4b04d68cba96df5a630e4a62156",
+      "crc32": "553bd4b0",
+      "stratum": "stair",
+      "boxes": [
+        {
+          "label": "grab_bar",
+          "box": [
+            1188.58,
+            680.12,
+            1227.22,
+            757.81
+          ],
+          "attributes": {}
+        },
+        {
+          "label": "stair",
+          "box": [
+            1101.64,
+            731.65,
+            1227.22,
+            831.07
+          ],
+          "attributes": {
+            "number_of_steps": "10"
+          }
+        }
+      ]
+    },
+    {
+      "path": "02.jpg",
+      "archive_entry": "images/000021675.jpg",
+      "width": 480,
+      "height": 640,
+      "sha256": "c9bb591f9d5e995c3f3449966c4ceaadfed0b5110aed807b6b73e22d43fbe1ce",
+      "crc32": "8a0e055f",
+      "stratum": "stair",
+      "boxes": [
+        {
+          "label": "stair",
+          "box": [
+            148.6,
+            253.74,
+            387.77,
+            374.98
+          ],
+          "attributes": {
+            "number_of_steps": "2"
+          }
+        }
+      ]
+    },
+    {
+      "path": "03.jpg",
+      "archive_entry": "images/000103714.jpg",
+      "width": 1350,
+      "height": 1800,
+      "sha256": "58a324f0941b8f5494ff22add6155276de2556abeb8f2063c2dc75d7e6ca6778",
+      "crc32": "d2185134",
+      "stratum": "stair",
+      "boxes": [
+        {
+          "label": "grab_bar",
+          "box": [
+            869.03,
+            326.28,
+            1025.11,
+            546.07
+          ],
+          "attributes": {}
+        },
+        {
+          "label": "stair",
+          "box": [
+            862.59,
+            527.46,
+            1015.08,
+            740.81
+          ],
+          "attributes": {
+            "number_of_steps": "4"
+          }
+        },
+        {
+          "label": "stair",
+          "box": [
+            1058.75,
+            540.35,
+            1226.28,
+            770.16
+          ],
+          "attributes": {
+            "number_of_steps": "4"
+          }
+        }
+      ]
+    },
+    {
+      "path": "04.jpg",
+      "archive_entry": "images/000002187.jpg",
+      "width": 1800,
+      "height": 1350,
+      "sha256": "05fde578cae2c23c7e681401c81b7d2ea625424d6ecaab471214b1d066421c55",
+      "crc32": "2b283486",
+      "stratum": "no_annotated_stair_or_step",
+      "boxes": []
+    },
+    {
+      "path": "05.jpg",
+      "archive_entry": "images/000044462.jpg",
+      "width": 1200,
+      "height": 1800,
+      "sha256": "3303932a4882b321aa7af3acb3f916976912c08e6be28c852a881e1f5aa1483b",
+      "crc32": "ff375d0c",
+      "stratum": "no_annotated_stair_or_step",
+      "boxes": []
+    },
+    {
+      "path": "06.jpg",
+      "archive_entry": "images/000011841.jpg",
+      "width": 1350,
+      "height": 1800,
+      "sha256": "427468aca603550604e784603405d969c72782209981887592d0b6c928e2447a",
+      "crc32": "aded9234",
+      "stratum": "no_annotated_stair_or_step",
+      "boxes": []
+    },
+    {
+      "path": "07.jpg",
+      "archive_entry": "images/000040999.jpg",
+      "width": 1350,
+      "height": 1800,
+      "sha256": "98e22f583545fb8b3ae9d9cc3cfce8bc64da95a56f2e8c55f74c3b873308a5ec",
+      "crc32": "c6b0a006",
+      "stratum": "no_annotated_stair_or_step",
+      "boxes": []
+    }
+  ],
+  "limitations": [
+    "Eight-image execution sample, not a representative evaluation or training split.",
+    "Negative means no published stair/step annotation, not independently reviewed hazard-free.",
+    "Source uses visible-region boxes and wheelchair-accessibility annotation conventions.",
+    "Step heights are annotator estimates, not measured distance ground truth.",
+    "Source locations and overlap with model pretraining are not established."
+  ]
+}

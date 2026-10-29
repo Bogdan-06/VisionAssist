@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">VisionAssist</string>
+    <string name="subtitle">Recunoaștere locală de obiecte</string>
+    <string name="prototype_label">PROTOTIP · ETAPA 4</string>
+    <string name="safety_title">Folosește în continuare bastonul alb</string>
+    <string name="safety_body">VisionAssist este un prototip de asistență și nu înlocuiește bastonul alb. Recunoașterea obiectelor poate greși sau omite obiecte. Nu oferă avertizări de siguranță.</string>
+    <string name="status_heading">Starea camerei</string>
+    <string name="status_permission">Este necesar accesul la cameră</string>
+    <string name="status_denied">Accesul la cameră nu a fost acordat</string>
+    <string name="status_paused">Camera este oprită</string>
+    <string name="status_starting">Se pornește camera din spate…</string>
+    <string name="status_streaming">Camera din spate este activă</string>
+    <string name="status_unavailable">Camera din spate nu este disponibilă</string>
+    <string name="status_error">Camera nu a putut fi pornită</string>
+    <string name="permission_body">Permite accesul pentru a afișa imaginea camerei din spate. Analiza obiectelor este locală. O fotografie este trimisă către furnizorul AI ales (Google Gemini sau OpenAI) doar când confirmi explicit trimiterea ei.</string>
+    <string name="denied_body">Poți încerca din nou. Dacă solicitarea nu mai apare, deschide setările aplicației și permite accesul la cameră.</string>
+    <string name="paused_body">Pornește camera când ești pregătit. Previzualizarea funcționează fără internet.</string>
+    <string name="active_body">Obiectele recunoscute apar în chenar și în lista de sub cameră. Nu sunt estimate distanțe sau trasee sigure.</string>
+    <string name="error_body">Verifică permisiunea și dacă altă aplicație folosește camera, apoi încearcă din nou.</string>
+    <string name="unavailable_body">Această aplicație are nevoie de o cameră din spate pentru previzualizare.</string>
+    <string name="allow_camera">Permite accesul la cameră</string>
+    <string name="start_camera">Pornește camera</string>
+    <string name="stop_camera">Oprește camera</string>
+    <string name="retry_camera">Încearcă din nou</string>
+    <string name="open_settings">Deschide setările aplicației</string>
+    <string name="preview_description">Previzualizare a camerei din spate cu chenare pentru obiectele recunoscute. Rezultatele sunt disponibile și în lista de sub cameră.</string>
+    <string name="preview_placeholder">Previzualizarea apare aici</string>
+    <string name="privacy_label">Recunoaștere locală · Conversație online opțională · Nicio fotografie trimisă automat</string>
+    <string name="help_title">Despre această versiune</string>
+    <string name="help_body">Camera recunoaște local 80 de categorii de obiecte. Chenarele și lista arată eticheta, scorul și poziția în imagine. Scorul nu este o garanție. Anunțurile locale opționale folosesc o voce română offline și au prioritate față de AI. Conversația AI necesită internet și trimite vocea către furnizorul AI ales (Google Gemini sau OpenAI). Pentru o descriere vizuală confirmă trimiterea unei singure fotografii. Nu sunt estimate distanțe sau trasee sigure. Camera, analiza și conversația se opresc în fundal.</string>
+    <string name="help_button">Ajutor și limitări</string>
+    <string name="close_help">Am înțeles</string>
+    <string name="detection_heading">Obiecte recunoscute</string>
+    <string name="detection_idle">Pornește camera pentru analiza locală.</string>
+    <string name="detection_loading">Se pregătește analiza locală…</string>
+    <string name="detection_active">Analiza locală este activă</string>
+    <string name="detection_stale">Nu există rezultate recente. Chenarele vechi au fost eliminate.</string>
+    <string name="detection_error">Recunoașterea obiectelor nu este disponibilă. Previzualizarea poate continua.</string>
+    <string name="retry_detection">Repornește analiza locală</string>
+    <string name="detection_empty">Niciun obiect recunoscut în acest cadru. Aceasta nu înseamnă că drumul este liber.</string>
+    <string name="detection_timing">Ultima analiză: %1$d ms</string>
+    <string name="detection_limits" formatted="false">Scor minim: 50%. Stânga, centru și dreapta indică poziția în imagine, nu instrucțiuni de deplasare. Modelul nu recunoaște gropi, scări, borduri sau stâlpi.</string>
+</resources>

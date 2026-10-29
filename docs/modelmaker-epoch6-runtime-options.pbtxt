@@ -1,0 +1,61 @@
+name: "mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_imagepreprocessinggraph__ImageToTensorCalculator"
+calculator: "ImageToTensorCalculator"
+input_stream: "IMAGE:mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_imagepreprocessinggraph____stream_5"
+input_stream: "NORM_RECT:norm_rect_in"
+output_stream: "LETTERBOX_PADDING:mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_imagepreprocessinggraph____stream_2"
+output_stream: "MATRIX:mediapipe_tasks_vision_objectdetectorgraph____stream_4"
+output_stream: "TENSORS:mediapipe_tasks_vision_objectdetectorgraph____stream_5"
+options {
+  [mediapipe.ImageToTensorCalculatorOptions.ext] {
+    output_tensor_width: 320
+    output_tensor_height: 320
+    output_tensor_float_range {
+      min: -1
+      max: 1
+    }
+    gpu_origin: TOP_LEFT
+  }
+}
+
+name: "mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph__TensorsToDetectionsCalculator"
+calculator: "TensorsToDetectionsCalculator"
+input_stream: "TENSORS:mediapipe_tasks_vision_objectdetectorgraph____stream_6"
+output_stream: "DETECTIONS:mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph____stream_2"
+input_side_packet: "ANCHORS:mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph____side_packet_1"
+options {
+  [mediapipe.TensorsToDetectionsCalculatorOptions.ext] {
+    num_classes: 2
+    num_boxes: 19125
+    num_coords: 4
+    keypoint_coord_offset: 0
+    num_keypoints: 0
+    num_values_per_keypoint: 2
+    x_scale: 1
+    y_scale: 1
+    w_scale: 1
+    h_scale: 1
+    apply_exponential_on_box_size: true
+    allow_classes: 1
+    sigmoid_score: false
+    min_score_thresh: 0.05
+    tensor_mapping {
+      detections_tensor_index: 0
+      scores_tensor_index: 1
+    }
+    box_format: YXHW
+  }
+}
+
+name: "mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph__NonMaxSuppressionCalculator"
+calculator: "NonMaxSuppressionCalculator"
+input_stream: "mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph____stream_2"
+output_stream: "mediapipe_tasks_vision_objectdetectorgraph__mediapipe_tasks_components_processors_detectionpostprocessinggraph____stream_3"
+options {
+  [mediapipe.NonMaxSuppressionCalculatorOptions.ext] {
+    max_num_detections: 100
+    min_suppression_threshold: 0.3
+    overlap_type: INTERSECTION_OVER_UNION
+    algorithm: DEFAULT
+    multiclass_nms: false
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "source_snapshot": "/mnt/c/Users/Moth/Desktop/VisionAssist/barrier-training-runs/20261028-215718-4bd1910e/resume-snapshot",
+  "initial_epoch": 3,
+  "restored_optimizer_step": 1464,
+  "verified_optimizer_variables": 280,
+  "weights_sha256": "39fd620d75951e019f377383cd308b322d2490c1653092dbf466ffc646268257",
+  "limitation": "Optimizer/model state and schedule restored; shuffled data order after restart is not bitwise identical to an uninterrupted run."
+}

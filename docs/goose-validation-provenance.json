@@ -1,0 +1,23 @@
+{
+  "url": "https://goose-dataset.de/storage/goose_2d_val.zip",
+  "source": "https://goose-dataset.de/docs/setup/",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution": "Peter Mortimer, Raphael Hagmanns, Miguel Granero, Thorsten Luettel, Janko Petereit, Hans-Joachim Wuensche",
+  "paper": "https://arxiv.org/abs/2310.16788",
+  "bytes": 2857251081,
+  "sha256": "9fed0dacfef36fa18c866dc724e63ea7a42796244fdd998bc91330555ed071d1",
+  "server_headers": {
+    "Date": "Sun, 25 Oct 2026 07:32:23 GMT",
+    "Content-Type": "application/zip",
+    "Content-Length": "2857251081",
+    "Connection": "close",
+    "Last-Modified": "Tue, 18 Mar 2025 16:59:04 GMT",
+    "ETag": "\"67d9a658-aa4e3109\"",
+    "Accept-Ranges": "bytes",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
+  },
+  "split": "validation",
+  "use": "curb annotation inspection; not training",
+  "checksum_scope": "Locally computed SHA-256; no publisher-provided cryptographic checksum found. HTTPS origin, size and ETag checked; inspect ZIP CRCs separately."
+}

@@ -1,0 +1,33 @@
+{
+  "source_sha256": "2327fb7ccacc68fab10a45753d868e09a6c9855ac0acae486aeefec15265f82d",
+  "model_sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+  "decoded_frames": 621,
+  "analyzed_frames": 52,
+  "nominal_fps": 29.97002997002997,
+  "interval_ms": 400,
+  "runtime": "grid",
+  "mediapipe_version": null,
+  "detector_options": null,
+  "inference_timing_scope": "Bare LiteRT invoke",
+  "reviewed_frames": 0,
+  "metrics_at_point3": null,
+  "warning_policy_eligible_timestamps_ms": [],
+  "production_ground_warnings_enabled": false,
+  "inference_ms": {
+    "p50": 3.500400001939852,
+    "p95": 5.05866499734111,
+    "p99": 6.286332003219289
+  },
+  "sampled_processing_ms": {
+    "p50": 22.551950001798104,
+    "p95": 30.159204998926707,
+    "p99": 37.65019899830805
+  },
+  "elapsed_seconds": 4.577680399990641,
+  "decode_and_inference_frames_per_second": 135.65822550680247,
+  "limitations": [
+    "Unreviewed frames have no precision/recall labels. No detection is not evidence of safety.",
+    "Temporal replay uses video timestamps; offline throughput is not live Android preview frame rate.",
+    "A single clip is not a representative walking-camera evaluation."
+  ]
+}

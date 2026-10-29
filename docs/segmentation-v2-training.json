@@ -1,0 +1,55 @@
+{
+  "architecture": "Frozen MobileNetV2 alpha 0.5 + separable multiscale mask decoder",
+  "classes": [
+    "pothole mask"
+  ],
+  "input": [
+    1,
+    320,
+    320,
+    3
+  ],
+  "input_normalization": "RGB / 127.5 - 1",
+  "output": [
+    1,
+    80,
+    80,
+    1
+  ],
+  "output_semantics": "sigmoid probability per stride-four pixel",
+  "backbone_sha256": "279052de2cfa801003aa6cc25cc4d007d35dd0b76f06935268c79788b7642d05",
+  "manifest_sha256": "6f87baaacef7ffdfb01e9c8ef8840ba60fdd433d4473dbc937d744d485688944",
+  "source_sha256": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+  "script_sha256": "f0d5ce47c0810ae8e0a71c46da896d95879d09dc28a4485d7bf3a0abfd8191a5",
+  "model_sha256": "a145296eca9ed48aa73ea3a2b29cbe354f20e36d8645d5f999f86ce2ff613f8d",
+  "bytes": 1997104,
+  "seed": 4217,
+  "requested_epochs": 12,
+  "completed_epochs": 12,
+  "selected_epoch": 9,
+  "selection": "minimum validation BCE plus soft-Dice loss over phone frames and supplied RDD negatives; no test fitting/selection",
+  "training_frames": 3853,
+  "validation_frames": 1706,
+  "phone_validation_frames": 620,
+  "negative_manifest_sha256": "e9982fed435113a895b007de7150f365d9334fcbcb2426ffb0e24c7f9515af43",
+  "training_negative_frames": 1993,
+  "validation_negative_frames": 1086,
+  "sampling": "Uniform per frame; five sampled frames per phone clip, one frame per RDD negative image",
+  "frozen_encoder": true,
+  "augmentation": "none for this initial cached-feature baseline",
+  "feature_cache_dtype": "float16; exported backbone inference remains float32",
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "elapsed_seconds": 873.9800479412079,
+  "limitations": [
+    "Published clip partitions preserved; capture locations/source sequences are not established as disjoint.",
+    "Near-neighbour grayscale differences are a manual review aid, not a reliable leakage classifier.",
+    "Only sampled frames were checked for exact decoded-frame duplication.",
+    "Test partition has already been used for detector development evaluation; not an untouched safety test.",
+    "Road close-up masks cannot establish walking safety, curb/stair classes or distances.",
+    "Pixel metrics at 320x320 do not measure calibrated hazard confidence or warning-event reliability.",
+    "RDD negatives, when supplied, are annotation-defined road scenes, not reviewed negative walking clips.",
+    "Only negative RDD images enter mask training; positive road-domain mask coverage remains missing.",
+    "No Android runtime integration, curb/stair classes or depth estimation in this candidate."
+  ]
+}

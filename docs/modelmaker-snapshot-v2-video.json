@@ -1,0 +1,39 @@
+{
+  "source_sha256": "2327fb7ccacc68fab10a45753d868e09a6c9855ac0acae486aeefec15265f82d",
+  "model_sha256": "3266cd1f8db6367b9da2e29e214e8c78269a51534846812a0b50d3ba221e5927",
+  "decoded_frames": 621,
+  "analyzed_frames": 52,
+  "nominal_fps": 29.97002997002997,
+  "interval_ms": 400,
+  "runtime": "mediapipe",
+  "mediapipe_version": "0.10.21",
+  "detector_options": {
+    "max_results": 100,
+    "score_threshold": 0.05,
+    "category_allowlist": [
+      "pothole"
+    ]
+  },
+  "inference_timing_scope": "MediaPipe detect including graph preprocessing/postprocessing; not bare inference",
+  "reviewed_frames": 0,
+  "metrics_at_point3": null,
+  "warning_policy_eligible_timestamps_ms": [],
+  "production_ground_warnings_enabled": false,
+  "inference_ms": {
+    "p50": 43.04615000728518,
+    "p95": 50.040399999852525,
+    "p99": 52.31398599891691
+  },
+  "sampled_processing_ms": {
+    "p50": 46.87990000093123,
+    "p95": 54.35845000611152,
+    "p99": 58.92911698785611
+  },
+  "elapsed_seconds": 5.667794699998922,
+  "decode_and_inference_frames_per_second": 109.5664244860736,
+  "limitations": [
+    "Unreviewed frames have no precision/recall labels. No detection is not evidence of safety.",
+    "Temporal replay uses video timestamps; offline throughput is not live Android preview frame rate.",
+    "A single clip is not a representative walking-camera evaluation."
+  ]
+}

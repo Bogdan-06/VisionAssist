@@ -1,0 +1,554 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :core:camera:preBuild UP-TO-DATE
+> Task :core:camera:preReleaseBuild UP-TO-DATE
+> Task :core:camera:mergeReleaseJniLibFolders
+> Task :core:camera:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:depth:preBuild UP-TO-DATE
+> Task :core:depth:preReleaseBuild UP-TO-DATE
+> Task :core:camera:copyReleaseJniLibsProjectOnly
+> Task :core:depth:mergeReleaseJniLibFolders
+> Task :core:depth:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:detection:preBuild UP-TO-DATE
+> Task :core:detection:preReleaseBuild UP-TO-DATE
+> Task :core:depth:copyReleaseJniLibsProjectOnly
+> Task :core:detection:mergeReleaseJniLibFolders
+> Task :core:detection:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:ground:preBuild UP-TO-DATE
+> Task :core:ground:preReleaseBuild UP-TO-DATE
+> Task :core:detection:copyReleaseJniLibsProjectOnly
+> Task :core:ground:mergeReleaseJniLibFolders
+> Task :core:ground:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:voice:preBuild UP-TO-DATE
+> Task :core:ground:copyReleaseJniLibsProjectOnly
+> Task :core:voice:preReleaseBuild UP-TO-DATE
+> Task :core:voice:mergeReleaseJniLibFolders
+> Task :core:voice:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:voice:copyReleaseJniLibsProjectOnly
+> Task :core:camera:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:camera:generateReleaseResValues FROM-CACHE
+> Task :core:camera:generateReleaseResources FROM-CACHE
+> Task :core:camera:packageReleaseResources
+> Task :core:camera:processReleaseNavigationResources FROM-CACHE
+> Task :core:camera:parseReleaseLocalResources FROM-CACHE
+> Task :core:camera:generateReleaseRFile FROM-CACHE
+> Task :core:detection:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:detection:generateReleaseResValues FROM-CACHE
+> Task :core:detection:generateReleaseResources FROM-CACHE
+> Task :core:detection:packageReleaseResources
+> Task :core:detection:processReleaseNavigationResources FROM-CACHE
+> Task :core:detection:parseReleaseLocalResources FROM-CACHE
+> Task :core:detection:generateReleaseRFile FROM-CACHE
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libarcore_sdk_c.so, libarcore_sdk_jni.so, libimage_processing_util_jni.so, libjingle_peerconnection_so.so, libmediapipe_tasks_vision_jni.so, libsurface_util_jni.so, libtensorflowlite_jni.so. Run with --info option to learn more.
+
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :core:detection:javaPreCompileRelease FROM-CACHE
+> Task :core:ground:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:ground:generateReleaseResValues FROM-CACHE
+> Task :core:ground:generateReleaseResources FROM-CACHE
+> Task :core:ground:packageReleaseResources
+> Task :core:ground:processReleaseNavigationResources FROM-CACHE
+> Task :core:ground:parseReleaseLocalResources FROM-CACHE
+> Task :core:ground:generateReleaseRFile FROM-CACHE
+> Task :core:detection:compileReleaseKotlin
+> Task :core:detection:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:detection:bundleLibCompileToJarRelease
+> Task :core:ground:javaPreCompileRelease FROM-CACHE
+> Task :core:camera:javaPreCompileRelease FROM-CACHE
+> Task :core:detection:mergeReleaseGeneratedProguardFiles
+> Task :core:detection:exportReleaseConsumerProguardFiles
+> Task :core:depth:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:depth:generateReleaseResValues FROM-CACHE
+> Task :core:depth:generateReleaseResources FROM-CACHE
+> Task :core:depth:packageReleaseResources
+> Task :core:depth:processReleaseNavigationResources FROM-CACHE
+> Task :core:depth:parseReleaseLocalResources FROM-CACHE
+> Task :core:depth:generateReleaseRFile FROM-CACHE
+> Task :core:depth:javaPreCompileRelease FROM-CACHE
+> Task :core:voice:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:voice:generateReleaseResValues FROM-CACHE
+> Task :core:voice:generateReleaseResources FROM-CACHE
+> Task :core:voice:packageReleaseResources
+> Task :core:voice:processReleaseNavigationResources FROM-CACHE
+> Task :core:voice:parseReleaseLocalResources FROM-CACHE
+> Task :core:voice:generateReleaseRFile FROM-CACHE
+> Task :core:ground:compileReleaseKotlin
+> Task :core:ground:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:ground:bundleLibCompileToJarRelease
+> Task :core:voice:compileReleaseKotlin
+> Task :core:camera:compileReleaseKotlin
+> Task :core:camera:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:camera:mergeReleaseGeneratedProguardFiles
+> Task :core:camera:exportReleaseConsumerProguardFiles
+> Task :core:ground:mergeReleaseGeneratedProguardFiles
+> Task :core:ground:exportReleaseConsumerProguardFiles
+> Task :core:voice:javaPreCompileRelease FROM-CACHE
+> Task :core:voice:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:voice:mergeReleaseGeneratedProguardFiles
+> Task :core:voice:exportReleaseConsumerProguardFiles
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateReleaseBuildConfig
+> Task :core:camera:writeReleaseAarMetadata
+> Task :core:depth:writeReleaseAarMetadata
+> Task :core:detection:writeReleaseAarMetadata
+> Task :core:ground:writeReleaseAarMetadata
+> Task :core:voice:writeReleaseAarMetadata
+> Task :app:checkReleaseAarMetadata
+> Task :app:processReleaseNavigationResources
+> Task :app:compileReleaseNavigationResources FROM-CACHE
+> Task :app:generateReleaseResValues FROM-CACHE
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:mergeReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:parseReleaseLocalResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :core:camera:extractDeepLinksRelease FROM-CACHE
+> Task :core:camera:processReleaseManifest FROM-CACHE
+> Task :core:depth:extractDeepLinksRelease FROM-CACHE
+> Task :core:depth:processReleaseManifest FROM-CACHE
+> Task :core:detection:extractDeepLinksRelease FROM-CACHE
+> Task :core:detection:processReleaseManifest FROM-CACHE
+> Task :core:ground:extractDeepLinksRelease FROM-CACHE
+> Task :core:ground:processReleaseManifest FROM-CACHE
+> Task :core:voice:extractDeepLinksRelease FROM-CACHE
+> Task :core:voice:processReleaseManifest FROM-CACHE
+> Task :core:depth:compileReleaseKotlin
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :core:camera:compileReleaseLibraryResources
+> Task :core:depth:compileReleaseLibraryResources FROM-CACHE
+> Task :core:detection:compileReleaseLibraryResources FROM-CACHE
+> Task :core:ground:compileReleaseLibraryResources FROM-CACHE
+> Task :core:voice:compileReleaseLibraryResources FROM-CACHE
+> Task :core:depth:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:depth:mergeReleaseGeneratedProguardFiles
+> Task :core:depth:exportReleaseConsumerProguardFiles
+> Task :core:camera:bundleLibCompileToJarRelease
+> Task :core:depth:bundleLibCompileToJarRelease
+> Task :core:voice:bundleLibCompileToJarRelease
+> Task :app:javaPreCompileRelease FROM-CACHE
+> Task :core:camera:prepareReleaseArtProfile
+> Task :core:depth:prepareReleaseArtProfile
+> Task :core:detection:prepareReleaseArtProfile
+> Task :core:ground:prepareReleaseArtProfile
+> Task :core:voice:prepareReleaseArtProfile
+> Task :app:mergeReleaseArtProfile
+> Task :core:camera:bundleLibRuntimeToJarRelease
+> Task :core:depth:bundleLibRuntimeToJarRelease
+> Task :core:detection:bundleLibRuntimeToJarRelease
+> Task :core:ground:bundleLibRuntimeToJarRelease
+> Task :core:voice:bundleLibRuntimeToJarRelease
+> Task :app:extractProguardFiles
+> Task :core:camera:processReleaseJavaRes
+> Task :core:depth:processReleaseJavaRes
+> Task :core:detection:processReleaseJavaRes
+> Task :core:ground:processReleaseJavaRes
+> Task :core:voice:processReleaseJavaRes
+> Task :app:mergeReleaseStartupProfile
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :core:camera:mergeReleaseShaders
+> Task :core:camera:compileReleaseShaders NO-SOURCE
+> Task :core:camera:generateReleaseAssets UP-TO-DATE
+> Task :core:camera:mergeReleaseAssets
+> Task :core:depth:mergeReleaseShaders
+> Task :core:depth:compileReleaseShaders NO-SOURCE
+> Task :core:depth:generateReleaseAssets UP-TO-DATE
+> Task :core:depth:mergeReleaseAssets
+> Task :core:detection:mergeReleaseShaders
+> Task :core:detection:compileReleaseShaders NO-SOURCE
+> Task :core:detection:generateReleaseAssets UP-TO-DATE
+> Task :core:detection:mergeReleaseAssets
+> Task :core:ground:mergeReleaseShaders
+> Task :core:ground:compileReleaseShaders NO-SOURCE
+> Task :core:ground:generateReleaseAssets UP-TO-DATE
+> Task :core:ground:mergeReleaseAssets
+> Task :core:voice:mergeReleaseShaders
+> Task :core:voice:compileReleaseShaders NO-SOURCE
+> Task :core:voice:generateReleaseAssets UP-TO-DATE
+> Task :core:voice:mergeReleaseAssets
+> Task :app:processReleaseResources
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :core:camera:createFullJarRelease
+> Task :core:camera:extractProguardFiles
+> Task :core:detection:createFullJarRelease
+> Task :core:detection:extractProguardFiles
+> Task :core:detection:generateReleaseLintModel
+> Task :core:detection:prepareLintJarForPublish
+> Task :core:ground:createFullJarRelease
+> Task :core:ground:extractProguardFiles
+> Task :core:ground:generateReleaseLintModel
+> Task :core:ground:prepareLintJarForPublish
+> Task :core:camera:generateReleaseLintModel
+> Task :core:camera:prepareLintJarForPublish
+> Task :core:depth:createFullJarRelease
+> Task :core:depth:extractProguardFiles
+> Task :core:depth:generateReleaseLintModel
+> Task :core:depth:prepareLintJarForPublish
+> Task :core:voice:createFullJarRelease
+> Task :core:voice:extractProguardFiles
+> Task :core:voice:generateReleaseLintModel
+> Task :core:voice:prepareLintJarForPublish
+> Task :core:camera:checkReleaseAarMetadata
+> Task :core:camera:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:camera:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:camera:extractDeepLinksForAarRelease
+> Task :core:camera:extractReleaseAnnotations
+> Task :core:camera:mergeReleaseConsumerProguardFiles
+> Task :core:camera:mergeReleaseJavaResource
+> Task :core:camera:syncReleaseLibJars
+> Task :core:camera:bundleReleaseLocalLintAar
+> Task :core:detection:checkReleaseAarMetadata
+> Task :core:detection:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:detection:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:detection:extractDeepLinksForAarRelease FROM-CACHE
+> Task :core:detection:extractReleaseAnnotations
+> Task :core:detection:mergeReleaseConsumerProguardFiles
+> Task :core:detection:mergeReleaseJavaResource
+> Task :core:detection:syncReleaseLibJars
+> Task :core:detection:bundleReleaseLocalLintAar
+> Task :core:depth:checkReleaseAarMetadata
+> Task :core:depth:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:depth:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:depth:extractDeepLinksForAarRelease FROM-CACHE
+> Task :core:depth:extractReleaseAnnotations
+> Task :core:depth:mergeReleaseConsumerProguardFiles
+> Task :core:depth:mergeReleaseJavaResource
+> Task :core:depth:syncReleaseLibJars
+> Task :core:depth:bundleReleaseLocalLintAar
+> Task :core:ground:checkReleaseAarMetadata
+> Task :core:ground:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:ground:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:ground:extractDeepLinksForAarRelease FROM-CACHE
+> Task :core:ground:extractReleaseAnnotations
+> Task :core:ground:mergeReleaseConsumerProguardFiles
+> Task :core:ground:mergeReleaseJavaResource
+> Task :core:ground:syncReleaseLibJars
+> Task :core:ground:bundleReleaseLocalLintAar
+> Task :core:voice:checkReleaseAarMetadata
+> Task :core:voice:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:voice:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:voice:extractDeepLinksForAarRelease FROM-CACHE
+> Task :core:voice:extractReleaseAnnotations
+> Task :core:voice:mergeReleaseConsumerProguardFiles
+> Task :core:voice:mergeReleaseJavaResource
+> Task :core:voice:syncReleaseLibJars
+> Task :core:voice:bundleReleaseLocalLintAar
+> Task :core:detection:writeReleaseLintModelMetadata
+> Task :core:ground:writeReleaseLintModelMetadata
+> Task :app:compileReleaseKotlin
+> Task :core:camera:lintVitalAnalyzeRelease
+
+> Task :app:compileReleaseKotlin
+w: file:///C:/Users/Moth/Desktop/VisionAssist/app/src/main/java/ro/visionassist/app/voice/LocalAnnouncements.kt:59:58 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:mergeReleaseGeneratedProguardFiles
+> Task :app:processReleaseJavaRes
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:generateReleaseLintVitalReportModel
+> Task :core:camera:writeReleaseLintModelMetadata
+> Task :app:mergeReleaseJavaResource
+> Task :core:depth:lintVitalAnalyzeRelease
+> Task :core:depth:writeReleaseLintModelMetadata
+> Task :core:detection:lintVitalAnalyzeRelease
+> Task :core:ground:lintVitalAnalyzeRelease
+> Task :app:minifyReleaseWithR8
+> Task :core:voice:lintVitalAnalyzeRelease
+> Task :core:voice:writeReleaseLintModelMetadata
+> Task :app:lintVitalAnalyzeRelease
+> Task :core:camera:generateReleaseLintVitalModel
+> Task :core:depth:generateReleaseLintVitalModel
+> Task :core:detection:generateReleaseLintVitalModel
+> Task :core:ground:generateReleaseLintVitalModel
+> Task :core:voice:generateReleaseLintVitalModel
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:optimizeReleaseResources
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :core:camera:preDebugBuild UP-TO-DATE
+> Task :core:detection:preDebugBuild UP-TO-DATE
+> Task :core:detection:writeDebugAarMetadata UP-TO-DATE
+> Task :core:ground:preDebugBuild UP-TO-DATE
+> Task :core:ground:writeDebugAarMetadata UP-TO-DATE
+> Task :core:camera:checkDebugAarMetadata
+> Task :core:camera:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:camera:mergeDebugNativeLibs NO-SOURCE
+> Task :core:camera:stripDebugDebugSymbols NO-SOURCE
+> Task :core:camera:copyDebugJniLibsProjectAndLocalJars
+> Task :core:camera:generateDebugResValues UP-TO-DATE
+> Task :core:camera:generateDebugResources UP-TO-DATE
+> Task :core:camera:packageDebugResources UP-TO-DATE
+> Task :core:camera:processDebugNavigationResources UP-TO-DATE
+> Task :core:camera:parseDebugLocalResources UP-TO-DATE
+> Task :core:camera:generateDebugRFile UP-TO-DATE
+> Task :core:detection:generateDebugResValues UP-TO-DATE
+> Task :core:detection:generateDebugResources UP-TO-DATE
+> Task :core:detection:packageDebugResources UP-TO-DATE
+> Task :core:detection:processDebugNavigationResources UP-TO-DATE
+> Task :core:detection:parseDebugLocalResources UP-TO-DATE
+> Task :core:detection:generateDebugRFile UP-TO-DATE
+> Task :core:detection:compileDebugKotlin UP-TO-DATE
+> Task :core:detection:javaPreCompileDebug UP-TO-DATE
+> Task :core:detection:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:detection:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:ground:generateDebugResValues UP-TO-DATE
+> Task :core:ground:generateDebugResources UP-TO-DATE
+> Task :core:ground:packageDebugResources UP-TO-DATE
+> Task :core:ground:processDebugNavigationResources UP-TO-DATE
+> Task :core:ground:parseDebugLocalResources UP-TO-DATE
+> Task :core:ground:generateDebugRFile UP-TO-DATE
+> Task :core:ground:compileDebugKotlin UP-TO-DATE
+> Task :core:ground:javaPreCompileDebug UP-TO-DATE
+> Task :core:ground:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:ground:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:camera:compileDebugKotlin UP-TO-DATE
+> Task :core:camera:extractDebugAnnotations
+> Task :core:camera:extractDeepLinksForAarDebug FROM-CACHE
+> Task :core:camera:mergeDebugShaders UP-TO-DATE
+> Task :core:camera:compileDebugShaders NO-SOURCE
+> Task :core:camera:generateDebugAssets UP-TO-DATE
+> Task :core:camera:mergeDebugAssets UP-TO-DATE
+> Task :core:camera:javaPreCompileDebug UP-TO-DATE
+> Task :core:camera:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:camera:mergeDebugGeneratedProguardFiles
+> Task :core:camera:mergeDebugConsumerProguardFiles
+> Task :core:camera:prepareDebugArtProfile
+> Task :core:camera:processDebugManifest UP-TO-DATE
+> Task :core:camera:processDebugJavaRes UP-TO-DATE
+> Task :core:camera:mergeDebugJavaResource
+> Task :core:camera:syncDebugLibJars
+> Task :core:camera:writeDebugAarMetadata UP-TO-DATE
+> Task :core:camera:bundleDebugLocalLintAar
+> Task :core:detection:checkDebugAarMetadata
+> Task :core:detection:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:detection:mergeDebugNativeLibs NO-SOURCE
+> Task :core:detection:stripDebugDebugSymbols NO-SOURCE
+> Task :core:detection:copyDebugJniLibsProjectAndLocalJars
+> Task :core:detection:extractDebugAnnotations
+> Task :core:detection:extractDeepLinksForAarDebug FROM-CACHE
+> Task :core:detection:mergeDebugShaders UP-TO-DATE
+> Task :core:detection:compileDebugShaders NO-SOURCE
+> Task :core:detection:generateDebugAssets UP-TO-DATE
+> Task :core:detection:mergeDebugAssets UP-TO-DATE
+> Task :core:detection:mergeDebugGeneratedProguardFiles
+> Task :core:detection:mergeDebugConsumerProguardFiles
+> Task :core:detection:prepareDebugArtProfile
+> Task :core:detection:processDebugManifest UP-TO-DATE
+> Task :core:detection:processDebugJavaRes UP-TO-DATE
+> Task :core:detection:mergeDebugJavaResource
+> Task :core:detection:syncDebugLibJars
+> Task :core:detection:bundleDebugLocalLintAar
+> Task :core:ground:checkDebugAarMetadata
+> Task :core:ground:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:ground:mergeDebugNativeLibs NO-SOURCE
+> Task :core:ground:stripDebugDebugSymbols NO-SOURCE
+> Task :core:ground:copyDebugJniLibsProjectAndLocalJars
+> Task :core:ground:extractDebugAnnotations
+> Task :core:ground:extractDeepLinksForAarDebug FROM-CACHE
+> Task :core:ground:mergeDebugShaders UP-TO-DATE
+> Task :core:ground:compileDebugShaders NO-SOURCE
+> Task :core:ground:generateDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugGeneratedProguardFiles
+> Task :core:ground:mergeDebugConsumerProguardFiles
+> Task :core:ground:prepareDebugArtProfile
+> Task :core:ground:processDebugManifest UP-TO-DATE
+> Task :core:ground:processDebugJavaRes UP-TO-DATE
+> Task :core:ground:mergeDebugJavaResource
+> Task :core:ground:syncDebugLibJars
+> Task :core:ground:bundleDebugLocalLintAar
+> Task :core:depth:preDebugBuild UP-TO-DATE
+> Task :core:depth:checkDebugAarMetadata
+> Task :core:depth:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:depth:mergeDebugNativeLibs NO-SOURCE
+> Task :core:depth:stripDebugDebugSymbols NO-SOURCE
+> Task :core:depth:copyDebugJniLibsProjectAndLocalJars
+> Task :core:depth:generateDebugResValues UP-TO-DATE
+> Task :core:depth:generateDebugResources UP-TO-DATE
+> Task :core:depth:packageDebugResources UP-TO-DATE
+> Task :core:depth:processDebugNavigationResources UP-TO-DATE
+> Task :core:depth:parseDebugLocalResources UP-TO-DATE
+> Task :core:depth:generateDebugRFile UP-TO-DATE
+> Task :core:depth:compileDebugKotlin UP-TO-DATE
+> Task :core:depth:extractDebugAnnotations
+> Task :core:depth:extractDeepLinksForAarDebug FROM-CACHE
+> Task :core:depth:mergeDebugShaders UP-TO-DATE
+> Task :core:depth:compileDebugShaders NO-SOURCE
+> Task :core:depth:generateDebugAssets UP-TO-DATE
+> Task :core:depth:mergeDebugAssets UP-TO-DATE
+> Task :core:depth:javaPreCompileDebug UP-TO-DATE
+> Task :core:depth:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:depth:mergeDebugGeneratedProguardFiles
+> Task :core:depth:mergeDebugConsumerProguardFiles
+> Task :core:depth:prepareDebugArtProfile
+> Task :core:depth:processDebugManifest UP-TO-DATE
+> Task :core:depth:processDebugJavaRes UP-TO-DATE
+> Task :core:depth:mergeDebugJavaResource
+> Task :core:depth:syncDebugLibJars
+> Task :core:depth:writeDebugAarMetadata UP-TO-DATE
+> Task :core:depth:bundleDebugLocalLintAar
+> Task :core:voice:preDebugBuild UP-TO-DATE
+> Task :core:voice:checkDebugAarMetadata
+> Task :core:voice:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:voice:mergeDebugNativeLibs NO-SOURCE
+> Task :core:voice:stripDebugDebugSymbols NO-SOURCE
+> Task :core:voice:copyDebugJniLibsProjectAndLocalJars
+> Task :core:voice:generateDebugResValues UP-TO-DATE
+> Task :core:voice:generateDebugResources UP-TO-DATE
+> Task :core:voice:packageDebugResources UP-TO-DATE
+> Task :core:voice:processDebugNavigationResources UP-TO-DATE
+> Task :core:voice:parseDebugLocalResources UP-TO-DATE
+> Task :core:voice:generateDebugRFile UP-TO-DATE
+> Task :core:voice:compileDebugKotlin UP-TO-DATE
+> Task :core:voice:extractDebugAnnotations
+> Task :core:voice:extractDeepLinksForAarDebug FROM-CACHE
+> Task :core:voice:mergeDebugShaders UP-TO-DATE
+> Task :core:voice:compileDebugShaders NO-SOURCE
+> Task :core:voice:generateDebugAssets UP-TO-DATE
+> Task :core:voice:mergeDebugAssets UP-TO-DATE
+> Task :core:voice:javaPreCompileDebug UP-TO-DATE
+> Task :core:voice:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:voice:mergeDebugGeneratedProguardFiles
+> Task :core:voice:mergeDebugConsumerProguardFiles
+> Task :core:voice:prepareDebugArtProfile
+> Task :core:voice:processDebugManifest UP-TO-DATE
+> Task :core:voice:processDebugJavaRes UP-TO-DATE
+> Task :core:voice:mergeDebugJavaResource
+> Task :core:voice:syncDebugLibJars
+> Task :core:voice:writeDebugAarMetadata UP-TO-DATE
+> Task :core:voice:bundleDebugLocalLintAar
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :core:camera:extractDeepLinksDebug UP-TO-DATE
+> Task :core:depth:extractDeepLinksDebug UP-TO-DATE
+> Task :core:detection:extractDeepLinksDebug UP-TO-DATE
+> Task :core:ground:extractDeepLinksDebug UP-TO-DATE
+> Task :core:voice:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :core:camera:compileDebugLibraryResources UP-TO-DATE
+> Task :core:depth:compileDebugLibraryResources UP-TO-DATE
+> Task :core:detection:compileDebugLibraryResources UP-TO-DATE
+> Task :core:ground:compileDebugLibraryResources UP-TO-DATE
+> Task :core:voice:compileDebugLibraryResources UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :core:camera:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:depth:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:voice:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :core:camera:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:camera:createFullJarDebug
+> Task :core:camera:writeDebugLintModelMetadata
+> Task :core:depth:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:depth:createFullJarDebug
+> Task :core:depth:writeDebugLintModelMetadata
+> Task :core:detection:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:detection:createFullJarDebug
+> Task :core:detection:writeDebugLintModelMetadata
+> Task :core:ground:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:ground:createFullJarDebug
+> Task :core:ground:writeDebugLintModelMetadata
+> Task :core:voice:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:voice:createFullJarDebug
+> Task :core:voice:writeDebugLintModelMetadata
+> Task :app:generateDebugAndroidTestLintModel
+> Task :core:detection:generateDebugLintModel
+> Task :core:ground:generateDebugLintModel
+> Task :core:camera:generateDebugLintModel
+> Task :core:depth:generateDebugLintModel
+> Task :core:voice:generateDebugLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:generateDebugUnitTestLintModel
+> Task :core:detection:lintAnalyzeDebug
+> Task :core:ground:lintAnalyzeDebug
+> Task :core:camera:lintAnalyzeDebug
+> Task :core:depth:lintAnalyzeDebug
+> Task :core:voice:lintAnalyzeDebug
+> Task :app:compileReleaseArtProfile
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:lintAnalyzeDebug
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :core:camera:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:camera:generateDebugAndroidTestResValues FROM-CACHE
+> Task :core:camera:generateDebugAndroidTestLintModel
+> Task :core:camera:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:camera:generateDebugUnitTestLintModel
+> Task :core:camera:lintAnalyzeDebugAndroidTest
+> Task :core:camera:lintAnalyzeDebugUnitTest
+> Task :core:depth:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:depth:generateDebugAndroidTestResValues FROM-CACHE
+> Task :core:depth:generateDebugAndroidTestLintModel
+> Task :core:depth:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:depth:generateDebugUnitTestLintModel
+> Task :core:depth:lintAnalyzeDebugAndroidTest
+> Task :core:depth:lintAnalyzeDebugUnitTest
+> Task :core:detection:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:detection:generateDebugAndroidTestResValues FROM-CACHE
+> Task :core:detection:generateDebugAndroidTestLintModel
+> Task :core:detection:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:detection:generateDebugUnitTestLintModel
+> Task :core:detection:lintAnalyzeDebugAndroidTest
+> Task :core:ground:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:ground:generateDebugAndroidTestResValues FROM-CACHE
+> Task :core:ground:generateDebugAndroidTestLintModel
+> Task :core:ground:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:ground:generateDebugUnitTestLintModel
+> Task :core:detection:lintAnalyzeDebugUnitTest
+> Task :core:ground:lintAnalyzeDebugUnitTest
+> Task :core:voice:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:voice:generateDebugAndroidTestResValues FROM-CACHE
+> Task :core:voice:generateDebugAndroidTestLintModel
+> Task :core:voice:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:voice:generateDebugUnitTestLintModel
+> Task :core:ground:lintAnalyzeDebugAndroidTest
+> Task :core:voice:lintAnalyzeDebugUnitTest
+> Task :core:voice:lintAnalyzeDebugAndroidTest
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///C:/Users/Moth/Desktop/VisionAssist/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+
+BUILD SUCCESSFUL in 7m 51s
+448 actionable tasks: 275 executed, 62 from cache, 111 up-to-date

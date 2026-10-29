@@ -1,0 +1,10 @@
+test_borderline_outputs_do_not_hide_required_mismatches (test_barrier_comparison.ComparisonTests.test_borderline_outputs_do_not_hide_required_mismatches) ... ok
+test_empty_result_has_no_fake_numeric_precision (test_barrier_comparison.ComparisonTests.test_empty_result_has_no_fake_numeric_precision) ... ok
+test_global_assignment_handles_ambiguous_nearby_boxes (test_barrier_comparison.ComparisonTests.test_global_assignment_handles_ambiguous_nearby_boxes) ... ok
+test_order_and_small_numeric_rounding (test_barrier_comparison.ComparisonTests.test_order_and_small_numeric_rounding) ... ok
+test_wrong_class_duplicate_and_bad_geometry_cannot_match (test_barrier_comparison.ComparisonTests.test_wrong_class_duplicate_and_bad_geometry_cannot_match) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

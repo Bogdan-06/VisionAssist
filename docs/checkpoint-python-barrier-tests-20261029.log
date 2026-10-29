@@ -1,0 +1,38 @@
+test_borderline_outputs_do_not_hide_required_mismatches (test_barrier_comparison.ComparisonTests.test_borderline_outputs_do_not_hide_required_mismatches) ... ok
+test_empty_result_has_no_fake_numeric_precision (test_barrier_comparison.ComparisonTests.test_empty_result_has_no_fake_numeric_precision) ... ok
+test_global_assignment_handles_ambiguous_nearby_boxes (test_barrier_comparison.ComparisonTests.test_global_assignment_handles_ambiguous_nearby_boxes) ... ok
+test_order_and_small_numeric_rounding (test_barrier_comparison.ComparisonTests.test_order_and_small_numeric_rounding) ... ok
+test_wrong_class_duplicate_and_bad_geometry_cannot_match (test_barrier_comparison.ComparisonTests.test_wrong_class_duplicate_and_bad_geometry_cannot_match) ... ok
+test_distinct_target_types_and_ignored_source_labels (test_barrier_data.AnnotationTests.test_distinct_target_types_and_ignored_source_labels) ... ok
+test_malformed_labels_boxes_and_xml_are_rejected (test_barrier_data.AnnotationTests.test_malformed_labels_boxes_and_xml_are_rejected) ... ok
+test_wrong_class_duplicate_and_score_order (test_barrier_data.ClassMetricTests.test_wrong_class_duplicate_and_score_order) ... ok
+test_incorrect_content_range_is_not_retried (test_barrier_data.DownloadTests.test_incorrect_content_range_is_not_retried) ... ok
+test_oversized_response_and_last_short_chunk (test_barrier_data.DownloadTests.test_oversized_response_and_last_short_chunk) ... ok
+Range 1 interrupted; retry 2/5 in 2s
+Range 1 interrupted; retry 3/5 in 4s
+Range 1 interrupted; retry 4/5 in 8s
+Range 1 interrupted; retry 5/5 in 16s
+test_retry_limit_and_http_error_classification (test_barrier_data.DownloadTests.test_retry_limit_and_http_error_classification) ... ok
+Range 1 interrupted; retry 2/5 in 2s
+test_truncated_range_restarts_and_preserves_neighbors (test_barrier_data.DownloadTests.test_truncated_range_restarts_and_preserves_neighbors) ... ok
+Decoded and hashed 1/164 images
+test_exact_conflicts_near_duplicates_review_and_orientation (test_barrier_data.SplitIntegrityTests.test_exact_conflicts_near_duplicates_review_and_orientation) ... ERROR
+
+======================================================================
+ERROR: test_exact_conflicts_near_duplicates_review_and_orientation (test_barrier_data.SplitIntegrityTests.test_exact_conflicts_near_duplicates_review_and_orientation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Moth\Desktop\VisionAssist\tools\ground\test_barrier_data.py", line 142, in test_exact_conflicts_near_duplicates_review_and_orientation
+    result = preparation.prepare(archive, copy.deepcopy(records), path, {'images/0000.jpg'})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Moth\Desktop\VisionAssist\tools\ground\prepare_barrier_dataset.py", line 123, in prepare
+    distances = np.bitwise_count(hashes[index+1:] ^ hashes[index])
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\Moth\Documents\Codex\2026-10-09\new-chat\work\ground\modelmaker-venv\Lib\site-packages\numpy\__init__.py", line 347, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'bitwise_count'
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.250s
+
+FAILED (errors=1)

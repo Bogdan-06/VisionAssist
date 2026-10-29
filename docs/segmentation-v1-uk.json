@@ -1,0 +1,280 @@
+{
+  "dataset_doi": "10.17632/tp95cdvgm8.1",
+  "source_sha256": "a154cab487415c02269041f674e9e790b6ca61afc1c9ac417e9f1aae3e283a22",
+  "model_sha256": "c1c7a8354a894cb77fa7d0d8bf8aa87ddf7b1bf18f26ba6c95c6967e01759536",
+  "conditions_sha256": "324ecabfbf7b486a43c604c5c999f09455f046925ebdb40f4754773c25fe8747",
+  "images": 708,
+  "excluded_images": [
+    {
+      "id": "Pothole-261",
+      "problems": [
+        {
+          "invalid_box": [
+            1721.0,
+            740.0,
+            2609.0,
+            1660.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-262",
+      "problems": [
+        {
+          "invalid_box": [
+            1870.0,
+            211.0,
+            3094.0,
+            1596.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-268",
+      "problems": [
+        {
+          "invalid_box": [
+            1841.0,
+            891.0,
+            2309.0,
+            1388.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-271",
+      "problems": [
+        {
+          "invalid_box": [
+            1501.0,
+            823.0,
+            2522.0,
+            1611.0
+          ],
+          "image_size": [
+            392,
+            806
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Pothole-487",
+      "problems": [
+        "Unknown annotation class"
+      ]
+    }
+  ],
+  "strata": {
+    "all": {
+      "images": 708,
+      "metrics": {
+        "0.3": {
+          "tp": 199,
+          "fp": 2612,
+          "fn": 948,
+          "precision": 0.07079331198861614,
+          "recall": 0.17349607672188316,
+          "f1": 0.10055583628094998
+        },
+        "0.5": {
+          "tp": 234,
+          "fp": 2996,
+          "fn": 913,
+          "precision": 0.07244582043343653,
+          "recall": 0.2040104620749782,
+          "f1": 0.10692254969156957
+        },
+        "0.65": {
+          "tp": 241,
+          "fp": 3179,
+          "fn": 906,
+          "precision": 0.07046783625730994,
+          "recall": 0.2101133391455972,
+          "f1": 0.10553974162469892
+        }
+      }
+    },
+    "wet": {
+      "images": 17,
+      "metrics": {
+        "0.3": {
+          "tp": 5,
+          "fp": 84,
+          "fn": 29,
+          "precision": 0.056179775280898875,
+          "recall": 0.14705882352941177,
+          "f1": 0.08130081300813008
+        },
+        "0.5": {
+          "tp": 8,
+          "fp": 104,
+          "fn": 26,
+          "precision": 0.07142857142857142,
+          "recall": 0.23529411764705882,
+          "f1": 0.1095890410958904
+        },
+        "0.65": {
+          "tp": 9,
+          "fp": 95,
+          "fn": 25,
+          "precision": 0.08653846153846154,
+          "recall": 0.2647058823529412,
+          "f1": 0.13043478260869565
+        }
+      }
+    },
+    "shadow": {
+      "images": 2,
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 14,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 1,
+          "fp": 9,
+          "fn": 5,
+          "precision": 0.1,
+          "recall": 0.16666666666666666,
+          "f1": 0.125
+        }
+      }
+    },
+    "night_low_light": {
+      "images": 1,
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "glare": {
+      "images": 1,
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "low_exposure": {
+      "images": 1,
+      "metrics": {
+        "0.3": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.5": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "component_rule": "8-connected mask regions at each fixed pixel threshold; all regions retained, mean probability sorting",
+  "matching": "one-to-one box IoU >= 0.5; difficult boxes ignored; no additional confidence threshold",
+  "inference_ms": {
+    "p50": 4.1145000141114,
+    "p95": 5.702595009643119,
+    "p99": 7.132020001590701
+  },
+  "image_processing_ms": {
+    "p50": 20.19944999483414,
+    "p95": 29.484230000525713,
+    "p99": 32.920650015876156
+  },
+  "tensorflow": "2.20.0",
+  "threads": 2,
+  "limitations": [
+    "Previously examined research benchmark, not an untouched safety evaluation.",
+    "Mostly positive close-up photos, not representative negative walking scenes.",
+    "Wet/shadow/night tags are small reviewed subsets, not inferred from filenames.",
+    "Semantic components are proxy object regions; probabilities are not calibrated hazard confidence.",
+    "Desktop timing only; no phone or live-camera performance claim."
+  ]
+}

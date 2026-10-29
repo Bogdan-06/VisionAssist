@@ -1,0 +1,26 @@
+{
+  "production_apk": "C:\\Users\\Moth\\Desktop\\VisionAssist\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+  "production_apk_sha256": "b9a218bf6479166b69058fc43c3c62abc9fed989b77bfc11569577c5e6695b41",
+  "production_has_barrier_test_assets": false,
+  "test_apk": "C:\\Users\\Moth\\Desktop\\VisionAssist\\core\\ground\\build\\outputs\\apk\\androidTest\\debug\\ground-debug-androidTest.apk",
+  "test_apk_sha256": "e501669773756f62f65f9b39191208cbc9b27c19e025bd2539418da8f4fc9bd4",
+  "test_assets": [
+    "assets/barrier-compat/fixture.json",
+    "assets/barrier-compat/frame-0.png",
+    "assets/barrier-compat/frame-1.png",
+    "assets/barrier-compat/frame-2.png",
+    "assets/barrier-compat/frame-3.png",
+    "assets/barrier-compat/model.tflite"
+  ],
+  "test_model_sha256": "0097090945bbf0b73301c33803c00c5d200f564d1e9d75bd42682a274e22e7ed",
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "classes": [
+    "background",
+    "stairs",
+    "curb",
+    "step"
+  ],
+  "scope": "Rejected smoke weights are instrumentation-only, not production detection.",
+  "test_apk_has_internet_camera_or_microphone_permissions": false
+}

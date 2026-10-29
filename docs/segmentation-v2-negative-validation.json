@@ -1,0 +1,23 @@
+{
+  "images": 1086,
+  "resolution": [
+    320,
+    320
+  ],
+  "metrics": {
+    "0.3": {
+      "images_with_prediction": 4,
+      "foreground_pixels": 3065
+    },
+    "0.5": {
+      "images_with_prediction": 4,
+      "foreground_pixels": 2541
+    },
+    "0.65": {
+      "images_with_prediction": 4,
+      "foreground_pixels": 2192
+    }
+  },
+  "negative_manifest_sha256": "e9982fed435113a895b007de7150f365d9334fcbcb2426ffb0e24c7f9515af43",
+  "limitation": "Annotation-defined validation negatives used in checkpoint selection; not untouched test data."
+}

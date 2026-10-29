@@ -1,0 +1,2393 @@
+{
+  "test_only": true,
+  "warning_eligible": false,
+  "model_sha256": "0097090945bbf0b73301c33803c00c5d200f564d1e9d75bd42682a274e22e7ed",
+  "fixture_sha256": "1062d220a147d925bb264f14ec194ad475923931558932cbf5cb705ffad76dd1",
+  "smoke_model": true,
+  "runtime": "MediaPipe Python 0.10.32 CPU on Linux",
+  "mediapipe_version": "0.10.32",
+  "numpy_version": "2.2.6",
+  "captured_utc": "2026-10-28T21:08:29.406561+00:00",
+  "records": [
+    {
+      "file": "frame-0.png",
+      "png_sha256": "dd4955b9d34dd8e26ce20cc8b0c16edad30f993af2dae6fe669bc76ebbc8b673",
+      "rgb_sha256": "f9b41f35d47bea471f88726980c180a5f1f9325e2db312a8e48ff02d742729cd",
+      "width": 320,
+      "height": 320,
+      "predictions": [
+        {
+          "score": 1.0,
+          "box": [
+            169,
+            0,
+            176,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            137,
+            270,
+            144,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            157,
+            0,
+            168,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            245,
+            320,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            160,
+            0,
+            167,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            186,
+            320,
+            193
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            145,
+            271,
+            152,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            165,
+            0,
+            176,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            244,
+            320,
+            245
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            154,
+            271,
+            161,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            174,
+            0,
+            185,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            177,
+            0,
+            184,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            162,
+            271,
+            169,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            129,
+            0,
+            135,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            114,
+            270,
+            121,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            134,
+            0,
+            145,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            136,
+            0,
+            143,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            121,
+            270,
+            128,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            143,
+            0,
+            153,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            144,
+            0,
+            151,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            129,
+            270,
+            136,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            150,
+            0,
+            160,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            152,
+            0,
+            159,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            223,
+            0,
+            235,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            195,
+            270,
+            206,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            214,
+            0,
+            228,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            216,
+            0,
+            225,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            203,
+            271,
+            214,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            208,
+            0,
+            217,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            246,
+            320,
+            247
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            224,
+            0,
+            232,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            210,
+            271,
+            221,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            231,
+            0,
+            244,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            231,
+            0,
+            239,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            182,
+            0,
+            193,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            185,
+            0,
+            191,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            171,
+            270,
+            178,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            191,
+            0,
+            202,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            193,
+            0,
+            200,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            180,
+            270,
+            188,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            200,
+            0,
+            211,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            200,
+            0,
+            209,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            187,
+            269,
+            197,
+            272
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            206,
+            0,
+            219,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            44,
+            268,
+            52,
+            271
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            47,
+            0,
+            57,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            35,
+            268,
+            44,
+            272
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            52,
+            0,
+            67,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            55,
+            0,
+            65,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            42,
+            0,
+            57,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            76,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            73,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            52,
+            268,
+            61,
+            271
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            72,
+            0,
+            81,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            249,
+            320,
+            250
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            188,
+            64,
+            197
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            36,
+            245,
+            43,
+            258
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            237,
+            320,
+            238
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            93,
+            0,
+            94,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            243,
+            320,
+            245
+          ],
+          "class": "stairs"
+        }
+      ],
+      "task_detect_ms": 67.17443400066259
+    },
+    {
+      "file": "frame-1.png",
+      "png_sha256": "5651631b27390544aaf4103e982bef6a1d2eac88fe8183edf665e91025d525ea",
+      "rgb_sha256": "76e69129a2f9ec135bb5ff41d7d7f03bc01246b60d5540156d30faf253f45743",
+      "width": 320,
+      "height": 320,
+      "predictions": [
+        {
+          "score": 1.0,
+          "box": [
+            140,
+            272,
+            148,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            162,
+            0,
+            171,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            243,
+            320,
+            244
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            160,
+            0,
+            169,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            185,
+            320,
+            192
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            149,
+            273,
+            158,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            167,
+            0,
+            179,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            168,
+            0,
+            176,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            156,
+            272,
+            165,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            175,
+            0,
+            187,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            176,
+            0,
+            184,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            164,
+            272,
+            173,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            143,
+            0,
+            154,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            116,
+            271,
+            125,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            136,
+            0,
+            147,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            136,
+            0,
+            144,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            124,
+            272,
+            133,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            186,
+            0,
+            197,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            145,
+            0,
+            152,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            134,
+            272,
+            142,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            153,
+            0,
+            163,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            152,
+            0,
+            161,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            196,
+            272,
+            205,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            214,
+            0,
+            226,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            216,
+            0,
+            224,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            204,
+            271,
+            213,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            224,
+            0,
+            235,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            224,
+            0,
+            232,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            210,
+            271,
+            218,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            232,
+            0,
+            243,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            244,
+            320,
+            245
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            232,
+            0,
+            240,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            181,
+            272,
+            190,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            184,
+            0,
+            192,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            173,
+            273,
+            181,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            193,
+            0,
+            203,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            192,
+            0,
+            199,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            127,
+            0,
+            138,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            200,
+            0,
+            212,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            200,
+            0,
+            208,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            188,
+            272,
+            197,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            207,
+            0,
+            218,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            208,
+            0,
+            216,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            47,
+            0,
+            56,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            36,
+            269,
+            44,
+            273
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            56,
+            0,
+            68,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            56,
+            0,
+            64,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            46,
+            270,
+            54,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            75,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            245,
+            320,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            64,
+            0,
+            72,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            54,
+            269,
+            62,
+            273
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            70,
+            0,
+            83,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            71,
+            0,
+            80,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            237,
+            320,
+            238
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            93,
+            0,
+            94,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            244,
+            320,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            21,
+            0,
+            29,
+            320
+          ],
+          "class": "curb"
+        }
+      ],
+      "task_detect_ms": 59.51400800040574
+    },
+    {
+      "file": "frame-2.png",
+      "png_sha256": "094c3e9b5e0cb150eba9b2b5e9945cbf68cb4c4b47d1eb1e86740c18ffb3f9a7",
+      "rgb_sha256": "e7577de91cceab7a2773384d63a403cc6e4c33f54f5b1b72d459a4cf363a2575",
+      "width": 320,
+      "height": 320,
+      "predictions": [
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            185,
+            320,
+            192
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            153,
+            0,
+            163,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            244,
+            320,
+            245
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            152,
+            0,
+            160,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            140,
+            272,
+            148,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            162,
+            0,
+            172,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            160,
+            0,
+            168,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            132,
+            272,
+            140,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            148,
+            272,
+            157,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            170,
+            0,
+            181,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            168,
+            0,
+            176,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            158,
+            272,
+            166,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            179,
+            0,
+            189,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            243,
+            320,
+            244
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            108,
+            270,
+            117,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            128,
+            0,
+            140,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            128,
+            0,
+            136,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            117,
+            271,
+            125,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            137,
+            0,
+            148,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            136,
+            0,
+            144,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            124,
+            272,
+            132,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            144,
+            0,
+            154,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            145,
+            0,
+            153,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            216,
+            0,
+            224,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            188,
+            272,
+            196,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            206,
+            0,
+            217,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            208,
+            0,
+            216,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            195,
+            272,
+            204,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            217,
+            0,
+            228,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            204,
+            272,
+            212,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            225,
+            0,
+            236,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            224,
+            0,
+            232,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            211,
+            272,
+            219,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            176,
+            0,
+            184,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            165,
+            272,
+            173,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            186,
+            0,
+            196,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            185,
+            0,
+            192,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            173,
+            272,
+            181,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            193,
+            0,
+            204,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            192,
+            0,
+            200,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            179,
+            273,
+            188,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            200,
+            0,
+            208,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            50,
+            0,
+            65,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            27,
+            268,
+            39,
+            271
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            245,
+            320,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            47,
+            0,
+            58,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            35,
+            267,
+            47,
+            270
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            38,
+            0,
+            49,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            56,
+            0,
+            66,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            45,
+            270,
+            55,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            77,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            62,
+            0,
+            72,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            223,
+            320,
+            226
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            259,
+            0,
+            263,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            189,
+            70,
+            198
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            37,
+            245,
+            44,
+            259
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            238,
+            320,
+            239
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            93,
+            0,
+            94,
+            320
+          ],
+          "class": "stairs"
+        }
+      ],
+      "task_detect_ms": 56.21789700035151
+    },
+    {
+      "file": "frame-3.png",
+      "png_sha256": "27859bac8994c632496147e5309cc7aceed469b1c1fad3a56ea6e8e6e154db7a",
+      "rgb_sha256": "9c439d5b92506e6fdc3e6c85321897f735495ca1f184942ab862fb82d6b162a6",
+      "width": 320,
+      "height": 320,
+      "predictions": [
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            185,
+            320,
+            192
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            147,
+            0,
+            161,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            245,
+            320,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            152,
+            0,
+            159,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            141,
+            272,
+            151,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            160,
+            0,
+            172,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            243,
+            320,
+            244
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            160,
+            0,
+            167,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            130,
+            272,
+            141,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            148,
+            273,
+            157,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            170,
+            0,
+            181,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            170,
+            0,
+            176,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            156,
+            273,
+            165,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            109,
+            271,
+            117,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            129,
+            0,
+            140,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            244,
+            320,
+            245
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            129,
+            0,
+            136,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            116,
+            270,
+            125,
+            274
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            137,
+            0,
+            148,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            136,
+            0,
+            144,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            125,
+            272,
+            134,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            143,
+            9,
+            152,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            216,
+            0,
+            224,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            188,
+            272,
+            197,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            207,
+            0,
+            219,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            209,
+            0,
+            216,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            197,
+            271,
+            206,
+            275
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            216,
+            0,
+            228,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            203,
+            271,
+            213,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            226,
+            0,
+            237,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            225,
+            0,
+            233,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            211,
+            271,
+            221,
+            276
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            176,
+            0,
+            184,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            164,
+            273,
+            174,
+            278
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            186,
+            0,
+            198,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            185,
+            0,
+            192,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            174,
+            272,
+            182,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            194,
+            0,
+            200,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            182,
+            272,
+            190,
+            277
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            201,
+            0,
+            208,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            55,
+            0,
+            69,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            29,
+            268,
+            38,
+            272
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            46,
+            0,
+            61,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            46,
+            0,
+            57,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            36,
+            269,
+            45,
+            273
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            39,
+            0,
+            48,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            56,
+            0,
+            65,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            45,
+            269,
+            53,
+            273
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            76,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            63,
+            0,
+            72,
+            320
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            270,
+            237,
+            274,
+            246
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            224,
+            320,
+            227
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            260,
+            0,
+            262,
+            320
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            222,
+            320,
+            225
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            191,
+            77,
+            200
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            34,
+            239,
+            43,
+            256
+          ],
+          "class": "stairs"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            0,
+            233,
+            320,
+            234
+          ],
+          "class": "curb"
+        },
+        {
+          "score": 1.0,
+          "box": [
+            86,
+            0,
+            88,
+            320
+          ],
+          "class": "stairs"
+        }
+      ],
+      "task_detect_ms": 74.31355999960942
+    }
+  ]
+}

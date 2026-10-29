@@ -1,0 +1,113 @@
+{
+  "split": "validation",
+  "model_sha256": "994ad01c8ad387c690f3db09124211fbc5f2c1f171b3b167b611dea105c4cda7",
+  "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+  "iou_threshold": 0.5,
+  "nms_iou": 0.4,
+  "conditions": {
+    "original": {
+      "images": 1330,
+      "metrics": {
+        "0.1": {
+          "tp": 88,
+          "fp": 7443,
+          "fn": 438,
+          "precision": 0.011685035187890054,
+          "recall": 0.16730038022813687,
+          "f1": 0.02184435894253444
+        },
+        "0.2": {
+          "tp": 73,
+          "fp": 1817,
+          "fn": 453,
+          "precision": 0.038624338624338624,
+          "recall": 0.13878326996197718,
+          "f1": 0.060430463576158944
+        },
+        "0.3": {
+          "tp": 41,
+          "fp": 380,
+          "fn": 485,
+          "precision": 0.09738717339667459,
+          "recall": 0.0779467680608365,
+          "f1": 0.08658922914466737
+        },
+        "0.4": {
+          "tp": 10,
+          "fp": 61,
+          "fn": 516,
+          "precision": 0.14084507042253522,
+          "recall": 0.019011406844106463,
+          "f1": 0.03350083752093802
+        },
+        "0.5": {
+          "tp": 2,
+          "fp": 10,
+          "fn": 524,
+          "precision": 0.16666666666666666,
+          "recall": 0.0038022813688212928,
+          "f1": 0.007434944237918215
+        },
+        "0.6": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 526,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.65": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 526,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.7": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 526,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.75": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 526,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.8": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 526,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "0.9": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 526,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "inference_ms": {
+        "p50": 2.2431500001403037,
+        "p95": 3.4592850013723364,
+        "p99": 4.338810000481318
+      },
+      "pipeline_ms": {
+        "p50": 13.917050000600284,
+        "p95": 18.825244997606205,
+        "p99": 21.202165001668618
+      }
+    }
+  },
+  "limitation": "Road photographs; synthetic dark/shadow tests are not genuine wet/night or walking videos. Scores are uncalibrated."
+}

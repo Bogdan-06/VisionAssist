@@ -1,0 +1,248 @@
+{
+  "checks": {
+    "history_identical": true,
+    "predictions_identical": true,
+    "actual_model_hash_matches": true
+  },
+  "training": {
+    "architecture": "COCO-pretrained MobileNetV2 320, FPN and anchor-based detection head",
+    "classes": [
+      "pothole"
+    ],
+    "class_profile": "pothole",
+    "hardware": {
+      "requested": "cpu",
+      "selected": "cpu",
+      "cpu_threads": 4,
+      "gpus": []
+    },
+    "smoke_only": true,
+    "warning_eligible": false,
+    "seed": 4217,
+    "epochs": 1,
+    "configured_epochs": 1,
+    "initial_epoch": 0,
+    "batch_size": 4,
+    "selected_epoch": 1,
+    "training_images": 8,
+    "validation_images": 16,
+    "checkpoint_url": "https://storage.googleapis.com/tf_model_garden/vision/qat/mobilenetv2_ssd_coco/mobilenetv2_ssd_i320_ckpt.tar.gz",
+    "checkpoint_sha256": "73dd229998007e47259b93b00f65aca410ec053a15e67d78519ce5c1779f521f",
+    "data_provenance": {
+      "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+      "manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+      "classes": [
+        "pothole"
+      ],
+      "counts": {
+        "train": {
+          "images": 3000,
+          "boxes": 2111,
+          "negatives": 1993
+        },
+        "validation": {
+          "images": 1330,
+          "boxes": 526,
+          "negatives": 1086
+        }
+      },
+      "test_images_exported": false,
+      "image_folder": "images",
+      "source": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+      "license": "Release CC BY 4.0; author repository images CC BY-SA 4.0; retain both notices.",
+      "transformations": "Original JPEG bytes; VOC-derived xyxy boxes converted to COCO xywh only."
+    },
+    "model_sha256": "9d5328d30fffa6338ed928a2fc2812030b506a1cf63f97737ae1045210603c06",
+    "model_bytes": 10452901,
+    "elapsed_seconds": 372.021169424057,
+    "inputs": [
+      {
+        "name": "serving_default_inputs:0",
+        "shape": [
+          1,
+          320,
+          320,
+          3
+        ],
+        "dtype": "<class 'numpy.float32'>"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:0",
+        "shape": [
+          1,
+          19125,
+          4
+        ],
+        "dtype": "<class 'numpy.float32'>"
+      },
+      {
+        "name": "StatefulPartitionedCall:1",
+        "shape": [
+          1,
+          19125,
+          2
+        ],
+        "dtype": "<class 'numpy.float32'>"
+      }
+    ],
+    "limitations": [
+      "Smoke runs test plumbing only, not detection quality.",
+      "Road imagery; walking-domain validation and independent evaluation still required."
+    ]
+  },
+  "runtime": {
+    "split": "validation",
+    "images": 4,
+    "available_images": 1330,
+    "partial": true,
+    "model_sha256": "9d5328d30fffa6338ed928a2fc2812030b506a1cf63f97737ae1045210603c06",
+    "annotations_sha256": "1085e9245ee86e7b50d0d5e50278d044b8de39c2e29b88b611fc64a28ba4c479",
+    "data_provenance": {
+      "source_sha256": "28eab0aa85638855e1907e63b175be2305a0accd018c54603037d3fb8cab963a",
+      "manifest_sha256": "24e131448dbdc5341d7af8caf5694eaf201812030dd0efcf37e01940120c8cf3",
+      "classes": [
+        "pothole"
+      ],
+      "counts": {
+        "train": {
+          "images": 3000,
+          "boxes": 2111,
+          "negatives": 1993
+        },
+        "validation": {
+          "images": 1330,
+          "boxes": 526,
+          "negatives": 1086
+        }
+      },
+      "test_images_exported": false,
+      "image_folder": "images",
+      "source": "https://doi.org/10.6084/m9.figshare.21431547.v1",
+      "license": "Release CC BY 4.0; author repository images CC BY-SA 4.0; retain both notices.",
+      "transformations": "Original JPEG bytes; VOC-derived xyxy boxes converted to COCO xywh only."
+    },
+    "runtime": "MediaPipe Tasks Python CPU; metadata-based detector decoding",
+    "iou_threshold": 0.5,
+    "mediapipe_version": "0.10.21",
+    "detector_options": {
+      "max_results": 100,
+      "score_threshold": 0.05,
+      "category_allowlist": [
+        "pothole"
+      ]
+    },
+    "metrics": {
+      "0.1": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.2": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.3": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.4": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.5": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.6": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.65": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.7": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.75": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.8": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "0.9": {
+        "tp": 0,
+        "fp": 226,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      }
+    },
+    "task_detect_ms": {
+      "p50": 206.1929999908898,
+      "p95": 246.43958502856546,
+      "p99": 251.55495703860652
+    },
+    "processing_ms": {
+      "p50": 236.29244999028742,
+      "p95": 266.4119400229538,
+      "p99": 268.59838802658487
+    },
+    "limitations": [
+      "Task detect timing includes graph preprocessing/postprocessing; not bare interpreter or phone timing.",
+      "Validation is used during development; not an independent safety evaluation.",
+      "Road imagery does not establish walking-camera warning reliability."
+    ]
+  },
+  "compared_training": "C:\\Users\\Moth\\Documents\\Codex\\2026-10-09\\new-chat\\work\\ground\\modelmaker-smoke-v2",
+  "compared_runtime": "C:\\Users\\Moth\\Documents\\Codex\\2026-10-09\\new-chat\\work\\ground\\modelmaker-smoke-runtime",
+  "limitations": [
+    "Eight negative optimization images and four inference images are software regression checks only.",
+    "The unstable single-epoch smoke model has 226 false predictions on four negative images and is rejected for use."
+  ]
+}

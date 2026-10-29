@@ -1,0 +1,101 @@
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.BarrierModelCompatibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.BarrierModelCompatibilityTest:
+INSTRUMENTATION_STATUS: test=threeClassMetadataModelRunsOfflineOnReviewedImages
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.BarrierModelCompatibilityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at ro.visionassist.core.ground.BarrierModelCompatibilityTest.threeClassMetadataModelRunsOfflineOnReviewedImages(BarrierModelCompatibilityTest.kt:67)
+
+INSTRUMENTATION_STATUS: stream=
+Error in threeClassMetadataModelRunsOfflineOnReviewedImages(ro.visionassist.core.ground.BarrierModelCompatibilityTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at ro.visionassist.core.ground.BarrierModelCompatibilityTest.threeClassMetadataModelRunsOfflineOnReviewedImages(BarrierModelCompatibilityTest.kt:67)
+
+INSTRUMENTATION_STATUS: test=threeClassMetadataModelRunsOfflineOnReviewedImages
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+ro.visionassist.core.ground.GroundInferenceTest:
+INSTRUMENTATION_STATUS: test=losslessPreparedInputMatchesPythonInterpreterAndDecoder
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=losslessPreparedInputMatchesPythonInterpreterAndDecoder
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=packagedModelRunsOnRealPhotographWithoutTakingBitmapOwnership
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=packagedModelRunsOnRealPhotographWithoutTakingBitmapOwnership
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=closeCanRaceFrameSubmissionWithoutRejectedTasks
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=closeCanRaceFrameSubmissionWithoutRejectedTasks
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=workerCopiesBeforeProducerRecyclesAndBoundsFrameBacklog
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ro.visionassist.core.ground.GroundInferenceTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=workerCopiesBeforeProducerRecyclesAndBoundsFrameBacklog
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 1.11
+There was 1 failure:
+1) threeClassMetadataModelRunsOfflineOnReviewedImages(ro.visionassist.core.ground.BarrierModelCompatibilityTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at ro.visionassist.core.ground.BarrierModelCompatibilityTest.threeClassMetadataModelRunsOfflineOnReviewedImages(BarrierModelCompatibilityTest.kt:67)
+
+FAILURES!!!
+Tests run: 5,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

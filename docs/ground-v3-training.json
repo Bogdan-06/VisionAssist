@@ -1,0 +1,41 @@
+{
+  "architecture": "MobileNetV2 alpha 0.5 frozen ImageNet multi-scale features + 20x20 GIoU center/box head",
+  "architecture_key": "fpn",
+  "classes": [
+    "pothole (RDD2022 D40)"
+  ],
+  "input": [
+    1,
+    320,
+    320,
+    3
+  ],
+  "input_normalization": "RGB / 127.5 - 1",
+  "output": [
+    1,
+    20,
+    20,
+    5
+  ],
+  "channels": [
+    "probability",
+    "cell_offset_x",
+    "cell_offset_y",
+    "normalized_width",
+    "normalized_height"
+  ],
+  "epochs": 40,
+  "training_images": 3000,
+  "validation_images": 1330,
+  "seed": 4217,
+  "model_sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+  "bytes": 2225580,
+  "elapsed_seconds": 584.0142796039581,
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "limitations": [
+    "Experimental road-image baseline; no safety validation",
+    "No curb, stair or generic uneven-ground classes",
+    "Adjacent source IDs grouped; location independence not established"
+  ]
+}

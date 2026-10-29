@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- This instrumentation APK must prove local inference without network access.
+         Production app permissions for optional voice providers are unaffected. -->
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+</manifest>

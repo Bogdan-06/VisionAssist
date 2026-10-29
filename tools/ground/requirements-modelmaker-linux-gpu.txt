@@ -1,0 +1,3 @@
+# Isolated legacy detector environment; does not replace the TF 2.20 mask trainer.
+-r requirements-modelmaker-windows-core.txt
+tensorflow[and-cuda]==2.15.1

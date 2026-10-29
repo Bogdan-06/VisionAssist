@@ -1,0 +1,37 @@
+test_barrier_comparison (unittest.loader._FailedTest.test_barrier_comparison) ... ERROR
+test_distinct_target_types_and_ignored_source_labels (test_barrier_data.AnnotationTests.test_distinct_target_types_and_ignored_source_labels) ... ok
+test_malformed_labels_boxes_and_xml_are_rejected (test_barrier_data.AnnotationTests.test_malformed_labels_boxes_and_xml_are_rejected) ... ok
+test_wrong_class_duplicate_and_score_order (test_barrier_data.ClassMetricTests.test_wrong_class_duplicate_and_score_order) ... ok
+test_incorrect_content_range_is_not_retried (test_barrier_data.DownloadTests.test_incorrect_content_range_is_not_retried) ... ok
+test_oversized_response_and_last_short_chunk (test_barrier_data.DownloadTests.test_oversized_response_and_last_short_chunk) ... ok
+Range 1 interrupted; retry 2/5 in 2s
+Range 1 interrupted; retry 3/5 in 4s
+Range 1 interrupted; retry 4/5 in 8s
+Range 1 interrupted; retry 5/5 in 16s
+test_retry_limit_and_http_error_classification (test_barrier_data.DownloadTests.test_retry_limit_and_http_error_classification) ... ok
+Range 1 interrupted; retry 2/5 in 2s
+test_truncated_range_restarts_and_preserves_neighbors (test_barrier_data.DownloadTests.test_truncated_range_restarts_and_preserves_neighbors) ... ok
+Decoded and hashed 1/164 images
+test_exact_conflicts_near_duplicates_review_and_orientation (test_barrier_data.SplitIntegrityTests.test_exact_conflicts_near_duplicates_review_and_orientation) ... ok
+
+======================================================================
+ERROR: test_barrier_comparison (unittest.loader._FailedTest.test_barrier_comparison)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_barrier_comparison
+Traceback (most recent call last):
+  File "C:\Users\Moth\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Moth\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Moth\Desktop\VisionAssist\tools\ground\test_barrier_comparison.py", line 2, in <module>
+    from compare_barrier_android import compare,validate
+  File "C:\Users\Moth\Desktop\VisionAssist\tools\ground\compare_barrier_android.py", line 9, in <module>
+    from scipy.optimize import linear_sum_assignment
+ModuleNotFoundError: No module named 'scipy'
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.948s
+
+FAILED (errors=1)

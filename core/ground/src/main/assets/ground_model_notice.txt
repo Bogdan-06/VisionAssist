@@ -1,0 +1,22 @@
+VisionAssist experimental pothole model v3
+
+Architecture: MobileNetV2 alpha 0.5 ImageNet features and a project-trained multi-scale
+center/box head. Training: 3,000 RDD2022 India photographs; validation: 1,330 photographs.
+Only potholes (D40) were trained. This model is not validated for navigation or warnings.
+
+RDD2022 attribution: Arya et al., RDD2022: A multi-national image dataset for automatic
+Road Damage Detection. Release: https://doi.org/10.6084/m9.figshare.21431547.v1
+Author repository: https://github.com/sekilab/RoadDamageDetector
+The release states CC BY 4.0; the repository states CC BY-SA 4.0 for images. Both notices
+are preserved. Fixture images and resized derivatives retain attribution/share-alike notices.
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Backbone source: official Google-hosted Keras Applications MobileNetV2 HDF5 weights.
+Keras code license: Apache License 2.0, https://github.com/keras-team/keras/blob/master/LICENSE
+ImageNet initialization is distinct from the RDD2022 training data. The source-code license
+does not imply that every training photograph has the same license.
+
+The source distribution includes docs/GROUND_MODEL.md, training and evaluation scripts,
+immutable hashes, failed model evaluations, and explicit limits. The model weights do not
+contain API credentials and run locally. Scores are not calibrated hazard probabilities.

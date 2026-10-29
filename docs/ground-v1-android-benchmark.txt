@@ -1,0 +1,3 @@
+--------- beginning of main
+10-16 23:22:52.417  2603  2617 I GroundBenchmark: fixture iterations=20 inference_ms median=5 p95=7; emulator timing is not phone timing
+10-16 23:22:52.432  2603  2617 I GroundBenchmark: process_pss_kb before=36026 loaded_after_20=53795; includes runtime/test harness, not isolated model allocation

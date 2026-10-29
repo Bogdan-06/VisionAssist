@@ -1,0 +1,98 @@
+{
+  "manifest_sha256": "d359f75d00beb6ca186ccb30b6b1163b2b2110ec78752840dcf0437d6ee04eee",
+  "checks": {
+    "train": {
+      "images": 3911,
+      "boxes": 3577,
+      "all_boxes_preserved": true,
+      "no_extra_or_test_files": true,
+      "annotation_and_hash_inventory_verified": true
+    },
+    "validation": {
+      "images": 825,
+      "boxes": 770,
+      "all_boxes_preserved": true,
+      "no_extra_or_test_files": true,
+      "annotation_and_hash_inventory_verified": true
+    }
+  },
+  "split_summary": {
+    "train": {
+      "images": 3911,
+      "target_boxes": {
+        "stairs": 1090,
+        "step": 1665,
+        "curb": 822
+      },
+      "no_target_images": 1565,
+      "annotation_tasks": {
+        "11": 634,
+        "7": 656,
+        "8": 644,
+        "10": 657,
+        "9": 654,
+        "12": 666
+      }
+    },
+    "validation": {
+      "images": 825,
+      "target_boxes": {
+        "curb": 185,
+        "stairs": 213,
+        "step": 372
+      },
+      "no_target_images": 351,
+      "annotation_tasks": {
+        "12": 136,
+        "8": 147,
+        "11": 148,
+        "9": 138,
+        "7": 135,
+        "10": 121
+      }
+    },
+    "test": {
+      "images": 802,
+      "target_boxes": {
+        "stairs": 189,
+        "step": 342,
+        "curb": 178
+      },
+      "no_target_images": 321,
+      "annotation_tasks": {
+        "11": 146,
+        "7": 134,
+        "9": 115,
+        "8": 137,
+        "12": 126,
+        "10": 144
+      }
+    },
+    "excluded": {
+      "images": 0,
+      "target_boxes": {},
+      "no_target_images": 0,
+      "annotation_tasks": {}
+    }
+  },
+  "duplicate_groups_cross_splits": false,
+  "reviewed_images_train_only": true,
+  "exact_duplicate_groups": 0,
+  "near_duplicate_pairs": [
+    {
+      "a": "images/000011653.jpg",
+      "b": "images/000011656.jpg",
+      "hamming": 0
+    }
+  ],
+  "image_bytes_check": "The training preflight separately rehashes all exported image bytes before fitting.",
+  "visual_review": "Eight training examples reviewed. Visible entry stairs, roadside curbs and raised doorsteps agree at overview scale; distant small boxes need caution. The near-duplicate pair shows the same entrance and remains grouped.",
+  "limitations": [
+    "Similarity grouping does not prove geographic, source-session or all-near-duplicate independence.",
+    "Source visible-barrier convention may omit unseen descending stairs and is wheelchair-oriented.",
+    "Heights and widths remain subjective source attributes, never distance ground truth.",
+    "Source boxes are not segmentation masks; no pixel ground truth is created.",
+    "Negative images are annotation-defined, not independently reviewed hazard-free scenes.",
+    "Research splits are provisional; no trained runtime or warning eligibility is established."
+  ]
+}

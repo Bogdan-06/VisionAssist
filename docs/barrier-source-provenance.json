@@ -1,0 +1,157 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.6382090",
+  "license": "CC BY 4.0",
+  "attribution": "Jakob Stolberg; collectors Christopher Richters and Sami Nenno; HIIG, 2022",
+  "bytes": 7972407510,
+  "publisher_md5": "d96051ca1339d1c1afa9ac736eabd058",
+  "sha256": "f4da6d044d55f1e21c7ca31dd2ff12a48bd5dbeabfa9d11d48fad932f7d6658b",
+  "zip_crcs_passed": true,
+  "members": 5540,
+  "url": "https://zenodo.org/api/records/6382090/files/wm_barriers_data.zip/content",
+  "metadata": {
+    "created": "2022-03-24T13:06:24.815810+00:00",
+    "modified": "2022-03-25T08:10:57.094962+00:00",
+    "id": 6382090,
+    "conceptrecid": "6382089",
+    "doi": "10.5281/zenodo.6382090",
+    "conceptdoi": "10.5281/zenodo.6382089",
+    "doi_url": "https://doi.org/10.5281/zenodo.6382090",
+    "metadata": {
+      "title": "Image Dataset of Accessibility Barriers",
+      "doi": "10.5281/zenodo.6382090",
+      "publication_date": "2022-03-24",
+      "description": "<p><strong>The Data</strong><br>\nThe dataset consist of 5538 images of public spaces, annotated with steps, stairs, ramps and grab bars for stairs and ramps. The dataset has annotations 3564 of steps, 1492 of stairs, 143 of ramps and 922 of grab bars.</p>\n\n<p>Each step annotation is attributed with an estimate of the height of the step, as falling into one of three categories: less than 3cm, 3cm to 7cm or more than 7cm. Additionally it is attributed with a &#39;type&#39;, with the possibilities &#39;doorstep&#39;, &#39;curb&#39; or &#39;other&#39;.</p>\n\n<p>Stair annotations are attributed with the number of steps in the stair.</p>\n\n<p>Ramps are attributed with an estimate of their width, also falling into three categories: less than 50cm, 50cm to 100cm and more than 100cm.</p>\n\n<p>In order to preserve all additional attributes of the labels, the data is published in the CVAT XML format for images.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Annotating Process</strong><br>\nThe labelling has been done using bounding boxes around the objects. This format is compatible with many popular object detection models, e.g. the YOLO object model. A bounding box is placed so it contains exactly <em>the visible part</em> of the respective objects. This implies that only objects that are visible in the photo are annotated. This means in particular a photo of a stair or step from above, where the object cannot be seen, have not been annotated, even when a human viewer can possibly infer that there is a stair or a step from other features in the photo.</p>\n\n<p><strong>Steps</strong><br>\nA step is annotated, when there is an vertical increment that functions as a passage between two surface areas intended human or vehicle traffic. This means that we have not included:</p>\n\n<ul>\n\t<li>Increments that are to high to reasonably be considered at passage.</li>\n\t<li>Increments that does not lead to a surface intended for human or vehicle traffic, e.g. a &#39;step&#39; in front of a wall or a curb in front of a bush.</li>\n</ul>\n\n<p>In particular, the bounding box of a step object contains exactly the incremental part of the step, but does not extend into the top or bottom horizontal surface any more than necessary to enclose entirely the incremental part. This has been chosen for consistency reasons, as including parts of the horizontal surfaces would imply a non-trivial choice of how much to include, which we deemed would most likely lead to more inconstistent annotations.</p>\n\n<p>The height of the steps are estimated by the annotators, and are therefore not guarranteed to be accurate.</p>\n\n<p>The type of the steps typically fall into the category &#39;doorstep&#39; or &#39;curb&#39;. Steps that are in a doorway, entrance or likewise are attributed as doorsteps. We also include in this category steps that are immediately leading to a doorway within a proximity of 1-2m. Steps between different types of pathways, e.g. between streets and sidewalks, are annotated as curbs. Any other type of step are annotated with &#39;other&#39;. Many of the &#39;other&#39; steps are for example steps to terraces.</p>\n\n<p><strong>Stairs</strong><br>\nThe stair label is used whenever two or more steps directly follow each other in a consistent pattern. All vertical increments are enclosed in the bounding box, as well as intermediate surfaces of the steps. However the top and bottom surface is not included more than necessary for the same reason as for steps, as described in the previous section.</p>\n\n<p>The annotator counts the number of steps, and attribute this to the stair object label.</p>\n\n<p><strong>Ramps</strong><br>\nRamps have been annotated when a sloped passage way has been placed or built to connect two surface areas intended for human or vehicle traffic. This implies the same considerations as with steps. Alike also only the sloped part of a ramp is annotated, not including the bottom or top surface area.</p>\n\n<p>For each ramp, the annotator makes an assessment of the width of the ramp in three categories: less than 50cm, 50cm to 100cm and more than 100cm. This parameter is visually hard to assess, and sometimes impossible due to the view of the ramp.</p>\n\n<p><strong>Grab Bars</strong><br>\nGrab bars are annotated for hand rails and similar that are in direct connection to a stair or a ramp. While horizontal grab bars could also have been included, this was omitted due to the implied ambiguities of fences and similar objects. As the grab bar was originally intended as an attributal information to stairs and ramps, we chose to keep this focus. The bounding box encloses the part of the grab bar that functions as a hand rail for the stair or ramp.</p>\n\n<p>&nbsp;</p>\n\n<p><strong>Usage</strong><br>\nAs is often the case when annotating data, much information depends on the subjective assessment of the annotator. As each data point in this dataset has been annotated only by one person, caution should be taken if the data is applied.</p>\n\n<p>Generally speaking, the mindset and usage guiding the annotations have been wheelchair accessibility. While we have strived to annotate at an object level, hopefully making the data more widely applicable than this, we state this explicitly as it may have swayed untrivial annotation choices.</p>\n\n<p>The attributal data, such as step height or ramp width are highly subjective estimations. We still provide this data to give a post-hoc method to adjust which annotations to use. E.g. for some purposes, one may be interested in detecting only steps that are indeed more than 3cm. The attributal data makes it possible to sort away the steps less than 3cm, so a machine learning algorithm can be trained on this more appropriate dataset for that use case. We stress however, that one cannot expect to train accurate machine learning algorithms inferring the attributal data, as this is not accurate data in the first place.</p>\n\n<p>We hope this dataset will be a useful building block in the endeavours for automating barrier detection and documentation.</p>",
+      "access_right": "open",
+      "creators": [
+        {
+          "name": "Stolberg, Jakob",
+          "affiliation": "Alexander von Humboldt Institute for Internet and Society"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Richters, Christopher",
+          "affiliation": "Alexander von Humboldt Institute for Internet and Society",
+          "type": "DataCollector"
+        },
+        {
+          "name": "Nenno, Sami",
+          "affiliation": "Alexander von Humboldt Institute for Internet and Society",
+          "type": "DataCollector"
+        },
+        {
+          "name": "Tannert, Benjamin",
+          "affiliation": "Hochschule Bremen",
+          "type": "Researcher"
+        },
+        {
+          "name": "Sch\u00f6ning, Johannes",
+          "affiliation": "University of St. Gallen",
+          "type": "Supervisor"
+        },
+        {
+          "name": "Z\u00fcger, Theresa",
+          "affiliation": "Alexander von Humboldt Institute for Internet and Society",
+          "type": "Supervisor"
+        }
+      ],
+      "keywords": [
+        "Accessibility",
+        "Object Detection",
+        "Computer Vision",
+        "Dataset"
+      ],
+      "language": "eng",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "communities": [
+        {
+          "id": "piai_hiig"
+        }
+      ],
+      "relations": {
+        "version": [
+          {
+            "index": 0,
+            "is_last": true,
+            "parent": {
+              "pid_type": "recid",
+              "pid_value": "6382089"
+            }
+          }
+        ]
+      }
+    },
+    "title": "Image Dataset of Accessibility Barriers",
+    "links": {
+      "self": "https://zenodo.org/api/records/6382090",
+      "self_html": "https://zenodo.org/records/6382090",
+      "preview_html": "https://zenodo.org/records/6382090?preview=1",
+      "doi": "https://doi.org/10.5281/zenodo.6382090",
+      "self_doi": "https://doi.org/10.5281/zenodo.6382090",
+      "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6382090",
+      "reserve_doi": "https://zenodo.org/api/records/6382090/draft/pids/doi",
+      "parent": "https://zenodo.org/api/records/6382089",
+      "parent_html": "https://zenodo.org/records/6382089",
+      "parent_doi": "https://doi.org/10.5281/zenodo.6382089",
+      "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6382089",
+      "self_iiif_manifest": "https://zenodo.org/api/iiif/record:6382090/manifest",
+      "self_iiif_sequence": "https://zenodo.org/api/iiif/record:6382090/sequence/default",
+      "files": "https://zenodo.org/api/records/6382090/files",
+      "media_files": "https://zenodo.org/api/records/6382090/media-files",
+      "latest": "https://zenodo.org/api/records/6382090/versions/latest",
+      "latest_html": "https://zenodo.org/records/6382090/latest",
+      "versions": "https://zenodo.org/api/records/6382090/versions",
+      "draft": "https://zenodo.org/api/records/6382090/draft",
+      "access_links": "https://zenodo.org/api/records/6382090/access/links",
+      "access_grants": "https://zenodo.org/api/records/6382090/access/grants",
+      "access_users": "https://zenodo.org/api/records/6382090/access/users",
+      "access_request": "https://zenodo.org/api/records/6382090/access/request",
+      "access": "https://zenodo.org/api/records/6382090/access",
+      "communities": "https://zenodo.org/api/records/6382090/communities",
+      "communities-suggestions": "https://zenodo.org/api/records/6382090/communities-suggestions",
+      "request_deletion": "https://zenodo.org/api/records/6382090/request-deletion",
+      "file_modification": "https://zenodo.org/api/records/6382090/file-modification",
+      "quota_increase": "https://zenodo.org/api/records/6382090/quota-increase",
+      "requests": "https://zenodo.org/api/records/6382090/requests"
+    },
+    "updated": "2022-03-25T08:10:57.094962+00:00",
+    "recid": "6382090",
+    "revision": 3,
+    "files": [
+      {
+        "id": "1ae3b996-de0b-4640-a0e2-97de2f274422",
+        "key": "wm_barriers_data.zip",
+        "size": 7972407510,
+        "checksum": "md5:d96051ca1339d1c1afa9ac736eabd058",
+        "links": {
+          "self": "https://zenodo.org/api/records/6382090/files/wm_barriers_data.zip/content"
+        }
+      }
+    ],
+    "swh": {},
+    "owners": [
+      {
+        "id": "309365"
+      }
+    ],
+    "status": "published",
+    "stats": {
+      "downloads": 2795,
+      "unique_downloads": 882,
+      "views": 3236,
+      "unique_views": 2915,
+      "version_downloads": 2793,
+      "version_unique_downloads": 880,
+      "version_unique_views": 2905,
+      "version_views": 3226
+    },
+    "state": "done",
+    "submitted": true
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.visionassist.app.ui.PreviewUiStateTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-10T13:00:53.571Z" hostname="DESKTOP-0CHM77T" time="0.013">
+  <properties/>
+  <testcase name="missing permission always wins over stale streaming events" classname="ro.visionassist.app.ui.PreviewUiStateTest" time="0.01"/>
+  <testcase name="only a streaming event can present an active camera" classname="ro.visionassist.app.ui.PreviewUiStateTest" time="0.001"/>
+  <testcase name="stopped or backgrounded preview never claims camera is active" classname="ro.visionassist.app.ui.PreviewUiStateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,206 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :core:camera:preBuild UP-TO-DATE
+> Task :core:camera:preDebugBuild UP-TO-DATE
+> Task :core:depth:preBuild UP-TO-DATE
+> Task :core:depth:preDebugBuild UP-TO-DATE
+> Task :core:depth:writeDebugAarMetadata
+> Task :core:camera:writeDebugAarMetadata
+> Task :core:detection:preBuild UP-TO-DATE
+> Task :core:detection:preDebugBuild UP-TO-DATE
+> Task :core:ground:preBuild UP-TO-DATE
+> Task :core:ground:preDebugBuild UP-TO-DATE
+> Task :core:detection:writeDebugAarMetadata
+> Task :core:ground:writeDebugAarMetadata
+> Task :core:voice:preBuild UP-TO-DATE
+> Task :core:voice:preDebugBuild UP-TO-DATE
+> Task :core:voice:writeDebugAarMetadata
+> Task :core:camera:processDebugNavigationResources
+> Task :core:depth:processDebugNavigationResources FROM-CACHE
+> Task :core:detection:processDebugNavigationResources FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :core:ground:processDebugNavigationResources FROM-CACHE
+> Task :core:voice:processDebugNavigationResources FROM-CACHE
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :core:camera:generateDebugResValues FROM-CACHE
+> Task :app:compileDebugNavigationResources
+> Task :core:camera:generateDebugResources
+> Task :core:camera:packageDebugResources
+> Task :core:depth:generateDebugResValues FROM-CACHE
+> Task :core:depth:generateDebugResources FROM-CACHE
+> Task :core:depth:packageDebugResources
+> Task :core:detection:generateDebugResValues FROM-CACHE
+> Task :core:detection:generateDebugResources FROM-CACHE
+> Task :core:detection:packageDebugResources
+> Task :core:ground:generateDebugResValues FROM-CACHE
+> Task :core:ground:generateDebugResources FROM-CACHE
+> Task :core:ground:packageDebugResources
+> Task :core:voice:generateDebugResValues FROM-CACHE
+> Task :core:voice:generateDebugResources FROM-CACHE
+> Task :core:voice:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :core:camera:extractDeepLinksDebug
+> Task :core:camera:processDebugManifest
+> Task :core:depth:extractDeepLinksDebug FROM-CACHE
+> Task :core:depth:processDebugManifest
+> Task :core:detection:extractDeepLinksDebug FROM-CACHE
+> Task :core:detection:processDebugManifest
+> Task :core:ground:extractDeepLinksDebug FROM-CACHE
+> Task :core:ground:processDebugManifest
+> Task :core:voice:extractDeepLinksDebug FROM-CACHE
+> Task :core:voice:processDebugManifest
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :core:camera:compileDebugLibraryResources
+> Task :core:depth:compileDebugLibraryResources FROM-CACHE
+> Task :core:camera:parseDebugLocalResources
+> Task :core:depth:parseDebugLocalResources
+> Task :core:depth:generateDebugRFile
+> Task :core:camera:generateDebugRFile
+> Task :core:detection:compileDebugLibraryResources FROM-CACHE
+> Task :core:detection:parseDebugLocalResources FROM-CACHE
+> Task :core:ground:compileDebugLibraryResources FROM-CACHE
+> Task :core:detection:generateDebugRFile
+> Task :core:ground:parseDebugLocalResources FROM-CACHE
+> Task :core:voice:compileDebugLibraryResources FROM-CACHE
+> Task :core:ground:generateDebugRFile
+> Task :core:voice:parseDebugLocalResources FROM-CACHE
+> Task :core:camera:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:detection:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:voice:generateDebugRFile
+> Task :app:processDebugResources
+> Task :core:detection:javaPreCompileDebug
+> Task :core:ground:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:detection:compileDebugKotlin
+> Task :core:detection:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:detection:bundleLibCompileToJarDebug
+> Task :core:ground:javaPreCompileDebug FROM-CACHE
+> Task :core:camera:javaPreCompileDebug FROM-CACHE
+> Task :core:depth:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:depth:javaPreCompileDebug FROM-CACHE
+> Task :core:voice:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:ground:compileDebugKotlin
+> Task :core:ground:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:ground:bundleLibCompileToJarDebug
+> Task :core:voice:compileDebugKotlin
+> Task :core:camera:compileDebugKotlin
+> Task :core:camera:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:camera:bundleLibCompileToJarDebug
+> Task :core:voice:javaPreCompileDebug FROM-CACHE
+> Task :core:voice:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:voice:bundleLibCompileToJarDebug
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:processDebugAndroidTestNavigationResources FROM-CACHE
+> Task :app:compileDebugAndroidTestNavigationResources FROM-CACHE
+> Task :app:generateDebugAndroidTestResValues FROM-CACHE
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:generateDebugAndroidTestResources FROM-CACHE
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestResources
+> Task :app:javaPreCompileDebugAndroidTest FROM-CACHE
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :core:camera:mergeDebugShaders
+> Task :core:camera:compileDebugShaders NO-SOURCE
+> Task :core:camera:generateDebugAssets UP-TO-DATE
+> Task :core:camera:mergeDebugAssets
+> Task :core:depth:mergeDebugShaders
+> Task :core:depth:compileDebugShaders NO-SOURCE
+> Task :core:depth:generateDebugAssets UP-TO-DATE
+> Task :core:depth:mergeDebugAssets
+> Task :core:detection:mergeDebugShaders
+> Task :core:detection:compileDebugShaders NO-SOURCE
+> Task :core:detection:generateDebugAssets UP-TO-DATE
+> Task :core:detection:mergeDebugAssets
+> Task :core:ground:mergeDebugShaders
+> Task :core:ground:compileDebugShaders NO-SOURCE
+> Task :core:ground:generateDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugAssets
+> Task :core:voice:mergeDebugShaders
+> Task :core:voice:compileDebugShaders NO-SOURCE
+> Task :core:voice:generateDebugAssets UP-TO-DATE
+> Task :core:voice:mergeDebugAssets
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :core:camera:bundleLibRuntimeToJarDebug
+> Task :core:depth:compileDebugKotlin
+> Task :core:depth:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:depth:bundleLibCompileToJarDebug
+> Task :core:detection:bundleLibRuntimeToJarDebug
+> Task :core:depth:bundleLibRuntimeToJarDebug
+> Task :core:ground:bundleLibRuntimeToJarDebug
+> Task :core:voice:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :core:camera:processDebugJavaRes
+> Task :core:depth:processDebugJavaRes
+> Task :core:detection:processDebugJavaRes
+> Task :core:ground:processDebugJavaRes
+> Task :core:voice:processDebugJavaRes
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebugAndroidTest
+
+> Task :app:compileDebugKotlin
+w: file:///C:/Users/Moth/Desktop/VisionAssist/app/src/main/java/ro/visionassist/app/voice/LocalAnnouncements.kt:59:58 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+
+> Task :app:compileDebugJavaWithJavac
+> Task :app:bundleDebugClassesToCompileJar
+> Task :core:camera:bundleLibRuntimeToDirDebug
+> Task :core:detection:bundleLibRuntimeToDirDebug
+> Task :core:depth:bundleLibRuntimeToDirDebug
+> Task :core:ground:bundleLibRuntimeToDirDebug
+> Task :core:voice:bundleLibRuntimeToDirDebug
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugJniLibFolders
+> Task :core:camera:mergeDebugJniLibFolders
+> Task :core:camera:mergeDebugNativeLibs NO-SOURCE
+> Task :core:camera:copyDebugJniLibsProjectOnly
+> Task :core:depth:mergeDebugJniLibFolders
+> Task :core:depth:mergeDebugNativeLibs NO-SOURCE
+> Task :core:depth:copyDebugJniLibsProjectOnly
+> Task :core:detection:mergeDebugJniLibFolders
+> Task :core:detection:mergeDebugNativeLibs NO-SOURCE
+> Task :core:detection:copyDebugJniLibsProjectOnly
+> Task :core:ground:mergeDebugJniLibFolders
+> Task :core:ground:mergeDebugNativeLibs NO-SOURCE
+> Task :core:ground:copyDebugJniLibsProjectOnly
+> Task :core:voice:mergeDebugJniLibFolders
+> Task :core:voice:mergeDebugNativeLibs NO-SOURCE
+> Task :core:voice:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:compileDebugAndroidTestJavaWithJavac
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 7m 46s
+152 actionable tasks: 118 executed, 34 from cache

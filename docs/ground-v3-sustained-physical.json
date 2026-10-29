@@ -1,0 +1,198 @@
+{
+  "device": "SM-S931B",
+  "api": 37,
+  "model_sha256": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+  "fixture": "rdd_pothole.jpg",
+  "warmup_frames": 5,
+  "frames": 300,
+  "target_interval_ms": 400,
+  "elapsed_ms": 120106,
+  "process_cpu_ms": 10977,
+  "process_cpu_ms_per_elapsed_ms": 0.09139426839624998,
+  "inference_ms": {
+    "p50": 18,
+    "p95": 25,
+    "p99": 33
+  },
+  "processing_ms": {
+    "p50": 36,
+    "p95": 43,
+    "p99": 50
+  },
+  "frame_interval_ms": {
+    "p50": 400,
+    "p95": 401,
+    "p99": 401
+  },
+  "process_pss_before_load_kb": 30877,
+  "process_pss_peak_sampled_kb": 57181,
+  "start_device_state": {
+    "charge_counter_uah": 2661945,
+    "current_now_ua": -2475000,
+    "battery_level": 66,
+    "plugged": 0,
+    "battery_temperature_tenths_c": 327,
+    "thermal_status": 0
+  },
+  "end_device_state": {
+    "charge_counter_uah": 2641870,
+    "current_now_ua": -232031,
+    "battery_level": 65,
+    "plugged": 0,
+    "battery_temperature_tenths_c": 336,
+    "thermal_status": 0
+  },
+  "samples": [
+    {
+      "elapsed_ms": 9731,
+      "process_pss_kb": 56444,
+      "device_state": {
+        "charge_counter_uah": 2657930,
+        "current_now_ua": -497656,
+        "battery_level": 66,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 327,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 19737,
+      "process_pss_kb": 51624,
+      "device_state": {
+        "charge_counter_uah": 2657930,
+        "current_now_ua": -283593,
+        "battery_level": 66,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 327,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 29733,
+      "process_pss_kb": 52005,
+      "device_state": {
+        "charge_counter_uah": 2657930,
+        "current_now_ua": -540625,
+        "battery_level": 66,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 327,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 39740,
+      "process_pss_kb": 52421,
+      "device_state": {
+        "charge_counter_uah": 2649900,
+        "current_now_ua": -229687,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 49741,
+      "process_pss_kb": 50035,
+      "device_state": {
+        "charge_counter_uah": 2649900,
+        "current_now_ua": -691406,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 59754,
+      "process_pss_kb": 50437,
+      "device_state": {
+        "charge_counter_uah": 2649900,
+        "current_now_ua": -288281,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 69755,
+      "process_pss_kb": 50155,
+      "device_state": {
+        "charge_counter_uah": 2645885,
+        "current_now_ua": -1071093,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 79756,
+      "process_pss_kb": 50425,
+      "device_state": {
+        "charge_counter_uah": 2645885,
+        "current_now_ua": -209375,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 89763,
+      "process_pss_kb": 50817,
+      "device_state": {
+        "charge_counter_uah": 2645885,
+        "current_now_ua": -290625,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 99763,
+      "process_pss_kb": 51221,
+      "device_state": {
+        "charge_counter_uah": 2641870,
+        "current_now_ua": -229687,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 109769,
+      "process_pss_kb": 50067,
+      "device_state": {
+        "charge_counter_uah": 2641870,
+        "current_now_ua": -252343,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    },
+    {
+      "elapsed_ms": 119769,
+      "process_pss_kb": 49679,
+      "device_state": {
+        "charge_counter_uah": 2641870,
+        "current_now_ua": -278125,
+        "battery_level": 65,
+        "plugged": 0,
+        "battery_temperature_tenths_c": 336,
+        "thermal_status": 0
+      }
+    }
+  ],
+  "limitations": [
+    "Single fixture at 400 ms intervals; no live camera, COCO concurrency or assistant.",
+    "Process CPU/PSS include the runtime and test harness; PSS peak is sampled, not continuous.",
+    "Battery counters/current/temperature describe the whole device, not attributable model energy.",
+    "No background-app, screen-brightness or ambient-temperature control; no battery-life estimate.",
+    "Two minutes is not a long-term thermal or navigation-safety study."
+  ]
+}

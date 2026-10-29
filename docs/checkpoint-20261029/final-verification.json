@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29",
+  "staged_files_reviewed": 480,
+  "local_credential_values_checked": 3,
+  "credential_findings": [],
+  "forbidden_files": [],
+  "staged_vs_worktree_byte_mismatches": [],
+  "intentionally_tracked_runtime_models": [
+    "core/detection/src/main/assets/efficientdet_lite0.tflite",
+    "core/ground/src/main/assets/ground_baseline.tflite"
+  ],
+  "inventoried_artifacts": 3814,
+  "original_artifacts_changed_since_first_inventory": [],
+  "warning_gate_false": true,
+  "android_build": "passed: assembleDebug + testDebugUnitTest; 19 JVM tests, 0 failures/errors",
+  "python_tests": "8 data + 5 comparison + 6 resume/finite-loss passed in documented separate environments",
+  "gpu_check_only": "passed; no training launched",
+  "limits": "Heuristic credential review, not a complete security audit. Ignored local artifacts are not backed up remotely. Historical raw evidence retains existing whitespace."
+}

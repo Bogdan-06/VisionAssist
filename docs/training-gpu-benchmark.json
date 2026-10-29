@@ -1,0 +1,55 @@
+{
+  "hardware": {
+    "requested": "gpu",
+    "selected": "gpu",
+    "cpu_threads": 8,
+    "gpus": [
+      {
+        "name": "/physical_device:GPU:0",
+        "compute_capability": [
+          7,
+          5
+        ],
+        "device_name": "NVIDIA GeForce GTX 1650 Ti with Max-Q Design"
+      }
+    ],
+    "encoder_output_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+    "decoder_weight_device": "/job:localhost/replica:0/task:0/device:GPU:0"
+  },
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "real_images": 32,
+  "batch_order_and_masks_match": true,
+  "batch_reference_max_abs_error": 0.000102996826171875,
+  "encoder_batch_ms": [
+    355.76364899998225,
+    163.91580800001293,
+    140.10525700001608,
+    132.8276549999714,
+    156.32709700003034
+  ],
+  "encoder_batch_median_ms": 156.32709700003034,
+  "train_batch_size": 16,
+  "decoder_losses": [
+    1.649871587753296,
+    1.641948938369751,
+    1.6345783472061157,
+    1.6275110244750977
+  ],
+  "decoder_step_ms": [
+    5701.998468,
+    43.58755199996267,
+    42.3057859999858,
+    41.30520999996179
+  ],
+  "steady_decoder_median_ms": 42.3057859999858,
+  "optimizer_updated_weights": true,
+  "limitations": [
+    "Short warm-cache benchmark, not full-run speed or accuracy.",
+    "First decoder step includes tracing/compilation; excluded from steady median."
+  ],
+  "gpu_memory_bytes": {
+    "current": 49571584,
+    "peak": 604287744
+  }
+}

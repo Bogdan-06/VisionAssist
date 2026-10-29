@@ -1,0 +1,8 @@
+{
+  "state": "interrupted",
+  "completed_epochs": 3,
+  "observed_utc": "2026-10-28T20:01:25.7686623Z",
+  "reason": "Original tool handle is missing and no matching trainer/controller process remains. Interruption cause is unknown; completed checkpoints are preserved.",
+  "completed": [],
+  "stage": "train"
+}

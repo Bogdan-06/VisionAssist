@@ -1,0 +1,2113 @@
+{
+  "dataset_doi": "10.17632/5bwfg4v4cd.3",
+  "source_sha256": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+  "authors": [
+    "Muhammad Ihsan",
+    "Agus Harjoko",
+    "Muhammad Alfian Amrizal"
+  ],
+  "license": "CC BY 4.0",
+  "source": "https://data.mendeley.com/datasets/5bwfg4v4cd/3",
+  "paper": "https://doi.org/10.1016/j.dib.2024.110131",
+  "split": "published test partition",
+  "use": "external evaluation; no training",
+  "videos": 123,
+  "records": [
+    {
+      "id": "0081",
+      "files": {
+        "rgb": {
+          "path": "rgb/000.mp4",
+          "archive_entry": "pothole_video/test/rgb/0081.mp4",
+          "sha256": "19697da49b39961dcb36d9485228b1548731ed90e8be780f41998ca775f03ef2",
+          "bytes": 1405683
+        },
+        "mask": {
+          "path": "mask/000.mp4",
+          "archive_entry": "pothole_video/test/mask/0081.mp4",
+          "sha256": "685df6aad11134496794d2783b9215dac40aa7ec687b37885353d1ec3ca486b3",
+          "bytes": 156058
+        }
+      }
+    },
+    {
+      "id": "0082",
+      "files": {
+        "rgb": {
+          "path": "rgb/001.mp4",
+          "archive_entry": "pothole_video/test/rgb/0082.mp4",
+          "sha256": "a6ebc81e086f654e36b52ee1dc91d1008ef76af3c0b82befd8d306303fc52931",
+          "bytes": 1602577
+        },
+        "mask": {
+          "path": "mask/001.mp4",
+          "archive_entry": "pothole_video/test/mask/0082.mp4",
+          "sha256": "fdb589e63f04659c1d83974002dd239987f1cc73fecde30a2a7ff752583a5de2",
+          "bytes": 332220
+        }
+      }
+    },
+    {
+      "id": "0083",
+      "files": {
+        "rgb": {
+          "path": "rgb/002.mp4",
+          "archive_entry": "pothole_video/test/rgb/0083.mp4",
+          "sha256": "44cccb62777568d267debbf56f48b9ef4afc012d1d62bf0d024b4f0a5cff8853",
+          "bytes": 1708452
+        },
+        "mask": {
+          "path": "mask/002.mp4",
+          "archive_entry": "pothole_video/test/mask/0083.mp4",
+          "sha256": "905901ec57ace054e779072a25e777bc7c7c00aaa0993b40b81d4b3bf40e735b",
+          "bytes": 135750
+        }
+      }
+    },
+    {
+      "id": "0084",
+      "files": {
+        "rgb": {
+          "path": "rgb/003.mp4",
+          "archive_entry": "pothole_video/test/rgb/0084.mp4",
+          "sha256": "a840edab8d33dc539fcd2330fe2ecbb87577f7a6606a1b35fda13fcf57b52a7d",
+          "bytes": 1629314
+        },
+        "mask": {
+          "path": "mask/003.mp4",
+          "archive_entry": "pothole_video/test/mask/0084.mp4",
+          "sha256": "bc830870b41d186ed3b5039400da1004b223f221ee9dac319284b67c8977a857",
+          "bytes": 232343
+        }
+      }
+    },
+    {
+      "id": "0085",
+      "files": {
+        "rgb": {
+          "path": "rgb/004.mp4",
+          "archive_entry": "pothole_video/test/rgb/0085.mp4",
+          "sha256": "f57743e01bae8ae87dee58c338c9172691e481a01e2b56142a23403918cc4a7e",
+          "bytes": 1642195
+        },
+        "mask": {
+          "path": "mask/004.mp4",
+          "archive_entry": "pothole_video/test/mask/0085.mp4",
+          "sha256": "f40af81eb3b427b38119ed23e3799221db70dca2f7e330a6be159a973ba9dd02",
+          "bytes": 230527
+        }
+      }
+    },
+    {
+      "id": "0086",
+      "files": {
+        "rgb": {
+          "path": "rgb/005.mp4",
+          "archive_entry": "pothole_video/test/rgb/0086.mp4",
+          "sha256": "e745c3dd6b14b48f439e1f805158b6d2595f27c161b0eccd2985cdfb292888d0",
+          "bytes": 1419169
+        },
+        "mask": {
+          "path": "mask/005.mp4",
+          "archive_entry": "pothole_video/test/mask/0086.mp4",
+          "sha256": "18c30981114b712a74e39dc918cb9e8030204bad1b0ea00ac3af265e660119fa",
+          "bytes": 278299
+        }
+      }
+    },
+    {
+      "id": "0087",
+      "files": {
+        "rgb": {
+          "path": "rgb/006.mp4",
+          "archive_entry": "pothole_video/test/rgb/0087.mp4",
+          "sha256": "9eb3634a3482af3f22615c14eb34f2a5e2fb2d842a2827fd451c12c5f0d63ff6",
+          "bytes": 1405363
+        },
+        "mask": {
+          "path": "mask/006.mp4",
+          "archive_entry": "pothole_video/test/mask/0087.mp4",
+          "sha256": "ff0f4c23ebdadbeb3c8b6c2e0336e6d5f4afb9bcf87158def40e29926256bc58",
+          "bytes": 233329
+        }
+      }
+    },
+    {
+      "id": "0088",
+      "files": {
+        "rgb": {
+          "path": "rgb/007.mp4",
+          "archive_entry": "pothole_video/test/rgb/0088.mp4",
+          "sha256": "cd98f57ef65fc3ce357065460889170290c4a56739e2cd0d8ad40e18dab76b3f",
+          "bytes": 1601158
+        },
+        "mask": {
+          "path": "mask/007.mp4",
+          "archive_entry": "pothole_video/test/mask/0088.mp4",
+          "sha256": "70427648eeb0ab7136e24f1b4117f928d4f3102b68509fc1b580c74dca5d8fe0",
+          "bytes": 261314
+        }
+      }
+    },
+    {
+      "id": "0089",
+      "files": {
+        "rgb": {
+          "path": "rgb/008.mp4",
+          "archive_entry": "pothole_video/test/rgb/0089.mp4",
+          "sha256": "a53e26e37d5746b1bee5c253c09916beeeac03c67f9c0535ee2762b6973761ff",
+          "bytes": 1378155
+        },
+        "mask": {
+          "path": "mask/008.mp4",
+          "archive_entry": "pothole_video/test/mask/0089.mp4",
+          "sha256": "58dd7e54dc5640e74bff408bc58a02bf29f57ad7e204c56eef42a6b55acb09f1",
+          "bytes": 213925
+        }
+      }
+    },
+    {
+      "id": "0090",
+      "files": {
+        "rgb": {
+          "path": "rgb/009.mp4",
+          "archive_entry": "pothole_video/test/rgb/0090.mp4",
+          "sha256": "113196bb52042de9c3d7bb845b9ea13483966d0264b8a1ba3f3eccde17367aed",
+          "bytes": 1374330
+        },
+        "mask": {
+          "path": "mask/009.mp4",
+          "archive_entry": "pothole_video/test/mask/0090.mp4",
+          "sha256": "a0aa12bd3029420d62e673f7eec21474777b03693b72aa5b0823fe574d91831b",
+          "bytes": 234690
+        }
+      }
+    },
+    {
+      "id": "0091",
+      "files": {
+        "rgb": {
+          "path": "rgb/010.mp4",
+          "archive_entry": "pothole_video/test/rgb/0091.mp4",
+          "sha256": "e29c92af44805d1904503ff95b83f0f76c23d9e9c728a2a92f70f148f625aff9",
+          "bytes": 1373519
+        },
+        "mask": {
+          "path": "mask/010.mp4",
+          "archive_entry": "pothole_video/test/mask/0091.mp4",
+          "sha256": "abf4fd5637a40e0eadddd8ebe196a8a1df438899123bcdbeafc1968e08c1ec4f",
+          "bytes": 223575
+        }
+      }
+    },
+    {
+      "id": "0092",
+      "files": {
+        "rgb": {
+          "path": "rgb/011.mp4",
+          "archive_entry": "pothole_video/test/rgb/0092.mp4",
+          "sha256": "0fc0da40a3d8fe3db31a1608790f38617d3c244900d9591d922ef8525e5df368",
+          "bytes": 1510810
+        },
+        "mask": {
+          "path": "mask/011.mp4",
+          "archive_entry": "pothole_video/test/mask/0092.mp4",
+          "sha256": "bab67c8abdf0d85bb941aaeb30fe0c5df975822e55675980bff7e8fe9baaf8ea",
+          "bytes": 277026
+        }
+      }
+    },
+    {
+      "id": "0093",
+      "files": {
+        "rgb": {
+          "path": "rgb/012.mp4",
+          "archive_entry": "pothole_video/test/rgb/0093.mp4",
+          "sha256": "47c18fef9f1959bde97becfed19901567ac0049f7717ef33e8f61fed4b04d39b",
+          "bytes": 1490772
+        },
+        "mask": {
+          "path": "mask/012.mp4",
+          "archive_entry": "pothole_video/test/mask/0093.mp4",
+          "sha256": "d8b8bf1d4787a4c27d0f4f9e068f00bf0ab5195af21509da8e1ceac7b49f64ee",
+          "bytes": 174974
+        }
+      }
+    },
+    {
+      "id": "0094",
+      "files": {
+        "rgb": {
+          "path": "rgb/013.mp4",
+          "archive_entry": "pothole_video/test/rgb/0094.mp4",
+          "sha256": "50987eb7531b27162c2d4dbaacc099ba7b6f11ac9aea5efa08b632b295b7a8fa",
+          "bytes": 1619934
+        },
+        "mask": {
+          "path": "mask/013.mp4",
+          "archive_entry": "pothole_video/test/mask/0094.mp4",
+          "sha256": "39ace68d4e5358153076d684cf9644061626205734414eca188e142f35c47349",
+          "bytes": 191394
+        }
+      }
+    },
+    {
+      "id": "0095",
+      "files": {
+        "rgb": {
+          "path": "rgb/014.mp4",
+          "archive_entry": "pothole_video/test/rgb/0095.mp4",
+          "sha256": "1c53bb722f103be4ae39a46d27f59af90f59a3fabb1204cf93f5837bc50a336a",
+          "bytes": 1608915
+        },
+        "mask": {
+          "path": "mask/014.mp4",
+          "archive_entry": "pothole_video/test/mask/0095.mp4",
+          "sha256": "18a1946ad093d3b3366c260eef1258c7803aa699f98d15d55663fca80dee701a",
+          "bytes": 225206
+        }
+      }
+    },
+    {
+      "id": "0096",
+      "files": {
+        "rgb": {
+          "path": "rgb/015.mp4",
+          "archive_entry": "pothole_video/test/rgb/0096.mp4",
+          "sha256": "3d702862720e42640129d4a660dafe25dd106cf911362dab891df38b2cf56639",
+          "bytes": 1414010
+        },
+        "mask": {
+          "path": "mask/015.mp4",
+          "archive_entry": "pothole_video/test/mask/0096.mp4",
+          "sha256": "0f2ea9d11c33335b853f535e8febd6b3b86f368d95610416fa0a98f2792c1536",
+          "bytes": 267507
+        }
+      }
+    },
+    {
+      "id": "0097",
+      "files": {
+        "rgb": {
+          "path": "rgb/016.mp4",
+          "archive_entry": "pothole_video/test/rgb/0097.mp4",
+          "sha256": "8943aad512dbdd75f3a323aa926b3b50733fe5d81cbe945178fb2dad0600cccf",
+          "bytes": 1702974
+        },
+        "mask": {
+          "path": "mask/016.mp4",
+          "archive_entry": "pothole_video/test/mask/0097.mp4",
+          "sha256": "2277120c4f5d65bfacb5b9a45673aa01fd2125ace1f0a63e850207775d474386",
+          "bytes": 210388
+        }
+      }
+    },
+    {
+      "id": "0098",
+      "files": {
+        "rgb": {
+          "path": "rgb/017.mp4",
+          "archive_entry": "pothole_video/test/rgb/0098.mp4",
+          "sha256": "00afc9f72a34fe1dbd0e2b3152a1b6b61dd1c9c97101de8c723be6af105b3c0b",
+          "bytes": 1552228
+        },
+        "mask": {
+          "path": "mask/017.mp4",
+          "archive_entry": "pothole_video/test/mask/0098.mp4",
+          "sha256": "4c6b63b6089b3b3a46f309fc3b8dd5ba8c5432cbea61dae5c22a4d85ea8d63e0",
+          "bytes": 229125
+        }
+      }
+    },
+    {
+      "id": "0099",
+      "files": {
+        "rgb": {
+          "path": "rgb/018.mp4",
+          "archive_entry": "pothole_video/test/rgb/0099.mp4",
+          "sha256": "dd968637e99442163b38a1ca68ff74a455789400e895205f144b88585c1dd93a",
+          "bytes": 1555332
+        },
+        "mask": {
+          "path": "mask/018.mp4",
+          "archive_entry": "pothole_video/test/mask/0099.mp4",
+          "sha256": "8865c60572109290cb6eab70cfca2bff6203da31df382c1e47954665349ad99b",
+          "bytes": 260262
+        }
+      }
+    },
+    {
+      "id": "0100",
+      "files": {
+        "rgb": {
+          "path": "rgb/019.mp4",
+          "archive_entry": "pothole_video/test/rgb/0100.mp4",
+          "sha256": "041276cb1774b766dc2c7f384e23e33a90e801421fedc6d6486d37134f6f6129",
+          "bytes": 1610192
+        },
+        "mask": {
+          "path": "mask/019.mp4",
+          "archive_entry": "pothole_video/test/mask/0100.mp4",
+          "sha256": "fe99110c0470984729b23aab720639585f8e7b90d699fc6497ddc323cb45bb85",
+          "bytes": 183424
+        }
+      }
+    },
+    {
+      "id": "0181",
+      "files": {
+        "rgb": {
+          "path": "rgb/020.mp4",
+          "archive_entry": "pothole_video/test/rgb/0181.mp4",
+          "sha256": "be04b65c3590b4b4f1e41456622fa1bdf684cd1560e174a507896525f091ce84",
+          "bytes": 1666595
+        },
+        "mask": {
+          "path": "mask/020.mp4",
+          "archive_entry": "pothole_video/test/mask/0181.mp4",
+          "sha256": "a8fc7313413c1466ee37bb01651399aaf910e71f0391837103c6a33b96436490",
+          "bytes": 219229
+        }
+      }
+    },
+    {
+      "id": "0182",
+      "files": {
+        "rgb": {
+          "path": "rgb/021.mp4",
+          "archive_entry": "pothole_video/test/rgb/0182.mp4",
+          "sha256": "cec3b4cd4713840f7408a5b0c176108c39213879070f6563519465cb6f5ce257",
+          "bytes": 1675473
+        },
+        "mask": {
+          "path": "mask/021.mp4",
+          "archive_entry": "pothole_video/test/mask/0182.mp4",
+          "sha256": "3739b18e36664820195cc80e74239e83af981e30d1f5bb1768c6b3c003e520a7",
+          "bytes": 186769
+        }
+      }
+    },
+    {
+      "id": "0183",
+      "files": {
+        "rgb": {
+          "path": "rgb/022.mp4",
+          "archive_entry": "pothole_video/test/rgb/0183.mp4",
+          "sha256": "e1cfb260d55f103a04130b2fd372feb95da855b39b5332c5e12c83e4d26e31a4",
+          "bytes": 1564877
+        },
+        "mask": {
+          "path": "mask/022.mp4",
+          "archive_entry": "pothole_video/test/mask/0183.mp4",
+          "sha256": "79579761f58d22df375fa096001404a134a7290152fd273c18a2b0290304b45f",
+          "bytes": 176717
+        }
+      }
+    },
+    {
+      "id": "0184",
+      "files": {
+        "rgb": {
+          "path": "rgb/023.mp4",
+          "archive_entry": "pothole_video/test/rgb/0184.mp4",
+          "sha256": "5782dba80f716961ec71b2467dcf59aa6cf842f5da19add1e294aef26f954e54",
+          "bytes": 1657343
+        },
+        "mask": {
+          "path": "mask/023.mp4",
+          "archive_entry": "pothole_video/test/mask/0184.mp4",
+          "sha256": "0593a36f1789a3f6b0003c35d4f35303900224ae809ebae794ee6757af7aef4e",
+          "bytes": 149177
+        }
+      }
+    },
+    {
+      "id": "0185",
+      "files": {
+        "rgb": {
+          "path": "rgb/024.mp4",
+          "archive_entry": "pothole_video/test/rgb/0185.mp4",
+          "sha256": "b74cd39fe99afc8a78aae8dda07aa125b370c59b598822e56e9c9f8a2c696cc1",
+          "bytes": 1553727
+        },
+        "mask": {
+          "path": "mask/024.mp4",
+          "archive_entry": "pothole_video/test/mask/0185.mp4",
+          "sha256": "e89623fec35c68162ce4b3471a4f13c697fbc8c4cdcdf7480d9591affaadbe52",
+          "bytes": 217914
+        }
+      }
+    },
+    {
+      "id": "0186",
+      "files": {
+        "rgb": {
+          "path": "rgb/025.mp4",
+          "archive_entry": "pothole_video/test/rgb/0186.mp4",
+          "sha256": "89716e8f2d66977a4ef0a4ec848f0bf2314b35d493f9f1cd546216529a06e16d",
+          "bytes": 1570680
+        },
+        "mask": {
+          "path": "mask/025.mp4",
+          "archive_entry": "pothole_video/test/mask/0186.mp4",
+          "sha256": "7d083200cc06e8b1e932b6cbf2ff0efae47d36747331261b8d1223800fa66eed",
+          "bytes": 180452
+        }
+      }
+    },
+    {
+      "id": "0187",
+      "files": {
+        "rgb": {
+          "path": "rgb/026.mp4",
+          "archive_entry": "pothole_video/test/rgb/0187.mp4",
+          "sha256": "754cfc5f6e23e1e6cadea6aa2f0a56a4221f5ae4a2ffe8510f1190433f8d1860",
+          "bytes": 1680715
+        },
+        "mask": {
+          "path": "mask/026.mp4",
+          "archive_entry": "pothole_video/test/mask/0187.mp4",
+          "sha256": "8dc37b12c5d14f4d6ec5e0b5363709579b785fbe19fdb3bb4e85f47fdd439648",
+          "bytes": 168713
+        }
+      }
+    },
+    {
+      "id": "0188",
+      "files": {
+        "rgb": {
+          "path": "rgb/027.mp4",
+          "archive_entry": "pothole_video/test/rgb/0188.mp4",
+          "sha256": "4a87f56efca8ea3741660a62b142a79a2e1be5df9e19bc107c056f2880b30672",
+          "bytes": 1684551
+        },
+        "mask": {
+          "path": "mask/027.mp4",
+          "archive_entry": "pothole_video/test/mask/0188.mp4",
+          "sha256": "897cf5119b12fe1e42d2d6c5fab0926b66954f862976054e6e6293adcf0cabf3",
+          "bytes": 170687
+        }
+      }
+    },
+    {
+      "id": "0189",
+      "files": {
+        "rgb": {
+          "path": "rgb/028.mp4",
+          "archive_entry": "pothole_video/test/rgb/0189.mp4",
+          "sha256": "2b77db6826e0c2e678a0971eb61f282f5fc3ae6a7e142215b6c148074ceda293",
+          "bytes": 1688308
+        },
+        "mask": {
+          "path": "mask/028.mp4",
+          "archive_entry": "pothole_video/test/mask/0189.mp4",
+          "sha256": "8c711ca172ca80e5d82e60d6e944b393745ea7d659ff94f9c78ec027222e77d3",
+          "bytes": 227164
+        }
+      }
+    },
+    {
+      "id": "0190",
+      "files": {
+        "rgb": {
+          "path": "rgb/029.mp4",
+          "archive_entry": "pothole_video/test/rgb/0190.mp4",
+          "sha256": "1efe13497f597d6774f21429d1af0fbc4d14d619145cf63481f911bdb3201120",
+          "bytes": 1680490
+        },
+        "mask": {
+          "path": "mask/029.mp4",
+          "archive_entry": "pothole_video/test/mask/0190.mp4",
+          "sha256": "bba35489a536a7c641a3ca0b79fb2a84b5113637a6dd73ebd725d226cdb4c585",
+          "bytes": 207679
+        }
+      }
+    },
+    {
+      "id": "0191",
+      "files": {
+        "rgb": {
+          "path": "rgb/030.mp4",
+          "archive_entry": "pothole_video/test/rgb/0191.mp4",
+          "sha256": "791ec339d7cd9ed68ffa3c7959f359f9279610e380207a515a68a7ba244a11c0",
+          "bytes": 1588207
+        },
+        "mask": {
+          "path": "mask/030.mp4",
+          "archive_entry": "pothole_video/test/mask/0191.mp4",
+          "sha256": "e32f2826ce9ce74b4db3be656c2ea6a3eb11960ac2461448564732339557aad8",
+          "bytes": 138249
+        }
+      }
+    },
+    {
+      "id": "0192",
+      "files": {
+        "rgb": {
+          "path": "rgb/031.mp4",
+          "archive_entry": "pothole_video/test/rgb/0192.mp4",
+          "sha256": "9c0e82ad97a5bb2478780c435041b1115f9f7e89d2d583e7db5d52fd1c3f8d53",
+          "bytes": 1606044
+        },
+        "mask": {
+          "path": "mask/031.mp4",
+          "archive_entry": "pothole_video/test/mask/0192.mp4",
+          "sha256": "e537d7dd35d95bf26f70390d0a340b28d47d62c4b88e38515f7323907046d0b6",
+          "bytes": 202375
+        }
+      }
+    },
+    {
+      "id": "0193",
+      "files": {
+        "rgb": {
+          "path": "rgb/032.mp4",
+          "archive_entry": "pothole_video/test/rgb/0193.mp4",
+          "sha256": "d4af1131ff0df57446bc81f6a97a43a3faf89e9cf71be4d8db3e84e22ef28522",
+          "bytes": 1619510
+        },
+        "mask": {
+          "path": "mask/032.mp4",
+          "archive_entry": "pothole_video/test/mask/0193.mp4",
+          "sha256": "be389b738c6d77876105c0b3fe29093a1e2fd1ae29ebff41c6b12188b4829907",
+          "bytes": 263478
+        }
+      }
+    },
+    {
+      "id": "0194",
+      "files": {
+        "rgb": {
+          "path": "rgb/033.mp4",
+          "archive_entry": "pothole_video/test/rgb/0194.mp4",
+          "sha256": "3f0f82cb0f478fc15b1bd5047fae0a4f0ef8dc429bdc05e389519af679756306",
+          "bytes": 1656685
+        },
+        "mask": {
+          "path": "mask/033.mp4",
+          "archive_entry": "pothole_video/test/mask/0194.mp4",
+          "sha256": "4188773c8e17a62a88e536ab1b0688235c72cd4f787ca0430980b111c73ad36e",
+          "bytes": 284803
+        }
+      }
+    },
+    {
+      "id": "0195",
+      "files": {
+        "rgb": {
+          "path": "rgb/034.mp4",
+          "archive_entry": "pothole_video/test/rgb/0195.mp4",
+          "sha256": "f4df7c711cf58ccf100fb4bf6802d685505fd86c9737f7332ca4e596d0274817",
+          "bytes": 1669873
+        },
+        "mask": {
+          "path": "mask/034.mp4",
+          "archive_entry": "pothole_video/test/mask/0195.mp4",
+          "sha256": "cb50cc3fa276fda45fa7d6e5a86fefd6f7e98187f621cdc1933acfbc261377e3",
+          "bytes": 194726
+        }
+      }
+    },
+    {
+      "id": "0196",
+      "files": {
+        "rgb": {
+          "path": "rgb/035.mp4",
+          "archive_entry": "pothole_video/test/rgb/0196.mp4",
+          "sha256": "4e8eb9052f2892e2f02d98e48bd95ef22fba80426d5f1071424554521db1832c",
+          "bytes": 1584396
+        },
+        "mask": {
+          "path": "mask/035.mp4",
+          "archive_entry": "pothole_video/test/mask/0196.mp4",
+          "sha256": "7f34ae8e2e6793f2228b1259df21771068f056d9fae3edc89b3e1e3bb0e65693",
+          "bytes": 172749
+        }
+      }
+    },
+    {
+      "id": "0197",
+      "files": {
+        "rgb": {
+          "path": "rgb/036.mp4",
+          "archive_entry": "pothole_video/test/rgb/0197.mp4",
+          "sha256": "cde5ae67e6cce58dba6d16ac7c4399adf5da68a203fb4c88557dec907c1ed806",
+          "bytes": 1494082
+        },
+        "mask": {
+          "path": "mask/036.mp4",
+          "archive_entry": "pothole_video/test/mask/0197.mp4",
+          "sha256": "3e5b4a6f916cc70b4494760859d0c40e193e1292adb0151733aec7151bfeab0d",
+          "bytes": 162930
+        }
+      }
+    },
+    {
+      "id": "0198",
+      "files": {
+        "rgb": {
+          "path": "rgb/037.mp4",
+          "archive_entry": "pothole_video/test/rgb/0198.mp4",
+          "sha256": "5b547a3f2b0e59845a6000e9f0349e5e16a6e0b8bccabc2f661dfd39d9595de6",
+          "bytes": 1591751
+        },
+        "mask": {
+          "path": "mask/037.mp4",
+          "archive_entry": "pothole_video/test/mask/0198.mp4",
+          "sha256": "3716ead2e8f75855efd249ecabb34afd02bc40fabfcc1dfe7d535d5039259c0c",
+          "bytes": 178074
+        }
+      }
+    },
+    {
+      "id": "0199",
+      "files": {
+        "rgb": {
+          "path": "rgb/038.mp4",
+          "archive_entry": "pothole_video/test/rgb/0199.mp4",
+          "sha256": "ecf54d451ee2ec75b80a41345b136d09b646490f8d3f79a22c51522ea3c4129d",
+          "bytes": 1709818
+        },
+        "mask": {
+          "path": "mask/038.mp4",
+          "archive_entry": "pothole_video/test/mask/0199.mp4",
+          "sha256": "4a4da8b912171e9c8417c28e13dd499e3b50a9e18e30a59765bc9bdf27dbe398",
+          "bytes": 220019
+        }
+      }
+    },
+    {
+      "id": "0200",
+      "files": {
+        "rgb": {
+          "path": "rgb/039.mp4",
+          "archive_entry": "pothole_video/test/rgb/0200.mp4",
+          "sha256": "827a451a901df39825fe1a767eb7ace2a1b30ba4f3fc662b154ada14be776532",
+          "bytes": 1690305
+        },
+        "mask": {
+          "path": "mask/039.mp4",
+          "archive_entry": "pothole_video/test/mask/0200.mp4",
+          "sha256": "f929daf2cc6da6ca7f97e3f88ea1f0cf9f56ae6a56a0a585b24639f604b5ee21",
+          "bytes": 209373
+        }
+      }
+    },
+    {
+      "id": "0281",
+      "files": {
+        "rgb": {
+          "path": "rgb/040.mp4",
+          "archive_entry": "pothole_video/test/rgb/0281.mp4",
+          "sha256": "0e2d8c08cdcabe103a5b2e69d5e2ea26eb0914a1fc663392c666745f426d9b96",
+          "bytes": 1700698
+        },
+        "mask": {
+          "path": "mask/040.mp4",
+          "archive_entry": "pothole_video/test/mask/0281.mp4",
+          "sha256": "0103b0cdc5dbe67c3b73158c227c2d06a2f47bbf2593cccb96a321db98ec094e",
+          "bytes": 199563
+        }
+      }
+    },
+    {
+      "id": "0282",
+      "files": {
+        "rgb": {
+          "path": "rgb/041.mp4",
+          "archive_entry": "pothole_video/test/rgb/0282.mp4",
+          "sha256": "b76d1b989b3eda2d05ca0c3a6334d5975b2060c02f964c4adac4f9651453e77e",
+          "bytes": 1661323
+        },
+        "mask": {
+          "path": "mask/041.mp4",
+          "archive_entry": "pothole_video/test/mask/0282.mp4",
+          "sha256": "edcbe1460d12e96894c5c4b740697568c7051d0ac1359bf93315b9597657eb0e",
+          "bytes": 174211
+        }
+      }
+    },
+    {
+      "id": "0283",
+      "files": {
+        "rgb": {
+          "path": "rgb/042.mp4",
+          "archive_entry": "pothole_video/test/rgb/0283.mp4",
+          "sha256": "9435090f93ef9bb62292eb67dc3597c49cc01c68109a450483be1b7047fbb554",
+          "bytes": 1672539
+        },
+        "mask": {
+          "path": "mask/042.mp4",
+          "archive_entry": "pothole_video/test/mask/0283.mp4",
+          "sha256": "b7ba815430039b8f913b0fe744c1d9942c49a04e47f277323575b3b5ded205ec",
+          "bytes": 204558
+        }
+      }
+    },
+    {
+      "id": "0284",
+      "files": {
+        "rgb": {
+          "path": "rgb/043.mp4",
+          "archive_entry": "pothole_video/test/rgb/0284.mp4",
+          "sha256": "048369460f6a553c253829b7156d03c6bef92686161916ba815f017f9e24c233",
+          "bytes": 1667192
+        },
+        "mask": {
+          "path": "mask/043.mp4",
+          "archive_entry": "pothole_video/test/mask/0284.mp4",
+          "sha256": "4a86b35194085fcf0834808b498ac07a838502f4c73b695487caa3aafead5648",
+          "bytes": 145025
+        }
+      }
+    },
+    {
+      "id": "0285",
+      "files": {
+        "rgb": {
+          "path": "rgb/044.mp4",
+          "archive_entry": "pothole_video/test/rgb/0285.mp4",
+          "sha256": "1cf59107b34ead97611894e65023a543e33d0c345af5509d1fa12305aef0cdbb",
+          "bytes": 1696149
+        },
+        "mask": {
+          "path": "mask/044.mp4",
+          "archive_entry": "pothole_video/test/mask/0285.mp4",
+          "sha256": "812cc499bda9fe2117738dfcd0b043b8830977e1278fbbffdf8fbb17e8b84d65",
+          "bytes": 129657
+        }
+      }
+    },
+    {
+      "id": "0286",
+      "files": {
+        "rgb": {
+          "path": "rgb/045.mp4",
+          "archive_entry": "pothole_video/test/rgb/0286.mp4",
+          "sha256": "577fa94ffb298dd8c370b8e44546c34911f3d8ce94e5e78947979d26e03578ea",
+          "bytes": 1702253
+        },
+        "mask": {
+          "path": "mask/045.mp4",
+          "archive_entry": "pothole_video/test/mask/0286.mp4",
+          "sha256": "34df2861086a047ee4846b47d75091cbac86aeacdf9d21158071cdbf1354ea8a",
+          "bytes": 148192
+        }
+      }
+    },
+    {
+      "id": "0287",
+      "files": {
+        "rgb": {
+          "path": "rgb/046.mp4",
+          "archive_entry": "pothole_video/test/rgb/0287.mp4",
+          "sha256": "61c9adf1643e3ed8604f04c44864082c2b68008598d7dc16eff05d98ece8f609",
+          "bytes": 1676946
+        },
+        "mask": {
+          "path": "mask/046.mp4",
+          "archive_entry": "pothole_video/test/mask/0287.mp4",
+          "sha256": "2c46e77156fb9805da7fbf75cd235d212130e258b1e1b918a66b4bd89422b245",
+          "bytes": 197759
+        }
+      }
+    },
+    {
+      "id": "0288",
+      "files": {
+        "rgb": {
+          "path": "rgb/047.mp4",
+          "archive_entry": "pothole_video/test/rgb/0288.mp4",
+          "sha256": "cd46426f88eb4b4b27db5da689c02ba9ef30d7bc78869f768505506735c34e8b",
+          "bytes": 1373831
+        },
+        "mask": {
+          "path": "mask/047.mp4",
+          "archive_entry": "pothole_video/test/mask/0288.mp4",
+          "sha256": "3d431d89bc048dae4c7a5026a4896e6c4c7d0fe20c072ecccde2c37354f1d41e",
+          "bytes": 174545
+        }
+      }
+    },
+    {
+      "id": "0289",
+      "files": {
+        "rgb": {
+          "path": "rgb/048.mp4",
+          "archive_entry": "pothole_video/test/rgb/0289.mp4",
+          "sha256": "caadb278918f1e4604e24d8de5fe77f0eb9c03e729296e19de578aeb74673739",
+          "bytes": 1702053
+        },
+        "mask": {
+          "path": "mask/048.mp4",
+          "archive_entry": "pothole_video/test/mask/0289.mp4",
+          "sha256": "447942ef7bf535b516a86f52f49e2295075167e3404913838fd7e4544da70fff",
+          "bytes": 215558
+        }
+      }
+    },
+    {
+      "id": "0290",
+      "files": {
+        "rgb": {
+          "path": "rgb/049.mp4",
+          "archive_entry": "pothole_video/test/rgb/0290.mp4",
+          "sha256": "3a729a079db3eab8b4e149bb4a66bda0f4c377d7efc29e9c0be7cfe4fd86ee48",
+          "bytes": 1414810
+        },
+        "mask": {
+          "path": "mask/049.mp4",
+          "archive_entry": "pothole_video/test/mask/0290.mp4",
+          "sha256": "cfe20fba35559e571d65233cc2a8fc9a4eda6fba226e681214953ff551a44cd8",
+          "bytes": 182301
+        }
+      }
+    },
+    {
+      "id": "0291",
+      "files": {
+        "rgb": {
+          "path": "rgb/050.mp4",
+          "archive_entry": "pothole_video/test/rgb/0291.mp4",
+          "sha256": "81bbeb6ec0b3c417ef4102c82a54b4181661f72714862ebf828cef071ef076a3",
+          "bytes": 1402017
+        },
+        "mask": {
+          "path": "mask/050.mp4",
+          "archive_entry": "pothole_video/test/mask/0291.mp4",
+          "sha256": "92b9905a291dd2d9e3aec81eb176ebc8b2294d256f8a9ad92898ebf4a668ba49",
+          "bytes": 223677
+        }
+      }
+    },
+    {
+      "id": "0292",
+      "files": {
+        "rgb": {
+          "path": "rgb/051.mp4",
+          "archive_entry": "pothole_video/test/rgb/0292.mp4",
+          "sha256": "82a81b75f31135677f724155b4e3c0f168cde766c5382736066865dfc088771d",
+          "bytes": 1673872
+        },
+        "mask": {
+          "path": "mask/051.mp4",
+          "archive_entry": "pothole_video/test/mask/0292.mp4",
+          "sha256": "f5c97d24409f459655237c33e712e76c66ecbe6c775745492f298d64576b8f33",
+          "bytes": 160289
+        }
+      }
+    },
+    {
+      "id": "0293",
+      "files": {
+        "rgb": {
+          "path": "rgb/052.mp4",
+          "archive_entry": "pothole_video/test/rgb/0293.mp4",
+          "sha256": "01cb7288b8f26051f47a2b475d7e34e7964422b298ddd4c9618c688cccf80bd8",
+          "bytes": 1576705
+        },
+        "mask": {
+          "path": "mask/052.mp4",
+          "archive_entry": "pothole_video/test/mask/0293.mp4",
+          "sha256": "9f51cc2e7b849d52dbc56698173d7dae282ec3a6bd2955a5fd6599143acaed97",
+          "bytes": 213231
+        }
+      }
+    },
+    {
+      "id": "0294",
+      "files": {
+        "rgb": {
+          "path": "rgb/053.mp4",
+          "archive_entry": "pothole_video/test/rgb/0294.mp4",
+          "sha256": "788447f39448494930a478b7ea842d55f29a92cd96d21d5d53321ba5a7245c6b",
+          "bytes": 1678028
+        },
+        "mask": {
+          "path": "mask/053.mp4",
+          "archive_entry": "pothole_video/test/mask/0294.mp4",
+          "sha256": "a4d578a303ba5cc7da2f5633d6bff9f4cf20f3350d3db15e829b871be8253437",
+          "bytes": 179345
+        }
+      }
+    },
+    {
+      "id": "0295",
+      "files": {
+        "rgb": {
+          "path": "rgb/054.mp4",
+          "archive_entry": "pothole_video/test/rgb/0295.mp4",
+          "sha256": "e32946d6a5812c93c272f90e683d85f5258dfcc7dea6c829e0969ceec5af43d8",
+          "bytes": 1669150
+        },
+        "mask": {
+          "path": "mask/054.mp4",
+          "archive_entry": "pothole_video/test/mask/0295.mp4",
+          "sha256": "755a6db4192c23a91fbbde1a7fe2a9c7f4eea88709d9785e8496d3903d561b3f",
+          "bytes": 167696
+        }
+      }
+    },
+    {
+      "id": "0296",
+      "files": {
+        "rgb": {
+          "path": "rgb/055.mp4",
+          "archive_entry": "pothole_video/test/rgb/0296.mp4",
+          "sha256": "6e767f00a15ca22fbf43efb24a58b8ea78f116501967635fdb6de3596c71f56f",
+          "bytes": 1655243
+        },
+        "mask": {
+          "path": "mask/055.mp4",
+          "archive_entry": "pothole_video/test/mask/0296.mp4",
+          "sha256": "f6815e3d8175f3fd49904082cf6a2f0adf7126b04a44ba93fe533b366ba545d3",
+          "bytes": 130228
+        }
+      }
+    },
+    {
+      "id": "0297",
+      "files": {
+        "rgb": {
+          "path": "rgb/056.mp4",
+          "archive_entry": "pothole_video/test/rgb/0297.mp4",
+          "sha256": "589df6eae569f72046c419a5f6441619478293c7d68f3b8f7bafa6421ed77f9e",
+          "bytes": 1648535
+        },
+        "mask": {
+          "path": "mask/056.mp4",
+          "archive_entry": "pothole_video/test/mask/0297.mp4",
+          "sha256": "880bbec909047ba000df4191c0f4a6467c0a22ee6635fa1bde0513638fbbea0c",
+          "bytes": 166012
+        }
+      }
+    },
+    {
+      "id": "0298",
+      "files": {
+        "rgb": {
+          "path": "rgb/057.mp4",
+          "archive_entry": "pothole_video/test/rgb/0298.mp4",
+          "sha256": "7e6540ab58621f7c476f4d9d621b433957b3e2274ebc8fdaea2097caa02f8786",
+          "bytes": 1669371
+        },
+        "mask": {
+          "path": "mask/057.mp4",
+          "archive_entry": "pothole_video/test/mask/0298.mp4",
+          "sha256": "180de5541509c60c671597c56ae68c6f298a4329b7977277e1bb5313ae3747ec",
+          "bytes": 180958
+        }
+      }
+    },
+    {
+      "id": "0299",
+      "files": {
+        "rgb": {
+          "path": "rgb/058.mp4",
+          "archive_entry": "pothole_video/test/rgb/0299.mp4",
+          "sha256": "10b4cc2379afbe72a40847ea575bb1dfce85bbd9d5608abfbdd84d0a7f43ba72",
+          "bytes": 1687682
+        },
+        "mask": {
+          "path": "mask/058.mp4",
+          "archive_entry": "pothole_video/test/mask/0299.mp4",
+          "sha256": "f5eaf1686b00c634053a14d9e84a35f1dd66ce8c8dd64049eb6113c9e83c70eb",
+          "bytes": 247900
+        }
+      }
+    },
+    {
+      "id": "0300",
+      "files": {
+        "rgb": {
+          "path": "rgb/059.mp4",
+          "archive_entry": "pothole_video/test/rgb/0300.mp4",
+          "sha256": "279f9652c99d1085e584e3903d1b7eda20c175955bdd59b71f1ab282b114c0b4",
+          "bytes": 1667921
+        },
+        "mask": {
+          "path": "mask/059.mp4",
+          "archive_entry": "pothole_video/test/mask/0300.mp4",
+          "sha256": "3c0c2838e168bb807427f4cf6a1ed25cebcdee9427d628bb2f58e399e50f2ee8",
+          "bytes": 183027
+        }
+      }
+    },
+    {
+      "id": "0381",
+      "files": {
+        "rgb": {
+          "path": "rgb/060.mp4",
+          "archive_entry": "pothole_video/test/rgb/0381.mp4",
+          "sha256": "3006a5f36e7a56fa05c8d74f6683d8b44ea136c9be15806b35b1cc112e9e4df4",
+          "bytes": 1503373
+        },
+        "mask": {
+          "path": "mask/060.mp4",
+          "archive_entry": "pothole_video/test/mask/0381.mp4",
+          "sha256": "d43fd835f5c1b01709bb9e2ea5b31963dfa99b3b2059cec70e2c09a7bfaed862",
+          "bytes": 184797
+        }
+      }
+    },
+    {
+      "id": "0382",
+      "files": {
+        "rgb": {
+          "path": "rgb/061.mp4",
+          "archive_entry": "pothole_video/test/rgb/0382.mp4",
+          "sha256": "e44600b5cc38550821523728cfdf07e186e56d5044677dd234d8fd99341f69f1",
+          "bytes": 1694741
+        },
+        "mask": {
+          "path": "mask/061.mp4",
+          "archive_entry": "pothole_video/test/mask/0382.mp4",
+          "sha256": "5ed1cc2fedfe9c3286e94df0ccd0320000f8543dc8f042431c7ad19caede44ae",
+          "bytes": 140998
+        }
+      }
+    },
+    {
+      "id": "0383",
+      "files": {
+        "rgb": {
+          "path": "rgb/062.mp4",
+          "archive_entry": "pothole_video/test/rgb/0383.mp4",
+          "sha256": "450b9ef6732028c5e1757c676bfd2ddd0cbdcfe9b1095782c483bbf6751e8d52",
+          "bytes": 1658385
+        },
+        "mask": {
+          "path": "mask/062.mp4",
+          "archive_entry": "pothole_video/test/mask/0383.mp4",
+          "sha256": "85e760000edd282e433ce90f26ab857d6a9e211cbba8c8d19c6468ab4a887a2b",
+          "bytes": 156093
+        }
+      }
+    },
+    {
+      "id": "0384",
+      "files": {
+        "rgb": {
+          "path": "rgb/063.mp4",
+          "archive_entry": "pothole_video/test/rgb/0384.mp4",
+          "sha256": "c210fcdd9c8013c95b514dd0b9b8e9e0b5b8ec14309d47d7971ec0d12e549e02",
+          "bytes": 1643684
+        },
+        "mask": {
+          "path": "mask/063.mp4",
+          "archive_entry": "pothole_video/test/mask/0384.mp4",
+          "sha256": "d9db9c9a4ff1098b07730d5ca7fe5e607a1d5ef0f1ede5f8d1d0fb84db25f341",
+          "bytes": 175038
+        }
+      }
+    },
+    {
+      "id": "0385",
+      "files": {
+        "rgb": {
+          "path": "rgb/064.mp4",
+          "archive_entry": "pothole_video/test/rgb/0385.mp4",
+          "sha256": "e1cd3795004be8b08302840816caa6104411579d95e633fe40020f78af054965",
+          "bytes": 1540464
+        },
+        "mask": {
+          "path": "mask/064.mp4",
+          "archive_entry": "pothole_video/test/mask/0385.mp4",
+          "sha256": "fb8548c55a51fdc1b77367e3b8275476b02b0d357a8687ba6cf46203f22eaac6",
+          "bytes": 223503
+        }
+      }
+    },
+    {
+      "id": "0386",
+      "files": {
+        "rgb": {
+          "path": "rgb/065.mp4",
+          "archive_entry": "pothole_video/test/rgb/0386.mp4",
+          "sha256": "4252f0f26414c8f3f01868de790b3b3e2c9fecdb6a37f738158e5e88b3edb845",
+          "bytes": 1564802
+        },
+        "mask": {
+          "path": "mask/065.mp4",
+          "archive_entry": "pothole_video/test/mask/0386.mp4",
+          "sha256": "ac0295b94a5301b1a61ef50cdff4293333afa9f8524f2a712e9b50c4aef242af",
+          "bytes": 147947
+        }
+      }
+    },
+    {
+      "id": "0387",
+      "files": {
+        "rgb": {
+          "path": "rgb/066.mp4",
+          "archive_entry": "pothole_video/test/rgb/0387.mp4",
+          "sha256": "c6192cb464346685043436b8cf066b18d07dc803482b685b025bd0a57f3bd2da",
+          "bytes": 1605299
+        },
+        "mask": {
+          "path": "mask/066.mp4",
+          "archive_entry": "pothole_video/test/mask/0387.mp4",
+          "sha256": "1d58f9c49c2345533b5993630b13e4d01ee601b0d0d8883ee8e2bb8759d271fa",
+          "bytes": 178276
+        }
+      }
+    },
+    {
+      "id": "0388",
+      "files": {
+        "rgb": {
+          "path": "rgb/067.mp4",
+          "archive_entry": "pothole_video/test/rgb/0388.mp4",
+          "sha256": "670d8222c5a9a4ae69a53486c9c7681e991ecb15c1977beb58bcc11e6fef5740",
+          "bytes": 1598291
+        },
+        "mask": {
+          "path": "mask/067.mp4",
+          "archive_entry": "pothole_video/test/mask/0388.mp4",
+          "sha256": "73185423bcf044dc2310dcf2183349de4f6e4808edb3ea8c77b90895b7b49426",
+          "bytes": 182516
+        }
+      }
+    },
+    {
+      "id": "0389",
+      "files": {
+        "rgb": {
+          "path": "rgb/068.mp4",
+          "archive_entry": "pothole_video/test/rgb/0389.mp4",
+          "sha256": "0b53c8da3dd4285a3cb7f6a1d74b256e69078d50b9472eab60d4d9b906c3c3a5",
+          "bytes": 1605300
+        },
+        "mask": {
+          "path": "mask/068.mp4",
+          "archive_entry": "pothole_video/test/mask/0389.mp4",
+          "sha256": "1f23f0f1fc9b2cc246f8a98e4f055db108201d69193c83db75f5d3c497fc51e2",
+          "bytes": 173054
+        }
+      }
+    },
+    {
+      "id": "0390",
+      "files": {
+        "rgb": {
+          "path": "rgb/069.mp4",
+          "archive_entry": "pothole_video/test/rgb/0390.mp4",
+          "sha256": "71538a66e22701eca09dce0aeda4124c33b99a939e101aaef000819114b32055",
+          "bytes": 1561070
+        },
+        "mask": {
+          "path": "mask/069.mp4",
+          "archive_entry": "pothole_video/test/mask/0390.mp4",
+          "sha256": "30cd98a762b77251e50b469f73e23883c3a0272c9da702b3b2c0adea0382f8cd",
+          "bytes": 170192
+        }
+      }
+    },
+    {
+      "id": "0391",
+      "files": {
+        "rgb": {
+          "path": "rgb/070.mp4",
+          "archive_entry": "pothole_video/test/rgb/0391.mp4",
+          "sha256": "757b85c3d25c0f862a91d01f1aff961d23ed6ec4ee14100dca140428006d4fb6",
+          "bytes": 1523639
+        },
+        "mask": {
+          "path": "mask/070.mp4",
+          "archive_entry": "pothole_video/test/mask/0391.mp4",
+          "sha256": "500ebc813fc69585487236063ed5ee6ef430f5922a0a6eb3efd3ccc2c96c730c",
+          "bytes": 265010
+        }
+      }
+    },
+    {
+      "id": "0392",
+      "files": {
+        "rgb": {
+          "path": "rgb/071.mp4",
+          "archive_entry": "pothole_video/test/rgb/0392.mp4",
+          "sha256": "4028f496d53b99a4e50ddb8c77aef3d981c3d08b0136dd17cf55b93aff408588",
+          "bytes": 1508528
+        },
+        "mask": {
+          "path": "mask/071.mp4",
+          "archive_entry": "pothole_video/test/mask/0392.mp4",
+          "sha256": "640cf1c0eeff7faee5ec499627247269b332e20a58279f5cc1fcbbae14726f4a",
+          "bytes": 313522
+        }
+      }
+    },
+    {
+      "id": "0393",
+      "files": {
+        "rgb": {
+          "path": "rgb/072.mp4",
+          "archive_entry": "pothole_video/test/rgb/0393.mp4",
+          "sha256": "7050292e6adedfdf4502ecd472816760ba2a9eeeab247a57ec27c5f37c26cf02",
+          "bytes": 1507609
+        },
+        "mask": {
+          "path": "mask/072.mp4",
+          "archive_entry": "pothole_video/test/mask/0393.mp4",
+          "sha256": "041d730845636bb196f286066dfec843402cb0196561b64755c89b2172d400ee",
+          "bytes": 214212
+        }
+      }
+    },
+    {
+      "id": "0394",
+      "files": {
+        "rgb": {
+          "path": "rgb/073.mp4",
+          "archive_entry": "pothole_video/test/rgb/0394.mp4",
+          "sha256": "f4995b5e06c964208f2562ead46fc6a6ac4871e55cce93b59ee54484674a866c",
+          "bytes": 1655891
+        },
+        "mask": {
+          "path": "mask/073.mp4",
+          "archive_entry": "pothole_video/test/mask/0394.mp4",
+          "sha256": "1c1b717c359282b0ff90009675bab119342a0a01db8d077556faa002d6b9d380",
+          "bytes": 182420
+        }
+      }
+    },
+    {
+      "id": "0395",
+      "files": {
+        "rgb": {
+          "path": "rgb/074.mp4",
+          "archive_entry": "pothole_video/test/rgb/0395.mp4",
+          "sha256": "e9a592964c8c3dd943e4076ecf7ac0f68d75c2b64f976aa6161d7dba35532513",
+          "bytes": 1511540
+        },
+        "mask": {
+          "path": "mask/074.mp4",
+          "archive_entry": "pothole_video/test/mask/0395.mp4",
+          "sha256": "a3231572927d026d3b976fc02c0e5d5a0e3e9c29f0f36afdf1295098cb526134",
+          "bytes": 222196
+        }
+      }
+    },
+    {
+      "id": "0396",
+      "files": {
+        "rgb": {
+          "path": "rgb/075.mp4",
+          "archive_entry": "pothole_video/test/rgb/0396.mp4",
+          "sha256": "71bd045039da530f3dd7e6d501587518620665699708074713af46a4bac8234f",
+          "bytes": 1610660
+        },
+        "mask": {
+          "path": "mask/075.mp4",
+          "archive_entry": "pothole_video/test/mask/0396.mp4",
+          "sha256": "dc21b6274ed99812d41ef019d54204eb172b2762dc01284fdf5447ae70b96bbe",
+          "bytes": 196534
+        }
+      }
+    },
+    {
+      "id": "0397",
+      "files": {
+        "rgb": {
+          "path": "rgb/076.mp4",
+          "archive_entry": "pothole_video/test/rgb/0397.mp4",
+          "sha256": "f8046254f43809752a165852d35139fa2571b484c48a0ea75a1072876cdb3db9",
+          "bytes": 1623997
+        },
+        "mask": {
+          "path": "mask/076.mp4",
+          "archive_entry": "pothole_video/test/mask/0397.mp4",
+          "sha256": "00c0768c43dc4fc8d4b5fec4714661ad9c0956266a6ffefea911f135182e831c",
+          "bytes": 212852
+        }
+      }
+    },
+    {
+      "id": "0398",
+      "files": {
+        "rgb": {
+          "path": "rgb/077.mp4",
+          "archive_entry": "pothole_video/test/rgb/0398.mp4",
+          "sha256": "6cde62f8ae06f4e75a81fdf9fd5f5ef748a9823e0b834adc5d96bb96add23158",
+          "bytes": 1630740
+        },
+        "mask": {
+          "path": "mask/077.mp4",
+          "archive_entry": "pothole_video/test/mask/0398.mp4",
+          "sha256": "706b10b24b3ef1486fd8a8bc1d00f86200a883a070c9469f6f987e5eeedaf881",
+          "bytes": 242963
+        }
+      }
+    },
+    {
+      "id": "0399",
+      "files": {
+        "rgb": {
+          "path": "rgb/078.mp4",
+          "archive_entry": "pothole_video/test/rgb/0399.mp4",
+          "sha256": "9cb371ac889a82ee0c2562c957d4679cfbc51f93b72b69f20dc7649506f212c1",
+          "bytes": 1651211
+        },
+        "mask": {
+          "path": "mask/078.mp4",
+          "archive_entry": "pothole_video/test/mask/0399.mp4",
+          "sha256": "6a8c6c57d9bf873be41874170a4c1baffa7fa1afe9cfe3da6e1e176e34f36e33",
+          "bytes": 185172
+        }
+      }
+    },
+    {
+      "id": "0400",
+      "files": {
+        "rgb": {
+          "path": "rgb/079.mp4",
+          "archive_entry": "pothole_video/test/rgb/0400.mp4",
+          "sha256": "350bd4f714ce1ca9a7bf4b92aab0164089b8767eeb34078b3dc0d155f3c76f2c",
+          "bytes": 1698559
+        },
+        "mask": {
+          "path": "mask/079.mp4",
+          "archive_entry": "pothole_video/test/mask/0400.mp4",
+          "sha256": "42d1f1d62484c415478c1bd9897757a634829e0082f35f8e3ab852fc8416eccc",
+          "bytes": 187220
+        }
+      }
+    },
+    {
+      "id": "0481",
+      "files": {
+        "rgb": {
+          "path": "rgb/080.mp4",
+          "archive_entry": "pothole_video/test/rgb/0481.mp4",
+          "sha256": "f398ce29ce9e8014663d53db7bc856b147da30e592992bd47c67a533d57befc5",
+          "bytes": 1607722
+        },
+        "mask": {
+          "path": "mask/080.mp4",
+          "archive_entry": "pothole_video/test/mask/0481.mp4",
+          "sha256": "8f4b6799c908c8ecac71ed5ed55d782b38b67549820aa96979a5f8853e55d6f6",
+          "bytes": 165300
+        }
+      }
+    },
+    {
+      "id": "0482",
+      "files": {
+        "rgb": {
+          "path": "rgb/081.mp4",
+          "archive_entry": "pothole_video/test/rgb/0482.mp4",
+          "sha256": "f6186dddcfb3eab7dcd83d14b937c4e6b2c5e69514190aec3cfd2c0a65c15f48",
+          "bytes": 1457743
+        },
+        "mask": {
+          "path": "mask/081.mp4",
+          "archive_entry": "pothole_video/test/mask/0482.mp4",
+          "sha256": "8769d0fea70cf29bdbaef6ad0dbc537c1131ccc2dff47347aa97c35481dde227",
+          "bytes": 180908
+        }
+      }
+    },
+    {
+      "id": "0483",
+      "files": {
+        "rgb": {
+          "path": "rgb/082.mp4",
+          "archive_entry": "pothole_video/test/rgb/0483.mp4",
+          "sha256": "cc66743367f5620a19ec6e0260baa47a9835daa2cc6d3a416ee2a080da970dae",
+          "bytes": 1474164
+        },
+        "mask": {
+          "path": "mask/082.mp4",
+          "archive_entry": "pothole_video/test/mask/0483.mp4",
+          "sha256": "acb77495f2a1ae3c79322c50bb68735e9512c50fd5c5dd27e5929de9a39f811e",
+          "bytes": 212750
+        }
+      }
+    },
+    {
+      "id": "0484",
+      "files": {
+        "rgb": {
+          "path": "rgb/083.mp4",
+          "archive_entry": "pothole_video/test/rgb/0484.mp4",
+          "sha256": "97e8df195465b9a3cdee1f0de390d84a62c46bda9870d0dce653fd8ac161ac40",
+          "bytes": 1658041
+        },
+        "mask": {
+          "path": "mask/083.mp4",
+          "archive_entry": "pothole_video/test/mask/0484.mp4",
+          "sha256": "ac7b650481b603feef79b4b5826b95ca1fe4698902d34e38f3f362883e382ab0",
+          "bytes": 217313
+        }
+      }
+    },
+    {
+      "id": "0485",
+      "files": {
+        "rgb": {
+          "path": "rgb/084.mp4",
+          "archive_entry": "pothole_video/test/rgb/0485.mp4",
+          "sha256": "80cf1a5b3e879e44ce4fbab0a97fc662521621867c70e5f3acfee68865bb7d37",
+          "bytes": 1571816
+        },
+        "mask": {
+          "path": "mask/084.mp4",
+          "archive_entry": "pothole_video/test/mask/0485.mp4",
+          "sha256": "24dca5cf19365725fad02983a1627209922e448aed26da90165ef874ce7f7b1a",
+          "bytes": 183621
+        }
+      }
+    },
+    {
+      "id": "0486",
+      "files": {
+        "rgb": {
+          "path": "rgb/085.mp4",
+          "archive_entry": "pothole_video/test/rgb/0486.mp4",
+          "sha256": "c5b7427dc8cecd2ff422df055fbbb2b3f4f090d5441e1f554beb02c6460234cd",
+          "bytes": 1605677
+        },
+        "mask": {
+          "path": "mask/085.mp4",
+          "archive_entry": "pothole_video/test/mask/0486.mp4",
+          "sha256": "17ce8e43084bb6de634a505ffa4fbb34cf0ed7468c8c1651c506239f6088c114",
+          "bytes": 227161
+        }
+      }
+    },
+    {
+      "id": "0487",
+      "files": {
+        "rgb": {
+          "path": "rgb/086.mp4",
+          "archive_entry": "pothole_video/test/rgb/0487.mp4",
+          "sha256": "9acf308667daa2c7ddc8b8d9da5ed39c156f1864c59cacc35f9e5b51a7a74dcf",
+          "bytes": 1596618
+        },
+        "mask": {
+          "path": "mask/086.mp4",
+          "archive_entry": "pothole_video/test/mask/0487.mp4",
+          "sha256": "7f453673b1d461623753114722a90ec7093374dc64fc71ca8da7649d81778a69",
+          "bytes": 217380
+        }
+      }
+    },
+    {
+      "id": "0488",
+      "files": {
+        "rgb": {
+          "path": "rgb/087.mp4",
+          "archive_entry": "pothole_video/test/rgb/0488.mp4",
+          "sha256": "b839d68c84c0632941670f72646402888c75c7b00cf110d7dea5539a2facfa61",
+          "bytes": 1543882
+        },
+        "mask": {
+          "path": "mask/087.mp4",
+          "archive_entry": "pothole_video/test/mask/0488.mp4",
+          "sha256": "c90a3a490342f18306404db405c40224e668451fc9824e871b721d3db2a793cd",
+          "bytes": 128706
+        }
+      }
+    },
+    {
+      "id": "0489",
+      "files": {
+        "rgb": {
+          "path": "rgb/088.mp4",
+          "archive_entry": "pothole_video/test/rgb/0489.mp4",
+          "sha256": "7ffd30cc9bacd3e644f5bc3f79e24f6a5ea18f7ed81b866af6b97ba865ef10ac",
+          "bytes": 1629137
+        },
+        "mask": {
+          "path": "mask/088.mp4",
+          "archive_entry": "pothole_video/test/mask/0489.mp4",
+          "sha256": "36648e1eae4982ea1cc4892107051aa225041913e0e0b97be4764e6d8afe443c",
+          "bytes": 228229
+        }
+      }
+    },
+    {
+      "id": "0490",
+      "files": {
+        "rgb": {
+          "path": "rgb/089.mp4",
+          "archive_entry": "pothole_video/test/rgb/0490.mp4",
+          "sha256": "2510281c9396c91ccfe2c9d9fc789fab6dce1bdfd97c13ab5a3eec78fc9b9d2d",
+          "bytes": 1627195
+        },
+        "mask": {
+          "path": "mask/089.mp4",
+          "archive_entry": "pothole_video/test/mask/0490.mp4",
+          "sha256": "ac7f53ee6ea91385dff53f9bf727c84e60bf36af7fe9a6f4e5c3f3b310f89876",
+          "bytes": 177660
+        }
+      }
+    },
+    {
+      "id": "0491",
+      "files": {
+        "rgb": {
+          "path": "rgb/090.mp4",
+          "archive_entry": "pothole_video/test/rgb/0491.mp4",
+          "sha256": "6d4948a2db55e786072d43f3f97432f565e0599db52ff9aed0e10d2331328d29",
+          "bytes": 1578831
+        },
+        "mask": {
+          "path": "mask/090.mp4",
+          "archive_entry": "pothole_video/test/mask/0491.mp4",
+          "sha256": "f4ed99ded376f8696ebe84782be9071d09e130657b82032b4893d3861d990e50",
+          "bytes": 177292
+        }
+      }
+    },
+    {
+      "id": "0492",
+      "files": {
+        "rgb": {
+          "path": "rgb/091.mp4",
+          "archive_entry": "pothole_video/test/rgb/0492.mp4",
+          "sha256": "c88a6efa3302eca45ba7071bb8a726d8f675410883caa72b79fb8b1e45eb1a67",
+          "bytes": 1622513
+        },
+        "mask": {
+          "path": "mask/091.mp4",
+          "archive_entry": "pothole_video/test/mask/0492.mp4",
+          "sha256": "45a37e458a014ed6fb7a0f37cb8f10e8035c63613ec79bc7f65b51edadcdf3f9",
+          "bytes": 163535
+        }
+      }
+    },
+    {
+      "id": "0493",
+      "files": {
+        "rgb": {
+          "path": "rgb/092.mp4",
+          "archive_entry": "pothole_video/test/rgb/0493.mp4",
+          "sha256": "5df90eee1515e1b632150acb39329353d0fe61787df2a4314f61b525d153768d",
+          "bytes": 1654764
+        },
+        "mask": {
+          "path": "mask/092.mp4",
+          "archive_entry": "pothole_video/test/mask/0493.mp4",
+          "sha256": "cf754b97a6bbfdec832dc84662ecf961b718ae2292b85e3cad6abe6b0695197b",
+          "bytes": 202927
+        }
+      }
+    },
+    {
+      "id": "0494",
+      "files": {
+        "rgb": {
+          "path": "rgb/093.mp4",
+          "archive_entry": "pothole_video/test/rgb/0494.mp4",
+          "sha256": "0a3a9083e61593cc94646644684a384885641ff690787badc210f999692437c9",
+          "bytes": 1576614
+        },
+        "mask": {
+          "path": "mask/093.mp4",
+          "archive_entry": "pothole_video/test/mask/0494.mp4",
+          "sha256": "c4a57ab15cdd30c434bc302108a796622432e3fbd69aee55bfc44c998c7a5901",
+          "bytes": 209081
+        }
+      }
+    },
+    {
+      "id": "0495",
+      "files": {
+        "rgb": {
+          "path": "rgb/094.mp4",
+          "archive_entry": "pothole_video/test/rgb/0495.mp4",
+          "sha256": "eb0a7e9c50a1f07fc08927bfd820c29c492c5f16900b4688f67ef93b34cf4119",
+          "bytes": 1675914
+        },
+        "mask": {
+          "path": "mask/094.mp4",
+          "archive_entry": "pothole_video/test/mask/0495.mp4",
+          "sha256": "cd1ad7c7e1073a09031fb38e8c49cb7b8071d5494dd3bfaa53f5bed949a49629",
+          "bytes": 188988
+        }
+      }
+    },
+    {
+      "id": "0496",
+      "files": {
+        "rgb": {
+          "path": "rgb/095.mp4",
+          "archive_entry": "pothole_video/test/rgb/0496.mp4",
+          "sha256": "21f23b29b4ee71a0942e2e65be18d6fd790f3bc8bee9a4a3e78f067cc17ab5d7",
+          "bytes": 1667008
+        },
+        "mask": {
+          "path": "mask/095.mp4",
+          "archive_entry": "pothole_video/test/mask/0496.mp4",
+          "sha256": "6cc315eae68b178c674337830bafa47c2faf2fc7f9ab66205647aa60ca703e4c",
+          "bytes": 192546
+        }
+      }
+    },
+    {
+      "id": "0497",
+      "files": {
+        "rgb": {
+          "path": "rgb/096.mp4",
+          "archive_entry": "pothole_video/test/rgb/0497.mp4",
+          "sha256": "455d9c6a568b524ecde2bcf6dbef46508afa52475bcc584877c4686eda3d81c5",
+          "bytes": 1629162
+        },
+        "mask": {
+          "path": "mask/096.mp4",
+          "archive_entry": "pothole_video/test/mask/0497.mp4",
+          "sha256": "fe5643b083c3c0fee6fc15dafc4974cc48d7d323b16d292be204dcefd0a0ad43",
+          "bytes": 180490
+        }
+      }
+    },
+    {
+      "id": "0498",
+      "files": {
+        "rgb": {
+          "path": "rgb/097.mp4",
+          "archive_entry": "pothole_video/test/rgb/0498.mp4",
+          "sha256": "3c72c8c3488796a456938a2cd57811e0c4177c4b612f215ce9e05f29e64e6caf",
+          "bytes": 1634803
+        },
+        "mask": {
+          "path": "mask/097.mp4",
+          "archive_entry": "pothole_video/test/mask/0498.mp4",
+          "sha256": "924c3a4eab850339614e801f7385aadb0d6bf7341f44d37deb35503d666a5cfb",
+          "bytes": 194177
+        }
+      }
+    },
+    {
+      "id": "0499",
+      "files": {
+        "rgb": {
+          "path": "rgb/098.mp4",
+          "archive_entry": "pothole_video/test/rgb/0499.mp4",
+          "sha256": "e55b42ebdfea9788144a01322d5d53c65b2daa9f7e127f1072ac870559906f8b",
+          "bytes": 1635524
+        },
+        "mask": {
+          "path": "mask/098.mp4",
+          "archive_entry": "pothole_video/test/mask/0499.mp4",
+          "sha256": "57b6fae5cee5afc624a229de9cf71f4ffa7d3403160691c8ddd0918c5ee2d74d",
+          "bytes": 215551
+        }
+      }
+    },
+    {
+      "id": "0500",
+      "files": {
+        "rgb": {
+          "path": "rgb/099.mp4",
+          "archive_entry": "pothole_video/test/rgb/0500.mp4",
+          "sha256": "6c2de25f292aa7f2bf8a744703258bbf7fb91b497d5cda188885e8e353899c32",
+          "bytes": 1617770
+        },
+        "mask": {
+          "path": "mask/099.mp4",
+          "archive_entry": "pothole_video/test/mask/0500.mp4",
+          "sha256": "27f14a82a4740bb46dfffa8888168417160de6f219337b0d94039a12088720a5",
+          "bytes": 228855
+        }
+      }
+    },
+    {
+      "id": "0581",
+      "files": {
+        "rgb": {
+          "path": "rgb/100.mp4",
+          "archive_entry": "pothole_video/test/rgb/0581.mp4",
+          "sha256": "d29da5091116018c2debeb415f1bcc3fa85f64cd3ef0146f9dae9a9dda503505",
+          "bytes": 1643931
+        },
+        "mask": {
+          "path": "mask/100.mp4",
+          "archive_entry": "pothole_video/test/mask/0581.mp4",
+          "sha256": "6f9ec5f9601881f2789e9e343ce8626cb5813f2b611c603843d05c86af562edb",
+          "bytes": 174116
+        }
+      }
+    },
+    {
+      "id": "0582",
+      "files": {
+        "rgb": {
+          "path": "rgb/101.mp4",
+          "archive_entry": "pothole_video/test/rgb/0582.mp4",
+          "sha256": "a2b57895951fe73afdd0d158deebbbd59d7d1dab5bd3be78d35a14200c761bf6",
+          "bytes": 1627056
+        },
+        "mask": {
+          "path": "mask/101.mp4",
+          "archive_entry": "pothole_video/test/mask/0582.mp4",
+          "sha256": "26f1fd785be7eef1798049af1f86dd5df72c5b3fdcfeb89d69501534221b4b6d",
+          "bytes": 149365
+        }
+      }
+    },
+    {
+      "id": "0583",
+      "files": {
+        "rgb": {
+          "path": "rgb/102.mp4",
+          "archive_entry": "pothole_video/test/rgb/0583.mp4",
+          "sha256": "919df1dd87cba20e11d48c2fa89257bd4eddffa5753d7bb6328ed4572031c446",
+          "bytes": 1641359
+        },
+        "mask": {
+          "path": "mask/102.mp4",
+          "archive_entry": "pothole_video/test/mask/0583.mp4",
+          "sha256": "eae19eaca26e7aabda391d303ceaf6664292d9a52ac3994d481234b88985b0f0",
+          "bytes": 252664
+        }
+      }
+    },
+    {
+      "id": "0584",
+      "files": {
+        "rgb": {
+          "path": "rgb/103.mp4",
+          "archive_entry": "pothole_video/test/rgb/0584.mp4",
+          "sha256": "3334a0940527ccdc882a813d43935e7365eeaa5d92b0bfe4881c81ecb59001d5",
+          "bytes": 1698016
+        },
+        "mask": {
+          "path": "mask/103.mp4",
+          "archive_entry": "pothole_video/test/mask/0584.mp4",
+          "sha256": "58bd593591a062d9f223e862e0fa99e96a03f6f38b1538e7d235ef713bad454a",
+          "bytes": 131765
+        }
+      }
+    },
+    {
+      "id": "0585",
+      "files": {
+        "rgb": {
+          "path": "rgb/104.mp4",
+          "archive_entry": "pothole_video/test/rgb/0585.mp4",
+          "sha256": "c3e5a35622186df20a49a8c195679822d24e4ee346114292af9d72adac0b1342",
+          "bytes": 1426388
+        },
+        "mask": {
+          "path": "mask/104.mp4",
+          "archive_entry": "pothole_video/test/mask/0585.mp4",
+          "sha256": "fcc7f502f2862ab94dd9d1347d5fcbb2d8a7201d826c21f316fdfc7ae82d4149",
+          "bytes": 192561
+        }
+      }
+    },
+    {
+      "id": "0586",
+      "files": {
+        "rgb": {
+          "path": "rgb/105.mp4",
+          "archive_entry": "pothole_video/test/rgb/0586.mp4",
+          "sha256": "f08865d0c3cb1a0aeb293bff23cb54d7d4915ede8785132552671d2ff51b33b2",
+          "bytes": 1665488
+        },
+        "mask": {
+          "path": "mask/105.mp4",
+          "archive_entry": "pothole_video/test/mask/0586.mp4",
+          "sha256": "f8190bb6457642658aee637ed2cb1ee2c9c2994e10131734c1b31102eaef9944",
+          "bytes": 218835
+        }
+      }
+    },
+    {
+      "id": "0587",
+      "files": {
+        "rgb": {
+          "path": "rgb/106.mp4",
+          "archive_entry": "pothole_video/test/rgb/0587.mp4",
+          "sha256": "54be0ab3a14c8d30fab10be95ae1807a11964de2d45acc100b59c8b6a7e3a012",
+          "bytes": 1672388
+        },
+        "mask": {
+          "path": "mask/106.mp4",
+          "archive_entry": "pothole_video/test/mask/0587.mp4",
+          "sha256": "08821b7dee9ceb770648112f47a78f0f616207022d71b5087b1d0086fab06db3",
+          "bytes": 222939
+        }
+      }
+    },
+    {
+      "id": "0588",
+      "files": {
+        "rgb": {
+          "path": "rgb/107.mp4",
+          "archive_entry": "pothole_video/test/rgb/0588.mp4",
+          "sha256": "6b812e25d71c844d1f7083d517cbc73cf7bd5bf62e5eb9298fcb2095ece9e209",
+          "bytes": 1672509
+        },
+        "mask": {
+          "path": "mask/107.mp4",
+          "archive_entry": "pothole_video/test/mask/0588.mp4",
+          "sha256": "022c9a33574b5ac6606574534ca23ed60438c26c207dd8b46a3af6fde8356357",
+          "bytes": 220529
+        }
+      }
+    },
+    {
+      "id": "0589",
+      "files": {
+        "rgb": {
+          "path": "rgb/108.mp4",
+          "archive_entry": "pothole_video/test/rgb/0589.mp4",
+          "sha256": "44ba3b5045e811b28f561b22b294c4b25214a61d7ed069226a0b5807b3b1c705",
+          "bytes": 1649871
+        },
+        "mask": {
+          "path": "mask/108.mp4",
+          "archive_entry": "pothole_video/test/mask/0589.mp4",
+          "sha256": "c14c856a685ef87315193fdb227912dc39d848df2760b9753b4679d66ce36fbd",
+          "bytes": 172732
+        }
+      }
+    },
+    {
+      "id": "0590",
+      "files": {
+        "rgb": {
+          "path": "rgb/109.mp4",
+          "archive_entry": "pothole_video/test/rgb/0590.mp4",
+          "sha256": "70644c2e9c60f96225317f44985b5efbe70939f40ed8ae1ccf99c2c7fd2772fc",
+          "bytes": 1646373
+        },
+        "mask": {
+          "path": "mask/109.mp4",
+          "archive_entry": "pothole_video/test/mask/0590.mp4",
+          "sha256": "3a97d02f21c0030259f58bd3e65889f50006ac5c57f0c94617e5b2c80a5d714b",
+          "bytes": 217563
+        }
+      }
+    },
+    {
+      "id": "0591",
+      "files": {
+        "rgb": {
+          "path": "rgb/110.mp4",
+          "archive_entry": "pothole_video/test/rgb/0591.mp4",
+          "sha256": "a72f74f0b662b71989ef92cba561a91455f93e94456a49ef1afc3000ef4ea673",
+          "bytes": 1666962
+        },
+        "mask": {
+          "path": "mask/110.mp4",
+          "archive_entry": "pothole_video/test/mask/0591.mp4",
+          "sha256": "46ed9384c1fb967980da1302592367661c93792ee03aa0074fbce1f77382568d",
+          "bytes": 192656
+        }
+      }
+    },
+    {
+      "id": "0592",
+      "files": {
+        "rgb": {
+          "path": "rgb/111.mp4",
+          "archive_entry": "pothole_video/test/rgb/0592.mp4",
+          "sha256": "82fe6021e4440a3cd1ccabaf0f8decf1ebefc81a0767bcad70d469ac34baf048",
+          "bytes": 1689952
+        },
+        "mask": {
+          "path": "mask/111.mp4",
+          "archive_entry": "pothole_video/test/mask/0592.mp4",
+          "sha256": "6041015941186a2eddfc93338579f8c8c36b7c4981ece75422105c63c17353d2",
+          "bytes": 235318
+        }
+      }
+    },
+    {
+      "id": "0593",
+      "files": {
+        "rgb": {
+          "path": "rgb/112.mp4",
+          "archive_entry": "pothole_video/test/rgb/0593.mp4",
+          "sha256": "eb48a2fda3d40b40dee6ca2a07a50ed185b8f9986904dd9c680d399e3d20f643",
+          "bytes": 1625167
+        },
+        "mask": {
+          "path": "mask/112.mp4",
+          "archive_entry": "pothole_video/test/mask/0593.mp4",
+          "sha256": "49f6abe35e28a90d9b89a24b98f1a3308a7e66f6900187958e11ac94fbb7e7e7",
+          "bytes": 206896
+        }
+      }
+    },
+    {
+      "id": "0594",
+      "files": {
+        "rgb": {
+          "path": "rgb/113.mp4",
+          "archive_entry": "pothole_video/test/rgb/0594.mp4",
+          "sha256": "6129d75aa748daed16425e081062b2e716cb93b86991dd3f63c6e4e94aaefcae",
+          "bytes": 1677534
+        },
+        "mask": {
+          "path": "mask/113.mp4",
+          "archive_entry": "pothole_video/test/mask/0594.mp4",
+          "sha256": "87b6f27d9836eb9e0def73f1076b7d155820eb52003a4c9794a049debde99338",
+          "bytes": 188328
+        }
+      }
+    },
+    {
+      "id": "0595",
+      "files": {
+        "rgb": {
+          "path": "rgb/114.mp4",
+          "archive_entry": "pothole_video/test/rgb/0595.mp4",
+          "sha256": "de51d4a79f02220cf8db72252981843639c2c4d94d20f74c8a09172f38f1d43c",
+          "bytes": 1619946
+        },
+        "mask": {
+          "path": "mask/114.mp4",
+          "archive_entry": "pothole_video/test/mask/0595.mp4",
+          "sha256": "819fc5ec3633b5f6d1c3729aac5c192058eae0eec2554e919db8402309bedd23",
+          "bytes": 202697
+        }
+      }
+    },
+    {
+      "id": "0596",
+      "files": {
+        "rgb": {
+          "path": "rgb/115.mp4",
+          "archive_entry": "pothole_video/test/rgb/0596.mp4",
+          "sha256": "5e5eaa8a6fea9387f7d1240bd39fa8185baee06cf9a4cd11b24bc31bd632788f",
+          "bytes": 1610777
+        },
+        "mask": {
+          "path": "mask/115.mp4",
+          "archive_entry": "pothole_video/test/mask/0596.mp4",
+          "sha256": "541ca31ae9708b8fd79b89aceb58cef8465d7849c3b43322a52d1994d7a4e85b",
+          "bytes": 125830
+        }
+      }
+    },
+    {
+      "id": "0597",
+      "files": {
+        "rgb": {
+          "path": "rgb/116.mp4",
+          "archive_entry": "pothole_video/test/rgb/0597.mp4",
+          "sha256": "74c79ea54edf3a2e3d453267dbc3e3d2954dc29373e8d99bf5f4d681cab55e9e",
+          "bytes": 1718053
+        },
+        "mask": {
+          "path": "mask/116.mp4",
+          "archive_entry": "pothole_video/test/mask/0597.mp4",
+          "sha256": "114f56f8ade409f4d77016a851260004e3bf0660658139cc5038fe829ac67b17",
+          "bytes": 157515
+        }
+      }
+    },
+    {
+      "id": "0598",
+      "files": {
+        "rgb": {
+          "path": "rgb/117.mp4",
+          "archive_entry": "pothole_video/test/rgb/0598.mp4",
+          "sha256": "8a961655b78d922988af5812e5b755eb4e88c4d552c59e9826d7d9ff9093f279",
+          "bytes": 1633458
+        },
+        "mask": {
+          "path": "mask/117.mp4",
+          "archive_entry": "pothole_video/test/mask/0598.mp4",
+          "sha256": "43e89b42ed396b3e439d9eb94641104cd6f78a961e01e2943dd66e189031b827",
+          "bytes": 157582
+        }
+      }
+    },
+    {
+      "id": "0599",
+      "files": {
+        "rgb": {
+          "path": "rgb/118.mp4",
+          "archive_entry": "pothole_video/test/rgb/0599.mp4",
+          "sha256": "bd0e12b62ba56f3284c3de4a48bba68afc3bb5be698ee5356298030dbbaea01f",
+          "bytes": 1641646
+        },
+        "mask": {
+          "path": "mask/118.mp4",
+          "archive_entry": "pothole_video/test/mask/0599.mp4",
+          "sha256": "d919c937dd9bf740bf35085cd0bc1f723481ba0b75f788b644d1bbd65c7649ce",
+          "bytes": 207311
+        }
+      }
+    },
+    {
+      "id": "0600",
+      "files": {
+        "rgb": {
+          "path": "rgb/119.mp4",
+          "archive_entry": "pothole_video/test/rgb/0600.mp4",
+          "sha256": "77a21d795e1e8b158817af27e9c9c00962ce789dd4ba0ad594924059b254a311",
+          "bytes": 1453007
+        },
+        "mask": {
+          "path": "mask/119.mp4",
+          "archive_entry": "pothole_video/test/mask/0600.mp4",
+          "sha256": "4735cc94e44d64ec44749d98a9be174101a5d47c0b4839a4b7ea4c7681943a2f",
+          "bytes": 269797
+        }
+      }
+    },
+    {
+      "id": "0617",
+      "files": {
+        "rgb": {
+          "path": "rgb/120.mp4",
+          "archive_entry": "pothole_video/test/rgb/0617.mp4",
+          "sha256": "94c7e18cdceb6926fe73a55b9c3521af54fcbc0add813daa8534ba11e6f9ebe6",
+          "bytes": 1626962
+        },
+        "mask": {
+          "path": "mask/120.mp4",
+          "archive_entry": "pothole_video/test/mask/0617.mp4",
+          "sha256": "33818c103c73b3f97a808bdc540830f35b12c114ce00926b96e38500659c3997",
+          "bytes": 156011
+        }
+      }
+    },
+    {
+      "id": "0618",
+      "files": {
+        "rgb": {
+          "path": "rgb/121.mp4",
+          "archive_entry": "pothole_video/test/rgb/0618.mp4",
+          "sha256": "1bc68125f2e7e851ac2bda4b54e1884482abfa9a153b90df8e9ef525045a70b8",
+          "bytes": 1733187
+        },
+        "mask": {
+          "path": "mask/121.mp4",
+          "archive_entry": "pothole_video/test/mask/0618.mp4",
+          "sha256": "f7abf8852bb9152cbae6ace1f4a3a15933fe610487933c2258ebb58ebd33dfc6",
+          "bytes": 140462
+        }
+      }
+    },
+    {
+      "id": "0619",
+      "files": {
+        "rgb": {
+          "path": "rgb/122.mp4",
+          "archive_entry": "pothole_video/test/rgb/0619.mp4",
+          "sha256": "5120ad20bd200193d95a4324ec9fe98ce873daad90aa243dde8e4340712ff8c3",
+          "bytes": 1634224
+        },
+        "mask": {
+          "path": "mask/122.mp4",
+          "archive_entry": "pothole_video/test/mask/0619.mp4",
+          "sha256": "7308faa0479bd9c1c1987480b0890b14bcc309cc2069c1f6e2bdbf95815c58e7",
+          "bytes": 199519
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Short downward-facing phone clips, not walking-route trials.",
+    "Masks are semantic, with semi-manual tracking and acknowledged boundary uncertainty.",
+    "Published capture height is not a measured per-frame distance label."
+  ]
+}

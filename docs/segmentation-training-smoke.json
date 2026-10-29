@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\Moth\\Documents\\Codex\\2026-10-09\\new-chat\\work\\ground\\masked-segmentation-v1\\train\\0001.npz",
+  "frames": 2,
+  "output_shape": [
+    2,
+    80,
+    80,
+    1
+  ],
+  "initial_loss": [
+    1.6897753477096558,
+    1.6889879703521729
+  ],
+  "gradient_norm": 0.6825662851333618,
+  "encoder_trainable_variables": 0,
+  "all_decoder_gradients_finite": true,
+  "actual_parameter_update": true
+}

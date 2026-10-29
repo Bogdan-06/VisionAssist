@@ -1,0 +1,175 @@
+{
+  "reviewed": "2026-10-27",
+  "basis": "Actual model SHA256, training history, successful runtime verification and matching model hashes in all completed evaluations.",
+  "runs": [
+    {
+      "run": "20261026-154128-a9c34157",
+      "epochs": 12,
+      "selected_epoch": 9,
+      "selected_validation_loss": 0.2234700620174408,
+      "pipeline_seconds_excluding_preflight": 1130.2189999999828,
+      "training_seconds": 963.0543313026428,
+      "model_sha256": "a145296eca9ed48aa73ea3a2b29cbe354f20e36d8645d5f999f86ce2ff613f8d",
+      "device": "legacy Windows CPU",
+      "runtime_verification_passed": true,
+      "validation_pixel_iou_0.5": 0.5808305369534538,
+      "keras_export_parity": {
+        "frames": 15,
+        "max_absolute_error": 3.0875205993652344e-05,
+        "rtol": 0.001,
+        "atol": 0.0001
+      },
+      "rdd_0.5": {
+        "tp": 0,
+        "fp": 8,
+        "fn": 550,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "video_components_0.5": {
+        "tp": 476,
+        "fp": 1419,
+        "fn": 163,
+        "precision": 0.2511873350923483,
+        "recall": 0.7449139280125195,
+        "f1": 0.3756906077348066
+      },
+      "uk_0.5": {
+        "tp": 250,
+        "fp": 1641,
+        "fn": 897,
+        "precision": 0.13220518244315177,
+        "recall": 0.21795989537925023,
+        "f1": 0.16458196181698487
+      }
+    },
+    {
+      "run": "20261026-160447-593cabb0",
+      "epochs": 1,
+      "selected_epoch": 1,
+      "selected_validation_loss": 0.3587836027145386,
+      "pipeline_seconds_excluding_preflight": 386.807944489,
+      "training_seconds": 254.47428512573242,
+      "model_sha256": "c352c107ac2561d5553db4ecf9d43ecc16f26907560e72721c924db466a103fc",
+      "device": "gpu",
+      "runtime_verification_passed": true,
+      "validation_pixel_iou_0.5": 0.32575563327097196,
+      "keras_export_parity": {
+        "frames": 15,
+        "max_absolute_error": 1.8656253814697266e-05,
+        "rtol": 0.001,
+        "atol": 0.0001
+      },
+      "rdd_0.5": {
+        "tp": 0,
+        "fp": 5,
+        "fn": 550,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "video_components_0.5": {
+        "tp": 237,
+        "fp": 2087,
+        "fn": 402,
+        "precision": 0.10197934595524957,
+        "recall": 0.37089201877934275,
+        "f1": 0.15997300033749579
+      },
+      "uk_0.5": {
+        "tp": 190,
+        "fp": 1217,
+        "fn": 957,
+        "precision": 0.13503909026297087,
+        "recall": 0.16564952048823017,
+        "f1": 0.14878621769772904
+      }
+    },
+    {
+      "run": "20261026-160708-4946f458",
+      "epochs": 12,
+      "selected_epoch": 12,
+      "selected_validation_loss": 0.225432887673378,
+      "pipeline_seconds_excluding_preflight": 617.343728157,
+      "training_seconds": 491.1905789375305,
+      "model_sha256": "802ff63dc513e1c5030e9105d8603d8e3d880643406319c08274ec6ee85b9994",
+      "device": "gpu",
+      "runtime_verification_passed": true,
+      "validation_pixel_iou_0.5": 0.5901590381782156,
+      "keras_export_parity": {
+        "frames": 15,
+        "max_absolute_error": 3.9458274841308594e-05,
+        "rtol": 0.001,
+        "atol": 0.0001
+      },
+      "rdd_0.5": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 550,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "video_components_0.5": {
+        "tp": 491,
+        "fp": 1123,
+        "fn": 148,
+        "precision": 0.3042131350681537,
+        "recall": 0.7683881064162754,
+        "f1": 0.43586329338659563
+      },
+      "uk_0.5": {
+        "tp": 263,
+        "fp": 1560,
+        "fn": 884,
+        "precision": 0.1442676906198574,
+        "recall": 0.22929380993897122,
+        "f1": 0.1771043771043771
+      }
+    },
+    {
+      "run": "20261026-162116-30937d54",
+      "epochs": 12,
+      "selected_epoch": 12,
+      "selected_validation_loss": 0.225432887673378,
+      "pipeline_seconds_excluding_preflight": 601.0846913839998,
+      "training_seconds": 453.1879141330719,
+      "model_sha256": "802ff63dc513e1c5030e9105d8603d8e3d880643406319c08274ec6ee85b9994",
+      "device": "gpu",
+      "runtime_verification_passed": true,
+      "validation_pixel_iou_0.5": 0.5901590381782156,
+      "keras_export_parity": {
+        "frames": 15,
+        "max_absolute_error": 3.9458274841308594e-05,
+        "rtol": 0.001,
+        "atol": 0.0001
+      },
+      "rdd_0.5": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 550,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "video_components_0.5": {
+        "tp": 491,
+        "fp": 1123,
+        "fn": 148,
+        "precision": 0.3042131350681537,
+        "recall": 0.7683881064162754,
+        "f1": 0.43586329338659563
+      },
+      "uk_0.5": {
+        "tp": 263,
+        "fp": 1560,
+        "fn": 884,
+        "precision": 0.1442676906198574,
+        "recall": 0.22929380993897122,
+        "f1": 0.1771043771043771
+      }
+    }
+  ],
+  "interpretation": "Fresh deterministic runs; repeated launches do not accumulate training. Metrics do not qualify any model for ground warnings."
+}

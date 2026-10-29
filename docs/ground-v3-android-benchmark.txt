@@ -1,0 +1,4 @@
+--------- beginning of main
+10-17 12:43:25.280  2158  2181 I GroundBenchmark: device=Android SDK built for x86_64 fixture iterations=20 inference_ms median=10 p95=15; fixture timing is not sustained camera throughput
+10-17 12:43:25.280  2158  2181 I GroundBenchmark: frame_processing_ms median=26 p95=33; includes resizing, inference and decoding, excludes CameraX delivery
+10-17 12:43:25.300  2158  2181 I GroundBenchmark: process_pss_kb before=47773 loaded_after_20=69532; includes runtime/test harness, not isolated model allocation

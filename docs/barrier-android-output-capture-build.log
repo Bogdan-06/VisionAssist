@@ -1,0 +1,65 @@
+> Task :core:ground:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:ground:preBuild UP-TO-DATE
+> Task :core:ground:preDebugBuild UP-TO-DATE
+> Task :core:ground:generateDebugResValues UP-TO-DATE
+> Task :core:ground:generateDebugResources UP-TO-DATE
+> Task :core:ground:packageDebugResources UP-TO-DATE
+> Task :core:ground:processDebugNavigationResources UP-TO-DATE
+> Task :core:ground:parseDebugLocalResources UP-TO-DATE
+> Task :core:ground:generateDebugRFile UP-TO-DATE
+> Task :core:ground:compileDebugKotlin UP-TO-DATE
+> Task :core:ground:javaPreCompileDebug UP-TO-DATE
+> Task :core:ground:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:ground:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:ground:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:ground:writeDebugAarMetadata UP-TO-DATE
+> Task :core:ground:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :core:ground:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :core:ground:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :core:ground:compileDebugLibraryResources UP-TO-DATE
+> Task :core:ground:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :core:ground:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :core:ground:generateDebugAndroidTestResources UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :core:ground:extractDeepLinksDebug UP-TO-DATE
+> Task :core:ground:processDebugManifest UP-TO-DATE
+> Task :core:ground:processDebugAndroidTestManifest UP-TO-DATE
+> Task :core:ground:processDebugAndroidTestResources UP-TO-DATE
+> Task :core:ground:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :core:ground:compileDebugAndroidTestShaders NO-SOURCE
+> Task :core:ground:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :core:ground:mergeDebugShaders UP-TO-DATE
+> Task :core:ground:compileDebugShaders NO-SOURCE
+> Task :core:ground:generateDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugAssets UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :core:ground:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :core:ground:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:ground:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :core:ground:processDebugJavaRes UP-TO-DATE
+> Task :core:ground:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :core:ground:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :core:ground:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:ground:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :core:ground:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:ground:mergeDebugNativeLibs NO-SOURCE
+> Task :core:ground:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestNativeLibs UP-TO-DATE
+> Task :core:ground:stripDebugAndroidTestDebugSymbols UP-TO-DATE
+> Task :core:ground:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :core:ground:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :core:ground:compileDebugAndroidTestKotlin
+> Task :core:ground:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :core:ground:dexBuilderDebugAndroidTest
+> Task :core:ground:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :core:ground:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :core:ground:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :core:ground:mergeProjectDexDebugAndroidTest
+> Task :core:ground:packageDebugAndroidTest
+> Task :core:ground:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :core:ground:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 23s
+50 actionable tasks: 4 executed, 46 up-to-date

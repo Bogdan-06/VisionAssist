@@ -1,0 +1,14 @@
+
+ro.visionassist.app.ui.CameraLifecycleTest:..
+ro.visionassist.app.ui.DetectionRenderingTest:.
+ro.visionassist.app.ui.DetectionViewModelTest:.
+ro.visionassist.app.ui.VisionAssistScreenTest:....
+ro.visionassist.app.voice.LiveRealtimeTest:
+ro.visionassist.app.voice.LiveRealtimeTest:
+ro.visionassist.app.voice.VoiceControlsTest:...
+
+Time: 63.057
+
+OK (12 tests)
+
+

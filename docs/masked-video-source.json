@@ -1,0 +1,32 @@
+{
+  "paper": "https://doi.org/10.1016/j.dib.2024.110131",
+  "authors": [
+    "Muhammad Ihsan",
+    "Agus Harjoko",
+    "Muhammad Alfian Amrizal"
+  ],
+  "doi": "10.17632/5bwfg4v4cd.3",
+  "source": "https://data.mendeley.com/datasets/5bwfg4v4cd/3",
+  "sha256": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+  "metadata": {
+    "filename": "pothole_video.zip",
+    "id": "3ca42bc8-8852-47ae-adb6-c1df78e6277e",
+    "content_details": {
+      "id": "9bea9357-d10b-4834-8aea-c7c5b6d13aa1",
+      "sha256_hash": "34a98a297f2e29c646cbdada37d820d2c8648e2ed5d15a28f72744d365fe9522",
+      "content_type": "application/zip",
+      "size": 1025786813,
+      "created_date": "2023-07-23T02:30:14.121Z",
+      "download_url": "https://data.mendeley.com/public-files/datasets/5bwfg4v4cd/files/3ca42bc8-8852-47ae-adb6-c1df78e6277e/file_downloaded",
+      "view_url": "https://data.mendeley.com/public-files/datasets/5bwfg4v4cd/files/3ca42bc8-8852-47ae-adb6-c1df78e6277e/file_viewed",
+      "download_expiry_time": "2126-10-24T19:18:02.192669613Z"
+    },
+    "size": 1025786813,
+    "last_modified_date": "2023-07-23T02:30:14.121Z",
+    "status": "COMPLETED"
+  },
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license": "CC BY 4.0",
+  "intended_use": "External labelled-video evaluation only; not used for training",
+  "bytes": 1025786813
+}
