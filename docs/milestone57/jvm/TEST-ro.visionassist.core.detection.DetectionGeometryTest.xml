@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.visionassist.core.detection.DetectionGeometryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T17:24:49.510Z" hostname="DESKTOP-0CHM77T" time="0.044">
+  <properties/>
+  <testcase name="clip to view and discard offscreen degenerate and nonfinite boxes" classname="ro.visionassist.core.detection.DetectionGeometryTest" time="0.038"/>
+  <testcase name="throttle samples at most eight frames per second and tolerates clock reset" classname="ro.visionassist.core.detection.DetectionGeometryTest" time="0.001"/>
+  <testcase name="old and future timestamps never remain current" classname="ro.visionassist.core.detection.DetectionGeometryTest" time="0.001"/>
+  <testcase name="positions use visible view thirds and include boundaries in center" classname="ro.visionassist.core.detection.DetectionGeometryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

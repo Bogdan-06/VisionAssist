@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import ro.visionassist.app.R
 
 @Composable
-fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit, developer: Boolean = true) {
+fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit, developer: Boolean = false) {
     val status = when (state.phase) {
         DetectionPhase.Idle -> R.string.detection_idle
         DetectionPhase.Loading -> R.string.detection_loading
@@ -42,8 +42,6 @@ fun DetectionPanel(state: DetectionUiState, onRetry: () -> Unit, developer: Bool
         state.result?.let { result ->
             if (developer) {
                 Text(ro(stringResource(R.string.detection_timing, result.inferenceMs)), style = MaterialTheme.typography.bodyMedium)
-                Text(ro(state.analysisFps?.let { "FPS analiză: %.1f cadre/s".format(java.util.Locale.ROOT, it) }
-                    ?: "FPS analiză: se colectează cadre. Nu reprezintă rata camerei."))
             }
             if (result.objects.isEmpty()) Text(ro(stringResource(R.string.detection_empty)))
             // Deliberately no live region on per-frame results: accessible by exploration,

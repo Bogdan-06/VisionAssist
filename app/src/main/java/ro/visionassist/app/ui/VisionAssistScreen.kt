@@ -16,6 +16,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
@@ -95,7 +96,8 @@ fun VisionAssistScreen(
     onLayout: (InterfaceLayout) -> Unit = {}, onTheme: (ThemeChoice) -> Unit = {},
     onDeveloper: (Boolean) -> Unit = {}, connectionSummary: String = "Asistent AI: deconectat",
     recentAnnouncements: List<String> = emptyList(), preferenceError: String? = null,
-    recentHazardWarnings: List<String> = emptyList()
+    recentHazardWarnings: List<String> = emptyList(),
+    diagnostics: @Composable () -> Unit = {}
 ) {
     var destination by rememberSaveable { mutableStateOf(Destination.Home) }
     val navigationHeight = 80.dp + 64.dp * (LocalDensity.current.fontScale - 1f).coerceAtLeast(0f)
@@ -116,13 +118,16 @@ fun VisionAssistScreen(
         ScreenStatus.Stopped -> R.string.start_camera
     }
     Scaffold(
+        modifier = Modifier.semantics { isTraversalGroup = true },
         topBar = {
-            Surface(tonalElevation = 3.dp) {
+            Surface(tonalElevation = 3.dp, modifier = Modifier.testTag("primary-region").semantics {
+                isTraversalGroup = true; traversalIndex = 0f
+            }) {
                 Column(Modifier.statusBarsPadding().fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically) {
-                        Text("VisionAssist", style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
+                        Text("VisionAssist", style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f).semantics { heading() })
                         Text("PROTOTIP", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
                     }
                     RoText(stringResource(statusText), Modifier.semantics { liveRegion = LiveRegionMode.Polite })
@@ -133,13 +138,13 @@ fun VisionAssistScreen(
             }
         },
         bottomBar = {
-            Column {
+            Column(Modifier.testTag("navigation-region").semantics { isTraversalGroup = true; traversalIndex = 2f }) {
             NavigationBar(modifier = Modifier.heightIn(min = navigationHeight), windowInsets = WindowInsets(0, 0, 0, 0)) {
                 Destination.entries.forEach { page ->
                     NavigationBarItem(selected = page == destination, onClick = { destination = page },
                         icon = { DestinationIcon(page) }, label = {
                             Text(AnnotatedString(page.title, SpanStyle(localeList = LocaleList("ro-RO"))),
-                                modifier = Modifier.widthIn(max = 96.dp), textAlign = TextAlign.Center)
+                                modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
                         }, alwaysShowLabel = true)
                 }
             }
@@ -147,7 +152,9 @@ fun VisionAssistScreen(
             }
         }
     ) { insets ->
-        BoxWithConstraints(Modifier.fillMaxSize().padding(insets)) {
+        BoxWithConstraints(Modifier.fillMaxSize().padding(insets).testTag("content-region").semantics {
+            isTraversalGroup = true; traversalIndex = 1f; paneTitle = destination.title
+        }) {
             val cameraHeight = maxHeight * if (preferences.layout == InterfaceLayout.CameraFocused) .48f else .26f
             Column(Modifier.fillMaxSize()) {
                 // Do not move this host into a destination branch, or change its size with destination.
@@ -174,6 +181,7 @@ fun VisionAssistScreen(
                             OutlinedButton(onSettings, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { RoText(stringResource(R.string.open_settings)) }
                         }
                         DetectionPanel(detectionState, onRetryDetection, developer = preferences.developer)
+                        if (preferences.developer) diagnostics()
                         RoText("Avertizări recente", title = true)
                         if (recentHazardWarnings.isEmpty()) RoText("Nu există avertizări recente. Detectoarele experimentale pentru sol sunt dezactivate până la validare.")
                         recentHazardWarnings.forEach { SummaryCard { RoText(it) } }
@@ -195,6 +203,7 @@ fun VisionAssistScreen(
                             RoText("Asistent vocal · OpenAI / Gemini", title = true)
                             RoText("Conversație în română, prin internet.")
                             voiceControls()
+                            if (preferences.developer) diagnostics()
                         } else {
                             RoText("Setări", title = true)
                             preferenceError?.let { RoText(it, Modifier.semantics { liveRegion = LiveRegionMode.Polite }) }
@@ -220,6 +229,7 @@ fun VisionAssistScreen(
                                 Switch(preferences.developer, onCheckedChange = null)
                             }
                             settingsControls()
+                            if (preferences.developer) diagnostics()
                             TextButton(onSettings, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { RoText(stringResource(R.string.open_settings)) }
                             TextButton(onHelp, Modifier.fillMaxWidth().heightIn(min = 56.dp)) { RoText(stringResource(R.string.help_button)) }
                             RoText(stringResource(R.string.privacy_label))

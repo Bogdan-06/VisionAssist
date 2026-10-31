@@ -6,7 +6,10 @@ data class VoiceState(
     val message: String = "Conversația este oprită.",
     val imageRequested: Boolean = false,
     val imageBusy: Boolean = false,
-    val warningActive: Boolean = false
+    val warningActive: Boolean = false,
+    // Native capture lifecycle, independently from permission to transmit microphone audio.
+    val microphoneCapturing: Boolean = false,
+    val microphoneMuted: Boolean = true
 )
 
 internal fun VoiceState.afterImageDispatch() = copy(message =

@@ -1,0 +1,4 @@
+--------- beginning of main
+10-29 19:36:56.086  3044  3044 I VisionAssist57: emulator-only samples=4 analysis_fps=2.4330900243309004 detect_median_ms=195 detect_p95_ms=534 receipt_age_ms=281 java_heap_bytes=11122160
+10-31 10:34:56.325  3501  3501 I VisionAssist57: emulator-only samples=5 analysis_fps=6.655574043261232 detect_median_ms=108 detect_p95_ms=128 receipt_age_ms=189 java_heap_bytes=11635952
+10-31 10:43:26.999  4070  4070 I VisionAssist57: emulator-only samples=4 analysis_fps=2.9880478087649402 detect_median_ms=234 detect_p95_ms=402 receipt_age_ms=291 java_heap_bytes=8851072

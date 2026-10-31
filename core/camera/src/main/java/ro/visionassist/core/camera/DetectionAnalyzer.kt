@@ -71,8 +71,9 @@ class DetectionAnalyzer(
                 if (!cancelled.get()) onGroundResult(result, metrics, source)
             }
             if (!failed) detector?.let { activeDetector ->
+                val inferenceStarted = SystemClock.elapsedRealtime()
                 val detections = activeDetector.detect(upright)
-                if (!cancelled.get()) onResult(detections, source, receivedAt, SystemClock.elapsedRealtime() - receivedAt)
+                if (!cancelled.get()) onResult(detections, source, receivedAt, SystemClock.elapsedRealtime() - inferenceStarted)
             }
         } catch (_: Exception) {
             fail(DetectionFailure.Inference)

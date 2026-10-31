@@ -4,6 +4,12 @@ The working project is on the Desktop in `VisionAssist`. It now recognizes suppo
 from the rear camera, entirely on-device. This is an assistive prototype, not a replacement
 for a white cane. Object recognition is not a validated hazard detector or route planner.
 
+Milestone 5.7 adds explicit accessibility traversal groups and developer-only diagnostics
+for analyzed-result FPS, detector median/p95, receipt age, Java heap/process PSS and native
+microphone lifecycle. See the [Romanian verification report](docs/MILESTONE_5_7_VALIDATION.md)
+and [Samsung Galaxy S25 manual protocol](docs/SAMSUNG_S25_VALIDATION.md).
+Automated emulator results do not establish physical-phone accessibility, audio or depth accuracy.
+
 ## What works
 
 To run local pothole-model training yourself, see [the PowerShell training command](docs/TRAINING_COMMAND.md).

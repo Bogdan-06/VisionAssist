@@ -29,6 +29,9 @@ internal class GeminiPcmAudio(
     private var epoch = 0
     private var writtenFrames = 0L
     private var speaking = false
+    internal val isCapturing: Boolean get() = synchronized(lock) {
+        active && recording?.recordingState == AudioRecord.RECORDSTATE_RECORDING
+    }
 
     @SuppressLint("MissingPermission") // Checked by GeminiVoiceClient immediately before opening.
     fun start() = synchronized(lock) {

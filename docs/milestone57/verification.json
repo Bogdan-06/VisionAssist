@@ -1,0 +1,210 @@
+{
+  "milestone": "5.7",
+  "base_commit": "59f201dc903ba78a3cc125208c0a363861bcc83b",
+  "physical_device_tests_run": false,
+  "emulator": "emulator-5580 / API36",
+  "android": {
+    "app": {
+      "passed": 30,
+      "skipped": 2,
+      "failed": 0,
+      "log": "app-tests-final-layout.log"
+    },
+    "camera": {
+      "passed": 10,
+      "skipped": 0,
+      "failed": 0,
+      "log": "camera-tests.log"
+    },
+    "detection": {
+      "passed": 4,
+      "skipped": 0,
+      "failed": 0,
+      "log": "detection-tests.log"
+    },
+    "voice": {
+      "passed": 5,
+      "skipped": 0,
+      "failed": 0,
+      "log": "voice-tests.log"
+    },
+    "ground": {
+      "passed": 5,
+      "skipped": 1,
+      "failed": 0,
+      "log": "ground-tests.log"
+    }
+  },
+  "jvm": [
+    {
+      "name": "ro.visionassist.app.ui.AnalysisWindowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.app.ui.PreviewUiStateTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.core.depth.DepthEvidenceTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.core.detection.DetectionGeometryTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.core.ground.GroundPolicyTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.core.voice.ImageRequestCoordinatorTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ro.visionassist.core.voice.VoicePolicyTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "android_passed": 54,
+  "android_skipped": 3,
+  "jvm_passed": 34,
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 26
+  },
+  "build_successful": true,
+  "backend_tests_passed": 9,
+  "apks": {
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 148265398,
+      "sha256": "7f091ca6672e0cec433eafb2774a6d58e6ff9954b5def2bce0d5a992364c36ce"
+    },
+    "app/build/outputs/apk/release/app-release-unsigned.apk": {
+      "bytes": 133287352,
+      "sha256": "0d4855f2b15852a90e457f6a3143759a22d59113db7d92ea038b04521bd8d1f6"
+    }
+  },
+  "source_sha256": {
+    "app/src/debug/AndroidManifest.xml": "3fd782b268f618ef0c725797e88fb9ebccd30fd33685f4f263f535cdad53b520",
+    "app/src/main/AndroidManifest.xml": "b4b4123d7197584f25c95fa631ebd379ddb41ed7f331474c95c6366f3a894e4f",
+    "app/src/androidTest/java/ro/visionassist/app/ui/CameraLifecycleTest.kt": "c8bf4673b37e8a77a55727a78baa249c9c60cc4f35fe750bfc0733aef6ba1dbc",
+    "app/src/androidTest/java/ro/visionassist/app/ui/DepthFallbackTest.kt": "c18832c238f79471393eb53a30f1c996f5b77882066b4276a480dbc4902fd93c",
+    "app/src/androidTest/java/ro/visionassist/app/ui/DetectionRenderingTest.kt": "846f0e0fee976f44a872be79c0e338d0dae5108c9f75dbcc7cfcbae314a45621",
+    "app/src/androidTest/java/ro/visionassist/app/ui/DetectionViewModelTest.kt": "c9f36f2d9ee4f16c14ebf295cdaefe1a789018d8adce1090ffe07f012ca5548c",
+    "app/src/androidTest/java/ro/visionassist/app/ui/DeviceReadinessAccessibilityTest.kt": "c3ed8c090491ba8359c8420b54671ff3a48901cc4a8ad0f23416133592efa8ca",
+    "app/src/androidTest/java/ro/visionassist/app/ui/InterfaceFlowTest.kt": "b8cc97170c72a0d4923e90315c3a377bcc23df88c2dc6d385da61fc271fafcf6",
+    "app/src/androidTest/java/ro/visionassist/app/ui/NavigationRetentionTest.kt": "f6309490306b4ab497eb5bccfd3329d0ff3fc0f787e49f717090bbd8531f2a45",
+    "app/src/androidTest/java/ro/visionassist/app/ui/OnboardingAccessibilityTest.kt": "b4834324747c8363f4959e1588e6497589e221226b4e90c8f97aee64d7475cb9",
+    "app/src/androidTest/java/ro/visionassist/app/ui/OnboardingTestSupport.kt": "cf8dae64491d419d1c4bb054843facecdd9613958fee85e9332e3f89711b8c07",
+    "app/src/androidTest/java/ro/visionassist/app/ui/PhysicalDepthMeasurementTest.kt": "eec484179efc1c31b2e76a014b44e7779cbbc19539dfc1888c145b60d8f42ebc",
+    "app/src/androidTest/java/ro/visionassist/app/ui/UiPreferencesPersistenceTest.kt": "a61c16fa32235a06e6811a733928a4a6cc567da34cd9cd2d5eb45afd7660b4af",
+    "app/src/androidTest/java/ro/visionassist/app/ui/VisionAssistScreenTest.kt": "66fab200f006469924d50d21dc2243ab2181bc4c23c4df10d07c85d671793082",
+    "app/src/androidTest/java/ro/visionassist/app/voice/BackendSettingsStoreTest.kt": "6f64c1df4564ab59811325ce7e7fb0569bf2248095ff15dce527ad20539378cc",
+    "app/src/androidTest/java/ro/visionassist/app/voice/LiveRealtimeTest.kt": "6a26efacccf02b3e075c53e467e10792d277e5d9c2ba68e5404d4a0880c8a92e",
+    "app/src/androidTest/java/ro/visionassist/app/voice/VoiceControlsTest.kt": "eddffd62811040a7095f0c87864c90c33a83b4f403a01d2fe05441bb16557b1d",
+    "app/src/androidTest/java/ro/visionassist/app/voice/VoiceNavigationSafetyTest.kt": "6b6f755bdc8cb45b00ef29f422b592bf7e4ec01e13b52626c29c8e6a88fba47a",
+    "app/src/debug/res/xml/debug_network_security.xml": "b7c3f3dd4caba57c880dd203874917e4b480edebd036b307df246d3a4a41fc68",
+    "app/src/main/java/ro/visionassist/app/MainActivity.kt": "43ec74d5b14952acf00c483bb8cee45f6e094c5e504db607591cbe41236a4ed2",
+    "app/src/main/java/ro/visionassist/app/depth/DepthActivity.kt": "4960ec82f9ceba765bb6dcdf14603c0b4cf0df60ea06584350f190bb76f22217",
+    "app/src/main/java/ro/visionassist/app/ui/AnalysisDiagnostics.kt": "98c3a9daf947371804c3fa13497c7faf592ead39fbf5af544f72e8bd82ffe38c",
+    "app/src/main/java/ro/visionassist/app/ui/DetectionLabels.kt": "c4d55383d2c8062806a4e9c125a164f027d62d96fece9608d73ba9691e6cb428",
+    "app/src/main/java/ro/visionassist/app/ui/DetectionOverlay.kt": "6d6b03f3eb9d8f19809925b04f3b0881dd8d70673b25e33c03feb417dba29f76",
+    "app/src/main/java/ro/visionassist/app/ui/DetectionPanel.kt": "d2032dc9234fd7dca6aea5dd8bb2395626cddf2893208ae3be243e34d6d6151b",
+    "app/src/main/java/ro/visionassist/app/ui/DetectionViewModel.kt": "77445d7ffd96e303b6cca4f11251aad686f136ab4d926baf4d2b43d7f9a741ed",
+    "app/src/main/java/ro/visionassist/app/ui/DeveloperDiagnostics.kt": "561883b5533d31ee876955bba6f823cf008c58e520c10f1e36d9db14dc39f673",
+    "app/src/main/java/ro/visionassist/app/ui/GroundOverlay.kt": "0bc95150252225310ded866e977c3b263a62585023ff70bd08c01b20635a9f99",
+    "app/src/main/java/ro/visionassist/app/ui/GroundPanel.kt": "39a19fc6705ae0f0e1e3625b83f596cee4967583c18b761dd978ec4ad6b93ad7",
+    "app/src/main/java/ro/visionassist/app/ui/PreviewUiState.kt": "9538d49136124827f603a12aa53e5c0374988febf1aa7aba17fff70eaa80c531",
+    "app/src/main/java/ro/visionassist/app/ui/UiPreferences.kt": "eee3e8e481f07c0c325fcd85fa84773c6e087c2357731769e660839a9f9981fa",
+    "app/src/main/java/ro/visionassist/app/ui/VisionAssistRoute.kt": "77810e16df846da1e0fb550d5285befe3c06da8b7d67ad58b4da3ec768175c8c",
+    "app/src/main/java/ro/visionassist/app/ui/VisionAssistScreen.kt": "5213e2f716fb8e4e59eb3e1629b8c23ca465ee5558f7fff3f9b477ddf4f5bab3",
+    "app/src/main/java/ro/visionassist/app/ui/VisionAssistTheme.kt": "631c660da73232e2f1a357a0c9a1ffaf0bebb932956b836c1418f8a8f23b1ac6",
+    "app/src/main/java/ro/visionassist/app/voice/BackendSettingsStore.kt": "03ec8c077989928a20b82fae080a59b3ee44f621310e60b140327240aa23d1e7",
+    "app/src/main/java/ro/visionassist/app/voice/LocalAnnouncements.kt": "0ddf65127d8b394fd5773e48b4214aa56bd042e007c7aec3d5abcc695729b4f0",
+    "app/src/main/java/ro/visionassist/app/voice/VoiceControls.kt": "0d01e7040e7df80264350345dec4996536ac52faf3ed369d9fb2901683bbce82",
+    "app/src/main/res/drawable/ic_visionassist.xml": "cdb6d0b88d23a25a568ce7150ed398b45a97f780f6e0775d108b9b343e2c4f34",
+    "app/src/main/res/values/strings.xml": "b4f637697d4f23164b5a990ff2a056d2b2efe4e5b3255094a07743aacf1760d2",
+    "app/src/main/res/values/themes.xml": "0b137f4d14f537392387464b3aa9cc8b7dba999d3b7dd9e4abf9490e62a1bc73",
+    "app/src/main/res/xml/backup_rules.xml": "d9064a7ac7e7df1d200997e35e4be275bd54f9f7c074d497dbb31405b573a82d",
+    "app/src/test/java/ro/visionassist/app/ui/AnalysisWindowTest.kt": "33ec6d0bc27268fd66002c02656efd3c7c50c322934195b73805d3209542b693",
+    "app/src/test/java/ro/visionassist/app/ui/PreviewUiStateTest.kt": "cb0635e1e4e65e7d9235b2188e549915f6e0565f094e5763e62aa681ff2ffe7e",
+    "core/camera/build.gradle.kts": "41f45a1d2354133b07f36a5fb5ed2f7b24355b8f1664cb8977ed17eef7a5705e",
+    "core/depth/build.gradle.kts": "e1b846636b874f7c6383311e3f792e22abc0ccb28ef68092d9438debb7047f98",
+    "core/detection/build.gradle.kts": "bbbb0d3a4872f1278ebd459c40e54fb999ece58d6361738a05765103032d088f",
+    "core/ground/build.gradle.kts": "70007642b2722b7b6bbd055ea7c3a9c3c750d2ad430cd4c98f8e0f04cf294de4",
+    "core/voice/build.gradle.kts": "1ff5da6d1fb0f5a2e4c379ccab593a423ded5c15fb392935f059ad40b8d1be11",
+    "core/camera/src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+    "core/camera/src/androidTest/java/ro/visionassist/core/camera/CameraSnapshotTest.kt": "d5cf86dcec71b0eb4a70d0d4dd58ddb6622c1acc1931882fe11f18f755fe3cf6",
+    "core/camera/src/androidTest/java/ro/visionassist/core/camera/DetectionAnalyzerTest.kt": "50d63f862aafe3dedaaad82e264830391bbf608865b8fa2e9a2b2a1bb84632a7",
+    "core/camera/src/androidTest/java/ro/visionassist/core/camera/DetectionMapperTest.kt": "c76707dce31c2894ed9114f63a383743653f67aabeb1bca97fa2deaf523039fc",
+    "core/camera/src/main/java/ro/visionassist/core/camera/CameraPreview.kt": "2ad1dd52f98b07705f2af30ae0a2b2acefe3e5ddf07b212355d1f4d2b8aa3c14",
+    "core/camera/src/main/java/ro/visionassist/core/camera/CameraSnapshotRequest.kt": "dd25faf791afdf5678fc7d1f9c513f3e1f4c196648238889f09feb5a02f1c88a",
+    "core/camera/src/main/java/ro/visionassist/core/camera/DetectionAnalyzer.kt": "9ae68da3c3022a9f59c47950da3fb02b6881456f785f787a457c81be2338f02b",
+    "core/camera/src/main/java/ro/visionassist/core/camera/DetectionMapper.kt": "ee024ab2202a00b4bae2f67f0843dd4039a78aea3b48138fdc2301c2181ad331",
+    "core/depth/src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+    "core/depth/src/main/java/ro/visionassist/core/depth/DepthCameraView.kt": "d34f8b35d2ba4e6852ff26f41f276be977ec848913a3ef1f23aae9c666d38eed",
+    "core/depth/src/main/java/ro/visionassist/core/depth/DepthEvidence.kt": "8e7a64ad141c465c058f08223443cf6cec68ae5d315f8367a3ade6e9cd998ff8",
+    "core/depth/src/main/java/ro/visionassist/core/depth/RawDepthCapture.kt": "fcabc604fd5349c75963277446662792f4b7192958084becbdc73ec2a51bf471",
+    "core/depth/src/test/java/ro/visionassist/core/depth/DepthEvidenceTest.kt": "8ba499fabed9e5752461d62fe69afa424f0d7325988756d64fd5827a835b5784",
+    "core/detection/src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+    "core/detection/src/androidTest/java/ro/visionassist/core/detection/ModelInstrumentedTest.kt": "5ffae5fbece953abe7c96f3534363db99d97b16e49962d6bd0a1062efe3cce87",
+    "core/detection/src/main/java/ro/visionassist/core/detection/DetectionResult.kt": "8ba78b8f81eacf825bfc11afc07e7763c434fedc2ebdeccb7e89b44a2df1ff68",
+    "core/detection/src/main/java/ro/visionassist/core/detection/ObjectDetector.kt": "23daba965911be384f4315890b854ee066359b1ef96d0633e965bcae3b4a90be",
+    "core/detection/src/test/java/ro/visionassist/core/detection/DetectionGeometryTest.kt": "904d38409c6cea4c9f5d57ee349ecb106ce8bdba9dacfcedec7a9a9f0a34935d",
+    "core/ground/src/androidTest/AndroidManifest.xml": "584a7beb67741c98257cb172fa19971c14e51df910a708126b05b48ba524c15d",
+    "core/ground/src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+    "core/ground/src/androidTest/java/ro/visionassist/core/ground/BarrierModelCompatibilityTest.kt": "f45c00692d1b0e72e5a5318b0dbffa6852646a8593d9d338339aa664b3960dc5",
+    "core/ground/src/androidTest/java/ro/visionassist/core/ground/GroundInferenceTest.kt": "9b47c17ccadfba1d66e194702c1e1c100fef50c344dc3842e82f49560e0f7b3b",
+    "core/ground/src/androidTest/java/ro/visionassist/core/ground/GroundSustainedBenchmarkTest.kt": "b2eb21808ea3be949753b917c052082ef47ffae3d13f60862024ad5ef57d079e",
+    "core/ground/src/main/java/ro/visionassist/core/ground/GroundHazardDetector.kt": "56d0889e472ee7019e87c1916d0e243b1a037082dfe9f994b5f25257c7b5fd73",
+    "core/ground/src/main/java/ro/visionassist/core/ground/GroundResult.kt": "5d15f5153d37647ed3709a7f40381a88e89db6d36c7f6b4b021aaddfbd3beea3",
+    "core/ground/src/main/java/ro/visionassist/core/ground/GroundWarningPolicy.kt": "f15cf15d984fea4c7925abb83e79a86b649c8807b8ae14ffcb295eca71a72af9",
+    "core/ground/src/main/java/ro/visionassist/core/ground/GroundWorker.kt": "c4dd598ec188eb30c7ee8ca804fbc89992c5c007925de0165eb79479647a0f08",
+    "core/ground/src/test/java/ro/visionassist/core/ground/GroundPolicyTest.kt": "a4c170dca66b99f2177dcc4897b76bbca7e5180611ae372822c5d7f5992be72d",
+    "core/voice/src/androidTest/AndroidManifest.xml": "2a5e48f173339653438a0bf50675c5deaced7947a6096b08ce5e3702266b3bdf",
+    "core/voice/src/androidTest/java/ro/visionassist/core/voice/GeminiEventsTest.kt": "67be6d28f579b69ff8beef5576a3091c860e9ad4590072b411194d1f83713fdd",
+    "core/voice/src/androidTest/java/ro/visionassist/core/voice/PcmLifecycleTest.kt": "8ec2ea6eb81e752d4cb0b5dffdef5eccf40e90c78833234f58736d56332955e3",
+    "core/voice/src/androidTest/java/ro/visionassist/core/voice/RealtimeProtocolTest.kt": "b9245f415cfeab4a28567114ff07a1236b52ca596f3eb0c1faec2d072e322e01",
+    "core/voice/src/main/java/ro/visionassist/core/voice/GeminiPcmAudio.kt": "07f8b135bc6e912b9575713e5fed054b9feda821630a64eee6f3d751e260086c",
+    "core/voice/src/main/java/ro/visionassist/core/voice/GeminiVoiceClient.kt": "4c560f2b5a41a5e01f6e77ed01218f066900dbcb5aa114ef60ae215d28021e2d",
+    "core/voice/src/main/java/ro/visionassist/core/voice/ImageRequestCoordinator.kt": "96ca66cfb398b370d8929aab676340ca73967279410091a7c676e04c9f6e69a2",
+    "core/voice/src/main/java/ro/visionassist/core/voice/RealtimeEvents.kt": "784e4342f43bc7dd779aaf4cc76e4ed47af5b3bf5e017eeed4d82e398dbd7405",
+    "core/voice/src/main/java/ro/visionassist/core/voice/RealtimeHttp.kt": "633ce803b45fdd60ae1386f276cb2ef840c84d68e637885490ce14ff3ca4674e",
+    "core/voice/src/main/java/ro/visionassist/core/voice/RealtimeVoiceClient.kt": "ed7347a4e7016a26c573b208a274ef14811be3af1a595fde3e9d7ed85b4889c9",
+    "core/voice/src/main/java/ro/visionassist/core/voice/VoiceClient.kt": "1dfdab3a24e1e34a372bfe7121e37f72fea652545efc04e920c2940321f61323",
+    "core/voice/src/main/java/ro/visionassist/core/voice/VoiceState.kt": "55882e6bf71c3ca1b0f7f96f2864e15284be66b340f4608d6f76737bc930be2a",
+    "core/voice/src/test/java/ro/visionassist/core/voice/ImageRequestCoordinatorTest.kt": "d66b1f1a3df8d3ec4ff35c6a0b8b4c1b2d4479b8bc9e798e81ed2fffa3634792",
+    "core/voice/src/test/java/ro/visionassist/core/voice/VoicePolicyTest.kt": "de27b355e4aff43180200de2d114f1e85c46590f4dbdedc01c191c60cba9908a"
+  },
+  "models_sha256": {
+    "core/detection/src/main/assets/efficientdet_lite0.tflite": "40338edf5ec70d43e318b0a716a84d4564cd1802759a7a07170c7e43796dbf58",
+    "core/ground/src/main/assets/ground_baseline.tflite": "bb8ebf2bce188df2206e3fa78891888764f095ab40cad5a508c3da307cc7af88",
+    "barrier-training-runs/20261028-215718-4bd1910e/training/model.tflite": "9e5e8ed50eec603097a9d34274dbe89712625b0a868e2b02f93efb2ea09ef0ce"
+  },
+  "warning_gate_false": true,
+  "camera_ground_disabled": true,
+  "emulator_diagnostic_sample": "10-31 10:43:26.999  4070  4070 I VisionAssist57: emulator-only samples=4 analysis_fps=2.9880478087649402 detect_median_ms=234 detect_p95_ms=402 receipt_age_ms=291 java_heap_bytes=8851072",
+  "build_log": "large-text-build.log"
+}

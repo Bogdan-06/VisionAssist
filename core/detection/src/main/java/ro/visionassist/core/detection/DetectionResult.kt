@@ -30,6 +30,7 @@ data class DetectionResult(
     val objects: List<DetectedObject>,
     // Monotonic time at analyzer receipt, not an inferred physical capture time.
     val receivedAtMs: Long,
+    // Detector call duration; CameraX excludes conversion/rotation/snapshot work.
     val inferenceMs: Long
 )
 enum class DetectionFailure { Model, Inference, Mapping }

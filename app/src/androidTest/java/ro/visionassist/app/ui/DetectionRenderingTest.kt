@@ -48,7 +48,7 @@ class DetectionRenderingTest {
                         Image(bitmap.asImageBitmap(),contentDescription = "Imagine de test",modifier = Modifier.fillMaxSize())
                         DetectionOverlay(result,Modifier.fillMaxSize())
                     }
-                    DetectionPanel(DetectionUiState(DetectionPhase.Active,result),{})
+                    DetectionPanel(DetectionUiState(DetectionPhase.Active,result),{}, developer = true)
                 }
             }
         }

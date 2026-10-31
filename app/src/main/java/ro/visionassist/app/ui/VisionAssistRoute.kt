@@ -59,6 +59,7 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
     val recent by announcements.recent.collectAsStateWithLifecycle()
     val hazards by announcements.recentHazards.collectAsStateWithLifecycle()
     LaunchedEffect(preferences.localAnnouncements) { announcements.enabled = preferences.localAnnouncements }
+    LaunchedEffect(preferences.developer) { detectionViewModel.setDiagnosticsEnabled(preferences.developer) }
     DisposableEffect(voice) {
         onDispose { voice.stop(); snapshots.cancel(); announcements.close(); voice.close() }
     }
@@ -200,6 +201,7 @@ fun VisionAssistRoute(preferences: UiPreferences = UiPreferences(InterfaceLayout
                     context.startActivity(Intent(context,ro.visionassist.app.depth.DepthActivity::class.java))
                 })
         },
-        groundResult = groundState.result
+        groundResult = groundState.result,
+        diagnostics = { DeveloperDiagnostics(detectionState, status, foreground, voiceState) }
     )
 }

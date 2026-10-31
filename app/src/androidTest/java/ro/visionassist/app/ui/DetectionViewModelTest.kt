@@ -14,6 +14,30 @@ import ro.visionassist.core.detection.DetectionResult
 import ro.visionassist.core.detection.ViewBox
 
 class DetectionViewModelTest {
+    @Test fun diagnosticsRequireOptInAndResetOnDisableFailureAndStop() {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val store = ViewModelStore()
+        instrumentation.runOnMainSync {
+            val vm = DetectionViewModel()
+            store.put("diagnostics", vm)
+            try {
+                fun result() = DetectionResult(emptyList(), SystemClock.elapsedRealtime(), 12)
+                vm.start(); vm.onResult(result())
+                assertEquals(0, vm.state.value.diagnostics.samples)
+                vm.setDiagnosticsEnabled(true); vm.onResult(result())
+                assertEquals(1, vm.state.value.diagnostics.samples)
+                vm.setDiagnosticsEnabled(false)
+                assertEquals(0, vm.state.value.diagnostics.samples)
+                assertNotNull(vm.state.value.result)
+                vm.setDiagnosticsEnabled(true); vm.onResult(result()); vm.onError(DetectionFailure.Inference)
+                assertEquals(0, vm.state.value.diagnostics.samples)
+                vm.start(); vm.onResult(result()); vm.stop()
+                assertEquals(0, vm.state.value.diagnostics.samples)
+                assertNull(vm.state.value.result)
+            } finally { store.clear() }
+        }
+    }
+
     @Test fun resultsExpireAndStopAndFailureClearBoxes() = runBlocking {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val vm = DetectionViewModel()

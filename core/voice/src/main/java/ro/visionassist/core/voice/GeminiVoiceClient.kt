@@ -119,7 +119,8 @@ class GeminiVoiceClient(context: Context, private val allowLoopbackHttp: Boolean
                     mutableState.value = mutableState.value.copy(phase = if (playing) VoicePhase.Speaking else VoicePhase.Listening)
                 } }, onFailure = { dispatch(gen) { fail("Microfonul sau redarea audio s-a oprit. Repornește conversația.") } })
                 pcm!!.start()
-                mutableState.value = VoiceState(VoicePhase.Listening, "Gemini ascultă. Vorbește în română.")
+                mutableState.value = VoiceState(VoicePhase.Listening, "Gemini ascultă. Vorbește în română.",
+                    microphoneCapturing = pcm!!.isCapturing, microphoneMuted = false)
             }
             val content = event.optJSONObject("serverContent")
             if (content?.optBoolean("interrupted") == true) pcm?.interrupt()
@@ -162,6 +163,7 @@ class GeminiVoiceClient(context: Context, private val allowLoopbackHttp: Boolean
         generation++; ready = false
         images.cancel("session_ended", notify = false)
         pcm?.close(); pcm = null
+        mutableState.value = mutableState.value.copy(microphoneCapturing = false, microphoneMuted = true)
         socket?.cancel(); socket = null; http.cancel()
         connection?.cancel(); connection = null; timeout?.cancel(); timeout = null
         focus?.let { audio.abandonAudioFocusRequest(it) }; focus = null

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.visionassist.core.ground.GroundPolicyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-29T05:47:22.678Z" hostname="DESKTOP-0CHM77T" time="0.056">
+  <properties/>
+  <testcase name="decoderReversesLetterboxAndSuppressesOverlappingPeaks" classname="ro.visionassist.core.ground.GroundPolicyTest" time="0.047"/>
+  <testcase name="oldDuplicateAndNonfiniteScoresCannotProduceWarnings" classname="ro.visionassist.core.ground.GroundPolicyTest" time="0.002"/>
+  <testcase name="paddingOnlyAndInvalidBoxOutputsAreDiscarded" classname="ro.visionassist.core.ground.GroundPolicyTest" time="0.002"/>
+  <testcase name="requiresThreeSpatiallyConsistentFreshFramesThenCoolsDown" classname="ro.visionassist.core.ground.GroundPolicyTest" time="0.001"/>
+  <testcase name="absenceStalenessAndChangingLocationsBreakEvidence" classname="ro.visionassist.core.ground.GroundPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

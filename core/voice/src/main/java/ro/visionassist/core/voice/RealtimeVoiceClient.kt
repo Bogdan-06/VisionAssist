@@ -154,6 +154,14 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         }
         fun audioError() = dispatch(gen) { if (wanted) fail("Microfonul sau redarea audio nu sunt disponibile. Verifică permisiunile și repornește conversația.") }
         audioDevice = JavaAudioDeviceModule.builder(app)
+            .setAudioRecordStateCallback(object : JavaAudioDeviceModule.AudioRecordStateCallback {
+                override fun onWebRtcAudioRecordStart() = dispatch(gen) {
+                    mutableState.value = mutableState.value.copy(microphoneCapturing = true)
+                }
+                override fun onWebRtcAudioRecordStop() = dispatch(gen) {
+                    mutableState.value = mutableState.value.copy(microphoneCapturing = false)
+                }
+            })
             .setAudioRecordErrorCallback(object : JavaAudioDeviceModule.AudioRecordErrorCallback {
                 override fun onWebRtcAudioRecordInitError(error: String) = audioError()
                 override fun onWebRtcAudioRecordStartError(code: JavaAudioDeviceModule.AudioRecordStartErrorCode, error: String) = audioError()
@@ -243,6 +251,7 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         val muted = !ready || priority.muted
         audioDevice?.setSpeakerMute(muted); audioDevice?.setMicrophoneMute(muted)
         microphone?.setEnabled(!muted)
+        mutableState.value = mutableState.value.copy(microphoneMuted = muted)
     }
 
     override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) = images.submit(capture)
@@ -288,6 +297,7 @@ class RealtimeVoiceClient(context: Context, private val allowLoopbackHttp: Boole
         peer?.close(); peer?.dispose(); peer = null
         microphone?.dispose(); microphone = null; source?.dispose(); source = null
         factory?.dispose(); factory = null; audioDevice?.release(); audioDevice = null
+        mutableState.value = mutableState.value.copy(microphoneCapturing = false, microphoneMuted = true)
         focus?.let { audio.abandonAudioFocusRequest(it) }; focus = null
         previousMode?.let { audio.mode = it }; previousMode = null
         priority.resetTransport()

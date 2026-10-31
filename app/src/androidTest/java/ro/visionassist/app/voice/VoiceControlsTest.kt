@@ -25,6 +25,35 @@ class VoiceControlsTest {
     private lateinit var local: LocalAnnouncements
     @After fun close() { compose.runOnIdle { if (::local.isInitialized) local.close(); if (::client.isInitialized) client.close() } }
 
+    @Test fun interruptedConversationShowsRecoveryAndBlocksPhotoWithoutRestartingItself() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val events = MutableStateFlow(VoiceState(VoicePhase.Listening, microphoneCapturing = true, microphoneMuted = false))
+        var starts = 0
+        compose.runOnIdle {
+            client = object : VoiceClient {
+                override val state = events
+                override fun start(settings: BackendSettings) { starts++ }
+                override fun stop() { events.value = VoiceState() }
+                override fun beginLocalWarning(id: String) = Unit
+                override fun endLocalWarning(id: String) = Unit
+                override suspend fun sendRequestedImage(capture: suspend () -> ByteArray) { error("Disconnected photo must stay disabled") }
+                override fun declineImage(reason: String) = Unit
+                override fun close() = Unit
+            }
+            local = LocalAnnouncements(context, client)
+        }
+        compose.setContent { VisionAssistTheme { Column(Modifier.verticalScroll(rememberScrollState())) {
+            VoiceControls(client, local, CameraSnapshotRequest(), false, true)
+        } } }
+        compose.onNodeWithText("Oprește conversația AI").assertExists()
+        compose.runOnIdle { events.value = VoiceState(VoicePhase.Error, "Conexiunea s-a întrerupt. Repornește conversația.") }
+        compose.onNodeWithText("Eroare de conexiune").assertExists()
+        compose.onNodeWithText("Conexiunea s-a întrerupt. Repornește conversația.").assertExists()
+        compose.onNodeWithText("Ce este în fața mea? Trimite o fotografie").performScrollTo().assertIsNotEnabled()
+        compose.onNodeWithText("Pornește conversația AI").performScrollTo().assertIsEnabled()
+        compose.runOnIdle { assertEquals(0, starts); assertFalse(client.state.value.microphoneCapturing) }
+    }
+
     @Test fun stopRemainsAvailableDuringLocalPriorityAndStartRemainsBlockedAfterStop() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val events = MutableStateFlow(VoiceState(VoicePhase.Listening, warningActive = true))

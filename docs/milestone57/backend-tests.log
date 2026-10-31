@@ -1,0 +1,17 @@
+✔ Gemini works without OpenAI credentials, locks the Romanian setup, and redacts token metadata (143.4275ms)
+✔ Gemini rejects unexpected upstream credential formats and separates main and app credentials (28.4124ms)
+✔ GA session uses Romanian audio, explicit image tool, and one-minute client secret (0.4623ms)
+✔ starts without secrets, health is factual, minting fails closed (12.095ms)
+✔ rejects unauthorized clients, browser origins, body overrides and wrong routes before upstream (14.3623ms)
+✔ mints only GA ephemeral secret, returns minimum fields and no-cache headers (11.396ms)
+✔ rejects expired/invalid credentials and redacts upstream failures (18.5377ms)
+✔ rate-limits authenticated mint attempts before issuing more secrets (13.8503ms)
+✔ distinguishes exhausted quota from transient rate limits without returning upstream data (21.4962ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 607.2287

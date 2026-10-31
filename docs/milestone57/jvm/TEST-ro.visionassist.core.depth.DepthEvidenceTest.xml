@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.visionassist.core.depth.DepthEvidenceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T05:58:58.757Z" hostname="DESKTOP-0CHM77T" time="0.082">
+  <properties/>
+  <testcase name="missingLowConfidenceOldAndOutOfViewDepthStayUnknown" classname="ro.visionassist.core.depth.DepthEvidenceTest" time="0.055"/>
+  <testcase name="rotationMappingAndInvalidDepthCannotProduceFakeDiscontinuities" classname="ro.visionassist.core.depth.DepthEvidenceTest" time="0.023"/>
+  <testcase name="validSamplesReturnAxialMedianAndCount" classname="ro.visionassist.core.depth.DepthEvidenceTest" time="0.001"/>
+  <testcase name="mixedSurfacesAreNotAveragedAndDuplicatePixelsDoNotCountAsSupport" classname="ro.visionassist.core.depth.DepthEvidenceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
