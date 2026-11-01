@@ -25,7 +25,10 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('data', 'model', 'output'):
         parser.add_argument('--'+name, type=pathlib.Path, required=True)
+    parser.add_argument('--max-images', type=int, help='Limit clips (each clip has multiple sampled frames)')
     args = parser.parse_args()
+    if args.max_images is not None and args.max_images < 1:
+        raise ValueError('Clip limit must be positive')
     if args.output.exists():
         raise ValueError('Use a new evaluation directory')
     manifest_path = args.data/'manifest.json'
@@ -42,7 +45,7 @@ def main():
     clips, latency = [], []
     args.output.mkdir(parents=True)
     with (args.output/'predictions.jsonl').open('w', encoding='utf8') as log:
-        for clip_index, record in enumerate(manifest['records']):
+        for clip_index, record in enumerate(manifest['records'][:args.max_images] if args.max_images else manifest['records']):
             paths = []
             for kind in ('rgb', 'mask'):
                 entry = record['files'][kind]
@@ -89,6 +92,7 @@ def main():
     report = dict(model_sha256=hashlib.sha256(args.model.read_bytes()).hexdigest(),
         source_sha256=SOURCE_SHA256, manifest_sha256=hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
         split='published test videos, already examined during prior model development', clips=len(clips),
+        available_clips=123,partial=len(clips)!=123,warning_eligible=False,
         sampled_frames=frames, decoded_rgb_frames=decoded, resolution=[320,320], truth_components=truth_components,
         pixel_metrics={key:pixel_scores(value) for key,value in pixels.items()},
         mean_clip_iou={key:float(np.mean([clip['pixel_metrics'][key]['iou'] for clip in clips])) for key in pixels},

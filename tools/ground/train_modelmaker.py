@@ -101,11 +101,22 @@ class ReviewedDetector(object_detector.ObjectDetector):
             shutil.copyfile(self._resume['path']/'best.weights.h5',output/'best.weights.h5')
             with (output/'history.csv').open('w',newline='',encoding='utf8') as stream:
                 writer=csv.DictWriter(stream,fieldnames=history[0].keys()); writer.writeheader(); writer.writerows(history)
+        class EpochArchive(tf.keras.callbacks.Callback):
+            def on_epoch_end(self, epoch, logs=None):
+                from experiment_store import atomic_json, digest
+                destination=output/'checkpoints'/f'epoch-{epoch+1:04d}'
+                destination.mkdir(parents=True,exist_ok=False)
+                for name in ('last.weights.h5','best.weights.h5','history.csv','run.json'):
+                    shutil.copyfile(output/name,destination/name)
+                shutil.copytree(output/'source',destination/'source')
+                atomic_json(destination/'committed.json',dict(completed_epochs=epoch+1,
+                    sha256={name:digest(destination/name) for name in ('last.weights.h5','best.weights.h5','history.csv','run.json')}))
+                print(f'CHECKPOINT epoch={epoch+1} path={destination}',flush=True)
         self._callbacks=[FiniteLosses(),
             tf.keras.callbacks.ModelCheckpoint(str(output/'best.weights.h5'),monitor='val_total_loss',
                 save_best_only=True,save_weights_only=True,initial_value_threshold=best_loss),
             tf.keras.callbacks.ModelCheckpoint(str(output/'last.weights.h5'),save_weights_only=True),
-            tf.keras.callbacks.CSVLogger(str(output/'history.csv'),append=bool(self._resume))]
+            tf.keras.callbacks.CSVLogger(str(output/'history.csv'),append=bool(self._resume)),EpochArchive()]
         super()._create_and_train_model(train_data,validation_data)
         self._model.load_weights(str(output/'best.weights.h5'))
         self._save_float_ckpt()
@@ -188,9 +199,11 @@ def main():
                     print(f'Image hashes verified: {split} {index}/{len(hashes)}',flush=True)
     resume=None
     if args.resume_from:
-        if args.smoke or args.epochs!=20 or args.batch_size!=8:
-            raise ValueError('Snapshot resume preserves the original 20-epoch, batch-8 schedule')
+        if args.smoke:
+            raise ValueError('Smoke runs cannot resume full training')
         resume=json.loads((args.resume_from/'snapshot.json').read_text(encoding='utf-8-sig'))
+        if args.epochs!=resume.get('configured_epochs',20) or args.batch_size!=resume.get('batch_size',8):
+            raise ValueError('Snapshot resume must retain original epochs and batch size')
         if resume['data_provenance']!=provenance or resume['pretrained_checkpoint_sha256']!=CHECKPOINT_SHA256:
             raise ValueError('Resume snapshot has different data or pretrained provenance')
         if not 0<resume['selected_epoch']<args.epochs: raise ValueError('No remaining epochs')
@@ -253,7 +266,7 @@ def main():
         warmup_steps=int(steps*epochs*.1),cosine_decay_steps=steps*epochs,cosine_decay_alpha=.1)
     versions={name:importlib.metadata.version(name) for name in
               ('tensorflow','keras','mediapipe','mediapipe-model-maker','tf-models-official','numpy')}
-    (args.output/'run.json').write_text(json.dumps(dict(epochs=epochs,batch_size=batch_size,seed=4217,
+    (args.output/'run.json').write_text(json.dumps(dict(epochs=epochs,batch_size=batch_size,seed=4217,smoke_only=args.smoke,resume_schema=1,
         data_provenance=provenance,learning_rate=.3,cosine_decay_alpha=.1,
         optimizer_settings=optimizer_settings,versions=versions,source_sha256=source_hashes,reproducibility=reproducibility,
         class_profile=args.class_profile,classes=classes,hardware=hardware,

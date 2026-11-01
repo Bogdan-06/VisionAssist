@@ -9,6 +9,7 @@ import json
 import os
 import pathlib
 import time
+import shutil
 
 os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '2')
 import cv2
@@ -142,15 +143,30 @@ def run(args):
         records.extend({**r, 'domain':'rdd_negative'} for r in negatives['records'])
     if len({(r['domain'],r['id']) for r in records}) != len(records):
         raise ValueError('Duplicate training/validation record identity')
+    resume_configuration = dict(epochs=args.epochs, batch_size=args.batch_size, device=args.device,
+        manifest_sha256=file_sha(manifest_path), negative_manifest_sha256=negative_manifest_sha,
+        backbone_sha256=file_sha(args.backbone), tensorflow=tf.__version__, keras=keras.__version__,
+        trainer_sha256=file_sha(pathlib.Path(__file__)),
+        resume_helper_sha256=file_sha(pathlib.Path(__file__).with_name('segmentation_resume.py')),
+        numpy=np.__version__, opencv=cv2.__version__,
+        hardware_helper_sha256=file_sha(pathlib.Path(__file__).with_name('training_hardware.py')))
+    resume_path, resume_state = None, None
+    if getattr(args, 'resume_from', None):
+        from segmentation_resume import inspect_checkpoint
+        resume_path, resume_state = inspect_checkpoint(args.resume_from, resume_configuration)
     records.sort(key=lambda r: 0 if r['split']=='train' else 1)
     def data_root(record):
         return args.data if record['domain']=='phone' else args.negative_data
     args.output.mkdir(parents=True)
+    from experiment_store import atomic_json
+    atomic_json(args.output/'resume-config.json', resume_configuration)
     script_bytes = pathlib.Path(__file__).read_bytes()
     (args.output/'train_masked_segmentation.source.py').write_bytes(script_bytes)
     started = time.time()
     def status(stage, **extra):
+        from experiment_store import process_identity
         (args.output/'status.json').write_text(json.dumps(dict(stage=stage, pid=os.getpid(),
+            process_created=process_identity(os.getpid()),
             elapsed_seconds=time.time()-started, **extra), indent=2), encoding='utf8')
     try:
         hardware = configure(args.device, args.threads)
@@ -213,14 +229,29 @@ def run(args):
             def on_epoch_end(self, epoch, logs=None):
                 status('training', completed_epochs=epoch+1, metrics={k:float(v) for k,v in (logs or {}).items()})
         decoder.compile(optimizer=keras.optimizers.Adam(1e-3), loss=segmentation_loss)
-        status('training', completed_epochs=0)
+        initial_epoch = 0
+        if resume_state:
+            decoder = keras.models.load_model(resume_path/'last.keras',
+                custom_objects={'segmentation_loss':segmentation_loss})
+            if int(decoder.optimizer.iterations.numpy()) != resume_state['optimizer_step']:
+                raise ValueError('Optimizer iteration was not restored')
+            for name in ('decoder.weights.h5', 'history.csv'):
+                shutil.copyfile(resume_path/name, args.output/name)
+            initial_epoch = resume_state['completed_epochs']
+            atomic_json(args.output/'resume.json', dict(source=str(resume_path), initial_epoch=initial_epoch,
+                optimizer_step=resume_state['optimizer_step'], limitation='Full optimizer and callback state restored; shuffle order after restart is not bitwise identical.'))
+        early = keras.callbacks.EarlyStopping(monitor='val_loss', patience=4, min_delta=0)
+        reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=2, factor=.5, min_lr=1e-5)
+        from segmentation_resume import callback
+        best_callback = keras.callbacks.ModelCheckpoint(str(args.output/'decoder.weights.h5'), monitor='val_loss',
+                        save_best_only=True, save_weights_only=True,
+                        initial_value_threshold=resume_state['early']['best'] if resume_state else None)
+        status('training', completed_epochs=initial_epoch)
         history = decoder.fit(dataset(0, training_count, True),
-            validation_data=dataset(training_count, count, False), epochs=args.epochs, verbose=2,
-            callbacks=[keras.callbacks.ModelCheckpoint(str(args.output/'decoder.weights.h5'), monitor='val_loss',
-                        save_best_only=True, save_weights_only=True),
-                keras.callbacks.EarlyStopping(monitor='val_loss', patience=4, min_delta=0),
-                keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=2, factor=.5, min_lr=1e-5),
-                keras.callbacks.CSVLogger(str(args.output/'history.csv')), Progress()])
+            validation_data=dataset(training_count, count, False), initial_epoch=initial_epoch, epochs=args.epochs, verbose=2,
+            callbacks=[best_callback, early, reduce_lr,
+                keras.callbacks.CSVLogger(str(args.output/'history.csv'), append=bool(resume_state)),
+                callback(keras, args.output, early, reduce_lr, resume_state), Progress()])
         decoder.load_weights(args.output/'decoder.weights.h5')
         inputs = keras.Input((SIZE, SIZE, 3), batch_size=1, name='rgb_minus_one_to_one')
         model = keras.Model(inputs, decoder(encoder(inputs, training=False)), name='visionassist_pothole_segmentation')
@@ -288,13 +319,15 @@ def run(args):
                 negative_manifest_sha256=negative_manifest_sha,
                 limitation='Annotation-defined validation negatives used in checkpoint selection; not untouched test data.')
             (args.output/'negative-validation.json').write_text(json.dumps(negative_report,indent=2),encoding='utf8')
+        import csv
+        completed_rows = list(csv.DictReader((args.output/'history.csv').open(encoding='utf8')))
         report = dict(architecture='Frozen MobileNetV2 alpha 0.5 + separable multiscale mask decoder',
             classes=['pothole mask'], input=[1,SIZE,SIZE,3], input_normalization='RGB / 127.5 - 1',
             output=[1,OUTPUT_SIZE,OUTPUT_SIZE,1], output_semantics='sigmoid probability per stride-four pixel',
             backbone_sha256=BACKBONE_SHA, manifest_sha256=file_sha(manifest_path), source_sha256=SOURCE_SHA256,
             script_sha256=hashlib.sha256(script_bytes).hexdigest(), model_sha256=hashlib.sha256(content).hexdigest(),
-            bytes=len(content), seed=SEED, requested_epochs=args.epochs, completed_epochs=len(history.history['loss']),
-            selected_epoch=int(np.argmin(history.history['val_loss']))+1,
+            bytes=len(content), seed=SEED, requested_epochs=args.epochs, completed_epochs=len(completed_rows),
+            selected_epoch=int(min(completed_rows,key=lambda row:float(row['val_loss']))['epoch'])+1,
             selection='minimum validation BCE plus soft-Dice loss over phone frames and supplied RDD negatives; no test fitting/selection',
             training_frames=training_count, validation_frames=count-training_count,
             phone_validation_frames=evaluation['frames'], negative_manifest_sha256=negative_manifest_sha,
@@ -330,4 +363,5 @@ if __name__ == '__main__':
     parser.add_argument('--device', choices=['auto', 'cpu', 'gpu'], default='auto')
     parser.add_argument('--batch-size', type=int, default=16)
     parser.add_argument('--cache-batch-size', type=int, default=32)
+    parser.add_argument('--resume-from', type=pathlib.Path)
     run(parser.parse_args())

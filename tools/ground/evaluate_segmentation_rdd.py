@@ -23,7 +23,10 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('dataset', 'manifest', 'model', 'output'):
         parser.add_argument('--'+name, type=pathlib.Path, required=True)
+    parser.add_argument('--max-images', type=int)
     args = parser.parse_args()
+    if args.max_images is not None and args.max_images < 1:
+        raise ValueError('Image limit must be positive')
     if args.output.exists():
         raise ValueError('Use a new evaluation directory')
     manifest = json.loads(args.manifest.read_text(encoding='utf8'))
@@ -34,6 +37,9 @@ def main():
     records = [record for record in manifest['records'] if record['split'] == 'test']
     if len(records) != 1342 or any(record['used_for_training'] for record in records):
         raise ValueError('Unexpected RDD evaluation split')
+    available_images = len(records)
+    if args.max_images:
+        records = records[:args.max_images]
     cv2.setNumThreads(2)
     segmenter = Segmenter(args.model)
     thresholds = (.3, .5, .65)
@@ -72,6 +78,7 @@ def main():
     report = dict(model_sha256=hashlib.sha256(args.model.read_bytes()).hexdigest(),
         source_sha256=source_hash, manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
         dataset='RDD2022 India, existing held-out test partition', images=len(records),
+        available_images=available_images, partial=len(records)!=available_images, warning_eligible=False,
         component_rule='8-connected regions of restored probability >= pixel threshold; no minimum area or top-k limit',
         component_score='mean member pixel probability; uncalibrated, no additional score threshold',
         matching='greedy descending component score, one-to-one box IoU >= 0.5; difficult boxes ignored',

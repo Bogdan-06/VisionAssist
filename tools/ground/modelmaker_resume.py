@@ -50,9 +50,16 @@ def inspect_source(path, provenance, epochs, batch_size, device):
     if (source/'training/run.json').is_file():
         source=source/'training'
     ensure_stopped(source)
+    committed=sorted(p for p in (source/'checkpoints').glob('epoch-*') if (p/'committed.json').is_file())
+    if committed:
+        source=committed[-1]
+        state=json.loads((source/'committed.json').read_text(encoding='utf8'))
+        for name,expected in state['sha256'].items():
+            if Path(name).name!=name or digest(source/name)!=expected:
+                raise ValueError('Committed epoch checkpoint changed')
     settings=json.loads((source/'run.json').read_text(encoding='utf8'))
-    if epochs!=20 or batch_size!=8 or settings['epochs']!=epochs or settings['batch_size']!=batch_size:
-        raise ValueError('Resume must retain the original 20-epoch, batch-8 schedule')
+    if settings['epochs']!=epochs or settings['batch_size']!=batch_size:
+        raise ValueError('Resume must retain the original epoch and batch schedule')
     if settings['class_profile']!='barriers' or settings['classes']!=['stairs','curb','step']:
         raise ValueError('Only a full three-class barrier run can be resumed here')
     if settings['data_provenance']!=provenance or settings['hardware']['selected']!=device:
@@ -76,6 +83,8 @@ def inspect_source(path, provenance, epochs, batch_size, device):
     for name,expected in settings['source_sha256'].items():
         if Path(name).name!=name or digest(source/'source'/name)!=expected:
             raise ValueError('Archived training source changed')
+        if settings.get('resume_schema')==1 and digest(Path(__file__).parent/name)!=expected:
+            raise ValueError('Current training implementation differs from the source experiment')
     hashes={name:digest(source/name) for name in ('last.weights.h5','best.weights.h5','history.csv','run.json')}
     return dict(source=str(source),completed_epochs=len(history),best_selected_epoch=best_index+1,
                 optimizer_step=len(history)*steps,files_sha256=hashes,settings=settings)
@@ -93,6 +102,7 @@ def capture_snapshot(info, destination):
             raise ValueError('Source changed while taking snapshot')
     settings=info['settings']
     snapshot=dict(data_provenance=settings['data_provenance'],pretrained_checkpoint_sha256=PRETRAINED_SHA,
+                  configured_epochs=settings['epochs'],batch_size=settings['batch_size'],
                   selected_epoch=info['completed_epochs'],best_selected_epoch=info['best_selected_epoch'],
                   resume_weights_filename='last.weights.h5',
                   weights_sha256=info['files_sha256']['last.weights.h5'],

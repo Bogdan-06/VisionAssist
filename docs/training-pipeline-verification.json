@@ -1,0 +1,142 @@
+{
+  "base_commit": "6549e6f",
+  "tests": {
+    "windows_data": {
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "windows_modelmaker": {
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "wsl_keras3": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "powershell_shared_lock_cases_passed": 3,
+  "powershell_syntax": "PASS",
+  "preserved_model_checkpoint_files": 71,
+  "preservation_mismatches": 0,
+  "full_training_started": false,
+  "android_source_changed": false,
+  "ground_inference_enabled": false,
+  "unvalidated_warnings_enabled": false,
+  "pothole_gpu_preflight": {
+    "runtime": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "executable": "/opt/visionassist/venv/bin/python",
+      "tensorflow": "2.20.0",
+      "opencv": "4.12.0",
+      "numpy": "2.2.6",
+      "pillow": "11.3.0",
+      "requested_device": "gpu",
+      "available_gpus": [
+        "/physical_device:GPU:0"
+      ],
+      "nvidia": "NVIDIA GeForce GTX 1650 Ti with Max-Q Design, 4096 MiB, 621.01",
+      "cuda_kernel": {
+        "device": "/job:localhost/replica:0/task:0/device:GPU:0",
+        "sum": 512.0
+      }
+    },
+    "splits": {
+      "masked-segmentation-v1": {
+        "manifest_sha256": "6f87baaacef7ffdfb01e9c8ef8840ba60fdd433d4473dbc937d744d485688944",
+        "counts": {
+          "train": 372,
+          "validation": 124,
+          "test": 123
+        }
+      },
+      "segmentation-negatives-v1": {
+        "manifest_sha256": "e9982fed435113a895b007de7150f365d9334fcbcb2426ffb0e24c7f9515af43",
+        "counts": {
+          "validation": 1086,
+          "train": 1993
+        }
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  },
+  "evidence_directory": "D:\\CodexTemp\\VisionAssist-training-pipeline",
+  "local_runs": {
+    "barrier_smoke": {
+      "directory": "D:\\CodexTemp\\VisionAssist-training-pipeline\\final-smoke-experiments\\20261101-103255-barrier-2a1fd79d",
+      "status": {
+        "state": "completed",
+        "stage": "evaluate-validation",
+        "pid": 407,
+        "process_created": "00375d28-d5ea-4162-9c4e-e694080e3424:5812",
+        "started_utc": "2026-11-01T08:32:59.753883+00:00",
+        "completed": [
+          "train",
+          "evaluate-validation"
+        ],
+        "updated_utc": "2026-11-01T08:39:27.380134+00:00",
+        "ended_utc": "2026-11-01T08:41:17.342212+00:00",
+        "warning_eligible": false
+      }
+    },
+    "barrier_checkpoint": {
+      "directory": "D:\\CodexTemp\\VisionAssist-training-pipeline\\checkpoint-evaluations\\20261101-104943-barrier-a6e3d602",
+      "status": {
+        "state": "completed",
+        "stage": "evaluate-validation",
+        "pid": 19252,
+        "process_created": "639291197709228465",
+        "started_utc": "2026-11-01T08:49:43.801840+00:00",
+        "completed": [
+          "export-checkpoint",
+          "evaluate-validation"
+        ],
+        "updated_utc": "2026-11-01T08:51:10.121773+00:00",
+        "ended_utc": "2026-11-01T08:51:32.124134+00:00",
+        "warning_eligible": false
+      }
+    },
+    "pothole_export": {
+      "directory": "D:\\CodexTemp\\VisionAssist-training-pipeline\\pothole-evaluations\\20261101-104551-pothole-a93f92cc",
+      "status": {
+        "state": "completed",
+        "stage": "evaluate-uk",
+        "pid": 17584,
+        "process_created": "639291195287318412",
+        "started_utc": "2026-11-01T08:45:51.885980+00:00",
+        "completed": [
+          "evaluate-rdd",
+          "evaluate-videos",
+          "evaluate-uk"
+        ],
+        "updated_utc": "2026-11-01T08:46:03.070023+00:00",
+        "ended_utc": "2026-11-01T08:46:09.532795+00:00",
+        "warning_eligible": false
+      }
+    },
+    "pothole_checkpoint": {
+      "directory": "D:\\CodexTemp\\VisionAssist-training-pipeline\\pothole-evaluations\\20261101-105653-pothole-9d813997",
+      "status": {
+        "state": "completed",
+        "stage": "evaluate-uk",
+        "pid": 7596,
+        "process_created": "639291201965748314",
+        "started_utc": "2026-11-01T08:56:54.317547+00:00",
+        "completed": [
+          "export-checkpoint",
+          "evaluate-rdd",
+          "evaluate-videos",
+          "evaluate-uk"
+        ],
+        "updated_utc": "2026-11-01T08:57:36.746138+00:00",
+        "ended_utc": "2026-11-01T08:57:44.685833+00:00",
+        "warning_eligible": false
+      }
+    }
+  }
+}

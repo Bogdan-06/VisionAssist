@@ -22,7 +22,10 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('dataset','model','conditions','output'):
         parser.add_argument('--'+name,type=pathlib.Path,required=True)
+    parser.add_argument('--max-images', type=int)
     args = parser.parse_args()
+    if args.max_images is not None and args.max_images < 1:
+        raise ValueError('Image limit must be positive')
     if args.output.exists():
         raise ValueError('Use a new output directory')
     with args.dataset.open('rb') as stream:
@@ -40,6 +43,9 @@ def main():
         accepted, excluded = records(archive)
         if len(accepted)!=708 or len(excluded)!=5 or set(tags)-{r['id'] for r in accepted}:
             raise ValueError('Unexpected accepted images/exclusions/condition identities')
+        available_images=len(accepted)
+        if args.max_images:
+            accepted=accepted[:args.max_images]
         for index,record in enumerate(accepted):
             start = time.perf_counter()
             with Image.open(io.BytesIO(archive.read(record['image']))) as image:
@@ -61,7 +67,8 @@ def main():
     report = dict(dataset_doi='10.17632/tp95cdvgm8.1',source_sha256=SOURCE_SHA,
         model_sha256=hashlib.sha256(args.model.read_bytes()).hexdigest(),
         conditions_sha256=hashlib.sha256(args.conditions.read_bytes()).hexdigest(),
-        images=len(accepted),excluded_images=excluded,
+        images=len(accepted),excluded_images=excluded,available_images=available_images,
+        partial=len(accepted)!=available_images,warning_eligible=False,
         strata={name:dict(images=value['images'],metrics={key:detection_scores(counts) for key,counts in value['totals'].items()}) for name,value in strata.items()},
         component_rule='8-connected mask regions at each fixed pixel threshold; all regions retained, mean probability sorting',
         matching='one-to-one box IoU >= 0.5; difficult boxes ignored; no additional confidence threshold',

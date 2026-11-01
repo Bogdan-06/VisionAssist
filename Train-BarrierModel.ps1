@@ -14,6 +14,9 @@ param(
     [switch]$CheckOnly
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'tools\ground\Acquire-TrainingLock.ps1')
+$legacyJobLock = if (-not $CheckOnly) { Get-VisionAssistTrainingLock } else { $null }
+try {
 if (-not $OutputRoot) { $OutputRoot = Join-Path $PSScriptRoot 'barrier-training-runs' }
 $runner = Join-Path $PSScriptRoot 'tools\ground\run_barrier_training.py'
 function Convert-BarrierWslPath([string]$Path) {
@@ -46,3 +49,6 @@ if ($Device -eq 'Gpu') {
     & $python @arguments
 }
 exit $LASTEXITCODE
+} finally {
+    if ($legacyJobLock) { $legacyJobLock.Dispose() }
+}

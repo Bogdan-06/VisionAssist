@@ -15,6 +15,7 @@ local.properties
 training-runs/
 barrier-training-runs/
 training-gpu.local.json
+visionassist-experiments/
 
 # Local secrets, runtime caches and experimental artifacts stay on disk.
 .env.*
@@ -28,6 +29,8 @@ training-gpu.local.json
 *.apk
 *.aab
 *.h5
+*.keras
+*.npy
 *.ckpt*
 *.pt
 *.pth

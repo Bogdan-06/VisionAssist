@@ -1,5 +1,10 @@
 # Resume Milestone 5: ground hazards
 
+For future independent command-line experiments, see
+[the unified training guide](docs/TRAIN_VISIONASSIST_RO.md) and
+`Train-VisionAssist.ps1`. The historical artifacts and limitations recorded below
+remain preserved. This automation does not integrate models or enable warnings.
+
 Checkpoint date: **29 October 2026 (Europe/Bucharest)**. Work intentionally stopped after
 checkpoint creation at the user's request. The milestone is **incomplete**.
 Authoritative project: `C:\Users\Moth\Desktop\VisionAssist`.

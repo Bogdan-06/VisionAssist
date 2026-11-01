@@ -1,5 +1,9 @@
 # Reproduce the ground baseline
 
+For the unified `check/train/evaluate/status/resume/report` workflow for both
+potholes and barriers, use [Train-VisionAssist.ps1 — Romanian guide](../../docs/TRAIN_VISIONASSIST_RO.md).
+Existing launchers below remain available and share the Windows job lock.
+
 Use a separate Python 3.12 environment. Keep datasets outside the Android project and
 generated artifacts out of version control. This workflow does not need or read API keys.
 

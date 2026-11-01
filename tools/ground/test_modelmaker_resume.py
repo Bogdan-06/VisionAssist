@@ -82,8 +82,25 @@ class ResumeTests(unittest.TestCase):
         with patch('modelmaker_resume.psutil.process_iter',return_value=[live]):
             with self.assertRaisesRegex(RuntimeError,'still running'):
                 self.inspect()
-        with self.assertRaisesRegex(ValueError,'original 20-epoch'):
+        with self.assertRaisesRegex(ValueError,'original epoch'):
             inspect_source(self.source,self.provenance,30,8,'gpu')
+
+    def test_custom_schedule_is_preserved(self):
+        self.settings['epochs']=7
+        self.save_settings()
+        info=inspect_source(self.source,self.provenance,7,8,'gpu')
+        snapshot=capture_snapshot(info,self.root/'snapshot')
+        self.assertEqual(snapshot['configured_epochs'],7)
+
+    def test_new_schema_rejects_changed_current_training_code(self):
+        self.settings['resume_schema']=1
+        self.save_settings()
+        current=self.root/'current'
+        current.mkdir()
+        (current/'trainer.py').write_text('different implementation')
+        with patch('modelmaker_resume.__file__',str(current/'modelmaker_resume.py')):
+            with self.assertRaisesRegex(ValueError,'Current training implementation differs'):
+                self.inspect()
 
 
 if __name__=='__main__': unittest.main()

@@ -13,6 +13,9 @@ param(
     [switch]$CheckOnly
 )
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'tools\ground\Acquire-TrainingLock.ps1')
+$legacyJobLock = if (-not $CheckOnly) { Get-VisionAssistTrainingLock } else { $null }
+try {
 if (-not $OutputRoot) { $OutputRoot = Join-Path $PSScriptRoot 'training-runs' }
 $runner = Join-Path $PSScriptRoot 'tools\ground\run_training.py'
 $gpuConfigPath = Join-Path $PSScriptRoot 'training-gpu.local.json'
@@ -47,3 +50,6 @@ $runnerArguments = @('-u', $runner, '--data-root', $DataRoot, '--backbone', $Bac
 if ($CheckOnly) { $runnerArguments += '--check-only' }
 & $Python @runnerArguments
 exit $LASTEXITCODE
+} finally {
+    if ($legacyJobLock) { $legacyJobLock.Dispose() }
+}
